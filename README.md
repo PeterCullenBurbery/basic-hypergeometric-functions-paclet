@@ -1,5 +1,5 @@
 # hypergeometric-functions-paclet
- This is a paclet for hypergeometric functions.
+ This is a paclet for basic hypergeometric functions.
  I am working on writing good code.
  I hope to do this by using version control to store history with GitHub instead of just copying the file to a backup directory on my computer. I am using GitHub and GitHub Desktop.
  I am using Mathematica 13.3 Prerelease version to build the paclet.

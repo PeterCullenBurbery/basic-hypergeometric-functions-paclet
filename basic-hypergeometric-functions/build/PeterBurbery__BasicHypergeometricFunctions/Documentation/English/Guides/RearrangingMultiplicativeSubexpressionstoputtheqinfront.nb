@@ -1,0 +1,296 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11604,        286]
+NotebookOptionsPosition[      8684,        225]
+NotebookOutlinePosition[     10559,        269]
+CellTagsIndexPosition[     10516,        266]
+WindowTitle->Rearranging Multiplicative Subexpressions to put the q in front
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "PETER BURBERY/ BASIC HYPERGEOMETRIC FUNCTIONS GUIDE", 
+           "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "a2ab5ac1-4437-476c-8613-3d887ddf8698"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "12ec8997-5104-45ac-8f01-f7b28bbefd54"],
+        Background->RGBColor[0.85098, 0.396078, 0],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Functions",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "cb8444e7-234f-4ec3-816b-ac6f5a5f0f5f"]
+         }],ExpressionUUID->"1ac424f6-aa87-4928-9bd4-57e30453b985"],
+         StripOnInput->False],{
+        "\"PositionQInFrontOfList\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/BasicHypergeometricFunctions/ref/\
+PositionQInFrontOfList"], "\"RearrangeMultiplicativeSubExpressions\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/BasicHypergeometricFunctions/ref/\
+RearrangeMultiplicativeSubExpressions"], "\"UnsortedComplement\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/BasicHypergeometricFunctions/ref/\
+UnsortedComplement"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"GuideFunction"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "ad8ec887-33c2-4581-bfe2-c7404c916c94"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "d7551991-9094-4fd6-bc06-1527a6887315"]
+         }],ExpressionUUID->"209af4e4-c081-48dc-bb59-e6a4e0a7f9cb"],
+         StripOnInput->False],{
+        "\"PeterBurbery/BasicHypergeometricFunctions/guide/\
+RearrangingMultiplicativeSubexpressionstoputtheqinfront\"" :> None, 
+         "\"Copy Wolfram Documentation Center URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell["PeterBurbery/BasicHypergeometricFunctions/guide/\
+RearrangingMultiplicativeSubexpressionstoputtheqinfront"]}, Visible -> 
+               False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], Delimiter, 
+         "\"Copy web URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell[BoxData[
+                 MakeBoxes[
+                  Hyperlink[
+                   "http://reference.wolfram.com/language/PeterBurbery/\
+BasicHypergeometricFunctions/guide/\
+RearrangingMultiplicativeSubexpressionstoputtheqinfront.html"], 
+                   StandardForm]], "Input", TextClipboardType -> 
+                 "PlainText"]}, Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+         "\"Go to web URL\"" :> 
+         FrontEndExecute[{
+           NotebookLocate[{
+             URL[If[TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$33118], 
+                 "http://reference.wolfram.com/system-modeler/", 
+                 "http://reference.wolfram.com/language/"] <> 
+               "PeterBurbery/BasicHypergeometricFunctions/guide/\
+RearrangingMultiplicativeSubexpressionstoputtheqinfront" <> ".html"], 
+              None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "c19c799e-5fc6-4a0f-955e-3a49fd61600b"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "04110c61-3014-4316-b5fb-de137a4f8767"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"263ebb50-5db2-4bf2-b569-871009a17a4a"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Rearranging Multiplicative Subexpressions to put the q in front\
+\>", "GuideTitle",
+ CellID->311846817,ExpressionUUID->"d22d329e-beee-4d03-a3ce-a004e82c9872"],
+
+Cell["\[NonBreakingSpace]", "GuideAbstract",
+ CellID->73099163,ExpressionUUID->"21849632-e721-4f2f-a00e-69b2d42a471c"],
+
+Cell["\t", "GuideDelimiterSubsection",ExpressionUUID->"80dbb647-afd7-404f-ac73-e78b35d107a7"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["UnsortedComplement"]], 
+    "paclet:PeterBurbery/BasicHypergeometricFunctions/ref/UnsortedComplement",
+     "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"c40ac8e4-27e1-4161-a8df-4d4f38357a23",ExpressionUUID->
+  "472830d5-57d4-426c-b4bb-929249c96e94"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Delete the elements of some lists from a list x without changing either \
+the order of x or the multiplicities of its elements"
+}], "GuideText",
+ CellID->173229931,ExpressionUUID->"4a193ed9-2266-4e8c-911f-4023ccc276b1"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["PositionQInFrontOfList"]], 
+    "paclet:PeterBurbery/BasicHypergeometricFunctions/ref/\
+PositionQInFrontOfList", "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"c5c6736a-1ff4-4e4e-8fcf-2d9846cbae62",ExpressionUUID->
+  "102b747c-26d2-4b39-955c-8b03e25318be"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Position q in front of other elements in a list"
+}], "GuideText",
+ CellID->257993547,ExpressionUUID->"5aee6f3d-6487-4a80-a08a-dd94d21ee7f8"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["RearrangeMultiplicativeSubExpressions"]], 
+    "paclet:PeterBurbery/BasicHypergeometricFunctions/ref/\
+RearrangeMultiplicativeSubExpressions", "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"ae548634-e926-458c-9375-5995081682ed",ExpressionUUID->
+  "6954a9ad-d8e3-41f8-a23f-34599d7cb6e4"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Position q in front of multiplicative subexpressions in a mathematical \
+expression"
+}], "GuideText",
+ CellID->917818999,ExpressionUUID->"daf5dc1f-75a7-4c49-8a1a-aebd52352a91"],
+
+Cell["\t", "GuideDelimiter",
+ CellID->508857929,ExpressionUUID->"338337e9-dfdc-4599-8f3c-ba1e359e0cf0"],
+
+Cell[TextData[Cell["\<\
+
+FrameBox[\"\\\"XXXX\\\"\"]\
+\>", "FunctionPlaceholder", \
+"InlineFunctionSansUnlinked",ExpressionUUID->"4d53a70d-ca1f-4ffe-b102-\
+05beec30cd43"]], "InlineGuideFunctionListing",
+ CellID->61540635,ExpressionUUID->"19c006e7-77ab-4e35-82f4-87670cc9785f"],
+
+Cell[BoxData["Open"], "Input",ExpressionUUID->"cdbdf393-fac4-495f-8b02-18b35e0dbc39"]
+}, Open  ]]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Rearranging Multiplicative Subexpressions to put the q in front",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> {$Failed, ""}, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 6, 5, 10, 40, 35.4761005}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "PeterBurbery`BasicHypergeometricFunctions`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Peter Burbery/ Basic Hypergeometric Functions Guide", 
+    "language" -> "en", "paclet" -> 
+    "PeterBurbery/BasicHypergeometricFunctions", "status" -> "None", 
+    "summary" -> "", "synonyms" -> {}, "tabletags" -> 
+    DocumentationBuild`Make`Private`tabletaggingrules$33087, "title" -> 
+    "Rearranging Multiplicative Subexpressions to put the q in front", 
+    "titlemodifier" -> "", "metadescription" -> "", "windowtitle" -> 
+    "Rearranging Multiplicative Subexpressions to put the q in front", "type" -> 
+    "Guide", "uri" -> 
+    "PeterBurbery/BasicHypergeometricFunctions/guide/\
+RearrangingMultiplicativeSubexpressionstoputtheqinfront"}},
+CacheGraphics->False,
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (May 18, 2023)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"8ebbb26f-2192-4787-ba44-6af50cb17bdb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[635, 21, 5214, 123, 70, "AnchorBarGrid",ExpressionUUID->"263ebb50-5db2-4bf2-b569-871009a17a4a",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[5874, 148, 168, 3, 70, "GuideTitle",ExpressionUUID->"d22d329e-beee-4d03-a3ce-a004e82c9872",
+ CellID->311846817],
+Cell[6045, 153, 118, 1, 70, "GuideAbstract",ExpressionUUID->"21849632-e721-4f2f-a00e-69b2d42a471c",
+ CellID->73099163],
+Cell[6166, 156, 93, 0, 70, "GuideDelimiterSubsection",ExpressionUUID->"80dbb647-afd7-404f-ac73-e78b35d107a7"],
+Cell[6262, 158, 670, 16, 70, "GuideText",ExpressionUUID->"4a193ed9-2266-4e8c-911f-4023ccc276b1",
+ CellID->173229931],
+Cell[6935, 176, 596, 15, 70, "GuideText",ExpressionUUID->"5aee6f3d-6487-4a80-a08a-dd94d21ee7f8",
+ CellID->257993547],
+Cell[7534, 193, 662, 16, 70, "GuideText",ExpressionUUID->"daf5dc1f-75a7-4c49-8a1a-aebd52352a91",
+ CellID->917818999],
+Cell[8199, 211, 103, 1, 70, "GuideDelimiter",ExpressionUUID->"338337e9-dfdc-4599-8f3c-ba1e359e0cf0",
+ CellID->508857929],
+Cell[8305, 214, 275, 6, 70, InheritFromParent,ExpressionUUID->"19c006e7-77ab-4e35-82f4-87670cc9785f",
+ CellID->61540635],
+Cell[8583, 222, 85, 0, 70, "Input",ExpressionUUID->"cdbdf393-fac4-495f-8b02-18b35e0dbc39"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
