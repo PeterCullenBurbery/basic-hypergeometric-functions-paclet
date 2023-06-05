@@ -40,7 +40,7 @@ PositionQInFrontOfMultiplicativeSubExpressions[input_] :=
      NonCommutativeMultiply[], All], NonCommutativeMultiply[x_] :> x, 
     All], {(nonqs : (_?(Head[#1] == Symbol && #1 =!= 
                q &) ..)) ** (qs : (q ** _)^_) :> qs ** nonqs}, All]]
-
+(*this has a bug.*)
 End[]; (* End `Private` *)
 
 EndPackage[];
