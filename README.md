@@ -17,3 +17,15 @@
  I will be using Git with Visual Studio Code.
  I am working on using GitHub Copilot.
  I am also using a Wolfram Language extension for Visual Studio Code.
+ I am using Ctrl+G Ctrl+Y for Git Sync instead of Ctrl+G Ctrl+S because s is more common than y and is more likely to run into keyboard shortcut conflicts. Its good to start with a rare keyboard shortcut to avoid conflicts.
+ The frequencies are <|"z" -> 0.000739431, "q" -> 0.000959261, "x" -> 0.00149885, 
+ "j" -> 0.00152882, "k" -> 0.00771406, "v" -> 0.00977248, 
+ "b" -> 0.0149185, "p" -> 0.0192752, "y" -> 0.0197248, 
+ "g" -> 0.0201345, "f" -> 0.0222629, "w" -> 0.0235818, 
+ "m" -> 0.0258501, "u" -> 0.0275588, "c" -> 0.0277886, 
+ "l" -> 0.0409085, "d" -> 0.0424973, "r" -> 0.0598239, 
+ "h" -> 0.0608931, "s" -> 0.062292, "n" -> 0.0674381, 
+ "i" -> 0.0696064, "o" -> 0.0750122, "a" -> 0.0808078, 
+ "t" -> 0.0904903, "e" -> 0.126922|>.
+ This data is from Sort[LetterFrequencyData[]] where LetterFrequencyData[] is from the Wolfram Function Repository.
+ I am also using Ctrl+G Ctrl+M for Commit instead of Ctrl+G Ctrl+C for commit. I can use Ctrl+G Ctrl+R for merge if need be later.
