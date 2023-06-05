@@ -19,3 +19,4 @@
 <<PeterBurbery`BasicHypergeometricFunctions`DeleteAllWhitespaceCharactersExceptSpace`;
 <<PeterBurbery`BasicHypergeometricFunctions`AppendBaseToTeXString`;
 <<PeterBurbery`BasicHypergeometricFunctions`TakeOutLastArgument`;
+<<PeterBurbery`BasicHypergeometricFunctions`AddSemicolonToQPochhammerTeXString`;
