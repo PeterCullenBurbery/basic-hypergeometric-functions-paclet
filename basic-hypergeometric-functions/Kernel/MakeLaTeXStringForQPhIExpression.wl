@@ -18,8 +18,7 @@ SetAttributes[MakeLaTeXStringForQPhIExpression, {Listable}]
 MakeLaTeXStringForQPhIExpression[input_QPhI] := 
  AddSemicolonToQPochhammerTeXString[
   AppendBaseToTeXString[
-   ReplaceFirstAndLastBracketsInQPochhammerSymbolTeXStringWithParenthe\
-ses[DeleteAllWhitespaceCharactersExceptSpace[
+   ReplaceFirstAndLastBracketsInQPochhammerSymbolTeXStringWithParentheses[DeleteAllWhitespaceCharactersExceptSpace[
      DeleteQPhIInQPochammerTeXString[
       DeleteNonCommutativeMultiplyInTeXString[
        MakeTeXFragment[

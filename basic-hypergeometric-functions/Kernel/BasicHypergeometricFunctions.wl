@@ -21,12 +21,12 @@
 <<PeterBurbery`BasicHypergeometricFunctions`AppendBaseToTeXString`;
 <<PeterBurbery`BasicHypergeometricFunctions`TakeOutLastArgument`;
 <<PeterBurbery`BasicHypergeometricFunctions`AddSemicolonToQPochhammerTeXString`;
-<<PeterBurbery`BasicHypergeometricFunctions`ReplaceFirstAndLastBracketsInQPochhammerSymbolTeXStringWithParentheses`;
 <<PeterBurbery`BasicHypergeometricFunctions`DeleteQPhIInQPochammerTeXString`;
 <<PeterBurbery`BasicHypergeometricFunctions`MakeLaTeXStringForQPhIExpression`;
 <<PeterBurbery`BasicHypergeometricFunctions`DeleteQPhInQPochammerTeXString`;
 <<PeterBurbery`BasicHypergeometricFunctions`AddEquationNumberingToTeXString`;
 <<PeterBurbery`BasicHypergeometricFunctions`ReplaceNIntegrateWithInactiveIntegrateAndInactivateSumAfterPlacingQ`;
+
 
 
 
