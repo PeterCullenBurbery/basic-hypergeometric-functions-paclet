@@ -21,3 +21,4 @@
 <<PeterBurbery`BasicHypergeometricFunctions`TakeOutLastArgument`;
 <<PeterBurbery`BasicHypergeometricFunctions`AddSemicolonToQPochhammerTeXString`;
 <<PeterBurbery`BasicHypergeometricFunctions`ReplaceFirstAndLastBracketsInQPochhammerSymbolTeXStringWithParentheses`;
+<<PeterBurbery`BasicHypergeometricFunctions`DeleteQPhIInQPochammerTeXString`;
