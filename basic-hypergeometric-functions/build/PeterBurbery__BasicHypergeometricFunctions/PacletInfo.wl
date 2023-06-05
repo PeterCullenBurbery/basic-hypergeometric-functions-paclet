@@ -19,6 +19,7 @@ PacletObject[
         },
         "Symbols" -> {
           "PeterBurbery`BasicHypergeometricFunctions`PositionQInFrontOfList",
+          "PeterBurbery`BasicHypergeometricFunctions`QWithinExpressionQ",
           "PeterBurbery`BasicHypergeometricFunctions`RearrangeMultiplicativeSubExpressions",
           "PeterBurbery`BasicHypergeometricFunctions`UnsortedComplement"
         }

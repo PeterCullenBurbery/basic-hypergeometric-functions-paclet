@@ -11,7 +11,7 @@
             ,
             "Hash"
             ->
-            "da1ff340bbb769e4fcc7eb9fc3c37282f58ab1a26fdb3740577275c984b704c9"
+            "fa587eff31aaf7f42b6cc3aca6c35c468045246af6cf89cfd2a72e2d6c69b902"
                 
         |>
         ,
@@ -25,6 +25,19 @@
             "Hash"
             ->
             "48d611eb5bf4656955e42b4794a5e886c8de4d84115a978a69273dfd74276c87"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Kernel\\QWithinExpressionQ.wl"
+            ]
+            ,
+            "Hash"
+            ->
+            "774c473c95ccd7825dd0a84f8f5a930a61aeabb80db096b9ee68b763d1c45f11"
                 
         |>
         ,
@@ -86,6 +99,20 @@
             "File"
             ->
             File[
+                "Documentation\\English\\ReferencePages\\Symbols\\QWithinExpressionQ.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "659e50433c2101641fca90fae35d787d5e759e9ed389d21bdfdf675ae1b8fb7e"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
                 "Documentation\\English\\ReferencePages\\Symbols\\UnsortedComplement.nb"
                     
             ]
@@ -106,7 +133,7 @@
             ,
             "Hash"
             ->
-            "01d2e8cc8422e89996838d4948f5f726b41bdf108858571f6eac054cec4b0cb2"
+            "e54c2412a1c52e2bfb77263a0013c2628081c4a801492b19fba21827774ac606"
                 
         |>
     }
