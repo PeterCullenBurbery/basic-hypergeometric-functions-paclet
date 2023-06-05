@@ -11,6 +11,9 @@ Begin["`Private`"];
 
 PositionQInFrontOfList//ClearAll
 
+PositionQInFrontOfList[input_?ListQ] := 
+ Module[{list}, list = Cases[q | q^_][input]; 
+  Join[list, UnsortedComplement[input, list]]]
 
 End[]; (* End `Private` *)
 
