@@ -15,3 +15,4 @@
 
 <<PeterBurbery`BasicHypergeometricFunctions`QPhIProcessForTeXFragment`;
 <<PeterBurbery`BasicHypergeometricFunctions`DeleteNonCommutativeMultiplyInTeXString`;
+<<PeterBurbery`BasicHypergeometricFunctions`MakeFirstListSequence`;<<PeterBurbery`BasicHypergeometricFunctions`MakeTeXFragment`;
