@@ -11,6 +11,6 @@
 <<PeterBurbery`BasicHypergeometricFunctions`VeryWellPoisedBasicHypergeometricSeriesData`;
 <<PeterBurbery`BasicHypergeometricFunctions`FromVeryWellPoisedBasicHypergeometricSeriesToLaTeX`;
 <<PeterBurbery`BasicHypergeometricFunctions`TeXString`;
-
+<<PeterBurbery`BasicHypergeometricFunctions`RearrangeAllMultiplicativeSubExpressions`;
 
 
