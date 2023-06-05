@@ -28,4 +28,4 @@
  "i" -> 0.0696064, "o" -> 0.0750122, "a" -> 0.0808078, 
  "t" -> 0.0904903, "e" -> 0.126922|>.
  This data is from Sort[LetterFrequencyData[]] where LetterFrequencyData[] is from the Wolfram Function Repository.
- I am also using Ctrl+G Ctrl+M for Commit instead of Ctrl+G Ctrl+C for commit. I can use Ctrl+G Ctrl+R for merge if need be later.
+ I am also using Ctrl+G Ctrl+M for Commit instead of Ctrl+G Ctrl+C for commit. I can use Ctrl+G Ctrl+R for merge if need be later. I changed the keyboard shortcut for Git Accept Message to Ctrl+G Ctrl+T because accept has a t and a is more common than t and t is rarer than a. I could use Ctrl+G Ctrl+K to track later on if need be.
