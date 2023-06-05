@@ -15,6 +15,12 @@ Begin["`Private`"];
 
 ReplaceFirstAndLastBracketsInQPochhammerSymbolTeXStringWithParentheses//ClearAll
 
+ReplaceFirstAndLastBracketsInQPochhammerSymbolTeXStringWithParentheses[input_?StringQ] :=
+ StringReplacePart[
+  StringDelete[input, 
+   Alternatives @@ {"\\left", "\\right"}], {"\\left(", 
+   "\\right)"}, {{3, 3}, {-3, -3}}]
+
 
 End[]; (* End `Private` *)
 
