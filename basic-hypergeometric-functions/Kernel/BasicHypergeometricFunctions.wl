@@ -14,3 +14,4 @@
 <<PeterBurbery`BasicHypergeometricFunctions`RearrangeAllMultiplicativeSubExpressions`;
 
 <<PeterBurbery`BasicHypergeometricFunctions`QPhIProcessForTeXFragment`;
+<<PeterBurbery`BasicHypergeometricFunctions`DeleteNonCommutativeMultiplyInTeXString`;
