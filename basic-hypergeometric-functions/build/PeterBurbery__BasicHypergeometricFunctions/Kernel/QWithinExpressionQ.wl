@@ -13,7 +13,7 @@ Begin["`Private`"];
 QWithinExpressionQ//ClearAll
 
 QWithinExpressionQ[input_] := 
- MemberQ[TreeData /@ TreeSelect[ExpressionTree[input], TreeLeafQ], q]
+ MemberQ[TreeData /@ TreeSelect[ExpressionTree[input], TreeLeafQ], Global`q]
 
 
 End[]; (* End `Private` *)

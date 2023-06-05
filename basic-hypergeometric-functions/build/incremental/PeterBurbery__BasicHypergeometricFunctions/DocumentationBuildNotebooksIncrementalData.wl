@@ -19,9 +19,9 @@ sions.nb" -> <|"Result" -> $Failed, "FileHash" ->
    "FileHash" -> "SDcDp3LRzRwIQztRlJ54Vd3FNT/9KqwXqwctG03IYtw="|>, 
  "English\\Tutorials\\RearrangingExpressions.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
-      "Time" -> Quantity[2.2694016, "Seconds"]|>], 
-   "FileHash" -> "vhenKpYl8v9H/UoMDBQWTCW14H+lcoQ75bxHQsDcs7c="|>, 
+      "Time" -> Quantity[2.8491022, "Seconds"]|>], 
+   "FileHash" -> "h2AJ2kqIIAsa/s+2KG+zTS/LsjL7bccMVOQ3nUIVBEo="|>, 
  "English\\ReferencePages\\Symbols\\QWithinExpressionQ.nb" -> 
   <|"Result" -> Success["ProcessedNotebook", <|"Action" -> "Build", 
-      "Time" -> Quantity[1.6446178, "Seconds"]|>], 
-   "FileHash" -> "YmqnMrZXqD9AnidoWsS3XD44nhTTcRbpLyez2f5lVUc="|>|>
+      "Time" -> Quantity[2.5931991, "Seconds"]|>], 
+   "FileHash" -> "gvj9EveXL16niLfUfNwdxrBKABPeodSw1ixZjsT8roI="|>|>
