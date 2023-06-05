@@ -18,3 +18,4 @@
 <<PeterBurbery`BasicHypergeometricFunctions`MakeFirstListSequence`;<<PeterBurbery`BasicHypergeometricFunctions`MakeTeXFragment`;
 <<PeterBurbery`BasicHypergeometricFunctions`DeleteAllWhitespaceCharactersExceptSpace`;
 <<PeterBurbery`BasicHypergeometricFunctions`AppendBaseToTeXString`;
+<<PeterBurbery`BasicHypergeometricFunctions`TakeOutLastArgument`;
