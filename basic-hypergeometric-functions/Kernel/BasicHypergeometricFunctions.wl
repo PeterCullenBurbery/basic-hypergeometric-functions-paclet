@@ -13,4 +13,4 @@
 <<PeterBurbery`BasicHypergeometricFunctions`TeXString`;
 <<PeterBurbery`BasicHypergeometricFunctions`RearrangeAllMultiplicativeSubExpressions`;
 
-
+<<PeterBurbery`BasicHypergeometricFunctions`QPhIProcessForTeXFragment`;
