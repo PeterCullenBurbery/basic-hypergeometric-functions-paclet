@@ -1,0 +1,328 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12465,        318]
+NotebookOptionsPosition[      9284,        250]
+NotebookOutlinePosition[     10974,        291]
+CellTagsIndexPosition[     10931,        288]
+WindowTitle->Rational Functions
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "PETER BURBERY/ BASIC HYPERGEOMETRIC FUNCTIONS GUIDE", 
+           "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "575cd1c0-cb20-4b3c-8731-460076a2c122"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "363b17a4-ac92-47fc-939b-36585c558e68"],
+        Background->RGBColor[0.85098, 0.396078, 0],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[{
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "Functions",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "a1b294f9-f23d-47bd-a373-f721474d8e6e"]
+         }],ExpressionUUID->"44a4295c-cd48-448e-b32b-ffc7e8c55eeb"],
+         StripOnInput->False],{
+        "\"DenominatorQ\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/BasicHypergeometricFunctions/ref/DenominatorQ"]\
+, "\"DenominatorTermQ\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/BasicHypergeometricFunctions/ref/\
+DenominatorTermQ"], "\"NumeratorQ\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/BasicHypergeometricFunctions/ref/NumeratorQ"], 
+         "\"NumeratorTermQ\"" :> 
+         Documentation`HelpLookup[
+          "paclet:PeterBurbery/BasicHypergeometricFunctions/ref/\
+NumeratorTermQ"]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"GuideFunction"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "e599044d-086a-4a61-a20d-8ec9e30000d5"],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      TagBox[
+       ActionMenuBox[
+        FrameBox[Cell[TextData[{
+          "URL",
+          " ",
+          Cell[BoxData[
+           GraphicsBox[
+            {GrayLevel[0.66667], Thickness[0.13], 
+             LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+            AspectRatio->1,
+            ImageSize->20,
+            PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+           "9af14262-f3b7-4ec6-b50d-637a466475b6"]
+         }],ExpressionUUID->"167c663a-63da-4d90-8169-963af38f4dcc"],
+         StripOnInput->False],{
+        "\"PeterBurbery/BasicHypergeometricFunctions/guide/RationalFunctions\"\
+" :> None, "\"Copy Wolfram Documentation Center URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell["PeterBurbery/BasicHypergeometricFunctions/guide/\
+RationalFunctions"]}, Visible -> False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], Delimiter, 
+         "\"Copy web URL\"" :> 
+         Module[{DocumentationSearch`Private`nb$}, 
+           DocumentationSearch`Private`nb$ = 
+            NotebookPut[
+             Notebook[{
+               Cell[BoxData[
+                 MakeBoxes[
+                  Hyperlink[
+                   "http://reference.wolfram.com/language/PeterBurbery/\
+BasicHypergeometricFunctions/guide/RationalFunctions.html"], StandardForm]], 
+                 "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+               False]]; 
+           SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+           FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+           NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+         "\"Go to web URL\"" :> 
+         FrontEndExecute[{
+           NotebookLocate[{
+             URL[If[TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$23751], 
+                 "http://reference.wolfram.com/system-modeler/", 
+                 "http://reference.wolfram.com/language/"] <> 
+               "PeterBurbery/BasicHypergeometricFunctions/guide/\
+RationalFunctions" <> ".html"], None}]}]},
+        Appearance->None,
+        MenuAppearance->Automatic,
+        MenuStyle->"URLMenu"],
+       MouseAppearanceTag["LinkHand"]]],
+      LineSpacing->{1.4, 0},ExpressionUUID->
+      "bca377e0-3b36-4ed0-be33-eb8992777d36"]
+    }], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "896c7566-b634-4d3b-a07a-e400a20be7a1"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"102ab238-32b7-4d95-bc2b-2c2449ff73cd"],
+
+Cell[CellGroupData[{
+
+Cell["Rational Functions", "GuideTitle",
+ CellID->483515298,ExpressionUUID->"4f393f38-e7d7-4e21-8568-2f775657255c"],
+
+Cell["\[NonBreakingSpace]", "GuideAbstract",
+ CellID->516746642,ExpressionUUID->"295f3a5e-1f29-4983-b655-fbfb5fec0f50"],
+
+Cell["\t", "GuideDelimiterSubsection",ExpressionUUID->"c03b6c6d-8755-456a-a69c-8ed42807f4f2"],
+
+Cell[CellGroupData[{
+
+Cell["Recommended Functions", "GuideFunctionsSubsection",
+ CellID->128820865,ExpressionUUID->"a56fb611-ad81-4f6a-a53f-885af23060bb"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["NumeratorTermQ"]], 
+    "paclet:PeterBurbery/BasicHypergeometricFunctions/ref/NumeratorTermQ", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"ba0d3802-a2dc-4bec-81f7-8445cb68a007",ExpressionUUID->
+  "58670c32-e655-414c-814c-ddfc991c6a27"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " check if an expression is in the numerator."
+}], "GuideText",
+ CellID->83974192,ExpressionUUID->"7b349ec4-6886-4042-83ca-91af47aad5df"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["DenominatorTermQ"]], 
+    "paclet:PeterBurbery/BasicHypergeometricFunctions/ref/DenominatorTermQ", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"ba0d3802-a2dc-4bec-81f7-8445cb68a007",ExpressionUUID->
+  "df8f46a4-23c6-41e9-9412-01c2e1d3a335"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " check if an expression is in the denominator and not in the numerator."
+}], "GuideText",
+ CellID->195313227,ExpressionUUID->"02b4b671-5e8c-42e2-a8d1-52b3eaba6c22"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Not recommended Functions", "GuideFunctionsSubsection",
+ CellID->1421379,ExpressionUUID->"ba89a2a5-e40f-420d-8a18-877713edca61"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["NumeratorQ"]], 
+    "paclet:PeterBurbery/BasicHypergeometricFunctions/ref/NumeratorQ", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"c40ac8e4-27e1-4161-a8df-4d4f38357a23",ExpressionUUID->
+  "936aaf89-2ea6-432a-8e78-9df6fac26039"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " check if an expression is in the numerator."
+}], "GuideText",
+ CellID->105815805,ExpressionUUID->"1f3f0990-b2ee-4aab-95bc-7209f9f85287"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{
+    Cell[
+     TextData["DenominatorQ"]], 
+    "paclet:PeterBurbery/BasicHypergeometricFunctions/ref/DenominatorQ", 
+    "PeterBurbery Package Symbol"},
+   "PackageLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  CellTags->"c5c6736a-1ff4-4e4e-8fcf-2d9846cbae62",ExpressionUUID->
+  "cadd88ef-9d5e-46a9-8c0e-8eb4260d672a"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " check if an expression is in the denominator while returning True even if \
+the expression is also in the numerator."
+}], "GuideText",
+ CellID->153469662,ExpressionUUID->"8d0da688-8477-4fa6-ad40-e81bcd93e73c"],
+
+Cell["\t", "GuideDelimiter",
+ CellID->296182900,ExpressionUUID->"d63ea2f9-c386-4c41-9274-6a6156c7c7bd"],
+
+Cell[TextData[Cell["\<\
+
+FrameBox[\"\\\"XXXX\\\"\"]\
+\>", "FunctionPlaceholder", \
+"InlineFunctionSansUnlinked",ExpressionUUID->"1ce47b20-754a-4739-a2ab-\
+673029539061"]], "InlineGuideFunctionListing",
+ CellID->44134258,ExpressionUUID->"2dcdc31c-d8f9-4d1f-b7ef-a41a69f125d2"],
+
+Cell[BoxData["Open"], "Input",ExpressionUUID->"a5559990-9b64-4924-a895-4a023bf69f2e"]
+}, Open  ]]
+}, Open  ]]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Rational Functions",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> {$Failed, ""}, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 6, 5, 15, 13, 42.3740950}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "PeterBurbery`BasicHypergeometricFunctions`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Peter Burbery/ Basic Hypergeometric Functions Guide", 
+    "language" -> "en", "paclet" -> 
+    "PeterBurbery/BasicHypergeometricFunctions", "status" -> "None", 
+    "summary" -> "", "synonyms" -> {}, "tabletags" -> 
+    DocumentationBuild`Make`Private`tabletaggingrules$23717, "title" -> 
+    "Rational Functions", "titlemodifier" -> "", "metadescription" -> "", 
+    "windowtitle" -> "Rational Functions", "type" -> "Guide", "uri" -> 
+    "PeterBurbery/BasicHypergeometricFunctions/guide/RationalFunctions"}},
+CacheGraphics->False,
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (May 18, 2023)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"309b961c-f76c-4855-9107-7b404e277708"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[590, 21, 5089, 122, 70, "AnchorBarGrid",ExpressionUUID->"102ab238-32b7-4d95-bc2b-2c2449ff73cd",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[5704, 147, 115, 1, 70, "GuideTitle",ExpressionUUID->"4f393f38-e7d7-4e21-8568-2f775657255c",
+ CellID->483515298],
+Cell[5822, 150, 119, 1, 70, "GuideAbstract",ExpressionUUID->"295f3a5e-1f29-4983-b655-fbfb5fec0f50",
+ CellID->516746642],
+Cell[5944, 153, 93, 0, 70, "GuideDelimiterSubsection",ExpressionUUID->"c03b6c6d-8755-456a-a69c-8ed42807f4f2"],
+Cell[CellGroupData[{
+Cell[6062, 157, 132, 1, 70, "GuideFunctionsSubsection",ExpressionUUID->"a56fb611-ad81-4f6a-a53f-885af23060bb",
+ CellID->128820865],
+Cell[6197, 160, 578, 15, 70, "GuideText",ExpressionUUID->"7b349ec4-6886-4042-83ca-91af47aad5df",
+ CellID->83974192],
+Cell[6778, 177, 610, 15, 70, "GuideText",ExpressionUUID->"02b4b671-5e8c-42e2-a8d1-52b3eaba6c22",
+ CellID->195313227]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7425, 197, 134, 1, 70, "GuideFunctionsSubsection",ExpressionUUID->"ba89a2a5-e40f-420d-8a18-877713edca61",
+ CellID->1421379],
+Cell[7562, 200, 571, 15, 70, "GuideText",ExpressionUUID->"1f3f0990-b2ee-4aab-95bc-7209f9f85287",
+ CellID->105815805],
+Cell[8136, 217, 648, 16, 70, "GuideText",ExpressionUUID->"8d0da688-8477-4fa6-ad40-e81bcd93e73c",
+ CellID->153469662],
+Cell[8787, 235, 103, 1, 70, "GuideDelimiter",ExpressionUUID->"d63ea2f9-c386-4c41-9274-6a6156c7c7bd",
+ CellID->296182900],
+Cell[8893, 238, 275, 6, 70, InheritFromParent,ExpressionUUID->"2dcdc31c-d8f9-4d1f-b7ef-a41a69f125d2",
+ CellID->44134258],
+Cell[9171, 246, 85, 0, 70, "Input",ExpressionUUID->"a5559990-9b64-4924-a895-4a023bf69f2e"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
