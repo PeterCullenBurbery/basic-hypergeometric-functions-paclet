@@ -9,5 +9,5 @@
 <<PeterBurbery`BasicHypergeometricFunctions`NumeratorTermQ`;
 <<PeterBurbery`BasicHypergeometricFunctions`DenominatorTermQ`;
 <<PeterBurbery`BasicHypergeometricFunctions`VeryWellPoisedBasicHypergeometricSeriesData`;
-
+<<PeterBurbery`BasicHypergeometricFunctions`FromVeryWellPoisedBasicHypergeometricSeriesToLaTeX;
 
