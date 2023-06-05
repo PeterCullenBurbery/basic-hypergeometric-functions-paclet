@@ -15,3 +15,5 @@
  I would like to take the input a b c d q^(-1+n) and move q to the front to get q^(-1+n) a b c d and then convert the math expression to LaTeX with q^{n-1}abcd.
  I will be using JetBrains Fleet to edit the readme.md file.
  I will be using Git with Visual Studio Code.
+ I am working on using GitHub Copilot.
+ I am also using a Wolfram Language extension for Visual Studio Code.
