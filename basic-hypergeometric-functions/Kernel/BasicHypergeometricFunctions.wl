@@ -22,3 +22,4 @@
 <<PeterBurbery`BasicHypergeometricFunctions`AddSemicolonToQPochhammerTeXString`;
 <<PeterBurbery`BasicHypergeometricFunctions`ReplaceFirstAndLastBracketsInQPochhammerSymbolTeXStringWithParentheses`;
 <<PeterBurbery`BasicHypergeometricFunctions`DeleteQPhIInQPochammerTeXString`;
+<<PeterBurbery`BasicHypergeometricFunctions`MakeLaTeXStringForQPhIExpression`;
