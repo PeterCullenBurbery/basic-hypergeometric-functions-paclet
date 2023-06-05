@@ -2,6 +2,6 @@
 
 
 
-<<PeterBurbery`HypergeometricFUnctions`PositionQInFrontOfList`;
-<<PeterBurbery`HypergeometricFUnctions`PositionQInFrontOfMultiplicativeSubexpressions`;
+<<PeterBurbery`HypergeometricFunctions`PositionQInFrontOfList`;
+<<PeterBurbery`HypergeometricFunctions`PositionQInFrontOfMultiplicativeSubexpressions`;
 <<PeterBurbery`HypergeometricFUnctions`UnsortedComplement`;
