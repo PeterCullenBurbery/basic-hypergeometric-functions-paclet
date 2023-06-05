@@ -23,3 +23,4 @@
 <<PeterBurbery`BasicHypergeometricFunctions`ReplaceFirstAndLastBracketsInQPochhammerSymbolTeXStringWithParentheses`;
 <<PeterBurbery`BasicHypergeometricFunctions`DeleteQPhIInQPochammerTeXString`;
 <<PeterBurbery`BasicHypergeometricFunctions`MakeLaTeXStringForQPhIExpression`;
+<<PeterBurbery`BasicHypergeometricFunctions`DeleteQPhInQPochammerTeXString`;
