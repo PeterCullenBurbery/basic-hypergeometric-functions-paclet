@@ -13,7 +13,7 @@ Begin["`Private`"];
 
 PositionQInFrontOfList//ClearAll
 
-PositionQInFrontOfList[input_?ListQ] := 
+PositionQInFrontOfList[input_?VectorQ] := 
  Module[{list}, list = Cases[Global`q | Global`q^_][input]; 
   Join[list, UnsortedComplement[input, list]]]
 

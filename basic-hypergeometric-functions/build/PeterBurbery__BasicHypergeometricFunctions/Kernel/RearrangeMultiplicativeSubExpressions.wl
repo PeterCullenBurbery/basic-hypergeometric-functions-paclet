@@ -9,6 +9,7 @@ PeterBurbery`BasicHypergeometricFunctions`RearrangeMultiplicativeSubExpressions;
 Begin["`Private`"];
 
 (* Define your public and private symbols here. *)
+RearrangeMultiplicativeSubExpressions//ClearAll
 
 RearrangeMultiplicativeSubExpressions[input_] := 
  Module[{firstoutput}, 

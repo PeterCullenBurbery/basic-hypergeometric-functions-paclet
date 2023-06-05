@@ -15,6 +15,21 @@
 		"BulkRetrievalOptimized" -> False
 	|>,
 	<|
+		"Name" -> "Text",
+		"Type" -> "Text",
+		"Tokenized" -> True,
+		"Stored" -> False,
+		"Weight" -> 1,
+		"Searchable" -> True,
+		"Language" -> "English",
+		"IgnoreCase" -> True,
+		"StemmingMethod" -> Automatic,
+		"CamelCaseMatching" -> True,
+		"DeleteStopWords" -> True,
+		"StoreTermVectors" -> False,
+		"BulkRetrievalOptimized" -> False
+	|>,
+	<|
 		"Name" -> "ExampleText",
 		"Type" -> "Text",
 		"Weight" -> 0.05,
@@ -338,21 +353,6 @@
 		"LengthWeighted" -> False,
 		"Tokenized" -> True,
 		"Stored" -> False,
-		"Searchable" -> True,
-		"Language" -> "English",
-		"IgnoreCase" -> True,
-		"StemmingMethod" -> Automatic,
-		"CamelCaseMatching" -> True,
-		"DeleteStopWords" -> True,
-		"StoreTermVectors" -> False,
-		"BulkRetrievalOptimized" -> False
-	|>,
-	<|
-		"Name" -> "Text",
-		"Type" -> "Text",
-		"Tokenized" -> True,
-		"Stored" -> False,
-		"Weight" -> 1,
 		"Searchable" -> True,
 		"Language" -> "English",
 		"IgnoreCase" -> True,
