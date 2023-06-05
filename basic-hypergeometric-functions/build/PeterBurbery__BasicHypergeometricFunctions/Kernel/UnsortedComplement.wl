@@ -9,7 +9,7 @@ PeterBurbery`BasicHypergeometricFunctions`UnsortedComplement;
 Begin["`Private`"];
 
 (* Define your public and private symbols here. *)
-UnsortedComplement//ClearAll
+(*UnsortedComplement//ClearAll*)
 
 UnsortedComplement[alist_, del___, opt : OptionsPattern[]] := 
  Select[alist, {#1} \[Union] Union[del] \[Union] opt =!= 

@@ -1,9 +1,11 @@
+(* ::Package:: *)
 
   BeginPackage["PeterBurbery`BasicHypergeometricFunctions`"];
 
 (* Declare your packages public symbols here. *)
 
 PeterBurbery`BasicHypergeometricFunctions`PositionQInFrontOfList;
+PeterBurbery`BasicHypergeometricFunctions`UnsortedComplement;
 
 Begin["`Private`"];
 
@@ -12,7 +14,7 @@ Begin["`Private`"];
 PositionQInFrontOfList//ClearAll
 
 PositionQInFrontOfList[input_?ListQ] := 
- Module[{list}, list = Cases[q | q^_][input]; 
+ Module[{list}, list = Cases[Global`q | Global`q^_][input]; 
   Join[list, UnsortedComplement[input, list]]]
 
 End[]; (* End `Private` *)
