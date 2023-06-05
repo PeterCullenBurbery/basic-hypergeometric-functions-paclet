@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    404919,      11210]
-NotebookOptionsPosition[    376417,      10559]
-NotebookOutlinePosition[    377535,      10589]
-CellTagsIndexPosition[    377375,      10583]
+NotebookDataLength[    444013,      12199]
+NotebookOptionsPosition[    414421,      11524]
+NotebookOutlinePosition[    415541,      11554]
+CellTagsIndexPosition[    415381,      11548]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -10480,6 +10480,971 @@ Cell[BoxData[
  CellChangeTimes->{3.894980719392506*^9},
  CellLabel->"Out[35]=",
  CellID->122682045,ExpressionUUID->"46e501f7-ae1b-4401-a27f-e97d35282ccc"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Module", "[", 
+  RowBox[{
+   RowBox[{"{", "firstoutput", "}"}], ",", " ", "\n", " ", 
+   RowBox[{
+    RowBox[{"firstoutput", " ", "=", " ", "\n", "  ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Inactivate", "[", 
+        RowBox[{
+         RowBox[{"a", " ", "b", " ", "c", " ", "d", " ", 
+          SuperscriptBox["q", 
+           RowBox[{"n", "-", "1"}]]}], ",", " ", "\n", "     ", "Times"}], 
+        "]"}], " ", "//.", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"Inactive", "[", "Times", "]"}], "[", 
+           RowBox[{"i", " ", ":", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"_", "?", "AtomQ"}], " ", ".."}], ")"}]}], "]"}], " ", ":>",
+           " ", "\n", "      ", 
+          RowBox[{"NonCommutativeMultiply", " ", "@@", " ", 
+           RowBox[{"PositionQInFrontOfList", "[", 
+            RowBox[{"{", "i", "}"}], "]"}]}]}], ",", " ", "\n", "     ", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Inactive", "[", "Times", "]"}], "[", "\n", "       ", 
+           RowBox[{"OrderlessPatternSequence", "[", "\n", "        ", 
+            RowBox[{
+             RowBox[{"n", " ", ":", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"_", "^", 
+                   RowBox[{"_", "?", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"#1", " ", ">", " ", "0"}], " ", "&"}], ")"}]}]}],
+                   " ", "|", " ", 
+                  RowBox[{"_", "?", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"NumeratorTermQ", "[", "#1", "]"}], " ", "&"}], 
+                    ")"}]}]}], ")"}], " ", ".."}], ")"}]}], ",", " ", "\n", 
+             "        ", 
+             RowBox[{"d", " ", ":", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"_", "^", 
+                   RowBox[{"_", "?", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    "#1", " ", "<", " ", "\n", "                  ", "0"}], 
+                    " ", "&"}], ")"}]}]}], " ", "|", " ", 
+                  RowBox[{"_", "?", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"DenominatorTermQ", "[", "#1", "]"}], " ", "&"}], 
+                    ")"}]}]}], ")"}], " ", ".."}], ")"}]}]}], "]"}], "]"}], 
+          " ", ":>", " ", 
+          RowBox[{
+           RowBox[{"\\\n", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"NonCommutativeMultiply", " ", "@@", " ", 
+               RowBox[{"PositionQInFrontOfList", "[", 
+                RowBox[{"{", "n", "}"}], "]"}]}], " ", "/.", "\n", 
+              "         ", "\n", "         ", 
+              RowBox[{
+               RowBox[{"NonCommutativeMultiply", "[", "x_", "]"}], " ", ":>", 
+               " ", "x"}]}], ")"}]}], "/", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+             "NonCommutativeMultiply", " ", "@@", " ", "\n", "          ", 
+              RowBox[{"PositionQInFrontOfList", "[", 
+               RowBox[{"Denominator", " ", "/@", " ", 
+                RowBox[{"{", "d", "}"}]}], "]"}]}], " ", "/.", " ", "\n", 
+             "         ", 
+             RowBox[{
+              RowBox[{"NonCommutativeMultiply", "[", "y_", "]"}], " ", ":>", 
+              " ", "y"}]}], ")"}]}]}], ",", " ", "\n", "     ", 
+         RowBox[{
+          RowBox[{"NonCommutativeMultiply", "[", 
+           RowBox[{"i", " ", ":", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"_", "?", "NumericQ"}], " ", ".."}], ")"}]}], "]"}], 
+          " ", ":>", " ", 
+          RowBox[{"Times", "[", "i", "]"}]}], ",", " ", "\n", "     ", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"u", " ", ":", " ", 
+            RowBox[{"NonCommutativeMultiply", "[", "___", "]"}]}], " ", "/;", 
+           " ", 
+           RowBox[{
+            RowBox[{"Cases", "[", 
+             RowBox[{"u", ",", " ", 
+              RowBox[{"q", " ", "|", " ", 
+               RowBox[{"q", "^", "_"}]}]}], "]"}], " ", "!=", " ", 
+            RowBox[{"{", "}"}]}]}], " ", ":>", " ", "\n", "      ", 
+          RowBox[{"NonCommutativeMultiply", " ", "@@", " ", 
+           RowBox[{"PositionQInFrontOfList", "[", 
+            RowBox[{"List", " ", "@@", " ", "u"}], "]"}]}]}], ",", " ", "\n", 
+         "     ", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Inactive", "[", "Times", "]"}], "[", "y__", "]"}], " ", ":>",
+           " ", 
+          RowBox[{"NonCommutativeMultiply", "[", "y", "]"}]}]}], "}"}]}], " ",
+       "/.", " ", "\n", "   ", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Inactive", "[", "Times", "]"}], "[", 
+        RowBox[{"i", " ", ":", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"_", "?", "NumericQ"}], " ", ".."}], ")"}]}], "]"}], " ", ":>",
+        " ", 
+       RowBox[{"Times", "[", "i", "]"}]}]}]}], ";", "\n", " ", 
+    RowBox[{"Replace", "[", "\n", "  ", 
+     RowBox[{
+      RowBox[{"Replace", "[", 
+       RowBox[{
+        RowBox[{"DeleteCases", "[", "\n", "    ", 
+         RowBox[{
+          RowBox[{"firstoutput", " ", "/.", " ", "\n", "     ", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"OrderlessPatternSequence", "[", 
+              RowBox[{
+               RowBox[{"numbers", " ", ":", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"_", "?", "NumericQ"}], " ", ".."}], ")"}]}], ",", 
+               " ", "\n", "        ", 
+               RowBox[{"symbols", " ", ":", " ", 
+                RowBox[{"(", 
+                 RowBox[{"_Symbol", " ", "..."}], ")"}]}], ",", " ", "\n", 
+               "        ", 
+               RowBox[{"powers", " ", ":", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"_", "^", "_."}], " ", ".."}], ")"}]}]}], "]"}], 
+             " ", "**", " ", 
+             RowBox[{"(", 
+              RowBox[{"plus", " ", ":", " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"+", "__"}], ")"}], " ", "..."}], ")"}]}], ")"}]}], 
+            " ", ":>", " ", "\n", "      ", 
+            RowBox[{
+             RowBox[{"Times", " ", "@@", " ", "numbers"}], " ", 
+             RowBox[{
+             "NonCommutativeMultiply", " ", "@@", " ", "\n", "        ", 
+              RowBox[{"PositionQInFrontOfList", "[", 
+               RowBox[{"Join", "[", 
+                RowBox[{
+                 RowBox[{"{", "symbols", "}"}], ",", " ", 
+                 RowBox[{"{", "powers", "}"}], ",", " ", 
+                 RowBox[{"{", "plus", "}"}]}], "]"}], "]"}]}]}]}]}], ",", " ",
+           "\n", "    ", 
+          RowBox[{"NonCommutativeMultiply", "[", "]"}], ",", " ", "All"}], 
+         "]"}], ",", " ", 
+        RowBox[{
+         RowBox[{"NonCommutativeMultiply", "[", "x_", "]"}], " ", ":>", " ", 
+         "x"}], ",", " ", "\n", "   ", "All"}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"NonCommutativeMultiply", "[", "\n", "     ", 
+         RowBox[{
+          RowBox[{"nonqs", " ", ":", " ", 
+           RowBox[{"Repeated", "[", 
+            RowBox[{"_", "?", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Head", "[", "#", "]"}], " ", "==", " ", "Symbol"}], 
+                " ", "&&", " ", 
+                RowBox[{"#", " ", "=!=", " ", "q"}]}], " ", "&"}], ")"}]}], 
+            "]"}]}], ",", " ", "\n", "     ", 
+          RowBox[{"qs", " ", ":", " ", 
+           RowBox[{"Power", "[", 
+            RowBox[{
+             RowBox[{"NonCommutativeMultiply", "[", 
+              RowBox[{"q", ",", " ", "_"}], "]"}], ",", " ", "_"}], "]"}]}]}],
+          "]"}], " ", ":>", " ", "\n", "    ", 
+        RowBox[{"NonCommutativeMultiply", "[", 
+         RowBox[{"qs", ",", " ", "nonqs"}], "]"}]}], "}"}], ",", " ", "All"}],
+      "]"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{3.8949815673670273`*^9},
+ CellLabel->"In[6]:=",
+ CellID->21969815,ExpressionUUID->"0cacd8f5-23dc-4ea0-ac55-a8d2c46faef8"],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["q", 
+   RowBox[{
+    RowBox[{"-", "1"}], "+", "n"}]], "**", "a", "**", "b", "**", "c", "**", 
+  "d"}]], "Output",
+ CellChangeTimes->{3.8949815689227724`*^9},
+ CellLabel->"Out[6]=",
+ CellID->157418928,ExpressionUUID->"e67930fe-c619-44f7-89b3-a87489619bf5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Module", "[", 
+  RowBox[{
+   RowBox[{
+   "{", "PeterBurbery`BasicHypergeometricFunctions`Private`firstoutput", 
+    "}"}], ",", 
+   RowBox[{
+    RowBox[{
+    "PeterBurbery`BasicHypergeometricFunctions`Private`firstoutput", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Inactivate", "[", 
+        RowBox[{
+         RowBox[{"a", " ", "b", " ", "c", " ", "d", " ", 
+          SuperscriptBox["q", 
+           RowBox[{"n", "-", "1"}]]}], ",", "Times"}], "]"}], "//.", 
+       "\[VeryThinSpace]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"Inactive", "[", "Times", "]"}], "[", 
+           RowBox[{"PeterBurbery`BasicHypergeometricFunctions`Private`i", ":", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"_", "?", "AtomQ"}], ".."}], ")"}]}], "]"}], 
+          "\[RuleDelayed]", 
+          RowBox[{"NonCommutativeMultiply", "@@", 
+           RowBox[{"PositionQInFrontOfList", "[", 
+            RowBox[{
+            "{", "PeterBurbery`BasicHypergeometricFunctions`Private`i", "}"}],
+             "]"}]}]}], ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Inactive", "[", "Times", "]"}], "[", 
+           RowBox[{"OrderlessPatternSequence", "[", 
+            RowBox[{
+             RowBox[{
+             "PeterBurbery`BasicHypergeometricFunctions`Private`n", ":", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  SuperscriptBox["_", 
+                   RowBox[{"_", "?", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"#1", ">", "0"}], "&"}], ")"}]}]], "|", 
+                  RowBox[{"_", "?", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    "PeterBurbery`BasicHypergeometricFunctions`Private`\
+NumeratorTermQ", "[", "#1", "]"}], "&"}], ")"}]}]}], ")"}], ".."}], ")"}]}], 
+             ",", 
+             RowBox[{
+             "PeterBurbery`BasicHypergeometricFunctions`Private`d", ":", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  SuperscriptBox["_", 
+                   RowBox[{"_", "?", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"#1", "<", "0"}], "&"}], ")"}]}]], "|", 
+                  RowBox[{"_", "?", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    "PeterBurbery`BasicHypergeometricFunctions`Private`\
+DenominatorTermQ", "[", "#1", "]"}], "&"}], ")"}]}]}], ")"}], ".."}], 
+               ")"}]}]}], "]"}], "]"}], "\[RuleDelayed]", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"NonCommutativeMultiply", "@@", 
+              RowBox[{"PositionQInFrontOfList", "[", 
+               RowBox[{
+               "{", "PeterBurbery`BasicHypergeometricFunctions`Private`n", 
+                "}"}], "]"}]}], "/.", "\[VeryThinSpace]", 
+             RowBox[{
+              RowBox[{
+              "NonCommutativeMultiply", "[", 
+               "PeterBurbery`BasicHypergeometricFunctions`Private`x_", "]"}], 
+              "\[RuleDelayed]", 
+              "PeterBurbery`BasicHypergeometricFunctions`Private`x"}]}], 
+            ")"}], "/", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"NonCommutativeMultiply", "@@", 
+              RowBox[{"PositionQInFrontOfList", "[", 
+               RowBox[{"Denominator", "/@", 
+                RowBox[{
+                "{", "PeterBurbery`BasicHypergeometricFunctions`Private`d", 
+                 "}"}]}], "]"}]}], "/.", "\[VeryThinSpace]", 
+             RowBox[{
+              RowBox[{
+              "NonCommutativeMultiply", "[", 
+               "PeterBurbery`BasicHypergeometricFunctions`Private`y_", "]"}], 
+              "\[RuleDelayed]", 
+              "PeterBurbery`BasicHypergeometricFunctions`Private`y"}]}], 
+            ")"}]}]}], ",", 
+         RowBox[{
+          RowBox[{"NonCommutativeMultiply", "[", 
+           RowBox[{"PeterBurbery`BasicHypergeometricFunctions`Private`i", ":", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"_", "?", "NumericQ"}], ".."}], ")"}]}], "]"}], 
+          "\[RuleDelayed]", 
+          RowBox[{
+          "Times", "[", "PeterBurbery`BasicHypergeometricFunctions`Private`i",
+            "]"}]}], ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"PeterBurbery`BasicHypergeometricFunctions`Private`u", ":", 
+            RowBox[{"NonCommutativeMultiply", "[", "___", "]"}]}], "/;", 
+           RowBox[{
+            RowBox[{"Cases", "[", 
+             RowBox[{
+             "PeterBurbery`BasicHypergeometricFunctions`Private`u", ",", 
+              RowBox[{
+              "PeterBurbery`BasicHypergeometricFunctions`Private`q", "|", 
+               
+               SuperscriptBox[
+                "PeterBurbery`BasicHypergeometricFunctions`Private`q", 
+                "_"]}]}], "]"}], "\[NotEqual]", 
+            RowBox[{"{", "}"}]}]}], "\[RuleDelayed]", 
+          RowBox[{"NonCommutativeMultiply", "@@", 
+           RowBox[{"PositionQInFrontOfList", "[", 
+            RowBox[{
+            "List", "@@", 
+             "PeterBurbery`BasicHypergeometricFunctions`Private`u"}], 
+            "]"}]}]}], ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Inactive", "[", "Times", "]"}], "[", 
+           "PeterBurbery`BasicHypergeometricFunctions`Private`y__", "]"}], 
+          "\[RuleDelayed]", 
+          RowBox[{
+          "NonCommutativeMultiply", "[", 
+           "PeterBurbery`BasicHypergeometricFunctions`Private`y", "]"}]}]}], 
+        "}"}]}], "/.", "\[VeryThinSpace]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Inactive", "[", "Times", "]"}], "[", 
+        RowBox[{"PeterBurbery`BasicHypergeometricFunctions`Private`i", ":", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"_", "?", "NumericQ"}], ".."}], ")"}]}], "]"}], 
+       "\[RuleDelayed]", 
+       RowBox[{
+       "Times", "[", "PeterBurbery`BasicHypergeometricFunctions`Private`i", 
+        "]"}]}]}]}], ";", 
+    RowBox[{"Replace", "[", 
+     RowBox[{
+      RowBox[{"Replace", "[", 
+       RowBox[{
+        RowBox[{"DeleteCases", "[", 
+         RowBox[{
+          RowBox[{
+          "PeterBurbery`BasicHypergeometricFunctions`Private`firstoutput", "/.",
+            "\[VeryThinSpace]", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"OrderlessPatternSequence", "[", 
+              RowBox[{
+               RowBox[{
+               "PeterBurbery`BasicHypergeometricFunctions`Private`numbers", 
+                ":", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"_", "?", "NumericQ"}], ".."}], ")"}]}], ",", 
+               RowBox[{
+               "PeterBurbery`BasicHypergeometricFunctions`Private`symbols", 
+                ":", 
+                RowBox[{"(", 
+                 RowBox[{"_Symbol", "..."}], ")"}]}], ",", 
+               RowBox[{
+               "PeterBurbery`BasicHypergeometricFunctions`Private`powers", 
+                ":", 
+                RowBox[{"(", 
+                 RowBox[{
+                  SuperscriptBox["_", "_."], ".."}], ")"}]}]}], "]"}], "**", 
+             RowBox[{"(", 
+              RowBox[{
+              "PeterBurbery`BasicHypergeometricFunctions`Private`plus", ":", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"+", "__"}], ")"}], "..."}], ")"}]}], ")"}]}], 
+            "\[RuleDelayed]", 
+            RowBox[{
+             RowBox[{
+             "Times", "@@", 
+              "PeterBurbery`BasicHypergeometricFunctions`Private`numbers"}], 
+             " ", 
+             RowBox[{"NonCommutativeMultiply", "@@", 
+              RowBox[{"PositionQInFrontOfList", "[", 
+               RowBox[{"Join", "[", 
+                RowBox[{
+                 RowBox[{
+                 "{", "PeterBurbery`BasicHypergeometricFunctions`Private`\
+symbols", "}"}], ",", 
+                 RowBox[{
+                 "{", "PeterBurbery`BasicHypergeometricFunctions`Private`\
+powers", "}"}], ",", 
+                 RowBox[{
+                 "{", "PeterBurbery`BasicHypergeometricFunctions`Private`\
+plus", "}"}]}], "]"}], "]"}]}]}]}]}], ",", 
+          RowBox[{"NonCommutativeMultiply", "[", "]"}], ",", "All"}], "]"}], 
+        ",", 
+        RowBox[{
+         RowBox[{
+         "NonCommutativeMultiply", "[", 
+          "PeterBurbery`BasicHypergeometricFunctions`Private`x_", "]"}], 
+         "\[RuleDelayed]", 
+         "PeterBurbery`BasicHypergeometricFunctions`Private`x"}], ",", 
+        "All"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+          "PeterBurbery`BasicHypergeometricFunctions`Private`nonqs", ":", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"_", "?", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Head", "[", "#1", "]"}], "\[Equal]", "Symbol"}], "&&", 
+                 RowBox[{
+                 "#1", "=!=", 
+                  "PeterBurbery`BasicHypergeometricFunctions`Private`q"}]}], 
+                "&"}], ")"}]}], ".."}], ")"}]}], ")"}], "**", 
+         RowBox[{"(", 
+          RowBox[{"PeterBurbery`BasicHypergeometricFunctions`Private`qs", ":", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{
+             "PeterBurbery`BasicHypergeometricFunctions`Private`q", "**", 
+              "_"}], ")"}], "_"]}], ")"}]}], "\[RuleDelayed]", 
+        RowBox[{
+        "PeterBurbery`BasicHypergeometricFunctions`Private`qs", "**", 
+         "PeterBurbery`BasicHypergeometricFunctions`Private`nonqs"}]}], "}"}],
+       ",", "All"}], "]"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{3.894981634088307*^9},
+ CellLabel->"In[11]:=",
+ CellID->173646475,ExpressionUUID->"8166455e-febd-4dac-b422-66f59e9787e0"],
+
+Cell[BoxData[
+ RowBox[{"a", "**", "b", "**", "c", "**", "d", "**", 
+  SuperscriptBox["q", 
+   RowBox[{
+    RowBox[{"-", "1"}], "+", "n"}]]}]], "Output",
+ CellChangeTimes->{3.8949816352760525`*^9, 3.894981897511026*^9},
+ CellLabel->"Out[11]=",
+ CellID->202299149,ExpressionUUID->"32ac0768-b6a0-47e9-beb7-94ec0c80417a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Module", "[", 
+  RowBox[{
+   RowBox[{
+   "{", "PeterBurbery`BasicHypergeometricFunctions`Private`firstoutput", 
+    "}"}], ",", 
+   RowBox[{
+    RowBox[{
+    "PeterBurbery`BasicHypergeometricFunctions`Private`firstoutput", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Inactivate", "[", 
+        RowBox[{
+         RowBox[{"a", " ", "b", " ", "c", " ", "d", " ", 
+          SuperscriptBox["q", 
+           RowBox[{"n", "-", "1"}]]}], ",", "Times"}], "]"}], "//.", 
+       "\[VeryThinSpace]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"Inactive", "[", "Times", "]"}], "[", 
+           RowBox[{"PeterBurbery`BasicHypergeometricFunctions`Private`i", ":", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"_", "?", "AtomQ"}], ".."}], ")"}]}], "]"}], 
+          "\[RuleDelayed]", 
+          RowBox[{"NonCommutativeMultiply", "@@", 
+           RowBox[{"PositionQInFrontOfList", "[", 
+            RowBox[{
+            "{", "PeterBurbery`BasicHypergeometricFunctions`Private`i", "}"}],
+             "]"}]}]}], ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Inactive", "[", "Times", "]"}], "[", 
+           RowBox[{"OrderlessPatternSequence", "[", 
+            RowBox[{
+             RowBox[{"n", ":", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  SuperscriptBox["_", 
+                   RowBox[{"_", "?", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"#1", ">", "0"}], "&"}], ")"}]}]], "|", 
+                  RowBox[{"_", "?", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    "PeterBurbery`BasicHypergeometricFunctions`Private`\
+NumeratorTermQ", "[", "#1", "]"}], "&"}], ")"}]}]}], ")"}], ".."}], ")"}]}], 
+             ",", 
+             RowBox[{"d", ":", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  SuperscriptBox["_", 
+                   RowBox[{"_", "?", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"#1", "<", "0"}], "&"}], ")"}]}]], "|", 
+                  RowBox[{"_", "?", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    "PeterBurbery`BasicHypergeometricFunctions`Private`\
+DenominatorTermQ", "[", "#1", "]"}], "&"}], ")"}]}]}], ")"}], ".."}], 
+               ")"}]}]}], "]"}], "]"}], "\[RuleDelayed]", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"NonCommutativeMultiply", "@@", 
+              RowBox[{"PositionQInFrontOfList", "[", 
+               RowBox[{"{", "n", "}"}], "]"}]}], "/.", "\[VeryThinSpace]", 
+             RowBox[{
+              RowBox[{"NonCommutativeMultiply", "[", "x_", "]"}], 
+              "\[RuleDelayed]", "x"}]}], ")"}], "/", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"NonCommutativeMultiply", "@@", 
+              RowBox[{"PositionQInFrontOfList", "[", 
+               RowBox[{"Denominator", "/@", 
+                RowBox[{"{", "d", "}"}]}], "]"}]}], "/.", "\[VeryThinSpace]", 
+             RowBox[{
+              RowBox[{"NonCommutativeMultiply", "[", "y_", "]"}], 
+              "\[RuleDelayed]", "y"}]}], ")"}]}]}], ",", 
+         RowBox[{
+          RowBox[{"NonCommutativeMultiply", "[", 
+           RowBox[{"i", ":", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"_", "?", "NumericQ"}], ".."}], ")"}]}], "]"}], 
+          "\[RuleDelayed]", 
+          RowBox[{"Times", "[", "i", "]"}]}], ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"u", ":", 
+            RowBox[{"NonCommutativeMultiply", "[", "___", "]"}]}], "/;", 
+           RowBox[{
+            RowBox[{"Cases", "[", 
+             RowBox[{"u", ",", 
+              RowBox[{"q", "|", 
+               SuperscriptBox["q", "_"]}]}], "]"}], "\[NotEqual]", 
+            RowBox[{"{", "}"}]}]}], "\[RuleDelayed]", 
+          RowBox[{"NonCommutativeMultiply", "@@", 
+           RowBox[{"PositionQInFrontOfList", "[", 
+            RowBox[{"List", "@@", "u"}], "]"}]}]}], ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Inactive", "[", "Times", "]"}], "[", "y__", "]"}], 
+          "\[RuleDelayed]", 
+          RowBox[{"NonCommutativeMultiply", "[", "y", "]"}]}]}], "}"}]}], "/.",
+       "\[VeryThinSpace]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Inactive", "[", "Times", "]"}], "[", 
+        RowBox[{"i", ":", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"_", "?", "NumericQ"}], ".."}], ")"}]}], "]"}], 
+       "\[RuleDelayed]", 
+       RowBox[{"Times", "[", "i", "]"}]}]}]}], ";", 
+    RowBox[{"Replace", "[", 
+     RowBox[{
+      RowBox[{"Replace", "[", 
+       RowBox[{
+        RowBox[{"DeleteCases", "[", 
+         RowBox[{
+          RowBox[{
+          "PeterBurbery`BasicHypergeometricFunctions`Private`firstoutput", "/.",
+            "\[VeryThinSpace]", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"OrderlessPatternSequence", "[", 
+              RowBox[{
+               RowBox[{"numbers", ":", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"_", "?", "NumericQ"}], ".."}], ")"}]}], ",", 
+               RowBox[{"symbols", ":", 
+                RowBox[{"(", 
+                 RowBox[{"_Symbol", "..."}], ")"}]}], ",", 
+               RowBox[{"powers", ":", 
+                RowBox[{"(", 
+                 RowBox[{
+                  SuperscriptBox["_", "_."], ".."}], ")"}]}]}], "]"}], "**", 
+             RowBox[{"(", 
+              RowBox[{"plus", ":", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"+", "__"}], ")"}], "..."}], ")"}]}], ")"}]}], 
+            "\[RuleDelayed]", 
+            RowBox[{
+             RowBox[{"Times", "@@", "numbers"}], " ", 
+             RowBox[{"NonCommutativeMultiply", "@@", 
+              RowBox[{"PositionQInFrontOfList", "[", 
+               RowBox[{"Join", "[", 
+                RowBox[{
+                 RowBox[{"{", "symbols", "}"}], ",", 
+                 RowBox[{"{", "powers", "}"}], ",", 
+                 RowBox[{"{", "plus", "}"}]}], "]"}], "]"}]}]}]}]}], ",", 
+          RowBox[{"NonCommutativeMultiply", "[", "]"}], ",", "All"}], "]"}], 
+        ",", 
+        RowBox[{
+         RowBox[{"NonCommutativeMultiply", "[", "x_", "]"}], "\[RuleDelayed]",
+          "x"}], ",", "All"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"nonqs", ":", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"_", "?", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Head", "[", "#1", "]"}], "\[Equal]", "Symbol"}], "&&", 
+                 RowBox[{"#1", "=!=", "q"}]}], "&"}], ")"}]}], ".."}], 
+            ")"}]}], ")"}], "**", 
+         RowBox[{"(", 
+          RowBox[{"qs", ":", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"q", "**", "_"}], ")"}], "_"]}], ")"}]}], 
+        "\[RuleDelayed]", 
+        RowBox[{"qs", "**", "nonqs"}]}], "}"}], ",", "All"}], "]"}]}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.894981654864444*^9, 3.894981771533656*^9}},
+ CellLabel->"In[8]:=",
+ CellID->30857652,ExpressionUUID->"de2936b4-acfa-49d3-b894-732c03afb353"],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["q", 
+   RowBox[{
+    RowBox[{"-", "1"}], "+", "n"}]], "**", "a", "**", "b", "**", "c", "**", 
+  "d"}]], "Output",
+ CellChangeTimes->{3.894981773738967*^9},
+ CellLabel->"Out[8]=",
+ CellID->516730849,ExpressionUUID->"c7bf196a-8ddd-425c-b530-23f2eedd2aaa"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Block", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b", ",", "c", ",", "d", ",", "q", ",", "n"}], "}"}], 
+   ",", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{
+     "{", "PeterBurbery`BasicHypergeometricFunctions`Private`firstoutput", 
+      "}"}], ",", 
+     RowBox[{
+      RowBox[{
+      "PeterBurbery`BasicHypergeometricFunctions`Private`firstoutput", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Inactivate", "[", 
+          RowBox[{
+           RowBox[{"a", " ", "b", " ", "c", " ", "d", " ", 
+            SuperscriptBox["q", 
+             RowBox[{"n", "-", "1"}]]}], ",", "Times"}], "]"}], "//.", 
+         "\[VeryThinSpace]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"Inactive", "[", "Times", "]"}], "[", 
+             RowBox[{
+             "PeterBurbery`BasicHypergeometricFunctions`Private`i", ":", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"_", "?", "AtomQ"}], ".."}], ")"}]}], "]"}], 
+            "\[RuleDelayed]", 
+            RowBox[{"NonCommutativeMultiply", "@@", 
+             RowBox[{"PositionQInFrontOfList", "[", 
+              RowBox[{
+              "{", "PeterBurbery`BasicHypergeometricFunctions`Private`i", 
+               "}"}], "]"}]}]}], ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Inactive", "[", "Times", "]"}], "[", 
+             RowBox[{"OrderlessPatternSequence", "[", 
+              RowBox[{
+               RowBox[{
+               "PeterBurbery`BasicHypergeometricFunctions`Private`n", ":", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["_", 
+                    RowBox[{"_", "?", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"#1", ">", "0"}], "&"}], ")"}]}]], "|", 
+                    RowBox[{"_", "?", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    "PeterBurbery`BasicHypergeometricFunctions`Private`\
+NumeratorTermQ", "[", "#1", "]"}], "&"}], ")"}]}]}], ")"}], ".."}], ")"}]}], 
+               ",", 
+               RowBox[{
+               "PeterBurbery`BasicHypergeometricFunctions`Private`d", ":", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["_", 
+                    RowBox[{"_", "?", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"#1", "<", "0"}], "&"}], ")"}]}]], "|", 
+                    RowBox[{"_", "?", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    "PeterBurbery`BasicHypergeometricFunctions`Private`\
+DenominatorTermQ", "[", "#1", "]"}], "&"}], ")"}]}]}], ")"}], ".."}], 
+                 ")"}]}]}], "]"}], "]"}], "\[RuleDelayed]", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"NonCommutativeMultiply", "@@", 
+                RowBox[{"PositionQInFrontOfList", "[", 
+                 RowBox[{
+                 "{", "PeterBurbery`BasicHypergeometricFunctions`Private`n", 
+                  "}"}], "]"}]}], "/.", "\[VeryThinSpace]", 
+               RowBox[{
+                RowBox[{
+                "NonCommutativeMultiply", "[", 
+                 "PeterBurbery`BasicHypergeometricFunctions`Private`x_", 
+                 "]"}], "\[RuleDelayed]", 
+                "PeterBurbery`BasicHypergeometricFunctions`Private`x"}]}], 
+              ")"}], "/", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"NonCommutativeMultiply", "@@", 
+                RowBox[{"PositionQInFrontOfList", "[", 
+                 RowBox[{"Denominator", "/@", 
+                  RowBox[{
+                  "{", "PeterBurbery`BasicHypergeometricFunctions`Private`d", 
+                   "}"}]}], "]"}]}], "/.", "\[VeryThinSpace]", 
+               RowBox[{
+                RowBox[{
+                "NonCommutativeMultiply", "[", 
+                 "PeterBurbery`BasicHypergeometricFunctions`Private`y_", 
+                 "]"}], "\[RuleDelayed]", 
+                "PeterBurbery`BasicHypergeometricFunctions`Private`y"}]}], 
+              ")"}]}]}], ",", 
+           RowBox[{
+            RowBox[{"NonCommutativeMultiply", "[", 
+             RowBox[{
+             "PeterBurbery`BasicHypergeometricFunctions`Private`i", ":", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"_", "?", "NumericQ"}], ".."}], ")"}]}], "]"}], 
+            "\[RuleDelayed]", 
+            RowBox[{
+            "Times", "[", 
+             "PeterBurbery`BasicHypergeometricFunctions`Private`i", "]"}]}], 
+           ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+             "PeterBurbery`BasicHypergeometricFunctions`Private`u", ":", 
+              RowBox[{"NonCommutativeMultiply", "[", "___", "]"}]}], "/;", 
+             RowBox[{
+              RowBox[{"Cases", "[", 
+               RowBox[{
+               "PeterBurbery`BasicHypergeometricFunctions`Private`u", ",", 
+                RowBox[{
+                "PeterBurbery`BasicHypergeometricFunctions`Private`q", "|", 
+                 
+                 SuperscriptBox[
+                  "PeterBurbery`BasicHypergeometricFunctions`Private`q", 
+                  "_"]}]}], "]"}], "\[NotEqual]", 
+              RowBox[{"{", "}"}]}]}], "\[RuleDelayed]", 
+            RowBox[{"NonCommutativeMultiply", "@@", 
+             RowBox[{"PositionQInFrontOfList", "[", 
+              RowBox[{
+              "List", "@@", 
+               "PeterBurbery`BasicHypergeometricFunctions`Private`u"}], 
+              "]"}]}]}], ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Inactive", "[", "Times", "]"}], "[", 
+             "PeterBurbery`BasicHypergeometricFunctions`Private`y__", "]"}], 
+            "\[RuleDelayed]", 
+            RowBox[{
+            "NonCommutativeMultiply", "[", 
+             "PeterBurbery`BasicHypergeometricFunctions`Private`y", "]"}]}]}],
+           "}"}]}], "/.", "\[VeryThinSpace]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Inactive", "[", "Times", "]"}], "[", 
+          RowBox[{"PeterBurbery`BasicHypergeometricFunctions`Private`i", ":", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"_", "?", "NumericQ"}], ".."}], ")"}]}], "]"}], 
+         "\[RuleDelayed]", 
+         RowBox[{
+         "Times", "[", "PeterBurbery`BasicHypergeometricFunctions`Private`i", 
+          "]"}]}]}]}], ";", 
+      RowBox[{"Replace", "[", 
+       RowBox[{
+        RowBox[{"Replace", "[", 
+         RowBox[{
+          RowBox[{"DeleteCases", "[", 
+           RowBox[{
+            RowBox[{
+            "PeterBurbery`BasicHypergeometricFunctions`Private`firstoutput", "/.",
+              "\[VeryThinSpace]", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"OrderlessPatternSequence", "[", 
+                RowBox[{
+                 RowBox[{
+                 "PeterBurbery`BasicHypergeometricFunctions`Private`numbers", 
+                  ":", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"_", "?", "NumericQ"}], ".."}], ")"}]}], ",", 
+                 RowBox[{
+                 "PeterBurbery`BasicHypergeometricFunctions`Private`symbols", 
+                  ":", 
+                  RowBox[{"(", 
+                   RowBox[{"_Symbol", "..."}], ")"}]}], ",", 
+                 RowBox[{
+                 "PeterBurbery`BasicHypergeometricFunctions`Private`powers", 
+                  ":", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["_", "_."], ".."}], ")"}]}]}], "]"}], "**", 
+               RowBox[{"(", 
+                RowBox[{
+                "PeterBurbery`BasicHypergeometricFunctions`Private`plus", ":", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{"+", "__"}], ")"}], "..."}], ")"}]}], ")"}]}], 
+              "\[RuleDelayed]", 
+              RowBox[{
+               RowBox[{
+               "Times", "@@", 
+                "PeterBurbery`BasicHypergeometricFunctions`Private`numbers"}],
+                " ", 
+               RowBox[{"NonCommutativeMultiply", "@@", 
+                RowBox[{"PositionQInFrontOfList", "[", 
+                 RowBox[{"Join", "[", 
+                  RowBox[{
+                   RowBox[{
+                   "{", "PeterBurbery`BasicHypergeometricFunctions`Private`\
+symbols", "}"}], ",", 
+                   RowBox[{
+                   "{", "PeterBurbery`BasicHypergeometricFunctions`Private`\
+powers", "}"}], ",", 
+                   RowBox[{
+                   "{", "PeterBurbery`BasicHypergeometricFunctions`Private`\
+plus", "}"}]}], "]"}], "]"}]}]}]}]}], ",", 
+            RowBox[{"NonCommutativeMultiply", "[", "]"}], ",", "All"}], "]"}],
+           ",", 
+          RowBox[{
+           RowBox[{
+           "NonCommutativeMultiply", "[", 
+            "PeterBurbery`BasicHypergeometricFunctions`Private`x_", "]"}], 
+           "\[RuleDelayed]", 
+           "PeterBurbery`BasicHypergeometricFunctions`Private`x"}], ",", 
+          "All"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+            "PeterBurbery`BasicHypergeometricFunctions`Private`nonqs", ":", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"_", "?", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"Head", "[", "#1", "]"}], "\[Equal]", "Symbol"}], 
+                   "&&", 
+                   RowBox[{
+                   "#1", "=!=", 
+                    "PeterBurbery`BasicHypergeometricFunctions`Private`q"}]}],
+                   "&"}], ")"}]}], ".."}], ")"}]}], ")"}], "**", 
+           RowBox[{"(", 
+            RowBox[{
+            "PeterBurbery`BasicHypergeometricFunctions`Private`qs", ":", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{
+               "PeterBurbery`BasicHypergeometricFunctions`Private`q", "**", 
+                "_"}], ")"}], "_"]}], ")"}]}], "\[RuleDelayed]", 
+          RowBox[{
+          "PeterBurbery`BasicHypergeometricFunctions`Private`qs", "**", 
+           "PeterBurbery`BasicHypergeometricFunctions`Private`nonqs"}]}], 
+         "}"}], ",", "All"}], "]"}]}]}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8949817848290215`*^9, 3.894981801164785*^9}},
+ CellLabel->"In[10]:=",
+ CellID->34212862,ExpressionUUID->"180f119f-213a-4120-ad9e-5dbda72e643d"],
+
+Cell[BoxData[
+ RowBox[{"a", "**", "b", "**", "c", "**", "d", "**", 
+  SuperscriptBox["q", 
+   RowBox[{
+    RowBox[{"-", "1"}], "+", "n"}]]}]], "Output",
+ CellChangeTimes->{{3.8949817882600565`*^9, 3.8949818017795935`*^9}},
+ CellLabel->"Out[10]=",
+ CellID->76091348,ExpressionUUID->"23847299-afed-4fcd-a99b-eafd7ab717a0"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -10557,8 +11522,8 @@ Cell["XXXX", "Keywords",
 }, Closed]]
 }, Open  ]]
 },
-WindowSize->{1141.2, 579.6},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowSize->{574.8, 579.6},
+WindowMargins->{{-4.8, Automatic}, {Automatic, 0}},
 TaggingRules-><|"Paclet" -> "PeterBurbery/BasicHypergeometricFunctions"|>,
 FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (May 18, 2023)",
 StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "TechNotePageStylesExt.nb", 
@@ -10570,20 +11535,20 @@ ExpressionUUID->"ab883cbf-4143-4b6c-8411-58fb2a297181"
 (* Internal cache information *)
 (*CellTagsOutline
 CellTagsIndex->{
- "407df68d-e655-417b-9ff2-0449c81d58ef"->{
-  Cell[347492, 9701, 771, 20, 24, "EchoBefore",ExpressionUUID->"104d456c-ed20-4f85-a700-42712bc8cd17",
-   CellTags->"407df68d-e655-417b-9ff2-0449c81d58ef",
-   CellID->585255656]},
  "1e264c9a-d32f-444c-996b-0bb1b507d08a"->{
   Cell[348266, 9723, 1480, 42, 24, "EchoAfter",ExpressionUUID->"db7c6fb7-bb00-4871-a8a4-db62aeb14ff1",
    CellTags->"1e264c9a-d32f-444c-996b-0bb1b507d08a",
-   CellID->257068581]}
+   CellID->257068581]},
+ "407df68d-e655-417b-9ff2-0449c81d58ef"->{
+  Cell[347492, 9701, 771, 20, 24, "EchoBefore",ExpressionUUID->"104d456c-ed20-4f85-a700-42712bc8cd17",
+   CellTags->"407df68d-e655-417b-9ff2-0449c81d58ef",
+   CellID->585255656]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"407df68d-e655-417b-9ff2-0449c81d58ef", 376949, 10572},
- {"1e264c9a-d32f-444c-996b-0bb1b507d08a", 377172, 10576}
+ {"1e264c9a-d32f-444c-996b-0bb1b507d08a", 414955, 11537},
+ {"407df68d-e655-417b-9ff2-0449c81d58ef", 415178, 11541}
  }
 *)
 (*NotebookFileOutline
@@ -11171,44 +12136,68 @@ Cell[373432, 10467, 357, 7, 29, "Input",ExpressionUUID->"61f47128-ddcd-4934-a0d0
  CellID->93964102],
 Cell[373792, 10476, 235, 5, 42, "Output",ExpressionUUID->"46e501f7-ae1b-4401-a27f-e97d35282ccc",
  CellID->122682045]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[374064, 10486, 8332, 201, 599, "Input",ExpressionUUID->"0cacd8f5-23dc-4ea0-ac55-a8d2c46faef8",
+ CellID->21969815],
+Cell[382399, 10689, 297, 8, 25, "Output",ExpressionUUID->"e67930fe-c619-44f7-89b3-a87489619bf5",
+ CellID->157418928]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[382733, 10702, 10018, 250, 1142, "Input",ExpressionUUID->"8166455e-febd-4dac-b422-66f59e9787e0",
+ CellID->173646475],
+Cell[392754, 10954, 317, 7, 25, "Output",ExpressionUUID->"32ac0768-b6a0-47e9-beb7-94ec0c80417a",
+ CellID->202299149]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[393108, 10966, 7528, 195, 650, "Input",ExpressionUUID->"de2936b4-acfa-49d3-b894-732c03afb353",
+ CellID->30857652],
+Cell[400639, 11163, 295, 8, 25, "Output",ExpressionUUID->"c7bf196a-8ddd-425c-b530-23f2eedd2aaa",
+ CellID->516730849]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[400971, 11176, 10737, 261, 1197, "Input",ExpressionUUID->"180f119f-213a-4120-ad9e-5dbda72e643d",
+ CellID->34212862],
+Cell[411711, 11439, 320, 7, 25, "Output",ExpressionUUID->"23847299-afed-4fcd-a99b-eafd7ab717a0",
+ CellID->76091348]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[374100, 10489, 191, 2, 74, "TutorialMoreAboutSection",ExpressionUUID->"76801787-5f70-41d3-a497-142c85e4f5f5",
+Cell[412104, 11454, 191, 2, 74, "TutorialMoreAboutSection",ExpressionUUID->"76801787-5f70-41d3-a497-142c85e4f5f5",
  CellID->161772049],
-Cell[374294, 10493, 107, 1, 24, "TutorialMoreAbout",ExpressionUUID->"293b3931-85af-4829-9e80-7b6c6a37d4eb",
+Cell[412298, 11458, 107, 1, 24, "TutorialMoreAbout",ExpressionUUID->"293b3931-85af-4829-9e80-7b6c6a37d4eb",
  CellID->67989278]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[374438, 10499, 128, 1, 74, "RelatedTutorialsSection",ExpressionUUID->"b843fff2-33d9-4c3f-83b8-39883e476e35",
+Cell[412442, 11464, 128, 1, 74, "RelatedTutorialsSection",ExpressionUUID->"b843fff2-33d9-4c3f-83b8-39883e476e35",
  CellID->183639716],
-Cell[374569, 10502, 106, 1, 24, "RelatedTutorials",ExpressionUUID->"3ca477f5-83dd-45cf-97d5-2f16fcf8c0a1",
+Cell[412573, 11467, 106, 1, 24, "RelatedTutorials",ExpressionUUID->"3ca477f5-83dd-45cf-97d5-2f16fcf8c0a1",
  CellID->29667343]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[374724, 10509, 110, 1, 72, "MetadataSection",ExpressionUUID->"f70824db-8bb0-4d0d-a14e-72f55559f5eb",
+Cell[412728, 11474, 110, 1, 72, "MetadataSection",ExpressionUUID->"f70824db-8bb0-4d0d-a14e-72f55559f5eb",
  CellID->213044136],
-Cell[374837, 10512, 472, 11, 26, "History",ExpressionUUID->"1fbf2634-130c-4a42-b1fd-588c4e7a8f5b",
+Cell[412841, 11477, 472, 11, 26, "History",ExpressionUUID->"1fbf2634-130c-4a42-b1fd-588c4e7a8f5b",
  CellID->72794903],
 Cell[CellGroupData[{
-Cell[375334, 10527, 122, 1, 21, "CategorizationSection",ExpressionUUID->"1aa13a2a-d527-4b88-a6f6-f464858515fe",
+Cell[413338, 11492, 122, 1, 21, "CategorizationSection",ExpressionUUID->"1aa13a2a-d527-4b88-a6f6-f464858515fe",
  CellID->385949988],
-Cell[375459, 10530, 137, 2, 70, "Categorization",ExpressionUUID->"ae94e6e3-6a49-4d7e-bb24-26a709fea1f8",
+Cell[413463, 11495, 137, 2, 70, "Categorization",ExpressionUUID->"ae94e6e3-6a49-4d7e-bb24-26a709fea1f8",
  CellID->509057587],
-Cell[375599, 10534, 169, 2, 70, "Categorization",ExpressionUUID->"c05029b2-5853-47e8-8989-2c88539ca3a9",
+Cell[413603, 11499, 169, 2, 70, "Categorization",ExpressionUUID->"c05029b2-5853-47e8-8989-2c88539ca3a9",
  CellID->519804101],
-Cell[375771, 10538, 166, 2, 70, "Categorization",ExpressionUUID->"44216c23-99d0-4901-8e9a-cf8468fac854",
+Cell[413775, 11503, 166, 2, 70, "Categorization",ExpressionUUID->"44216c23-99d0-4901-8e9a-cf8468fac854",
  CellID->392509224],
-Cell[375940, 10542, 200, 4, 70, "Categorization",ExpressionUUID->"764c4ddd-b0e0-480f-80bd-532b6aa0f96f",
+Cell[413944, 11507, 200, 4, 70, "Categorization",ExpressionUUID->"764c4ddd-b0e0-480f-80bd-532b6aa0f96f",
  CellID->22346959]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[376177, 10551, 110, 1, 21, "KeywordsSection",ExpressionUUID->"bf86c44b-4960-45b2-b08f-b5f2b7bff7e6",
+Cell[414181, 11516, 110, 1, 21, "KeywordsSection",ExpressionUUID->"bf86c44b-4960-45b2-b08f-b5f2b7bff7e6",
  CellID->426123361],
-Cell[376290, 10554, 99, 1, 70, "Keywords",ExpressionUUID->"196dd428-ec9d-4b25-82c2-5e89d985bbff",
+Cell[414294, 11519, 99, 1, 70, "Keywords",ExpressionUUID->"196dd428-ec9d-4b25-82c2-5e89d985bbff",
  CellID->393918541]
 }, Closed]]
 }, Open  ]]
