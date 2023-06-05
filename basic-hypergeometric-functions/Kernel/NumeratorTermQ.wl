@@ -6,19 +6,16 @@
 
 (* Declare your packages public symbols here. *)
 
-PeterBurbery`BasicHypergeometricFunctions`DenominatorQ;
+PeterBurbery`BasicHypergeometricFunctions`NumeratorTermQ;
 
 
 Begin["`Private`"];
 
 (* Define your public and private symbols here. *)
 
-DenominatorQ//ClearAll
+NumeratorTermQ//ClearAll
 
-
-
-  DenominatorQ[input_] := Denominator[input] =!= 1
-
+NumeratorTermQ[input_] := Which[And @@ { !NumeratorQ[input], DenominatorQ[input]}, False, And @@ {NumeratorQ[input], !DenominatorQ[input]}, True, And @@ {NumeratorQ[input], DenominatorQ[input]}, True, And @@ { !NumeratorQ[input], !DenominatorQ[input]}, True]
 End[]; (* End `Private` *)
 
 EndPackage[];
