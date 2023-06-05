@@ -1,0 +1,4051 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    136150,       4043]
+NotebookOptionsPosition[    123682,       3750]
+NotebookOutlinePosition[    124236,       3768]
+CellTagsIndexPosition[    124193,       3765]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Rearranging Expressions", "Title",
+ CellID->555292541,ExpressionUUID->"4392a549-f5bc-4eed-86cd-bd4f56abb022"],
+
+Cell[TextData[{
+ "The functions defined in the ",
+ Cell[BoxData["PeterBurbery`BasicHypergeometricFunctions`"], "InlineFormula",
+  FormatType->StandardForm,ExpressionUUID->
+  "33d3b121-2af1-420b-8d3c-d9ff2a4461b4"],
+ " context provide support for placing the q in front."
+}], "Text",
+ CellChangeTimes->{{3.894968939778677*^9, 3.8949689950377684`*^9}},
+ CellID->34242218,ExpressionUUID->"da171d77-9ecf-45b9-aa05-d6d9041a939a"],
+
+Cell[CellGroupData[{
+
+Cell["This loads the package:", "MathCaption",
+ CellChangeTimes->{{3.894968996501567*^9, 3.8949690035870385`*^9}},
+ CellID->513850824,ExpressionUUID->"7bada169-7c3d-4776-b7f7-9de2435b9070"],
+
+Cell[BoxData[
+ RowBox[{"<<", "PeterBurbery`BasicHypergeometricFunctions`"}]], "Input",
+ CellChangeTimes->{{3.8949690042623696`*^9, 3.894969012464512*^9}},
+ CellLabel->"In[9]:=",
+ CellID->542855510,ExpressionUUID->"0dee9fdd-35d3-4720-adb9-0ac50b09f781"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Put Q in the front", "Section",
+ CellChangeTimes->{{3.3702661238247538`*^9, 3.370266130890768*^9}, 
+   3.371301959371707*^9, {3.3751044240283327`*^9, 3.375104428916211*^9}, {
+   3.8949690267658215`*^9, 3.894969030164384*^9}},
+ CellID->2591,ExpressionUUID->"e289c6af-e7f4-4b1c-818e-9eda6dd9cb82"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+The built-in function PositionQInFrontOfList puts q in front of a list. The \
+function works by using UnsortedComplement.\
+\>", "Text",
+ CellChangeTimes->{{3.8949690314164023`*^9, 3.894969074727002*^9}},
+ CellID->590619292,ExpressionUUID->"b612293d-b26c-4a4f-9c16-0ee176d43931"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PositionQInFrontOfList", "[", 
+  RowBox[{"{", 
+   RowBox[{"b", ",", "c", ",", "d", ",", "q", ",", "f", ",", "q"}], "}"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.894969041619733*^9, 3.894969080736179*^9}},
+ CellLabel->"In[10]:=",
+ CellID->219423307,ExpressionUUID->"c005b7de-a8c7-45df-9f11-f64113601e19"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"q", ",", "q", ",", "b", ",", "c", ",", "d", ",", "f"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.89496908104531*^9},
+ CellLabel->"Out[10]=",
+ CellID->272831206,ExpressionUUID->"9e37fe5e-f82a-4f84-a340-a0975f379d0a"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Rearranging", "Section",
+ CellChangeTimes->{{3.3702661238247538`*^9, 3.370266130890768*^9}, 
+   3.371301959371707*^9, {3.3751044240283327`*^9, 3.375104428916211*^9}, {
+   3.8949690267658215`*^9, 3.894969030164384*^9}, {3.894969115477767*^9, 
+   3.8949691269123325`*^9}},
+ CellID->237748664,ExpressionUUID->"00036f6a-63fd-4f4f-a2de-66a749e3d47c"],
+
+Cell[CellGroupData[{
+
+Cell["This is the expression tree of a a b s a s q s d \
+s\[NonBreakingSpace]d:", "MathCaption",
+ CellChangeTimes->{{3.8949691282524586`*^9, 3.8949691430957074`*^9}},
+ CellID->30906755,ExpressionUUID->"e250cd9f-9b0e-4e7b-8c8b-dd8939ecf38b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"exampleInput", "=", 
+  RowBox[{
+  "a", " ", "b", " ", "s", " ", "a", " ", "s", " ", "q", " ", "s", " ", "d", 
+   " ", "s", " ", "d"}]}]], "Input",
+ CellChangeTimes->{{3.8949691440325036`*^9, 3.894969152146666*^9}},
+ CellLabel->"In[12]:=",
+ CellID->501709717,ExpressionUUID->"1542516c-d21f-43bc-a96f-434c0b7c4782"],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["a", "2"], " ", "b", " ", 
+  SuperscriptBox["d", "2"], " ", "q", " ", 
+  SuperscriptBox["s", "4"]}]], "Output",
+ CellChangeTimes->{3.8949691525907345`*^9},
+ CellLabel->"Out[12]=",
+ CellID->227264227,ExpressionUUID->"5ce1d3a9-dcd7-4e75-9690-197784b36a5a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ExpressionTree", "[", "exampleInput", "]"}]], "Input",
+ CellChangeTimes->{{3.8949691546072807`*^9, 3.894969158038974*^9}},
+ CellLabel->"In[13]:=",
+ CellID->45907700,ExpressionUUID->"afa7c4e4-7e9c-42d8-8885-a887ef7faee4"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["Trees",
+   DynamicModuleBox[{Typeset`tree = HoldComplete[
+     Tree[Times, {
+       Tree[Power, {
+         Tree[$CellContext`a, None], 
+         Tree[2, None]}], 
+       Tree[$CellContext`b, None], 
+       Tree[Power, {
+         Tree[$CellContext`d, None], 
+         Tree[2, None]}], 
+       Tree[$CellContext`q, None], 
+       Tree[Power, {
+         Tree[$CellContext`s, None], 
+         Tree[4, None]}]}]]}, 
+    NamespaceBox[{
+      {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+       {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+        AbsoluteThickness[1], 
+        LineBox[{{1.7480147469502525`, 1.5148043949059136`}, {
+         0.3496029493900505, 0.7574021974529568}}]}, 
+       {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+        AbsoluteThickness[1], 
+        LineBox[{{1.7480147469502525`, 1.5148043949059136`}, {
+         1.0488088481701514`, 0.7574021974529568}}]}, 
+       {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+        AbsoluteThickness[1], 
+        LineBox[{{1.7480147469502525`, 1.5148043949059136`}, {
+         1.7480147469502525`, 0.7574021974529568}}]}, 
+       {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+        AbsoluteThickness[1], 
+        LineBox[{{1.7480147469502525`, 1.5148043949059136`}, {
+         2.4472206457303534`, 0.7574021974529568}}]}, 
+       {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+        AbsoluteThickness[1], 
+        LineBox[{{1.7480147469502525`, 1.5148043949059136`}, {
+         3.1464265445104544`, 0.7574021974529568}}]}, 
+       {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+        AbsoluteThickness[1], 
+        LineBox[{{0.3496029493900505, 0.7574021974529568}, {0., 0.}}]}, 
+       {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+        AbsoluteThickness[1], 
+        LineBox[{{0.3496029493900505, 0.7574021974529568}, {0.699205898780101,
+          0.}}]}, 
+       {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+        AbsoluteThickness[1], 
+        LineBox[{{1.7480147469502525`, 0.7574021974529568}, {
+         1.398411797560202, 0.}}]}, 
+       {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+        AbsoluteThickness[1], 
+        LineBox[{{1.7480147469502525`, 0.7574021974529568}, {
+         2.097617696340303, 0.}}]}, 
+       {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+        AbsoluteThickness[1], 
+        LineBox[{{3.1464265445104544`, 0.7574021974529568}, {
+         2.796823595120404, 0.}}]}, 
+       {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+        AbsoluteThickness[1], 
+        LineBox[{{3.1464265445104544`, 0.7574021974529568}, {
+         3.496029493900505, 0.}}]}}, 
+      {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+       TagBox[InsetBox[
+         FrameBox["Times",
+          Background->Directive[
+            RGBColor[
+            0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+          BaseStyle->GrayLevel[0],
+          FrameMargins->{{2, 2}, {1, 1}},
+          FrameStyle->Directive[
+            RGBColor[
+            0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+            AbsoluteThickness[1], 
+            Opacity[1]],
+          ImageSize->Automatic,
+          RoundingRadius->4,
+          StripOnInput->False], {1.7480147469502525, 1.5148043949059136}],
+        "DynamicName",
+        BoxID -> "VertexID$1"], 
+       TagBox[InsetBox[
+         FrameBox["Power",
+          Background->Directive[
+            RGBColor[
+            0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+          BaseStyle->GrayLevel[0],
+          FrameMargins->{{2, 2}, {1, 1}},
+          FrameStyle->Directive[
+            RGBColor[
+            0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+            AbsoluteThickness[1], 
+            Opacity[1]],
+          ImageSize->Automatic,
+          RoundingRadius->4,
+          StripOnInput->False], {0.3496029493900505, 0.7574021974529568}],
+        "DynamicName",
+        BoxID -> "VertexID$2"], 
+       TagBox[InsetBox[
+         FrameBox["a",
+          Background->Directive[
+            RGBColor[
+            0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+          BaseStyle->GrayLevel[0],
+          FrameMargins->{{2, 2}, {1, 1}},
+          FrameStyle->Directive[
+            RGBColor[
+            0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+            AbsoluteThickness[1], 
+            Opacity[1]],
+          ImageSize->Automatic,
+          RoundingRadius->0,
+          StripOnInput->False], {0., 0.}],
+        "DynamicName",
+        BoxID -> "VertexID$3"], 
+       TagBox[InsetBox[
+         FrameBox["2",
+          Background->Directive[
+            RGBColor[
+            0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+          BaseStyle->GrayLevel[0],
+          FrameMargins->{{2, 2}, {1, 1}},
+          FrameStyle->Directive[
+            RGBColor[
+            0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+            AbsoluteThickness[1], 
+            Opacity[1]],
+          ImageSize->Automatic,
+          RoundingRadius->0,
+          StripOnInput->False], {0.699205898780101, 0.}],
+        "DynamicName",
+        BoxID -> "VertexID$4"], 
+       TagBox[InsetBox[
+         FrameBox["b",
+          Background->Directive[
+            RGBColor[
+            0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+          BaseStyle->GrayLevel[0],
+          FrameMargins->{{2, 2}, {1, 1}},
+          FrameStyle->Directive[
+            RGBColor[
+            0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+            AbsoluteThickness[1], 
+            Opacity[1]],
+          ImageSize->Automatic,
+          RoundingRadius->0,
+          StripOnInput->False], {1.0488088481701514, 0.7574021974529568}],
+        "DynamicName",
+        BoxID -> "VertexID$5"], 
+       TagBox[InsetBox[
+         FrameBox["Power",
+          Background->Directive[
+            RGBColor[
+            0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+          BaseStyle->GrayLevel[0],
+          FrameMargins->{{2, 2}, {1, 1}},
+          FrameStyle->Directive[
+            RGBColor[
+            0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+            AbsoluteThickness[1], 
+            Opacity[1]],
+          ImageSize->Automatic,
+          RoundingRadius->4,
+          StripOnInput->False], {1.7480147469502525, 0.7574021974529568}],
+        "DynamicName",
+        BoxID -> "VertexID$6"], 
+       TagBox[InsetBox[
+         FrameBox["d",
+          Background->Directive[
+            RGBColor[
+            0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+          BaseStyle->GrayLevel[0],
+          FrameMargins->{{2, 2}, {1, 1}},
+          FrameStyle->Directive[
+            RGBColor[
+            0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+            AbsoluteThickness[1], 
+            Opacity[1]],
+          ImageSize->Automatic,
+          RoundingRadius->0,
+          StripOnInput->False], {1.398411797560202, 0.}],
+        "DynamicName",
+        BoxID -> "VertexID$7"], 
+       TagBox[InsetBox[
+         FrameBox["2",
+          Background->Directive[
+            RGBColor[
+            0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+          BaseStyle->GrayLevel[0],
+          FrameMargins->{{2, 2}, {1, 1}},
+          FrameStyle->Directive[
+            RGBColor[
+            0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+            AbsoluteThickness[1], 
+            Opacity[1]],
+          ImageSize->Automatic,
+          RoundingRadius->0,
+          StripOnInput->False], {2.097617696340303, 0.}],
+        "DynamicName",
+        BoxID -> "VertexID$8"], 
+       TagBox[InsetBox[
+         FrameBox["q",
+          Background->Directive[
+            RGBColor[
+            0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+          BaseStyle->GrayLevel[0],
+          FrameMargins->{{2, 2}, {1, 1}},
+          FrameStyle->Directive[
+            RGBColor[
+            0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+            AbsoluteThickness[1], 
+            Opacity[1]],
+          ImageSize->Automatic,
+          RoundingRadius->0,
+          StripOnInput->False], {2.4472206457303534, 0.7574021974529568}],
+        "DynamicName",
+        BoxID -> "VertexID$9"], 
+       TagBox[InsetBox[
+         FrameBox["Power",
+          Background->Directive[
+            RGBColor[
+            0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+          BaseStyle->GrayLevel[0],
+          FrameMargins->{{2, 2}, {1, 1}},
+          FrameStyle->Directive[
+            RGBColor[
+            0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+            AbsoluteThickness[1], 
+            Opacity[1]],
+          ImageSize->Automatic,
+          RoundingRadius->4,
+          StripOnInput->False], {3.1464265445104544, 0.7574021974529568}],
+        "DynamicName",
+        BoxID -> "VertexID$10"], 
+       TagBox[InsetBox[
+         FrameBox["s",
+          Background->Directive[
+            RGBColor[
+            0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+          BaseStyle->GrayLevel[0],
+          FrameMargins->{{2, 2}, {1, 1}},
+          FrameStyle->Directive[
+            RGBColor[
+            0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+            AbsoluteThickness[1], 
+            Opacity[1]],
+          ImageSize->Automatic,
+          RoundingRadius->0,
+          StripOnInput->False], {2.796823595120404, 0.}],
+        "DynamicName",
+        BoxID -> "VertexID$11"], 
+       TagBox[InsetBox[
+         FrameBox["4",
+          Background->Directive[
+            RGBColor[
+            0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+          BaseStyle->GrayLevel[0],
+          FrameMargins->{{2, 2}, {1, 1}},
+          FrameStyle->Directive[
+            RGBColor[
+            0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+            AbsoluteThickness[1], 
+            Opacity[1]],
+          ImageSize->Automatic,
+          RoundingRadius->0,
+          StripOnInput->False], {3.496029493900505, 0.}],
+        "DynamicName",
+        BoxID -> "VertexID$12"]}}]]],
+  AlignmentPoint->Center,
+  Axes->False,
+  AxesLabel->None,
+  AxesOrigin->Automatic,
+  AxesStyle->{},
+  Background->None,
+  BaseStyle->{},
+  BaselinePosition->Automatic,
+  ContentSelectable->Automatic,
+  DefaultBaseStyle->"TreeGraphics",
+  Epilog->{},
+  FormatType->StandardForm,
+  Frame->False,
+  FrameLabel->None,
+  FrameStyle->{},
+  FrameTicks->None,
+  FrameTicksStyle->{},
+  GridLines->None,
+  GridLinesStyle->{},
+  ImageMargins->0.,
+  ImagePadding->All,
+  ImageSize->Automatic,
+  LabelStyle->{},
+  PlotLabel->None,
+  PlotRange->All,
+  PlotRangeClipping->False,
+  PlotRangePadding->Automatic,
+  PlotRegion->Automatic,
+  Prolog->{},
+  RotateLabel->True,
+  Ticks->Automatic,
+  TicksStyle->{}]], "Output",
+ CellChangeTimes->{3.8949691592289743`*^9},
+ CellLabel->"Out[13]=",
+ CellID->43000966,ExpressionUUID->"f7a7b257-1130-4058-8645-df2afcda5d32"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+We want to put q in the front. We need to verify q is in the expression first:\
+\>", "MathCaption",
+ CellChangeTimes->{{3.8949691623887377`*^9, 3.8949691782679667`*^9}},
+ CellID->340949841,ExpressionUUID->"f8838af4-b20d-4ec5-a66f-f7d8b078f083"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Position", "[", 
+  RowBox[{"exampleInput", ",", "q"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8949691790251617`*^9, 3.8949691820111685`*^9}},
+ CellLabel->"In[14]:=",
+ CellID->152984908,ExpressionUUID->"3ffb77c4-590c-4ead-a50c-cb1b18c855f9"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", "4", "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.894969182409585*^9},
+ CellLabel->"Out[14]=",
+ CellID->63383656,ExpressionUUID->"9b5fba77-ff3f-47e9-95f9-f7f310b9adb5"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["An expression without q would have a different output.", "MathCaption",
+ CellChangeTimes->{{3.8949691900043087`*^9, 3.8949692012692738`*^9}},
+ CellID->579788294,ExpressionUUID->"2e56b696-7921-4dd2-bf7d-0c15be4b3e70"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"expressionWithNoQ", "=", 
+  RowBox[{"b", " ", "d"}]}]], "Input",
+ CellChangeTimes->{{3.894969202497032*^9, 3.894969212139762*^9}},
+ CellLabel->"In[15]:=",
+ CellID->8585758,ExpressionUUID->"9e3189cf-1dac-4683-b068-aa39e4a347fe"],
+
+Cell[BoxData[
+ RowBox[{"b", " ", "d"}]], "Output",
+ CellChangeTimes->{3.894969212516898*^9},
+ CellLabel->"Out[15]=",
+ CellID->460763986,ExpressionUUID->"b5916929-e2a3-46c4-bf9e-c2aca0de6b8c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Position", "[", 
+  RowBox[{"expressionWithNoQ", ",", "q"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8949692159597335`*^9, 3.8949692198048673`*^9}},
+ CellLabel->"In[16]:=",
+ CellID->1001352657,ExpressionUUID->"8d2cec3f-4b54-43fc-ae0e-c64bd1ae354a"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{3.89496922053944*^9},
+ CellLabel->"Out[16]=",
+ CellID->16490087,ExpressionUUID->"a6d97a4e-7815-4021-af0e-b41e8e7c3949"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["The q could be raised to a power:", "MathCaption",
+ CellChangeTimes->{{3.8949692252117195`*^9, 3.8949692303046722`*^9}},
+ CellID->210058381,ExpressionUUID->"8565d89a-3dc1-40ac-acd5-d801d217a040"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"qraisedtothepower", "=", 
+  RowBox[{"b", " ", "d", " ", 
+   SuperscriptBox["q", "2"], " ", "d", " ", "b"}]}]], "Input",
+ CellChangeTimes->{{3.8949692323762565`*^9, 3.8949692414595823`*^9}},
+ CellLabel->"In[17]:=",
+ CellID->3618976,ExpressionUUID->"2de0fa28-d123-428b-b5e2-98d1c8625d06"],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["b", "2"], " ", 
+  SuperscriptBox["d", "2"], " ", 
+  SuperscriptBox["q", "2"]}]], "Output",
+ CellChangeTimes->{3.894969241859357*^9},
+ CellLabel->"Out[17]=",
+ CellID->61579599,ExpressionUUID->"58592733-54e0-4d30-94a9-3da47c44295c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Position", "[", 
+  RowBox[{"qraisedtothepower", ",", "q"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8949692460745296`*^9, 3.89496924958002*^9}},
+ CellLabel->"In[18]:=",
+ CellID->158897045,ExpressionUUID->"660b225c-1422-4319-8e29-d30e3deb8688"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"3", ",", "1"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.89496924999722*^9},
+ CellLabel->"Out[18]=",
+ CellID->4430423,ExpressionUUID->"2f122f61-1ef2-46f0-9389-554e45070651"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Let's look at these three examples from the perspective of Cases:\
+\>", "MathCaption",
+ CellChangeTimes->{{3.8949692568198767`*^9, 3.8949692685568333`*^9}},
+ CellID->45747336,ExpressionUUID->"2af08122-2b75-4880-a344-84d2102e1006"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", 
+  RowBox[{"exampleInput", ",", "q"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8949692696952534`*^9, 3.8949692739442234`*^9}},
+ CellLabel->"In[19]:=",
+ CellID->106947108,ExpressionUUID->"66b70e28-e77a-447e-a23b-1b9e9d0d56eb"],
+
+Cell[BoxData[
+ RowBox[{"{", "q", "}"}]], "Output",
+ CellChangeTimes->{3.8949692743166456`*^9},
+ CellLabel->"Out[19]=",
+ CellID->17869975,ExpressionUUID->"fe8b0a84-f99e-464c-a8f1-06ec8703fc89"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", 
+  RowBox[{"expressionWithNoQ", ",", "q"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8949692696952534`*^9, 3.8949692788900175`*^9}},
+ CellLabel->"In[20]:=",
+ CellID->289386853,ExpressionUUID->"4468754d-b339-4a2a-9d0d-4595095e64b6"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{3.8949692791362443`*^9},
+ CellLabel->"Out[20]=",
+ CellID->884702477,ExpressionUUID->"bc2202ab-62f1-421b-b74e-ee33964fb58b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", 
+  RowBox[{"qraisedtothepower", ",", "q"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8949692696952534`*^9, 3.8949692827785826`*^9}},
+ CellLabel->"In[21]:=",
+ CellID->616336306,ExpressionUUID->"d79fbaf0-27e6-49a8-aa49-3068b2ea26df"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{3.8949692831055317`*^9},
+ CellLabel->"Out[21]=",
+ CellID->4026612,ExpressionUUID->"36406cd8-801d-4b3d-beef-cb79da63db25"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+The last example should have something, but q is on a higher level. Let's \
+look at the expression tree.\
+\>", "MathCaption",
+ CellChangeTimes->{{3.894969287663664*^9, 3.894969313196578*^9}},
+ CellID->657986846,ExpressionUUID->"58782be3-aee4-4688-9aa0-f67ced329f3f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ExpressionTree", "[", "qraisedtothepower", "]"}]], "Input",
+ CellChangeTimes->{{3.89496931377957*^9, 3.8949693172066326`*^9}},
+ CellLabel->"In[22]:=",
+ CellID->3639185,ExpressionUUID->"53397038-fd0e-4d9a-9edd-b596769b620d"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["Trees",
+   DynamicModuleBox[{Typeset`tree = HoldComplete[
+     Tree[Times, {
+       Tree[Power, {
+         Tree[$CellContext`b, None], 
+         Tree[2, None]}], 
+       Tree[Power, {
+         Tree[$CellContext`d, None], 
+         Tree[2, None]}], 
+       Tree[Power, {
+         Tree[$CellContext`q, None], 
+         Tree[2, None]}]}]]}, 
+    NamespaceBox[{
+      {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+       {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+        AbsoluteThickness[1], 
+        LineBox[{{1.7437145811572892`, 1.5111053108157988`}, {
+         0.34874291623145787`, 0.7555526554078994}}]}, 
+       {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+        AbsoluteThickness[1], 
+        LineBox[{{1.7437145811572892`, 1.5111053108157988`}, {
+         1.7437145811572892`, 0.7555526554078994}}]}, 
+       {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+        AbsoluteThickness[1], 
+        LineBox[{{1.7437145811572892`, 1.5111053108157988`}, {
+         3.1386862460831204`, 0.7555526554078994}}]}, 
+       {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+        AbsoluteThickness[1], 
+        LineBox[{{0.34874291623145787`, 0.7555526554078994}, {0., 0.}}]}, 
+       {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+        AbsoluteThickness[1], 
+        LineBox[{{0.34874291623145787`, 0.7555526554078994}, {
+         0.6974858324629157, 0.}}]}, 
+       {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+        AbsoluteThickness[1], 
+        LineBox[{{1.7437145811572892`, 0.7555526554078994}, {
+         1.3949716649258315`, 0.}}]}, 
+       {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+        AbsoluteThickness[1], 
+        LineBox[{{1.7437145811572892`, 0.7555526554078994}, {
+         2.092457497388747, 0.}}]}, 
+       {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+        AbsoluteThickness[1], 
+        LineBox[{{3.1386862460831204`, 0.7555526554078994}, {
+         2.789943329851663, 0.}}]}, 
+       {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+        AbsoluteThickness[1], 
+        LineBox[{{3.1386862460831204`, 0.7555526554078994}, {
+         3.4874291623145783`, 0.}}]}}, 
+      {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+       TagBox[InsetBox[
+         FrameBox["Times",
+          Background->Directive[
+            RGBColor[
+            0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+          BaseStyle->GrayLevel[0],
+          FrameMargins->{{2, 2}, {1, 1}},
+          FrameStyle->Directive[
+            RGBColor[
+            0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+            AbsoluteThickness[1], 
+            Opacity[1]],
+          ImageSize->Automatic,
+          RoundingRadius->4,
+          StripOnInput->False], {1.7437145811572892, 1.5111053108157988}],
+        "DynamicName",
+        BoxID -> "VertexID$1"], 
+       TagBox[InsetBox[
+         FrameBox["Power",
+          Background->Directive[
+            RGBColor[
+            0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+          BaseStyle->GrayLevel[0],
+          FrameMargins->{{2, 2}, {1, 1}},
+          FrameStyle->Directive[
+            RGBColor[
+            0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+            AbsoluteThickness[1], 
+            Opacity[1]],
+          ImageSize->Automatic,
+          RoundingRadius->4,
+          StripOnInput->False], {0.34874291623145787, 0.7555526554078994}],
+        "DynamicName",
+        BoxID -> "VertexID$2"], 
+       TagBox[InsetBox[
+         FrameBox["b",
+          Background->Directive[
+            RGBColor[
+            0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+          BaseStyle->GrayLevel[0],
+          FrameMargins->{{2, 2}, {1, 1}},
+          FrameStyle->Directive[
+            RGBColor[
+            0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+            AbsoluteThickness[1], 
+            Opacity[1]],
+          ImageSize->Automatic,
+          RoundingRadius->0,
+          StripOnInput->False], {0., 0.}],
+        "DynamicName",
+        BoxID -> "VertexID$3"], 
+       TagBox[InsetBox[
+         FrameBox["2",
+          Background->Directive[
+            RGBColor[
+            0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+          BaseStyle->GrayLevel[0],
+          FrameMargins->{{2, 2}, {1, 1}},
+          FrameStyle->Directive[
+            RGBColor[
+            0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+            AbsoluteThickness[1], 
+            Opacity[1]],
+          ImageSize->Automatic,
+          RoundingRadius->0,
+          StripOnInput->False], {0.6974858324629157, 0.}],
+        "DynamicName",
+        BoxID -> "VertexID$4"], 
+       TagBox[InsetBox[
+         FrameBox["Power",
+          Background->Directive[
+            RGBColor[
+            0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+          BaseStyle->GrayLevel[0],
+          FrameMargins->{{2, 2}, {1, 1}},
+          FrameStyle->Directive[
+            RGBColor[
+            0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+            AbsoluteThickness[1], 
+            Opacity[1]],
+          ImageSize->Automatic,
+          RoundingRadius->4,
+          StripOnInput->False], {1.7437145811572892, 0.7555526554078994}],
+        "DynamicName",
+        BoxID -> "VertexID$5"], 
+       TagBox[InsetBox[
+         FrameBox["d",
+          Background->Directive[
+            RGBColor[
+            0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+          BaseStyle->GrayLevel[0],
+          FrameMargins->{{2, 2}, {1, 1}},
+          FrameStyle->Directive[
+            RGBColor[
+            0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+            AbsoluteThickness[1], 
+            Opacity[1]],
+          ImageSize->Automatic,
+          RoundingRadius->0,
+          StripOnInput->False], {1.3949716649258315, 0.}],
+        "DynamicName",
+        BoxID -> "VertexID$6"], 
+       TagBox[InsetBox[
+         FrameBox["2",
+          Background->Directive[
+            RGBColor[
+            0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+          BaseStyle->GrayLevel[0],
+          FrameMargins->{{2, 2}, {1, 1}},
+          FrameStyle->Directive[
+            RGBColor[
+            0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+            AbsoluteThickness[1], 
+            Opacity[1]],
+          ImageSize->Automatic,
+          RoundingRadius->0,
+          StripOnInput->False], {2.092457497388747, 0.}],
+        "DynamicName",
+        BoxID -> "VertexID$7"], 
+       TagBox[InsetBox[
+         FrameBox["Power",
+          Background->Directive[
+            RGBColor[
+            0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+          BaseStyle->GrayLevel[0],
+          FrameMargins->{{2, 2}, {1, 1}},
+          FrameStyle->Directive[
+            RGBColor[
+            0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+            AbsoluteThickness[1], 
+            Opacity[1]],
+          ImageSize->Automatic,
+          RoundingRadius->4,
+          StripOnInput->False], {3.1386862460831204, 0.7555526554078994}],
+        "DynamicName",
+        BoxID -> "VertexID$8"], 
+       TagBox[InsetBox[
+         FrameBox["q",
+          Background->Directive[
+            RGBColor[
+            0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+          BaseStyle->GrayLevel[0],
+          FrameMargins->{{2, 2}, {1, 1}},
+          FrameStyle->Directive[
+            RGBColor[
+            0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+            AbsoluteThickness[1], 
+            Opacity[1]],
+          ImageSize->Automatic,
+          RoundingRadius->0,
+          StripOnInput->False], {2.789943329851663, 0.}],
+        "DynamicName",
+        BoxID -> "VertexID$9"], 
+       TagBox[InsetBox[
+         FrameBox["2",
+          Background->Directive[
+            RGBColor[
+            0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+          BaseStyle->GrayLevel[0],
+          FrameMargins->{{2, 2}, {1, 1}},
+          FrameStyle->Directive[
+            RGBColor[
+            0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+            AbsoluteThickness[1], 
+            Opacity[1]],
+          ImageSize->Automatic,
+          RoundingRadius->0,
+          StripOnInput->False], {3.4874291623145783, 0.}],
+        "DynamicName",
+        BoxID -> "VertexID$10"]}}]]],
+  AlignmentPoint->Center,
+  Axes->False,
+  AxesLabel->None,
+  AxesOrigin->Automatic,
+  AxesStyle->{},
+  Background->None,
+  BaseStyle->{},
+  BaselinePosition->Automatic,
+  ContentSelectable->Automatic,
+  DefaultBaseStyle->"TreeGraphics",
+  Epilog->{},
+  FormatType->StandardForm,
+  Frame->False,
+  FrameLabel->None,
+  FrameStyle->{},
+  FrameTicks->None,
+  FrameTicksStyle->{},
+  GridLines->None,
+  GridLinesStyle->{},
+  ImageMargins->0.,
+  ImagePadding->All,
+  ImageSize->Automatic,
+  LabelStyle->{},
+  PlotLabel->None,
+  PlotRange->All,
+  PlotRangeClipping->False,
+  PlotRangePadding->Automatic,
+  PlotRegion->Automatic,
+  Prolog->{},
+  RotateLabel->True,
+  Ticks->Automatic,
+  TicksStyle->{}]], "Output",
+ CellChangeTimes->{3.8949693175765953`*^9},
+ CellLabel->"Out[22]=",
+ CellID->35599521,ExpressionUUID->"02fe16fe-6ea1-47fb-b157-5af0c139996a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TreeLevel", "[", 
+  RowBox[{
+   RowBox[{"ExpressionTree", "[", "qraisedtothepower", "]"}], ",", "1"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.894969320974035*^9, 3.894969324249234*^9}},
+ CellLabel->"In[23]:=",
+ CellID->106876852,ExpressionUUID->"b8a9ab4a-ca17-489b-a112-77b3eb665233"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[Power, {
+         Tree[$CellContext`b, None], 
+         Tree[2, None]}]]}, 
+      NamespaceBox[{
+        {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+         {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+          AbsoluteThickness[1], 
+          LineBox[{{0.4472135954999579, 0.8929961074943159}, {0., 0.}}]}, 
+         {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+          AbsoluteThickness[1], 
+          LineBox[{{0.4472135954999579, 0.8929961074943159}, {
+           0.8944271909999159, 0.}}]}}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["Power",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->4,
+            StripOnInput->False], {0.4472135954999579, 0.8929961074943159}],
+          "DynamicName",
+          BoxID -> "VertexID$1"], 
+         TagBox[InsetBox[
+           FrameBox["b",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {0., 0.}],
+          "DynamicName",
+          BoxID -> "VertexID$2"], 
+         TagBox[InsetBox[
+           FrameBox["2",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {0.8944271909999159, 0.}],
+          "DynamicName",
+          BoxID -> "VertexID$3"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->Automatic,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[Power, {
+         Tree[$CellContext`d, None], 
+         Tree[2, None]}]]}, 
+      NamespaceBox[{
+        {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+         {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+          AbsoluteThickness[1], 
+          LineBox[{{0.4472135954999579, 0.8929961074943159}, {0., 0.}}]}, 
+         {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+          AbsoluteThickness[1], 
+          LineBox[{{0.4472135954999579, 0.8929961074943159}, {
+           0.8944271909999159, 0.}}]}}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["Power",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->4,
+            StripOnInput->False], {0.4472135954999579, 0.8929961074943159}],
+          "DynamicName",
+          BoxID -> "VertexID$1"], 
+         TagBox[InsetBox[
+           FrameBox["d",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {0., 0.}],
+          "DynamicName",
+          BoxID -> "VertexID$2"], 
+         TagBox[InsetBox[
+           FrameBox["2",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {0.8944271909999159, 0.}],
+          "DynamicName",
+          BoxID -> "VertexID$3"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->Automatic,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[Power, {
+         Tree[$CellContext`q, None], 
+         Tree[2, None]}]]}, 
+      NamespaceBox[{
+        {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+         {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+          AbsoluteThickness[1], 
+          LineBox[{{0.4472135954999579, 0.8929961074943159}, {0., 0.}}]}, 
+         {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+          AbsoluteThickness[1], 
+          LineBox[{{0.4472135954999579, 0.8929961074943159}, {
+           0.8944271909999159, 0.}}]}}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["Power",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->4,
+            StripOnInput->False], {0.4472135954999579, 0.8929961074943159}],
+          "DynamicName",
+          BoxID -> "VertexID$1"], 
+         TagBox[InsetBox[
+           FrameBox["q",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {0., 0.}],
+          "DynamicName",
+          BoxID -> "VertexID$2"], 
+         TagBox[InsetBox[
+           FrameBox["2",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {0.8944271909999159, 0.}],
+          "DynamicName",
+          BoxID -> "VertexID$3"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->Automatic,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}]}], "}"}]], "Output",
+ CellChangeTimes->{3.894969324948366*^9},
+ CellLabel->"Out[23]=",
+ CellID->380757827,ExpressionUUID->"74d6cd85-637a-4f17-85c0-da831feaf9d7"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["q is on the second level:", "MathCaption",
+ CellChangeTimes->{{3.8949693826997375`*^9, 3.8949693860439405`*^9}},
+ CellID->201555096,ExpressionUUID->"ea217606-4fc7-4ae5-b860-1a9d9c0c9bb4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TreeLevel", "[", 
+  RowBox[{
+   RowBox[{"ExpressionTree", "[", "qraisedtothepower", "]"}], ",", "2"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.894969320974035*^9, 3.894969324249234*^9}, {
+  3.8949693866741505`*^9, 3.8949693878641925`*^9}},
+ CellLabel->"In[24]:=",
+ CellID->76274047,ExpressionUUID->"7365682a-9352-4f44-8e92-8fa88547b46e"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[$CellContext`b, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["b",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[2, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["2",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[Power, {
+         Tree[$CellContext`b, None], 
+         Tree[2, None]}]]}, 
+      NamespaceBox[{
+        {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+         {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+          AbsoluteThickness[1], 
+          LineBox[{{0.4472135954999579, 0.8929961074943159}, {0., 0.}}]}, 
+         {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+          AbsoluteThickness[1], 
+          LineBox[{{0.4472135954999579, 0.8929961074943159}, {
+           0.8944271909999159, 0.}}]}}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["Power",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->4,
+            StripOnInput->False], {0.4472135954999579, 0.8929961074943159}],
+          "DynamicName",
+          BoxID -> "VertexID$1"], 
+         TagBox[InsetBox[
+           FrameBox["b",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {0., 0.}],
+          "DynamicName",
+          BoxID -> "VertexID$2"], 
+         TagBox[InsetBox[
+           FrameBox["2",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {0.8944271909999159, 0.}],
+          "DynamicName",
+          BoxID -> "VertexID$3"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->Automatic,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[$CellContext`d, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["d",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[2, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["2",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[Power, {
+         Tree[$CellContext`d, None], 
+         Tree[2, None]}]]}, 
+      NamespaceBox[{
+        {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+         {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+          AbsoluteThickness[1], 
+          LineBox[{{0.4472135954999579, 0.8929961074943159}, {0., 0.}}]}, 
+         {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+          AbsoluteThickness[1], 
+          LineBox[{{0.4472135954999579, 0.8929961074943159}, {
+           0.8944271909999159, 0.}}]}}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["Power",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->4,
+            StripOnInput->False], {0.4472135954999579, 0.8929961074943159}],
+          "DynamicName",
+          BoxID -> "VertexID$1"], 
+         TagBox[InsetBox[
+           FrameBox["d",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {0., 0.}],
+          "DynamicName",
+          BoxID -> "VertexID$2"], 
+         TagBox[InsetBox[
+           FrameBox["2",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {0.8944271909999159, 0.}],
+          "DynamicName",
+          BoxID -> "VertexID$3"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->Automatic,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[$CellContext`q, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["q",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[2, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["2",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[Power, {
+         Tree[$CellContext`q, None], 
+         Tree[2, None]}]]}, 
+      NamespaceBox[{
+        {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+         {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+          AbsoluteThickness[1], 
+          LineBox[{{0.4472135954999579, 0.8929961074943159}, {0., 0.}}]}, 
+         {RGBColor[0.6, 0.5882352941176471, 0.5529411764705883], 
+          AbsoluteThickness[1], 
+          LineBox[{{0.4472135954999579, 0.8929961074943159}, {
+           0.8944271909999159, 0.}}]}}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["Power",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->4,
+            StripOnInput->False], {0.4472135954999579, 0.8929961074943159}],
+          "DynamicName",
+          BoxID -> "VertexID$1"], 
+         TagBox[InsetBox[
+           FrameBox["q",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {0., 0.}],
+          "DynamicName",
+          BoxID -> "VertexID$2"], 
+         TagBox[InsetBox[
+           FrameBox["2",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {0.8944271909999159, 0.}],
+          "DynamicName",
+          BoxID -> "VertexID$3"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->Automatic,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}]}], "}"}]], "Output",
+ CellChangeTimes->{3.894969388494458*^9},
+ CellLabel->"Out[24]=",
+ CellID->200297245,ExpressionUUID->"783eaae8-3c67-40f5-b198-98181b398079"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+We might want just level 2 and not the subtrees. We can specify this:\
+\>", "MathCaption",
+ CellChangeTimes->{{3.894969400701731*^9, 3.894969414339944*^9}},
+ CellID->116384939,ExpressionUUID->"193fd985-a1c8-4cb4-8049-61c540b24416"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TreeLevel", "[", 
+  RowBox[{
+   RowBox[{"ExpressionTree", "[", "qraisedtothepower", "]"}], ",", 
+   RowBox[{"{", "2", "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.894969320974035*^9, 3.894969324249234*^9}, {
+  3.8949693866741505`*^9, 3.894969416293313*^9}},
+ CellLabel->"In[25]:=",
+ CellID->11721902,ExpressionUUID->"1650bdc2-d3dd-44d2-935a-cb0166afa61e"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[$CellContext`b, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["b",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[2, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["2",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[$CellContext`d, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["d",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[2, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["2",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[$CellContext`q, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["q",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[2, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["2",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}]}], "}"}]], "Output",
+ CellChangeTimes->{3.8949694167668667`*^9},
+ CellLabel->"Out[25]=",
+ CellID->436036227,ExpressionUUID->"fe4497d2-b4a0-45e8-a12b-2d65fa561b8d"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["q is in the leaves:", "MathCaption",
+ CellChangeTimes->{{3.8949693761751165`*^9, 3.894969379816039*^9}},
+ CellID->7379660,ExpressionUUID->"86b94b57-eaac-4303-81af-a7050b4a3f0d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TreeLeaves", "[", 
+  RowBox[{"ExpressionTree", "[", "qraisedtothepower", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8949694237806373`*^9, 3.894969444523631*^9}},
+ CellLabel->"In[28]:=",
+ CellID->57152497,ExpressionUUID->"fc483901-d97e-4372-9f6a-9813c3022a4b"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[$CellContext`b, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["b",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[2, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["2",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[$CellContext`d, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["d",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[2, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["2",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[$CellContext`q, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["q",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[2, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["2",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.8949694289816074`*^9, 3.894969445137455*^9}},
+ CellLabel->"Out[28]=",
+ CellID->785266654,ExpressionUUID->"306f88c8-9ee8-4934-b8e9-caa547808962"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["We can also use -1 level specification:", "MathCaption",
+ CellChangeTimes->{{3.8949693761751165`*^9, 3.894969379816039*^9}, {
+  3.894969499172389*^9, 3.894969505432061*^9}},
+ CellID->600024437,ExpressionUUID->"124a6d2d-ea42-451a-94ee-c679eb1ebe95"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TreeLevel", "[", 
+  RowBox[{
+   RowBox[{"ExpressionTree", "[", "qraisedtothepower", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"-", "1"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8949694237806373`*^9, 3.894969444523631*^9}, {
+  3.8949695061181626`*^9, 3.894969515298168*^9}},
+ CellLabel->"In[29]:=",
+ CellID->356384648,ExpressionUUID->"85f25a87-aaee-49ac-aec1-40dc56984d69"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[$CellContext`b, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["b",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[2, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["2",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[$CellContext`d, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["d",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[2, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["2",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[$CellContext`q, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["q",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[2, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["2",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}]}], "}"}]], "Output",
+ CellChangeTimes->{3.8949695157736745`*^9},
+ CellLabel->"Out[29]=",
+ CellID->446846364,ExpressionUUID->"166b99f3-9b10-48f5-9088-949ae3cdcc92"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Another way to get q is with TreeLeafQ:", "MathCaption",
+ CellChangeTimes->{{3.8949695522537136`*^9, 3.8949695588228693`*^9}},
+ CellID->32533157,ExpressionUUID->"ef013166-4ead-44c5-b462-ff65ddc99d01"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TreeSelect", "[", 
+  RowBox[{
+   RowBox[{"ExpressionTree", "[", "qraisedtothepower", "]"}], ",", 
+   "TreeLeafQ"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8949694237806373`*^9, 3.894969444523631*^9}, {
+  3.8949695061181626`*^9, 3.894969515298168*^9}, {3.894969559492277*^9, 
+  3.894969569287594*^9}},
+ CellLabel->"In[30]:=",
+ CellID->221488453,ExpressionUUID->"0416be1e-c919-43ec-aa1e-85469159a7b8"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[$CellContext`b, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["b",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[2, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["2",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[$CellContext`d, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["d",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[2, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["2",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[$CellContext`q, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["q",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}], ",", 
+   GraphicsBox[
+    NamespaceBox["Trees",
+     DynamicModuleBox[{Typeset`tree = HoldComplete[
+       Tree[2, None]]}, 
+      NamespaceBox[{{}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[InsetBox[
+           FrameBox["2",
+            Background->Directive[
+              RGBColor[
+              0.9607843137254902, 0.9882352941176471, 0.9764705882352941]],
+            BaseStyle->GrayLevel[0],
+            FrameMargins->{{2, 2}, {1, 1}},
+            FrameStyle->Directive[
+              RGBColor[
+              0.4196078431372549, 0.6313725490196078, 0.4196078431372549], 
+              AbsoluteThickness[1], 
+              Opacity[1]],
+            ImageSize->Automatic,
+            RoundingRadius->0,
+            StripOnInput->False], {1., 1.}],
+          "DynamicName",
+          BoxID -> "VertexID$1"]}}]]],
+    AlignmentPoint->Center,
+    Axes->False,
+    AxesLabel->None,
+    AxesOrigin->Automatic,
+    AxesStyle->{},
+    Background->None,
+    BaseStyle->{},
+    BaselinePosition->Automatic,
+    ContentSelectable->Automatic,
+    DefaultBaseStyle->"TreeGraphics",
+    Epilog->{},
+    FormatType->StandardForm,
+    Frame->False,
+    FrameLabel->None,
+    FrameStyle->{},
+    FrameTicks->None,
+    FrameTicksStyle->{},
+    GridLines->None,
+    GridLinesStyle->{},
+    ImageMargins->0.,
+    ImagePadding->All,
+    ImageSize->Automatic,
+    LabelStyle->{},
+    PlotLabel->None,
+    PlotRange->All,
+    PlotRangeClipping->False,
+    PlotRangePadding->0.1,
+    PlotRegion->Automatic,
+    Prolog->{},
+    RotateLabel->True,
+    Ticks->Automatic,
+    TicksStyle->{}]}], "}"}]], "Output",
+ CellChangeTimes->{3.894969569922017*^9},
+ CellLabel->"Out[30]=",
+ CellID->166436640,ExpressionUUID->"00092154-f75d-4482-af59-72a7fe82ead0"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["We can get the data with TreeData:", "MathCaption",
+ CellChangeTimes->{{3.894969587792997*^9, 3.8949695947360897`*^9}},
+ CellID->441304007,ExpressionUUID->"a2133ad2-2225-44aa-9f09-fb71192a71ea"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TreeData", "/@", 
+  RowBox[{"TreeSelect", "[", 
+   RowBox[{
+    RowBox[{"ExpressionTree", "[", "qraisedtothepower", "]"}], ",", 
+    "TreeLeafQ"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.894969577102889*^9, 3.8949695791575985`*^9}},
+ CellLabel->"In[31]:=",
+ CellID->784023909,ExpressionUUID->"a58c9ff8-287c-44c1-b668-5330c449eee6"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"b", ",", "2", ",", "d", ",", "2", ",", "q", ",", "2"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.894969579437874*^9},
+ CellLabel->"Out[31]=",
+ CellID->55707303,ExpressionUUID->"59bb91e8-ebe7-40fc-907f-af9cfa3d25a3"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+If q is in the expression, then q will be in this list. Otherwise it will not \
+be.\
+\>", "MathCaption",
+ CellChangeTimes->{{3.8949695997676344`*^9, 3.8949696073557587`*^9}, {
+  3.8949699741404486`*^9, 3.894969984771845*^9}},
+ CellID->48363548,ExpressionUUID->"5149010d-c608-4898-8767-cfd634db1877"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TreeData", "/@", 
+  RowBox[{"TreeSelect", "[", 
+   RowBox[{
+    RowBox[{"ExpressionTree", "[", "expressionWithNoQ", "]"}], ",", 
+    "TreeLeafQ"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.894969577102889*^9, 3.8949695791575985`*^9}, {
+  3.89496998582251*^9, 3.8949699920734425`*^9}},
+ CellLabel->"In[32]:=",
+ CellID->265849720,ExpressionUUID->"0994fd9e-af71-478d-908d-4500620df444"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"b", ",", "d"}], "}"}]], "Output",
+ CellChangeTimes->{3.8949699924218483`*^9},
+ CellLabel->"Out[32]=",
+ CellID->23619359,ExpressionUUID->"b737de54-9ca7-48c8-8352-9765952fd8d6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MemberQ", "[", 
+  RowBox[{
+   RowBox[{"TreeData", "/@", 
+    RowBox[{"TreeSelect", "[", 
+     RowBox[{
+      RowBox[{"ExpressionTree", "[", "expressionWithNoQ", "]"}], ",", 
+      "TreeLeafQ"}], "]"}]}], ",", "q"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8949699954406986`*^9, 3.8949700005932827`*^9}},
+ CellLabel->"In[33]:=",
+ CellID->10018807,ExpressionUUID->"fd7a6e53-b654-4cbc-b5ee-9f48f9ec5f56"],
+
+Cell[BoxData["False"], "Output",
+ CellChangeTimes->{3.8949700010475116`*^9},
+ CellLabel->"Out[33]=",
+ CellID->37584096,ExpressionUUID->"69d6f3c2-6774-4536-a874-a32ecdb99241"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Make a function to test if q is in an expression:", "MathCaption",
+ CellChangeTimes->{{3.894970432273905*^9, 3.8949704389607983`*^9}},
+ CellID->222360495,ExpressionUUID->"7d92d8c6-2ea7-4ba0-8219-43584f030b73"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"QInExpressionQ", "[", "input_", "]"}], ":=", 
+  RowBox[{"MemberQ", "[", 
+   RowBox[{
+    RowBox[{"TreeData", "/@", 
+     RowBox[{"TreeSelect", "[", 
+      RowBox[{
+       RowBox[{"ExpressionTree", "[", "input", "]"}], ",", "TreeLeafQ"}], 
+      "]"}]}], ",", "q"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.894970428956133*^9, 3.894970450647216*^9}},
+ CellLabel->"In[34]:=",
+ CellID->876159263,ExpressionUUID->"82beeeb9-2a8c-4463-af42-1005bc5440b5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Test the function:", "MathCaption",
+ CellChangeTimes->{{3.894970460467807*^9, 3.8949704627825966`*^9}},
+ CellID->140693972,ExpressionUUID->"bb3a1f82-6483-45e6-bf09-9be803a1b346"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"QInExpressionQ", "[", "expressionWithNoQ", "]"}]], "Input",
+ CellChangeTimes->{{3.8949704526003966`*^9, 3.894970456870181*^9}},
+ CellLabel->"In[35]:=",
+ CellID->676058770,ExpressionUUID->"d8f63307-e67d-4fc8-a97d-402c45b59692"],
+
+Cell[BoxData["False"], "Output",
+ CellChangeTimes->{3.894970457560179*^9},
+ CellLabel->"Out[35]=",
+ CellID->664127742,ExpressionUUID->"f8678d9c-6fde-4ba7-ada9-36c9f3f4c422"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Test all the examples with the SameTest QInExpressionQ[#1] == #2.\
+\>", "MathCaption",
+ CellChangeTimes->{{3.894970681532936*^9, 3.8949706918600016`*^9}},
+ CellID->362701572,ExpressionUUID->"9acb1795-a990-4a13-8873-c90e28be41a8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TestReport", "[", 
+  RowBox[{
+   RowBox[{"MapThread", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"TestCreate", "[", 
+       RowBox[{"#1", ",", "#2", ",", 
+        RowBox[{"TestID", "->", "Automatic"}]}], "]"}], "&"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "expressionWithNoQ", ",", "qraisedtothepower", ",", "exampleInput"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"False", ",", "True", ",", "True"}], "}"}]}], "}"}]}], "]"}], 
+   ",", 
+   RowBox[{"SameTest", "->", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"QInExpressionQ", "[", "#1", "]"}], "==", "#2"}], "&"}], 
+     ")"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.894970620321947*^9, 3.894970658010736*^9}, {
+  3.8949706949242897`*^9, 3.894970698515956*^9}},
+ CellLabel->"In[45]:=",
+ CellID->569912814,ExpressionUUID->"19d0214e-62ae-45d5-aa1b-60302fc7b9e9"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["TestReportObject",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[{
+              InsetBox[
+               BoxData[
+                FormBox[
+                 PaneBox[
+                  DynamicBox[
+                   FEPrivate`FrontEndResource[
+                   "MUnitExpressions", "SuccessIcon"]], Alignment -> Center, 
+                  ImageSize -> 
+                  Dynamic[{
+                    Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], TraditionalForm]]]}, 
+             PlotRange -> {{0, 1}, {0, 1}}, Background -> GrayLevel[0.93], 
+             Axes -> False, AspectRatio -> 1, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}], Frame -> True, FrameTicks -> None, 
+             FrameStyle -> Directive[
+               Thickness[Tiny], 
+               GrayLevel[0.55]]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Tests count: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["3", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Success rate: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  TagBox[
+                   InterpretationBox[
+                    StyleBox["\"100%\"", ShowStringCharacters -> False], 1., 
+                    AutoDelete -> True], PercentForm], "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[{
+              InsetBox[
+               BoxData[
+                FormBox[
+                 PaneBox[
+                  DynamicBox[
+                   FEPrivate`FrontEndResource[
+                   "MUnitExpressions", "SuccessIcon"]], Alignment -> Center, 
+                  ImageSize -> 
+                  Dynamic[{
+                    Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], TraditionalForm]]]}, 
+             PlotRange -> {{0, 1}, {0, 1}}, Background -> GrayLevel[0.93], 
+             Axes -> False, AspectRatio -> 1, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}], Frame -> True, FrameTicks -> None, 
+             FrameStyle -> Directive[
+               Thickness[Tiny], 
+               GrayLevel[0.55]]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Tests count: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["3", "SummaryItem"]}], ""}, {
+               RowBox[{
+                 TagBox["\"Success rate: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  TagBox[
+                   InterpretationBox[
+                    StyleBox["\"100%\"", ShowStringCharacters -> False], 1., 
+                    AutoDelete -> True], PercentForm], "SummaryItem"]}], ""}, {
+               RowBox[{
+                 TagBox["\"Succeeded: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["3", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+               RowBox[{
+                 TagBox["\"Time elapsed: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  
+                  TemplateBox[{
+                   "0``6.6733937431123245", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                  "SummaryItem"]}], "\[SpanFromLeft]"}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  TestReportObject[<|
+   "Title" -> Automatic, "Aborted" -> False, 
+    "TestResults" -> <|
+     4128043482169681221 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 3.8949706989096313`*^9, 
+         "SameTest" -> ($CellContext`QInExpressionQ[#] == #2& ), 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "b70d2306-cc76-42e7-bab8-e2771e1191ed", "TestID" -> 
+         "cbe78c74-4ea7-4a77-83cc-31f03b8fdb6f", "TestFileName" -> "", 
+         "EvaluationID" -> "a50e033f-80cb-45b9-b61a-c3c60a824fd4", "Input" -> 
+         HoldForm[$CellContext`b $CellContext`d], "ExpectedOutput" -> 
+         HoldForm[False], "ExpectedMessages" -> HoldForm[{}], "ActualOutput" -> 
+         HoldForm[$CellContext`b $CellContext`d], "ActualMessages" -> {}, 
+         "AbsoluteTimeUsed" -> 0``7.150514997831988, "CPUTimeUsed" -> 0., 
+         "MemoryUsed" -> 2152, "Outcome" -> "Success"|>], 4035037867313058495 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 3.8949706989096313`*^9, 
+         "SameTest" -> ($CellContext`QInExpressionQ[#] == #2& ), 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "5ce0d061-85d1-43ea-ab55-4c44d82620d7", "TestID" -> 
+         "41415255-e2f1-4ac1-8f6b-1dc97bb34f90", "TestFileName" -> "", 
+         "EvaluationID" -> "0e0970e1-75ce-459b-a8b3-7cf3ef98a7ae", "Input" -> 
+         HoldForm[$CellContext`b^2 $CellContext`d^2 $CellContext`q^2], 
+         "ExpectedOutput" -> HoldForm[True], "ExpectedMessages" -> 
+         HoldForm[{}], "ActualOutput" -> 
+         HoldForm[$CellContext`b^2 $CellContext`d^2 $CellContext`q^2], 
+         "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 0``7.150514997831988, 
+         "CPUTimeUsed" -> 0., "MemoryUsed" -> 2168, "Outcome" -> "Success"|>],
+       6961956222533146915 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 3.8949706989096313`*^9, 
+         "SameTest" -> ($CellContext`QInExpressionQ[#] == #2& ), 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "76782610-8490-454c-bf47-57e02d216fbe", "TestID" -> 
+         "1a946b23-733c-4699-9a9e-d9dc3d14b923", "TestFileName" -> "", 
+         "EvaluationID" -> "cc2d59fb-8ce4-42aa-a06a-6238bd32d1a7", "Input" -> 
+         HoldForm[$CellContext`a^2 $CellContext`b $CellContext`d^2 \
+$CellContext`q $CellContext`s^4], "ExpectedOutput" -> HoldForm[True], 
+         "ExpectedMessages" -> HoldForm[{}], "ActualOutput" -> 
+         HoldForm[$CellContext`a^2 $CellContext`b $CellContext`d^2 \
+$CellContext`q $CellContext`s^4], "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 
+         0``7.150514997831988, "CPUTimeUsed" -> 0., "MemoryUsed" -> 2184, 
+         "Outcome" -> "Success"|>]|>, "FailureResults" -> <||>, 
+    "TestsNotEvaluatedKeys" -> {}, "TestsFailedWrongResultsKeys" -> {}, 
+    "TestsFailedWithMessagesKeys" -> {}, "TestsFailedWithErrorsKeys" -> {}, 
+    "TestsSucceededKeys" -> {4128043482169681221, 4035037867313058495, 
+     6961956222533146915}|>],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{{3.894970632563512*^9, 3.894970658447559*^9}, 
+   3.894970698934829*^9},
+ CellLabel->"Out[45]=",
+ CellID->28588414,ExpressionUUID->"bba63a61-83d0-4537-b13b-46de17a1f9d9"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData[GridBox[{
+   {"XXXX", Cell[
+    "XXXX", "TableText",ExpressionUUID->
+     "20abe685-ebfa-41b2-9eb3-70763a2cf376"]},
+   {"XXXX", Cell[
+    "XXXX", "TableText",ExpressionUUID->
+     "a120455c-2b93-4748-80c5-2bbc9da0b85c"]},
+   {"XXXX", Cell[
+    "XXXX", "TableText",ExpressionUUID->
+     "719ac795-98a8-4d7b-9296-26ff2232ec52"]}
+  }]], "DefinitionBox",
+ CellID->771150938,ExpressionUUID->"3a120140-9199-49e4-9455-dd2ea9fc8376"],
+
+Cell["XXXX.", "Caption",
+ CellID->56681674,ExpressionUUID->"f5f60007-c978-4515-b0ad-835ba5ae7d46"],
+
+Cell[CellGroupData[{
+
+Cell["XXXX", "MathCaption",
+ CellID->135753386,ExpressionUUID->"8cfa9254-3dcb-4f06-b363-a79c3c589855"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["XXXX"], "Input",
+ CellLabel->"In[1]:=",
+ CellID->49790133,ExpressionUUID->"95b13454-664a-49ef-b319-51b599fe4560"],
+
+Cell[BoxData["XXXX"], "Output",
+ CellLabel->"Out[1]=",
+ CellID->380375781,ExpressionUUID->"291a9438-7152-4128-85b7-ac77dd1cf2b8"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Guides", "TutorialMoreAboutSection",
+ CellChangeTimes->{{3.843042384656711*^9, 3.843042386024461*^9}},
+ CellID->161772049,ExpressionUUID->"76801787-5f70-41d3-a497-142c85e4f5f5"],
+
+Cell["XXXX", "TutorialMoreAbout",
+ CellID->67989278,ExpressionUUID->"293b3931-85af-4829-9e80-7b6c6a37d4eb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Tech Notes", "RelatedTutorialsSection",
+ CellID->183639716,ExpressionUUID->"b843fff2-33d9-4c3f-83b8-39883e476e35"],
+
+Cell["XXXX", "RelatedTutorials",
+ CellID->29667343,ExpressionUUID->"3ca477f5-83dd-45cf-97d5-2f16fcf8c0a1"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Metadata", "MetadataSection",
+ CellID->213044136,ExpressionUUID->"f70824db-8bb0-4d0d-a14e-72f55559f5eb"],
+
+Cell[TextData[{
+ "New in: ",
+ Cell["XX", "HistoryData",
+  CellTags->"New",ExpressionUUID->"00750a98-0d8b-4ac9-a585-78078de9c9c1"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified",ExpressionUUID->"d9f1acff-d511-4f24-bff4-6f819a656bdf"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete",ExpressionUUID->"35277e2a-5bd5-4a8a-8d1f-f226c2768b16"]
+}], "History",
+ CellID->72794903,ExpressionUUID->"1fbf2634-130c-4a42-b1fd-588c4e7a8f5b"],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",
+ CellID->385949988,ExpressionUUID->"1aa13a2a-d527-4b88-a6f6-f464858515fe"],
+
+Cell["Tech Note", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->509057587,ExpressionUUID->"ae94e6e3-6a49-4d7e-bb24-26a709fea1f8"],
+
+Cell["PeterBurbery/BasicHypergeometricFunctions", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->519804101,ExpressionUUID->"c05029b2-5853-47e8-8989-2c88539ca3a9"],
+
+Cell["PeterBurbery`BasicHypergeometricFunctions`", "Categorization",
+ CellLabel->"Context",
+ CellID->392509224,ExpressionUUID->"44216c23-99d0-4901-8e9a-cf8468fac854"],
+
+Cell["\<\
+PeterBurbery/BasicHypergeometricFunctions/tutorial/RearrangingExpressions\
+\>", "Categorization",
+ CellLabel->"URI",
+ CellID->22346959,ExpressionUUID->"764c4ddd-b0e0-480f-80bd-532b6aa0f96f"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->426123361,ExpressionUUID->"bf86c44b-4960-45b2-b08f-b5f2b7bff7e6"],
+
+Cell["XXXX", "Keywords",
+ CellID->393918541,ExpressionUUID->"196dd428-ec9d-4b25-82c2-5e89d985bbff"]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{1141.2, 574.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+TaggingRules-><|"Paclet" -> "PeterBurbery/BasicHypergeometricFunctions"|>,
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (May 18, 2023)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "TechNotePageStylesExt.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"ab883cbf-4143-4b6c-8411-58fb2a297181"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 115, 1, 114, "Title",ExpressionUUID->"4392a549-f5bc-4eed-86cd-bd4f56abb022",
+ CellID->555292541],
+Cell[698, 25, 424, 8, 44, "Text",ExpressionUUID->"da171d77-9ecf-45b9-aa05-d6d9041a939a",
+ CellID->34242218],
+Cell[CellGroupData[{
+Cell[1147, 37, 189, 2, 40, "MathCaption",ExpressionUUID->"7bada169-7c3d-4776-b7f7-9de2435b9070",
+ CellID->513850824],
+Cell[1339, 41, 252, 4, 25, "Input",ExpressionUUID->"0dee9fdd-35d3-4720-adb9-0ac50b09f781",
+ CellID->542855510]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1628, 50, 301, 4, 45, "Section",ExpressionUUID->"e289c6af-e7f4-4b1c-818e-9eda6dd9cb82",
+ CellID->2591],
+Cell[CellGroupData[{
+Cell[1954, 58, 288, 5, 44, "Text",ExpressionUUID->"b612293d-b26c-4a4f-9c16-0ee176d43931",
+ CellID->590619292],
+Cell[CellGroupData[{
+Cell[2267, 67, 330, 7, 25, "Input",ExpressionUUID->"c005b7de-a8c7-45df-9f11-f64113601e19",
+ CellID->219423307],
+Cell[2600, 76, 256, 6, 24, "Output",ExpressionUUID->"9e37fe5e-f82a-4f84-a340-a0975f379d0a",
+ CellID->272831206]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2917, 89, 351, 5, 45, "Section",ExpressionUUID->"00036f6a-63fd-4f4f-a2de-66a749e3d47c",
+ CellID->237748664],
+Cell[CellGroupData[{
+Cell[3293, 98, 240, 3, 40, "MathCaption",ExpressionUUID->"e250cd9f-9b0e-4e7b-8c8b-dd8939ecf38b",
+ CellID->30906755],
+Cell[CellGroupData[{
+Cell[3558, 105, 337, 7, 25, "Input",ExpressionUUID->"1542516c-d21f-43bc-a96f-434c0b7c4782",
+ CellID->501709717],
+Cell[3898, 114, 295, 7, 25, "Output",ExpressionUUID->"5ce1d3a9-dcd7-4e75-9690-197784b36a5a",
+ CellID->227264227]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4230, 126, 244, 4, 25, "Input",ExpressionUUID->"afa7c4e4-7e9c-42d8-8885-a887ef7faee4",
+ CellID->45907700],
+Cell[4477, 132, 11168, 300, 178, "Output",ExpressionUUID->"f7a7b257-1130-4058-8645-df2afcda5d32",
+ CellID->43000966]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15694, 438, 254, 4, 40, "MathCaption",ExpressionUUID->"f8838af4-b20d-4ec5-a66f-f7d8b078f083",
+ CellID->340949841],
+Cell[CellGroupData[{
+Cell[15973, 446, 264, 5, 25, "Input",ExpressionUUID->"3ffb77c4-590c-4ead-a50c-cb1b18c855f9",
+ CellID->152984908],
+Cell[16240, 453, 213, 5, 24, "Output",ExpressionUUID->"9b5fba77-ff3f-47e9-95f9-f7f310b9adb5",
+ CellID->63383656]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16502, 464, 222, 2, 40, "MathCaption",ExpressionUUID->"2e56b696-7921-4dd2-bf7d-0c15be4b3e70",
+ CellID->579788294],
+Cell[CellGroupData[{
+Cell[16749, 470, 251, 5, 25, "Input",ExpressionUUID->"9e3189cf-1dac-4683-b068-aa39e4a347fe",
+ CellID->8585758],
+Cell[17003, 477, 191, 4, 24, "Output",ExpressionUUID->"b5916929-e2a3-46c4-bf9e-c2aca0de6b8c",
+ CellID->460763986]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17231, 486, 270, 5, 25, "Input",ExpressionUUID->"8d2cec3f-4b54-43fc-ae0e-c64bd1ae354a",
+ CellID->1001352657],
+Cell[17504, 493, 184, 4, 24, "Output",ExpressionUUID->"a6d97a4e-7815-4021-af0e-b41e8e7c3949",
+ CellID->16490087]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17737, 503, 201, 2, 40, "MathCaption",ExpressionUUID->"8565d89a-3dc1-40ac-acd5-d801d217a040",
+ CellID->210058381],
+Cell[CellGroupData[{
+Cell[17963, 509, 310, 6, 26, "Input",ExpressionUUID->"2de0fa28-d123-428b-b5e2-98d1c8625d06",
+ CellID->3618976],
+Cell[18276, 517, 272, 7, 25, "Output",ExpressionUUID->"58592733-54e0-4d30-94a9-3da47c44295c",
+ CellID->61579599]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18585, 529, 266, 5, 25, "Input",ExpressionUUID->"660b225c-1422-4319-8e29-d30e3deb8688",
+ CellID->158897045],
+Cell[18854, 536, 235, 6, 24, "Output",ExpressionUUID->"2f122f61-1ef2-46f0-9389-554e45070651",
+ CellID->4430423]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19138, 548, 240, 4, 40, "MathCaption",ExpressionUUID->"2af08122-2b75-4880-a344-84d2102e1006",
+ CellID->45747336],
+Cell[CellGroupData[{
+Cell[19403, 556, 261, 5, 25, "Input",ExpressionUUID->"66b70e28-e77a-447e-a23b-1b9e9d0d56eb",
+ CellID->106947108],
+Cell[19667, 563, 192, 4, 24, "Output",ExpressionUUID->"fe8b0a84-f99e-464c-a8f1-06ec8703fc89",
+ CellID->17869975]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19896, 572, 266, 5, 25, "Input",ExpressionUUID->"4468754d-b339-4a2a-9d0d-4595095e64b6",
+ CellID->289386853],
+Cell[20165, 579, 188, 4, 24, "Output",ExpressionUUID->"bc2202ab-62f1-421b-b74e-ee33964fb58b",
+ CellID->884702477]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20390, 588, 266, 5, 25, "Input",ExpressionUUID->"d79fbaf0-27e6-49a8-aa49-3068b2ea26df",
+ CellID->616336306],
+Cell[20659, 595, 186, 4, 24, "Output",ExpressionUUID->"36406cd8-801d-4b3d-beef-cb79da63db25",
+ CellID->4026612]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20894, 605, 276, 5, 57, "MathCaption",ExpressionUUID->"58782be3-aee4-4688-9aa0-f67ced329f3f",
+ CellID->657986846],
+Cell[CellGroupData[{
+Cell[21195, 614, 247, 4, 25, "Input",ExpressionUUID->"53397038-fd0e-4d9a-9edd-b596769b620d",
+ CellID->3639185],
+Cell[21445, 620, 9415, 256, 178, "Output",ExpressionUUID->"02fe16fe-6ea1-47fb-b157-5af0c139996a",
+ CellID->35599521]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30897, 881, 311, 7, 25, "Input",ExpressionUUID->"b8a9ab4a-ca17-489b-a112-77b3eb665233",
+ CellID->106876852],
+Cell[31211, 890, 10526, 302, 413, "Output",ExpressionUUID->"74d6cd85-637a-4f17-85c0-da831feaf9d7",
+ CellID->380757827]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[41786, 1198, 193, 2, 40, "MathCaption",ExpressionUUID->"ea217606-4fc7-4ae5-b860-1a9d9c0c9bb4",
+ CellID->201555096],
+Cell[CellGroupData[{
+Cell[42004, 1204, 363, 8, 25, "Input",ExpressionUUID->"7365682a-9352-4f44-8e92-8fa88547b46e",
+ CellID->76274047],
+Cell[42370, 1214, 20249, 632, 1044, "Output",ExpressionUUID->"783eaae8-3c67-40f5-b198-98181b398079",
+ CellID->200297245]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[62668, 1852, 241, 4, 40, "MathCaption",ExpressionUUID->"193fd985-a1c8-4cb4-8049-61c540b24416",
+ CellID->116384939],
+Cell[CellGroupData[{
+Cell[62934, 1860, 382, 8, 25, "Input",ExpressionUUID->"1650bdc2-d3dd-44d2-935a-cb0166afa61e",
+ CellID->11721902],
+Cell[63319, 1870, 9919, 335, 608, "Output",ExpressionUUID->"fe4497d2-b4a0-45e8-a12b-2d65fa561b8d",
+ CellID->436036227]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[73287, 2211, 183, 2, 40, "MathCaption",ExpressionUUID->"86b94b57-eaac-4303-81af-a7050b4a3f0d",
+ CellID->7379660],
+Cell[CellGroupData[{
+Cell[73495, 2217, 286, 5, 25, "Input",ExpressionUUID->"fc483901-d97e-4372-9f6a-9813c3022a4b",
+ CellID->57152497],
+Cell[73784, 2224, 9943, 335, 608, "Output",ExpressionUUID->"306f88c8-9ee8-4934-b8e9-caa547808962",
+ CellID->785266654]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[83776, 2565, 254, 3, 40, "MathCaption",ExpressionUUID->"124a6d2d-ea42-451a-94ee-c679eb1ebe95",
+ CellID->600024437],
+Cell[CellGroupData[{
+Cell[84055, 2572, 405, 9, 25, "Input",ExpressionUUID->"85f25a87-aaee-49ac-aec1-40dc56984d69",
+ CellID->356384648],
+Cell[84463, 2583, 9919, 335, 608, "Output",ExpressionUUID->"166b99f3-9b10-48f5-9088-949ae3cdcc92",
+ CellID->446846364]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[94431, 2924, 206, 2, 40, "MathCaption",ExpressionUUID->"ef013166-4ead-44c5-b462-ff65ddc99d01",
+ CellID->32533157],
+Cell[CellGroupData[{
+Cell[94662, 2930, 423, 9, 25, "Input",ExpressionUUID->"0416be1e-c919-43ec-aa1e-85469159a7b8",
+ CellID->221488453],
+Cell[95088, 2941, 9917, 335, 608, "Output",ExpressionUUID->"00092154-f75d-4482-af59-72a7fe82ead0",
+ CellID->166436640]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[105054, 3282, 200, 2, 40, "MathCaption",ExpressionUUID->"a2133ad2-2225-44aa-9f09-fb71192a71ea",
+ CellID->441304007],
+Cell[CellGroupData[{
+Cell[105279, 3288, 357, 8, 25, "Input",ExpressionUUID->"a58c9ff8-287c-44c1-b668-5330c449eee6",
+ CellID->784023909],
+Cell[105639, 3298, 256, 6, 24, "Output",ExpressionUUID->"59bb91e8-ebe7-40fc-907f-af9cfa3d25a3",
+ CellID->55707303]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[105944, 3310, 309, 6, 40, "MathCaption",ExpressionUUID->"5149010d-c608-4898-8767-cfd634db1877",
+ CellID->48363548],
+Cell[CellGroupData[{
+Cell[106278, 3320, 407, 9, 25, "Input",ExpressionUUID->"0994fd9e-af71-478d-908d-4500620df444",
+ CellID->265849720],
+Cell[106688, 3331, 215, 5, 24, "Output",ExpressionUUID->"b737de54-9ca7-48c8-8352-9765952fd8d6",
+ CellID->23619359]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[106940, 3341, 424, 10, 25, "Input",ExpressionUUID->"fd7a6e53-b654-4cbc-b5ee-9f48f9ec5f56",
+ CellID->10018807],
+Cell[107367, 3353, 174, 3, 24, "Output",ExpressionUUID->"69d6f3c2-6774-4536-a874-a32ecdb99241",
+ CellID->37584096]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[107590, 3362, 215, 2, 40, "MathCaption",ExpressionUUID->"7d92d8c6-2ea7-4ba0-8219-43584f030b73",
+ CellID->222360495],
+Cell[107808, 3366, 484, 12, 43, "Input",ExpressionUUID->"82beeeb9-2a8c-4463-af42-1005bc5440b5",
+ CellID->876159263]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[108329, 3383, 184, 2, 40, "MathCaption",ExpressionUUID->"bb3a1f82-6483-45e6-bf09-9be803a1b346",
+ CellID->140693972],
+Cell[CellGroupData[{
+Cell[108538, 3389, 250, 4, 25, "Input",ExpressionUUID->"d8f63307-e67d-4fc8-a97d-402c45b59692",
+ CellID->676058770],
+Cell[108791, 3395, 173, 3, 24, "Output",ExpressionUUID->"f8678d9c-6fde-4ba7-ada9-36c9f3f4c422",
+ CellID->664127742]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[109013, 3404, 239, 4, 40, "MathCaption",ExpressionUUID->"9acb1795-a990-4a13-8873-c90e28be41a8",
+ CellID->362701572],
+Cell[CellGroupData[{
+Cell[109277, 3412, 931, 27, 61, "Input",ExpressionUUID->"19d0214e-62ae-45d5-aa1b-60302fc7b9e9",
+ CellID->569912814],
+Cell[110211, 3441, 10116, 199, 53, "Output",ExpressionUUID->"bba63a61-83d0-4537-b13b-46de17a1f9d9",
+ CellID->28588414]
+}, Open  ]]
+}, Open  ]],
+Cell[120354, 3644, 438, 11, 96, "DefinitionBox",ExpressionUUID->"3a120140-9199-49e4-9455-dd2ea9fc8376",
+ CellID->771150938],
+Cell[120795, 3657, 98, 1, 30, "Caption",ExpressionUUID->"f5f60007-c978-4515-b0ad-835ba5ae7d46",
+ CellID->56681674],
+Cell[CellGroupData[{
+Cell[120918, 3662, 102, 1, 40, "MathCaption",ExpressionUUID->"8cfa9254-3dcb-4f06-b363-a79c3c589855",
+ CellID->135753386],
+Cell[CellGroupData[{
+Cell[121045, 3667, 127, 2, 25, "Input",ExpressionUUID->"95b13454-664a-49ef-b319-51b599fe4560",
+ CellID->49790133],
+Cell[121175, 3671, 129, 2, 24, "Output",ExpressionUUID->"291a9438-7152-4128-85b7-ac77dd1cf2b8",
+ CellID->380375781]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[121365, 3680, 191, 2, 74, "TutorialMoreAboutSection",ExpressionUUID->"76801787-5f70-41d3-a497-142c85e4f5f5",
+ CellID->161772049],
+Cell[121559, 3684, 107, 1, 24, "TutorialMoreAbout",ExpressionUUID->"293b3931-85af-4829-9e80-7b6c6a37d4eb",
+ CellID->67989278]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[121703, 3690, 128, 1, 74, "RelatedTutorialsSection",ExpressionUUID->"b843fff2-33d9-4c3f-83b8-39883e476e35",
+ CellID->183639716],
+Cell[121834, 3693, 106, 1, 24, "RelatedTutorials",ExpressionUUID->"3ca477f5-83dd-45cf-97d5-2f16fcf8c0a1",
+ CellID->29667343]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[121989, 3700, 110, 1, 72, "MetadataSection",ExpressionUUID->"f70824db-8bb0-4d0d-a14e-72f55559f5eb",
+ CellID->213044136],
+Cell[122102, 3703, 472, 11, 26, "History",ExpressionUUID->"1fbf2634-130c-4a42-b1fd-588c4e7a8f5b",
+ CellID->72794903],
+Cell[CellGroupData[{
+Cell[122599, 3718, 122, 1, 21, "CategorizationSection",ExpressionUUID->"1aa13a2a-d527-4b88-a6f6-f464858515fe",
+ CellID->385949988],
+Cell[122724, 3721, 137, 2, 70, "Categorization",ExpressionUUID->"ae94e6e3-6a49-4d7e-bb24-26a709fea1f8",
+ CellID->509057587],
+Cell[122864, 3725, 169, 2, 70, "Categorization",ExpressionUUID->"c05029b2-5853-47e8-8989-2c88539ca3a9",
+ CellID->519804101],
+Cell[123036, 3729, 166, 2, 70, "Categorization",ExpressionUUID->"44216c23-99d0-4901-8e9a-cf8468fac854",
+ CellID->392509224],
+Cell[123205, 3733, 200, 4, 70, "Categorization",ExpressionUUID->"764c4ddd-b0e0-480f-80bd-532b6aa0f96f",
+ CellID->22346959]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[123442, 3742, 110, 1, 21, "KeywordsSection",ExpressionUUID->"bf86c44b-4960-45b2-b08f-b5f2b7bff7e6",
+ CellID->426123361],
+Cell[123555, 3745, 99, 1, 70, "Keywords",ExpressionUUID->"196dd428-ec9d-4b25-82c2-5e89d985bbff",
+ CellID->393918541]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+

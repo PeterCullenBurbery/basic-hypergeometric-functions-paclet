@@ -37,7 +37,7 @@
             ,
             "Hash"
             ->
-            "e81d6ddce64ab604f6fb2c59b614d2c88d5e6fa3ae4f8512b37d633943082061"
+            "615a858006150792b2839f47d922a2bc327d0281b4bbf407192bf183b57f2adc"
                 
         |>
         ,
@@ -64,7 +64,7 @@
             ,
             "Hash"
             ->
-            "5e7a97bf97f4ba0bbd4d465a439c2c5a1accf59a065fee31a855bce1dd6ff44d"
+            "9ed8ffd7d7d931ba5f07fec9ad1efb5e7580815d40b93671e05a86d89cf9512e"
                 
         |>
         ,
@@ -78,21 +78,7 @@
             ,
             "Hash"
             ->
-            "59ecfad7de6f6d72cb427cd5125c266e38ab84e776646b0ad4ba007df4cf8426"
-                
-        |>
-        ,
-        <|
-            "File"
-            ->
-            File[
-                "Documentation\\English\\ReferencePages\\Symbols\\RearrangeMultiplicativeSubExpressions.nb"
-                    
-            ]
-            ,
-            "Hash"
-            ->
-            "dccd607e6feedb54faf9bd62c4f561023ef1bb48f41f0c2d7ab65cbe51893d7c"
+            "1e3fc4acb36046ca1c7acd28ae63fbf07191e7bdd007e7b51642c0495692ac28"
                 
         |>
         ,
@@ -106,7 +92,21 @@
             ,
             "Hash"
             ->
-            "0859ffb1c56f4dcd7470032a19c5796018affd56a96b66a03fbca62be0cdce39"
+            "c572d25583719981f862fd7cac27edfaca95b2bbea3d3bbb69925a645c571c03"
+                
+        |>
+        ,
+        <|
+            "File"
+            ->
+            File[
+                "Documentation\\English\\Tutorials\\RearrangingExpressions.nb"
+                    
+            ]
+            ,
+            "Hash"
+            ->
+            "01d2e8cc8422e89996838d4948f5f726b41bdf108858571f6eac054cec4b0cb2"
                 
         |>
     }

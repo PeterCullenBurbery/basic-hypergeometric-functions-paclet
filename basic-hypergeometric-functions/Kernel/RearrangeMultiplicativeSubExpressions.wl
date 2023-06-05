@@ -10,7 +10,8 @@ Begin["`Private`"];
 
 (* Define your public and private symbols here. *)
 RearrangeMultiplicativeSubExpressions//ClearAll
-
+Attributes[
+  RearrangeMultiplicativeSubExpressions] = {HoldFirst}
 RearrangeMultiplicativeSubExpressions[input_] := 
  Module[{firstoutput}, 
   firstoutput = 
