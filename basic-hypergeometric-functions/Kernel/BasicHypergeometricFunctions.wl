@@ -24,3 +24,4 @@
 <<PeterBurbery`BasicHypergeometricFunctions`DeleteQPhIInQPochammerTeXString`;
 <<PeterBurbery`BasicHypergeometricFunctions`MakeLaTeXStringForQPhIExpression`;
 <<PeterBurbery`BasicHypergeometricFunctions`DeleteQPhInQPochammerTeXString`;
+PeterBurbery`BasicHypergeometricFunctions`AddEquationNumberingToTeXString;
