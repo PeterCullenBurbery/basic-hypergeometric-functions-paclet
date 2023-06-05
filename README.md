@@ -13,4 +13,5 @@
  There are some details about my bug at https://community.wolfram.com/groups/-/m/t/2929795?p_p_auth=Lp5Wq3WS.
  For more information, see the Wikipedia article for the Q Pochhammer symbol at https://en.wikipedia.org/wiki/Q-Pochhammer_symbol, and the Wikipedia article for the Generalized hypergeometric function at https://en.wikipedia.org/wiki/Generalized_hypergeometric_function.
  I would like to take the input a b c d q^(-1+n) and move q to the front to get q^(-1+n) a b c d and then convert the math expression to LaTeX with q^{n-1}abcd.
- 
+ I will be using JetBrains Fleet to edit the readme.md file.
+ I will be using Git with Visual Studio Code.
