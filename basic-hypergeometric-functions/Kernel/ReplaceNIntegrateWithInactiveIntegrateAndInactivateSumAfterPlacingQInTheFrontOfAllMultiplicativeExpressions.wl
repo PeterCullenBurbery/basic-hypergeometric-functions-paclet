@@ -17,7 +17,7 @@ Attributes[
 InTheFrontOfAllMultiplicativeExpressions] = {HoldFirst}; 
 ReplaceNIntegrateWithInactiveIntegrateAndInactivateSumAfterPlacingQInT\
 heFrontOfAllMultiplicativeExpressions[input_] := 
- PositionQInFrontOfAllMultiplicativeExpressions //@ 
+ RearrangeMultiplicativeSubExpressions //@ 
    Inactivate[input, 
     Sum | NIntegrate] /. {Inactive[NIntegrate][
      f_, {x_, xmin_, xmax_}, ___] :> 
