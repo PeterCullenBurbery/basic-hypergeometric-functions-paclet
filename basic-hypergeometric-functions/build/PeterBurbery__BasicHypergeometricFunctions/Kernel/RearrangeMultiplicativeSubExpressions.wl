@@ -14,38 +14,38 @@ Attributes[
   RearrangeMultiplicativeSubExpressions] = {HoldFirst}
 RearrangeMultiplicativeSubExpressions[input_] := 
  Module[{firstoutput}, 
- firstoutput = 
+firstoutput = 
   Inactivate[input, 
-     Times] //. {Inactive[Times][i : (_?AtomQ ..)] :> 
-      NonCommutativeMultiply @@ PositionQInFrontOfList[{i}], 
+     Times] //. {Inactive[Times][Global`i : (_?AtomQ ..)] :> 
+      NonCommutativeMultiply @@ PositionQInFrontOfList[{Global`i}], 
      Inactive[Times][
        OrderlessPatternSequence[
-        n : ((_^_?(#1 > 0 &) | _?(NumeratorTermQ[#1] &)) ..), 
-        d : ((_^_?(#1 < 
+       Global`n : ((_^_?(#1 > 0 &) | _?(NumeratorTermQ[#1] &)) ..), 
+        Global`d : ((_^_?(#1 < 
                   0 &) | _?(DenominatorTermQ[#1] &)) ..)]] :> \
-(NonCommutativeMultiply @@ PositionQInFrontOfList[{n}] /.
+(NonCommutativeMultiply @@ PositionQInFrontOfList[{Global`n}] /.
          
-         NonCommutativeMultiply[x_] :> x)/(NonCommutativeMultiply @@ 
-          PositionQInFrontOfList[Denominator /@ {d}] /. 
-         NonCommutativeMultiply[y_] :> y), 
-     NonCommutativeMultiply[i : (_?NumericQ ..)] :> Times[i], 
-     u : NonCommutativeMultiply[___] /; Cases[u, q | q^_] != {} :> 
+         NonCommutativeMultiply[Global`x_] :>Global`x)/(NonCommutativeMultiply @@ 
+          PositionQInFrontOfList[Denominator /@ {      Global`d}] /. 
+         NonCommutativeMultiply[Global`y_] :> Global`y), 
+     NonCommutativeMultiply[Global`i : (_?NumericQ ..)] :> Times[Global`i], 
+     u : NonCommutativeMultiply[___] /; Cases[u, Global`q | Global`q^_] != {} :> 
       NonCommutativeMultiply @@ PositionQInFrontOfList[List @@ u], 
-     Inactive[Times][y__] :> NonCommutativeMultiply[y]} /. 
-   Inactive[Times][i : (_?NumericQ ..)] :> Times[i];
+     Inactive[Times][Global`y__] :> NonCommutativeMultiply[Global`y]} /. 
+   Inactive[Times][Global`i : (_?NumericQ ..)] :> Times[Global`i];
  Replace[
   Replace[DeleteCases[
     firstoutput /. 
-     OrderlessPatternSequence[numbers : (_?NumericQ ..), 
-        symbols : (_Symbol ...), 
-        powers : (_^_. ..)] ** (plus : ((+__) ...)) :> 
-      Times @@ numbers NonCommutativeMultiply @@ 
-        PositionQInFrontOfList[Join[{symbols}, {powers}, {plus}]], 
-    NonCommutativeMultiply[], All], NonCommutativeMultiply[x_] :> x, 
+     OrderlessPatternSequence[Global`numbers : (_?NumericQ ..), 
+        Global`symbols : (_Symbol ...), 
+        Global`powers : (_^_. ..)] ** (Global`plus : ((+__) ...)) :> 
+      Times @@ Global`numbers NonCommutativeMultiply @@ 
+        PositionQInFrontOfList[Join[{Global`symbols}, {Global`powers}, {Global`plus}]], 
+    NonCommutativeMultiply[], All], NonCommutativeMultiply[Global`x_] :> Global`x, 
    All], {NonCommutativeMultiply[
-     nonqs : Repeated[_?(Head[#] == Symbol && # =!= q &)], 
-     qs : Power[NonCommutativeMultiply[q, _], _]] :> 
-    NonCommutativeMultiply[qs, nonqs]}, All]]
+     Global`nonqs : Repeated[_?(Head[#] == Symbol && # =!= Global`q &)], 
+  Global`qs : Power[NonCommutativeMultiply[Global`q, _], _]] :> 
+    NonCommutativeMultiply[Global`qs, Global`nonqs]}, All]]
 End[]; (* End `Private` *)
 
 EndPackage[];
