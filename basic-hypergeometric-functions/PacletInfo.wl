@@ -9,7 +9,7 @@ PacletObject[
     "PublisherID" -> "PeterBurbery",
     "Version" -> "1.0.0",
     "WolframVersion" -> "13.1+",
-     "Loading" -> "Startup",
+    
     "PrimaryContext" -> "PeterBurbery`BasicHypergeometricFunctions`",
     "Extensions" -> {
       {
