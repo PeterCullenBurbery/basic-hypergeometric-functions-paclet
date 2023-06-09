@@ -1,0 +1,1081 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     53462,       1071]
+NotebookOptionsPosition[     49089,        976]
+NotebookOutlinePosition[     51583,       1038]
+CellTagsIndexPosition[     51461,       1032]
+WindowTitle->AddEquationNumberingToTeXString
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "PETER BURBERY/ BASIC HYPERGEOMETRIC FUNCTIONS SYMBOL", 
+           "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "c27dd25b-c3b2-4707-ac7a-7d81ac825944"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "7a4618c0-dd18-43ca-b00b-f6ab06889baf"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[Cell[BoxData[
+     TagBox[
+      ActionMenuBox[
+       FrameBox[Cell[TextData[{
+         "URL",
+         " ",
+         Cell[BoxData[
+          GraphicsBox[
+           {GrayLevel[0.66667], Thickness[0.13], 
+            LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+           AspectRatio->1,
+           ImageSize->20,
+           PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+          "9ae99848-bd76-419d-836c-633b981cd899"]
+        }],ExpressionUUID->"2bc429d5-9d53-419c-a81b-0b645ab1b9ba"],
+        StripOnInput->False],{
+       "\"PeterBurbery/BasicHypergeometricFunctions/ref/\
+AddEquationNumberingToTeXString\"" :> None, 
+        "\"Copy Wolfram Documentation Center URL\"" :> 
+        Module[{DocumentationSearch`Private`nb$}, 
+          DocumentationSearch`Private`nb$ = 
+           NotebookPut[
+            Notebook[{
+              Cell["PeterBurbery/BasicHypergeometricFunctions/ref/\
+AddEquationNumberingToTeXString"]}, Visible -> False]]; 
+          SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+          FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+          NotebookClose[DocumentationSearch`Private`nb$]; Null], Delimiter, 
+        "\"Copy web URL\"" :> 
+        Module[{DocumentationSearch`Private`nb$}, 
+          DocumentationSearch`Private`nb$ = 
+           NotebookPut[
+            Notebook[{
+              Cell[BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                  "http://reference.wolfram.com/language/PeterBurbery/\
+BasicHypergeometricFunctions/ref/AddEquationNumberingToTeXString.html"], 
+                  StandardForm]], "Input", TextClipboardType -> "PlainText"]},
+               Visible -> False]]; 
+          SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+          FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+          NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        "\"Go to web URL\"" :> 
+        FrontEndExecute[{
+          NotebookLocate[{
+            URL[If[TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$57438], 
+                "http://reference.wolfram.com/system-modeler/", 
+                "http://reference.wolfram.com/language/"] <> 
+              "PeterBurbery/BasicHypergeometricFunctions/ref/\
+AddEquationNumberingToTeXString" <> ".html"], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"],
+      MouseAppearanceTag["LinkHand"]]],
+     LineSpacing->{1.4, 0},ExpressionUUID->
+     "dade1f7b-4dcf-410b-9fe9-e1abf775f5eb"]], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "b267b105-e35c-4756-b053-4b482e9edd42"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"50bf8da3-1553-4104-93e9-453b93601c32"],
+
+Cell["PeterBurbery`BasicHypergeometricFunctions`", "ContextNameCell",ExpressionUUID->"3c5a71a6-d91f-46fe-a3dc-1a1a55351a3e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "AddEquationNumberingToTeXString", "ObjectName",ExpressionUUID->
+      "0a478932-4d77-43eb-ae5f-93e7f18e07d3"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"cad9f5b4-f05f-419e-a8df-45592cf3587d"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "349cc9e1-86c6-4386-bd16-92c4aa983a31"]
+    }],ExpressionUUID->"c75ff528-22fc-41bc-a73a-0748406f1a01"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"f19c49c8-a29a-480f-8bdd-\
+86f1fd331161"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{
+         Cell[
+          TextData["AddEquationNumberingToTeXString"]], 
+         "paclet:PeterBurberyBasicHypergeometricFunctions/ref/\
+AddEquationNumberingToTeXString", 
+         "PeterBurberyBasicHypergeometricFunctions Package Symbol"},
+        "PackageLink",
+        BaseStyle->"InlineFormula"], "[", "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "4277e547-5409-429a-b490-329de4c83a39"],
+     "\[LineSeparator]XXXX"
+    }],ExpressionUUID->"88b3c242-22d0-49be-ab01-67007a0f8cd3"]}
+  }]], "Usage",
+ CellID->8225710,ExpressionUUID->"931d5f02-bc37-44ba-8539-114df4352f85"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"7c9ac4a1-45f0-4029-ad69-0fa0fca08212"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"fea29275-0b2d-4c4e-8cf6-d1f8aa8e26a9"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "71b93179-58b2-48a5-9783-e9f6fa23dd88"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->48961296,ExpressionUUID->"c6f53411-3b9c-496c-bc98-39ce8f83aa4d"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PeterBurbery`BasicHypergeometricFunctions`\>\"", 
+  "]"}]], "Input", "ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->230650015,ExpressionUUID->"e5eaf0aa-3cb3-46eb-b09f-32cfb354ea1e"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"ef74d35b-0d75-4beb-8269-551a4082b303"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"693615de-9c0c-4cc7-af35-50494913bb43"],
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "a85a4200-6dbf-440c-8365-b68a629dcf4b"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->130842870,ExpressionUUID->"805efe5e-e8aa-4b20-a2fe-844871c5989e"],
+
+Cell[TextData[{
+ "Add equation numbering to a ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
+    SingleLetterItalics->False], TraditionalForm]],ExpressionUUID->
+  "20e7b07c-aae5-4588-a700-30c19da102de"],
+ " string: "
+}], "ExampleText",
+ CellID->501479086,ExpressionUUID->"d89f55c1-632b-445e-ba3c-2e68ceb8ee3f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClickToCopy", "[", 
+  RowBox[{"\"\<example\>\"", ",", 
+   RowBox[{
+    InterpretationBox[
+     RowBox[{
+      TagBox["CloudExpression",
+       "SummaryHead"], "[", 
+      DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = 
+       "Ready"}, 
+       TemplateBox[{
+         PaneSelectorBox[{False -> GridBox[{{
+               PaneBox[
+                ButtonBox[
+                 DynamicBox[
+                  FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"],
+                   ImageSizeCache -> {10.0329375, {0., 10.0329375}}], 
+                 Appearance -> None, BaseStyle -> {}, 
+                 ButtonFunction :> (Typeset`open$$ = True), Evaluator -> 
+                 Automatic, Method -> "Preemptive"], 
+                Alignment -> {Center, Center}, ImageSize -> 
+                Dynamic[{
+                  Automatic, 
+                   3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
+               GraphicsBox[{
+                 Thickness[0.002777777777777778], {
+                  FaceForm[{
+                    RGBColor[
+                    0.6669999999999999, 0.6669999999999999, 
+                    0.6669999999999999], 
+                    Opacity[1.]}], 
+                  
+                  FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+                   3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+                   3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 
+                   3}}}, CompressedData["
+1:eJxTTMoPSmVmYGBgBGI1IGZigAKOEoeijIlvaw6nO1yteKlmKFPiUCWyzv2h
+W4aDj3mnY4J6iYMKW+NU58sIvjeITs2E84WaD5xaaJvjELfLk4dJvNgBbG5P
+HoR/vBDOB1ljvxTBB9vXUujwVSOm/1BrnoNsVIr1/eRCB67riwtsq/IcFDcA
+XXa7wGHLibJ981cUOliBGJtzHWxBCkqLHVpfB+6Qe5kB5++fL6V/d0IqnP8N
+ZO7MJIh/phQ5rPx4yTfpQILDstlHFDZYFToAVauwHYyHuBNm76NYB6BtUvqV
+hQ590/OEmj9Ew/l3ftZl7TEJgvMlQPoXujhYgty1Og/Oh4UPivztDAewBWdd
+HBa6bvv8NyTD4QKIIesK8f/FdIcNJZMlWK6ZOlxQuv2z7laaw4G575cfOy0D
+kbdMgfOdu3Oe/1ZMhPMfgDxYGOXQAPLnLDuHanvTuF2SIQ4zJFjC+Pb6wvng
+8J9bBOdXg9QXlcD54Hh8X+rgkyQQYdkTBec/WgoMMIdEOB/k/bsKKQ6PQeIa
+pZBwnZPmgJ6eAE5jA2M=
+                   "]]}, {
+                  FaceForm[{
+                    RGBColor[1., 1., 1.], 
+                    Opacity[1.]}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   79.59, 232.36700000000002`}, {98.72300000000001, 
+                   232.36700000000002`}, {98.72300000000001, 213.234}, {79.59,
+                    213.234}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   186.105, 232.36700000000002`}, {205.238, 
+                   232.36700000000002`}, {205.238, 213.234}, {186.105, 
+                   213.234}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   112.94500000000001`, 232.36700000000002`}, {170.082, 
+                   232.36700000000002`}, {170.082, 213.234}, {
+                   112.94500000000001`, 213.234}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   79.586, 195.691}, {136.723, 195.691}, {136.723, 176.558}, {
+                   79.586, 176.558}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   79.586, 124.258}, {136.723, 124.258}, {136.723, 105.125}, {
+                   79.586, 105.125}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   152.809, 124.258}, {209.946, 124.258}, {209.946, 
+                   105.125}, {152.809, 105.125}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   220.098, 124.258}, {277.235, 124.258}, {277.235, 
+                   105.125}, {220.098, 105.125}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   149.93800000000002`, 195.691}, {171.02, 195.691}, {171.02, 
+                   176.558}, {149.93800000000002`, 176.558}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   186.934, 195.691}, {208.012, 195.691}, {208.012, 
+                   176.558}, {186.934, 176.558}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   221.059, 195.691}, {242.141, 195.691}, {242.141, 
+                   176.558}, {221.059, 176.558}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   256.15200000000004`, 195.691}, {277.23400000000004`, 
+                   195.691}, {277.23400000000004`, 176.558}, {
+                   256.15200000000004`, 176.558}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   256.15200000000004`, 162.52700000000002`}, {
+                   277.23400000000004`, 162.52700000000002`}, {
+                   277.23400000000004`, 143.394}, {256.15200000000004`, 
+                   143.394}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   79.586, 162.52700000000002`}, {100.66799999999999`, 
+                   162.52700000000002`}, {100.66799999999999`, 143.394}, {
+                   79.586, 143.394}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   187.59, 162.52700000000002`}, {242.457, 
+                   162.52700000000002`}, {242.457, 143.394}, {187.59, 
+                   143.394}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   116.793, 162.52700000000002`}, {171.66, 
+                   162.52700000000002`}, {171.66, 143.394}, {116.793, 
+                   143.394}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   220.098, 232.36700000000002`}, {277.235, 
+                   232.36700000000002`}, {277.235, 213.234}, {220.098, 
+                   213.234}}}]}}, AspectRatio -> 1, Axes -> False, Background -> 
+                None, Frame -> None, FrameTicks -> None, 
+                ImageSize -> {Automatic, 
+                  Dynamic[
+                  3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification]), ImageSizeCache -> {45., {0., 9.}}]}, 
+                PlotRange -> {{0., 360.}, {0., 360.}}], 
+               GridBox[{{
+                  RowBox[{
+                    TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{
+                    "\"VeryWellPoisedBasicHypergeometricSourceData\""}, 
+                    "RowDefault"], "SummaryItem"]}]}, {
+                  RowBox[{
+                    TagBox["\"Owner: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    TemplateBox[{"\"burbery1\""}, "RowDefault"], 
+                    "SummaryItem"]}]}}, AutoDelete -> False, 
+                BaseStyle -> {
+                 ShowStringCharacters -> False, NumberMarks -> False, 
+                  PrintPrecision -> 3, ShowSyntaxStyles -> False}, 
+                GridBoxAlignment -> {
+                 "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                GridBoxSpacings -> {
+                 "Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}}, AutoDelete -> 
+             False, BaselinePosition -> {1, 1}, 
+             GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+             GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], True -> 
+           GridBox[{{
+               PaneBox[
+                ButtonBox[
+                 DynamicBox[
+                  FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"],
+                   ImageSizeCache -> {10.0329375, {0., 10.0329375}}], 
+                 Appearance -> None, BaseStyle -> {}, 
+                 ButtonFunction :> (Typeset`open$$ = False), Evaluator -> 
+                 Automatic, Method -> "Preemptive"], 
+                Alignment -> {Center, Center}, ImageSize -> 
+                Dynamic[{
+                  Automatic, 
+                   3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
+               GraphicsBox[{
+                 Thickness[0.002777777777777778], {
+                  FaceForm[{
+                    RGBColor[
+                    0.6669999999999999, 0.6669999999999999, 
+                    0.6669999999999999], 
+                    Opacity[1.]}], 
+                  
+                  FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+                   3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+                   3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 
+                   3}}}, CompressedData["
+1:eJxTTMoPSmVmYGBgBGI1IGZigAKOEoeijIlvaw6nO1yteKlmKFPiUCWyzv2h
+W4aDj3mnY4J6iYMKW+NU58sIvjeITs2E84WaD5xaaJvjELfLk4dJvNgBbG5P
+HoR/vBDOB1ljvxTBB9vXUujwVSOm/1BrnoNsVIr1/eRCB67riwtsq/IcFDcA
+XXa7wGHLibJ981cUOliBGJtzHWxBCkqLHVpfB+6Qe5kB5++fL6V/d0IqnP8N
+ZO7MJIh/phQ5rPx4yTfpQILDstlHFDZYFToAVauwHYyHuBNm76NYB6BtUvqV
+hQ590/OEmj9Ew/l3ftZl7TEJgvMlQPoXujhYgty1Og/Oh4UPivztDAewBWdd
+HBa6bvv8NyTD4QKIIesK8f/FdIcNJZMlWK6ZOlxQuv2z7laaw4G575cfOy0D
+kbdMgfOdu3Oe/1ZMhPMfgDxYGOXQAPLnLDuHanvTuF2SIQ4zJFjC+Pb6wvng
+8J9bBOdXg9QXlcD54Hh8X+rgkyQQYdkTBec/WgoMMIdEOB/k/bsKKQ6PQeIa
+pZBwnZPmgJ6eAE5jA2M=
+                   "]]}, {
+                  FaceForm[{
+                    RGBColor[1., 1., 1.], 
+                    Opacity[1.]}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   79.59, 232.36700000000002`}, {98.72300000000001, 
+                   232.36700000000002`}, {98.72300000000001, 213.234}, {79.59,
+                    213.234}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   186.105, 232.36700000000002`}, {205.238, 
+                   232.36700000000002`}, {205.238, 213.234}, {186.105, 
+                   213.234}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   112.94500000000001`, 232.36700000000002`}, {170.082, 
+                   232.36700000000002`}, {170.082, 213.234}, {
+                   112.94500000000001`, 213.234}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   79.586, 195.691}, {136.723, 195.691}, {136.723, 176.558}, {
+                   79.586, 176.558}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   79.586, 124.258}, {136.723, 124.258}, {136.723, 105.125}, {
+                   79.586, 105.125}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   152.809, 124.258}, {209.946, 124.258}, {209.946, 
+                   105.125}, {152.809, 105.125}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   220.098, 124.258}, {277.235, 124.258}, {277.235, 
+                   105.125}, {220.098, 105.125}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   149.93800000000002`, 195.691}, {171.02, 195.691}, {171.02, 
+                   176.558}, {149.93800000000002`, 176.558}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   186.934, 195.691}, {208.012, 195.691}, {208.012, 
+                   176.558}, {186.934, 176.558}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   221.059, 195.691}, {242.141, 195.691}, {242.141, 
+                   176.558}, {221.059, 176.558}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   256.15200000000004`, 195.691}, {277.23400000000004`, 
+                   195.691}, {277.23400000000004`, 176.558}, {
+                   256.15200000000004`, 176.558}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   256.15200000000004`, 162.52700000000002`}, {
+                   277.23400000000004`, 162.52700000000002`}, {
+                   277.23400000000004`, 143.394}, {256.15200000000004`, 
+                   143.394}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   79.586, 162.52700000000002`}, {100.66799999999999`, 
+                   162.52700000000002`}, {100.66799999999999`, 143.394}, {
+                   79.586, 143.394}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   187.59, 162.52700000000002`}, {242.457, 
+                   162.52700000000002`}, {242.457, 143.394}, {187.59, 
+                   143.394}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   116.793, 162.52700000000002`}, {171.66, 
+                   162.52700000000002`}, {171.66, 143.394}, {116.793, 
+                   143.394}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   220.098, 232.36700000000002`}, {277.235, 
+                   232.36700000000002`}, {277.235, 213.234}, {220.098, 
+                   213.234}}}]}}, AspectRatio -> 1, Axes -> False, Background -> 
+                None, Frame -> None, FrameTicks -> None, 
+                ImageSize -> {Automatic, 
+                  Dynamic[
+                  3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification]), ImageSizeCache -> {45., {0., 9.}}]}, 
+                PlotRange -> {{0., 360.}, {0., 360.}}], 
+               GridBox[{{
+                  RowBox[{
+                    TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{
+                    "\"VeryWellPoisedBasicHypergeometricSourceData\""}, 
+                    "RowDefault"], "SummaryItem"]}]}, {
+                  RowBox[{
+                    TagBox["\"Owner: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    TemplateBox[{"\"burbery1\""}, "RowDefault"], 
+                    "SummaryItem"]}]}, {
+                  RowBox[{
+                    TagBox["\"URI: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{
+                    "\"https://www.wolframcloud.com/obj/burbery1/\
+CloudExpression/VeryWellPoisedBasicHypergeometricSourceData\""}, 
+                    "RowDefault"], "SummaryItem"]}]}}, AutoDelete -> False, 
+                BaseStyle -> {
+                 ShowStringCharacters -> False, NumberMarks -> False, 
+                  PrintPrecision -> 3, ShowSyntaxStyles -> False}, 
+                GridBoxAlignment -> {
+                 "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                GridBoxSpacings -> {
+                 "Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}}, AutoDelete -> 
+             False, BaselinePosition -> {1, 1}, 
+             GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+             GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]}, 
+          Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+        "SummaryPanel"],
+       DynamicModuleValues:>{}], "]"}],
+     CloudExpression[
+     "https://www.wolframcloud.com/obj/burbery1/CloudExpression/\
+VeryWellPoisedBasicHypergeometricSourceData"],
+     Editable->False,
+     SelectWithContents->True,
+     Selectable->False], "[", "4", "]"}]}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`BasicHypergeometricFunctions`"],
+ CellLabel->"In[1]:=",
+ CellID->472614081,ExpressionUUID->"381aca99-2770-478e-ba66-63af443ce97e"],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1:eJztWMttGzEQXTgXH6MSAl191CFXn4RcHQQ624hs6CIDcoAg6iAdqANVoArU
+gBpQB+ph85IHP4yH5IqrJLaDzAO8oGaH83kcDrl+d3N/dXvWNM3DOR5X118v
+F4vrbx/f4sen+cPsbj79/GH+ZXo3Xby/eQPhBf5u8fdz3AYCgUAgEAgEAoFA
+IBAI/Db2+/33p9huty8d1KsG+GmeAqS9dFCvGrbGhsNhMNYL4/E4GOuFZ2Ns
+t9uxqtfr9eFwcG/5arPZODkkkK9Wq9QahKVZ9NL+6j/q0nDKKdY7LbgIu7t6
+DWPYxfSFJ8YdmlkgQnoRBoMBMxJgmXJrHylQ33KCMTuJBSRQlg4k8AgXUsBb
+xQBlqwkgwtFoZA3OZrNSOkcZWy6XLjxIetHFYBAnV1CRu6WkHE9JONG5gwUI
+8QpyjPEEzykPUIB8MpnQiExRWa4ZiXRgEFxR6Na0kjFOhxeGJ2v1u5gJWh7a
+x4pChFYIbpkO96CYcQZRLa7ONdHxAA7xCjVpF5r5Ok05tTGnrokOxngJQTB2
+42unpL0oC+6gdC9T7owwO3jUwO61DmR5UCuzWWQ1XZ+EJuUdvrKMsaLS4qQ8
+7bdZqCYdyFjaY20TKO2L9rGll6zZfMmYijzLWBoG5dn16mCMr8CPS7bX8dp0
+Ig1V64uqyBpEFmnnd9b+FGPZQ/MoYyX0YiytMSLdrejVpKvJHTFqWWqtf7XG
+sp3nhBqrubQITLCy6elEAJOumRO8MLjW2hZ44PgExjjFHr6pryxjXO7KflUC
+mx6eLkf8dHHqTGH30A3NXTjTXEBj9qzkuC9jug6VNlEHY1xQrrh7VU+jqgVp
+qlyxFhDaKwfiTL9wGblVE6sQ8jJme9rJjMGIu93BtV0pe9DQIwMgbL6MmVdB
+vkXWnFLJWFvo1bBpfbGe3RVI/NjTX3dCARKesCcz5gAdtyNY2yVYzfQDh0CC
+9Ywp8lIP1P9S0tOc35VuHfUBqK82GtdesFNoXBcVDKymOJfB7I3CXWYcUn33
+2VvZxv8JuO0cOIpgrC+Csb4Ixvqi9OkRCAQCgUAgEPhP8AMDi/do
+    "], {{0, 22.}, {51., 0}}, {0, 255},
+    ColorFunction->RGBColor,
+    ImageResolution->{144., 144.},
+    SmoothingQuality->"High"],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  DefaultBaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{51., 22.},
+  PlotRange->{{0, 51.}, {0, 22.}}]], "Output",
+ CellTags->"RasterizedOutput",
+ CellLabel->"Out[1]=",
+ CellID->426396195,ExpressionUUID->"0d8c9c2f-6d8a-4f89-8173-06928d6bfa06"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AddEquationNumberingToTeXString", "[", 
+  RowBox[{"MakeTeXFragment", "[", 
+   RowBox[{"ReplaceAndInactivate", "[", 
+    InterpretationBox[
+     DynamicModuleBox[{Typeset`open = False}, 
+      TemplateBox[{"Expression", 
+        RowBox[{"Equal", "[", 
+          DynamicBox[
+           FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], "]"}], 
+        GridBox[{{
+           RowBox[{
+             TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+             TagBox["41368", "IconizedItem"]}]}}, 
+         GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+         "Column", 
+         GridBoxItemSize -> {
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+        Dynamic[Typeset`open]},
+       "IconizedObject"]],
+     $CellContext`W87[$CellContext`a, $CellContext`b, $CellContext`c, \
+$CellContext`d, $CellContext`e, $CellContext`f, $CellContext`q, \
+$CellContext`z] == 
+     Sum[($CellContext`QPh[{
+          Sqrt[$CellContext`q] ($CellContext`a^(3/
+              2)/($CellContext`b $CellContext`c)), 
+           Sqrt[$CellContext`q $CellContext`a]/$CellContext`b, 
+           Sqrt[$CellContext`q $CellContext`a]/$CellContext`c, $CellContext`q \
+($CellContext`a/($CellContext`b $CellContext`c)), $CellContext`d, \
+$CellContext`e, $CellContext`f}, $CellContext`q, $CellContext`n] \
+$CellContext`QPh[{$CellContext`q $CellContext`a}, $CellContext`q, 
+          2 $CellContext`n] ($CellContext`b $CellContext`c ($CellContext`z/
+           Sqrt[$CellContext`q $CellContext`a]))^$CellContext`n 
+        Sum[($CellContext`QPh[{$CellContext`a^2 ($CellContext`q^(1 + 
+                 2 $CellContext`n)/($CellContext`b $CellContext`c \
+$CellContext`d)), $CellContext`a ($CellContext`q^(
+                 1 + $CellContext`n)/($CellContext`b $CellContext`c)), 
+              Sqrt[$CellContext`a $CellContext`q]/$CellContext`d, \
+$CellContext`q^$CellContext`n (($CellContext`a $CellContext`q)^(3/
+                 2)/($CellContext`b $CellContext`c $CellContext`d)), \
+$CellContext`e $CellContext`q^$CellContext`n, $CellContext`f \
+$CellContext`q^$CellContext`n}, $CellContext`q, $CellContext`m] \
+$CellContext`QPh[{$CellContext`a $CellContext`q^(1 + 
+                2 $CellContext`n)}, $CellContext`q, 
+             2 $CellContext`m] ($CellContext`b $CellContext`c $CellContext`d \
+($CellContext`z/($CellContext`a $CellContext`q)))^$CellContext`m \
+$CellContext`QPhI[{$CellContext`q, $CellContext`b^2 $CellContext`c^2 \
+$CellContext`d^2 $CellContext`e^2 $CellContext`f^2 \
+($CellContext`z^2/($CellContext`a^4 $CellContext`q^4)), $CellContext`a \
+$CellContext`q^(1 + 
+                2 ($CellContext`m + $CellContext`n)), \
+$CellContext`q^($CellContext`m + $CellContext`n) (($CellContext`a \
+$CellContext`q)^(5/
+                 2)/($CellContext`b $CellContext`c $CellContext`d \
+$CellContext`e $CellContext`f))}, $CellContext`q] 
+           Sum[($CellContext`q^((1/
+                 2) (-1 + $CellContext`j) $CellContext`j) \
+$CellContext`QPh[{$CellContext`a^(5/
+                   2) ($CellContext`q^(3/2 + 2 $CellContext`m + 
+                    2 $CellContext`n)/($CellContext`b $CellContext`c \
+$CellContext`d $CellContext`e)), $CellContext`q^($CellContext`m + \
+$CellContext`n) (($CellContext`a $CellContext`q)^(3/
+                    2)/($CellContext`b $CellContext`c $CellContext`d)), 
+                 Sqrt[$CellContext`a $CellContext`q]/$CellContext`e, \
+$CellContext`a^2 ($CellContext`q^(
+                    2 + $CellContext`m + $CellContext`n)/($CellContext`b \
+$CellContext`c $CellContext`d $CellContext`e)), $CellContext`f \
+$CellContext`q^($CellContext`m + $CellContext`n)}, $CellContext`q, \
+$CellContext`j] $CellContext`QPh[{$CellContext`q^(
+                   2 ($CellContext`m + $CellContext`n)) (($CellContext`a \
+$CellContext`q)^(5/
+                    2)/($CellContext`b $CellContext`c $CellContext`d \
+$CellContext`e))}, $CellContext`q, 
+                2 $CellContext`j] ((-$CellContext`a) $CellContext`q^(
+                  1 + $CellContext`m + $CellContext`n))^$CellContext`j 
+              NIntegrate[$CellContext`QPhI[{$CellContext`q^(
+                    3/4 + $CellContext`j/
+                    2 + (1/2) (
+                    1 + $CellContext`m + $CellContext`n)) $CellContext`a^(5/4)
+                     Sqrt[$CellContext`f] ($CellContext`\[Rho]/(
+                    Sqrt[$CellContext`b $CellContext`c $CellContext`d \
+$CellContext`e $CellContext`z] $CellContext`g)), $CellContext`q^(
+                    1/4 - $CellContext`j/
+                    2 + (1/2) (-1 - $CellContext`m - $CellContext`n)) 
+                   Sqrt[$CellContext`b $CellContext`c $CellContext`d \
+$CellContext`e $CellContext`z] ($CellContext`\[Rho]/($CellContext`a^(5/4) 
+                    Sqrt[$CellContext`f] $CellContext`g)), $CellContext`q^(
+                    3/4 + $CellContext`j/
+                    2 + (1/2) (
+                    1 + $CellContext`m + $CellContext`n)) $CellContext`a^(5/4)
+                     Sqrt[$CellContext`f] ($CellContext`g/(
+                    Sqrt[$CellContext`b $CellContext`c $CellContext`d \
+$CellContext`e $CellContext`z] $CellContext`\[Rho])), $CellContext`q^(
+                    1/4 - $CellContext`j/
+                    2 + (1/2) (-1 - $CellContext`m - $CellContext`n)) 
+                   Sqrt[$CellContext`b $CellContext`c $CellContext`d \
+$CellContext`e $CellContext`z] ($CellContext`g/($CellContext`a^(5/4) 
+                    Sqrt[$CellContext`f] $CellContext`\[Rho])), \
+$CellContext`q^(1/4 + $CellContext`j/
+                    2 + (1/2) (-1 + $CellContext`m + $CellContext`n)) 
+                   Sqrt[$CellContext`b $CellContext`c $CellContext`d \
+$CellContext`e $CellContext`z] ($CellContext`g/($CellContext`a^(1/4) 
+                    Sqrt[$CellContext`f] $CellContext`\[Rho])), \
+$CellContext`q^((1/4) (-7 + 2 $CellContext`j + 2 $CellContext`m + 
+                    2 $CellContext`n)) ($CellContext`b $CellContext`c \
+$CellContext`d $CellContext`e $CellContext`f $CellContext`z)^(3/
+                    2) ($CellContext`g/($CellContext`a^(11/
+                    4) $CellContext`\[Rho])), $CellContext`q^(3/4 + 
+                    3 ($CellContext`j/2) + (1/2) (1 + 
+                    3 ($CellContext`m + $CellContext`n))) $CellContext`a^(5/4)
+                     Sqrt[$CellContext`f $CellContext`z] ($CellContext`g/(
+                    Sqrt[$CellContext`b $CellContext`c $CellContext`d \
+$CellContext`e] $CellContext`\[Rho]))}, \
+$CellContext`q]/$CellContext`QPhI[{$CellContext`q^(
+                    3/4 + $CellContext`j/
+                    2 + (1/2) (
+                    1 + $CellContext`m + $CellContext`n)) $CellContext`a^(5/
+                    4) ($CellContext`\[Rho]/(
+                   Sqrt[$CellContext`b $CellContext`c $CellContext`d \
+$CellContext`e $CellContext`f $CellContext`z] $CellContext`g)), \
+$CellContext`q^(-(3/4) - $CellContext`j/
+                    2 + (1/2) (-1 - $CellContext`m - $CellContext`n)) 
+                  Sqrt[$CellContext`b $CellContext`c $CellContext`d \
+$CellContext`e $CellContext`f $CellContext`z] \
+($CellContext`\[Rho]/($CellContext`a^(5/4) $CellContext`g)), $CellContext`q^((
+                    1/4) (-1 + 2 $CellContext`j + 2 $CellContext`m + 
+                    2 $CellContext`n)) 
+                  Sqrt[$CellContext`b $CellContext`c $CellContext`d \
+$CellContext`e $CellContext`f $CellContext`z] \
+($CellContext`g/($CellContext`a^(3/4) $CellContext`\[Rho])), $CellContext`q^((
+                    1/4) (-3 + 2 $CellContext`j + 2 $CellContext`m + 
+                    2 $CellContext`n)) 
+                  Sqrt[$CellContext`b $CellContext`c $CellContext`d \
+$CellContext`e $CellContext`f $CellContext`z] \
+($CellContext`g/($CellContext`a^(3/
+                    4) $CellContext`\[Rho])), -($CellContext`q^((1/4) (-3 + 
+                    2 $CellContext`j + 2 $CellContext`m + 2 $CellContext`n)) 
+                   Sqrt[$CellContext`b $CellContext`c $CellContext`d \
+$CellContext`e $CellContext`f $CellContext`z] \
+($CellContext`g/($CellContext`a^(3/
+                    4) $CellContext`\[Rho]))), -($CellContext`q^((1/4) (-1 + 
+                    2 $CellContext`j + 2 $CellContext`m + 2 $CellContext`n)) 
+                   Sqrt[$CellContext`b $CellContext`c $CellContext`d \
+$CellContext`e $CellContext`f $CellContext`z] \
+($CellContext`g/($CellContext`a^(3/4) $CellContext`\[Rho]))), $CellContext`q^(
+                    3/4 + $CellContext`j/
+                    2 + (1/2) (
+                    1 + $CellContext`m + $CellContext`n)) $CellContext`a^(5/4)
+                     Sqrt[$CellContext`z] ($CellContext`g/(
+                   Sqrt[$CellContext`b $CellContext`c $CellContext`d \
+$CellContext`e $CellContext`f] $CellContext`\[Rho]))}, $CellContext`q], \
+{$CellContext`\[Zeta], -Pi, Pi}, WorkingPrecision -> 
+                30])/($CellContext`QPh[{$CellContext`q, $CellContext`a^2 \
+($CellContext`q^(2 (
+                    1 + $CellContext`m + $CellContext`n))/($CellContext`b \
+$CellContext`c $CellContext`d)), $CellContext`a ($CellContext`q^(
+                   1 + $CellContext`m + $CellContext`n)/$CellContext`e), 
+                
+                Sqrt[$CellContext`a $CellContext`q^(1 + 
+                   2 ($CellContext`m + $CellContext`n))], \
+$CellContext`q^($CellContext`m + $CellContext`n) (($CellContext`a \
+$CellContext`q)^(5/
+                   2)/($CellContext`b $CellContext`c $CellContext`d \
+$CellContext`e $CellContext`f))}, $CellContext`q, $CellContext`j] \
+$CellContext`QPh[{$CellContext`a^(5/
+                  2) ($CellContext`q^(3/2 + 2 $CellContext`m + 
+                   2 $CellContext`n)/($CellContext`b $CellContext`c \
+$CellContext`d $CellContext`e))}, $CellContext`q, 
+               2 $CellContext`j]), {$CellContext`j, 0, 
+              Infinity}])/($CellContext`QPh[{$CellContext`q, \
+$CellContext`q^$CellContext`n 
+             Sqrt[$CellContext`a $CellContext`q], $CellContext`q^(
+               2 $CellContext`n) (($CellContext`a $CellContext`q)^(3/
+                2)/($CellContext`b $CellContext`c)), $CellContext`a \
+($CellContext`q^(
+                1 + $CellContext`n)/$CellContext`d), $CellContext`a \
+($CellContext`q^(
+                1 + $CellContext`n)/$CellContext`e), $CellContext`a \
+($CellContext`q^(
+                1 + $CellContext`n)/$CellContext`f)}, $CellContext`q, \
+$CellContext`m] $CellContext`QPh[{$CellContext`a^2 ($CellContext`q^(1 + 
+                2 $CellContext`n)/($CellContext`b $CellContext`c \
+$CellContext`d))}, $CellContext`q, 2 $CellContext`m] (2 
+           Pi $CellContext`QPhI[{$CellContext`f, \
+$CellContext`q/$CellContext`f, $CellContext`q^($CellContext`m + \
+$CellContext`n) (($CellContext`a $CellContext`q)^(5/
+                 2)/($CellContext`b $CellContext`c $CellContext`d \
+$CellContext`e $CellContext`z)), $CellContext`b $CellContext`c $CellContext`d \
+$CellContext`e $CellContext`q^(-(3/
+                  2) - $CellContext`m - $CellContext`n) \
+($CellContext`z/$CellContext`a^(5/
+                2)), $CellContext`b^2 $CellContext`c^2 $CellContext`d^2 \
+$CellContext`e^2 $CellContext`f^2 ($CellContext`z^2/($CellContext`a^4 \
+$CellContext`q^3)), $CellContext`a ($CellContext`q^(
+                 1 + $CellContext`m + $CellContext`n)/$CellContext`f), \
+$CellContext`q^(
+                2 ($CellContext`m + $CellContext`n)) (($CellContext`a \
+$CellContext`q)^(5/
+                 2)/($CellContext`b $CellContext`c $CellContext`d \
+$CellContext`e))}, $CellContext`q])), {$CellContext`m, 0, 
+           Infinity}])/($CellContext`QPh[{$CellContext`q, 
+          
+          Sqrt[$CellContext`q $CellContext`a], $CellContext`q \
+($CellContext`a/$CellContext`b), $CellContext`q \
+($CellContext`a/$CellContext`c), $CellContext`q \
+($CellContext`a/$CellContext`d), $CellContext`q \
+($CellContext`a/$CellContext`e), $CellContext`q \
+($CellContext`a/$CellContext`f)}, $CellContext`q, $CellContext`n] \
+$CellContext`QPh[{
+         Sqrt[$CellContext`q] ($CellContext`a^(3/
+             2)/($CellContext`b $CellContext`c))}, $CellContext`q, 
+         2 $CellContext`n]), {$CellContext`n, 0, Infinity}],
+     SelectWithContents->True,
+     Selectable->False], "]"}], "]"}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`BasicHypergeometricFunctions`"],
+ CellLabel->"In[2]:=",
+ CellID->138005299,ExpressionUUID->"9b003548-c9a2-4d8f-9d8a-5938b04479aa"],
+
+Cell[BoxData["\<\"\\\\begin{equation}\\\\text{W87}[a,b,c,d,e,f,q,z]==\\\\\
+underset{n=0}{\\\\overset{\\\\infty }{\\\\sum }}\\\\frac{b^n\\\\text{**}c^n\\\
+\\text{**}z^n\\\\text{**}\\\\text{QPh}[\\\\{q\\\\text{**}a\\\\},q,2 \
+n]\\\\text{**}\\\\text{QPh}\\\\left[\\\\left\\\\{\\\\frac{\\\\sqrt{q}\\\\text{\
+**}a^{3/2}}{b\\\\text{**}c},\\\\frac{\\\\sqrt{q}\\\\text{**}\\\\sqrt{a}}{b},\\\
+\\frac{\\\\sqrt{q}\\\\text{**}\\\\sqrt{a}}{c},\\\\frac{q\\\\text{**}a}{b\\\\\
+text{**}c},d,e,f\\\\right\\\\},q,n\\\\right]\\\\text{**}\\\\underset{m=0}{\\\\\
+overset{\\\\infty\\r\\n}{\\\\sum }}\\\\frac{b^m\\\\text{**}c^m\\\\text{**}d^m\
+\\\\text{**}z^m\\\\text{**}\\\\text{QPh}\\\\left[\\\\left\\\\{q^{1+2 \
+n}\\\\text{**}a\\\\right\\\\},q,2 \
+m\\\\right]\\\\text{**}\\\\text{QPh}\\\\left[\\\\left\\\\{\\\\frac{q^{1+2\\r\\\
+nn}\\\\text{**}a^2}{b\\\\text{**}c\\\\text{**}d},\\\\frac{q^{1+n}\\\\text{**}\
+a}{b\\\\text{**}c},\\\\frac{\\\\sqrt{q}\\\\text{**}\\\\sqrt{a}}{d},\\\\frac{q^\
+{\\\\frac{3}{2}+n}\\\\text{**}a^{3/2}}{b\\\\text{**}c\\\\text{**}d},q^n\\\\\
+text{**}e,q^n\\\\text{**}f\\\\right\\\\},q,m\\\\right]\\\\text{**}\\\\text{\
+QPhI}\\\\left[\\\\left\\\\{q,\\\\frac{b^2\\\\text{**}c^2\\\\text{**}d^2\\\\\
+text{**}e^2\\\\text{**}f^2\\\\text{**}z^2}{q^4\\\\text{**}a^4},q^{1+2\\r\\n(m+\
+n)}\\\\text{**}a,\\\\frac{q^{\\\\frac{5}{2}+m+n}\\\\text{**}a^{5/2}}{b\\\\\
+text{**}c\\\\text{**}d\\\\text{**}e\\\\text{**}f}\\\\right\\\\},q\\\\right]\\\
+\\text{**}\\\\underset{j=0}{\\\\overset{\\\\infty\\r\\n}{\\\\sum \
+}}\\\\frac{q^{\\\\frac{1}{2} \
+(-1+j)\\\\text{**}j+j\\\\text{**}(1+m+n)}\\\\text{**}(-1)^j\\\\text{**}a^j\\\\\
+text{**}\\\\text{QPh}\\\\left[\\\\left\\\\{\\\\frac{q^{\\\\frac{5}{2}+2\\r\\n(\
+m+n)}\\\\text{**}a^{5/2}}{b\\\\text{**}c\\\\text{**}d\\\\text{**}e}\\\\right\\\
+\\},q,2 j\\\\right]\\\\text{**}\\\\text{QPh}\\\\left[\\\\left\\\\{\\\\frac{q^{\
+\\\\frac{3}{2}+2 m+2 \
+n}\\\\text{**}a^{5/2}}{b\\\\text{**}c\\\\text{**}d\\\\text{**}e},\\\\frac{q^{\
+\\\\frac{3}{2}+m+n}\\\\text{**}a^{3/2}}{b\\\\text{**}c\\\\text{**}d},\\\\frac{\
+\\\\sqrt{q}\\\\text{**}\\\\sqrt{a}}{e},\\\\frac{q^{2+m+n}\\\\text{**}a^2}{b\\\
+\\text{**}c\\\\text{**}d\\\\text{**}e},q^{m+n}\\\\text{**}f\\\\right\\\\},q,j\
+\\\\right]\\\\text{**}\\\\int\\r\\n_{-\\\\pi }^{\\\\pi \
+}\\\\frac{\\\\text{QPhI}\\\\left[\\\\left\\\\{\\\\frac{q^{\\\\frac{3}{4}+\\\\\
+frac{j}{2}+\\\\frac{1}{2} \
+(1+m+n)}\\\\text{**}a^{5/4}\\\\text{**}\\\\sqrt{f}\\\\text{**}\\\\rho\\r\\n}{\
+\\\\sqrt{b}\\\\text{**}\\\\sqrt{c}\\\\text{**}\\\\sqrt{d}\\\\text{**}\\\\sqrt{\
+e}\\\\text{**}g\\\\text{**}\\\\sqrt{z}},\\\\frac{\\\\sqrt{b}\\\\text{**}\\\\\
+sqrt{c}\\\\text{**}\\\\sqrt{d}\\\\text{**}\\\\sqrt{e}\\\\text{**}\\\\sqrt{z}\\\
+\\text{**}\\\\rho\\r\\n}{q^{\\\\frac{1}{4}+\\\\frac{j}{2}+\\\\frac{m}{2}+\\\\\
+frac{n}{2}}\\\\text{**}a^{5/4}\\\\text{**}\\\\sqrt{f}\\\\text{**}g},\\\\frac{\
+q^{\\\\frac{3}{4}+\\\\frac{j}{2}+\\\\frac{1}{2} (1+m+n)}\\\\text{**}a^{5/4}\\\
+\\text{**}\\\\sqrt{f}\\\\text{**}g}{\\\\sqrt{b}\\\\text{**}\\\\sqrt{c}\\\\\
+text{**}\\\\sqrt{d}\\\\text{**}\\\\sqrt{e}\\\\text{**}\\\\sqrt{z}\\\\text{**}\
+\\\\rho\\r\\n},\\\\frac{\\\\sqrt{b}\\\\text{**}\\\\sqrt{c}\\\\text{**}\\\\\
+sqrt{d}\\\\text{**}\\\\sqrt{e}\\\\text{**}g\\\\text{**}\\\\sqrt{z}}{q^{\\\\\
+frac{1}{4}+\\\\frac{j}{2}+\\\\frac{m}{2}+\\\\frac{n}{2}}\\\\text{**}a^{5/4}\\\
+\\text{**}\\\\sqrt{f}\\\\text{**}\\\\rho\\r\\n},\\\\frac{q^{\\\\frac{1}{4}+\\\
+\\frac{j}{2}+\\\\frac{1}{2} \
+(-1+m+n)}\\\\text{**}\\\\sqrt{b}\\\\text{**}\\\\sqrt{c}\\\\text{**}\\\\sqrt{d}\
+\\\\text{**}\\\\sqrt{e}\\\\text{**}g\\\\text{**}\\\\sqrt{z}}{a^{1/4}\\\\text{*\
+*}\\\\sqrt{f}\\\\text{**}\\\\rho\\r\\n},\\\\frac{q^{\\\\frac{1}{4} (-7+2 j+2 \
+m+2 n)}\\\\text{**}b^{3/2}\\\\text{**}c^{3/2}\\\\text{**}d^{3/2}\\\\text{**}e^\
+{3/2}\\\\text{**}f^{3/2}\\\\text{**}g\\\\text{**}z^{3/2}}{a^{11/4}\\\\text{**}\
+\\\\rho\\r\\n},\\\\frac{q^{\\\\frac{3}{4}+\\\\frac{3 j}{2}+\\\\frac{1}{2} \
+(1+3 (m+n))}\\\\text{**}a^{5/4}\\\\text{**}\\\\sqrt{f}\\\\text{**}g\\\\text{**\
+}\\\\sqrt{z}}{\\\\sqrt{b}\\\\text{**}\\\\sqrt{c}\\\\text{**}\\\\sqrt{d}\\\\\
+text{**}\\\\sqrt{e}\\\\text{**}\\\\rho\\r\\n}\\\\right\\\\},q\\\\right]}{\\\\\
+text{QPhI}\\\\left[\\\\left\\\\{\\\\frac{q^{\\\\frac{3}{4}+\\\\frac{j}{2}+\\\\\
+frac{1}{2} (1+m+n)}\\\\text{**}a^{5/4}\\\\text{**}\\\\rho \
+}{\\\\sqrt{b}\\\\text{**}\\\\sqrt{c}\\\\text{**}\\\\sqrt{d}\\\\text{**}\\\\\
+sqrt{e}\\\\text{**}\\\\sqrt{f}\\\\text{**}g\\\\text{**}\\\\sqrt{z}},\\\\frac{\
+\\\\sqrt{b}\\\\text{**}\\\\sqrt{c}\\\\text{**}\\\\sqrt{d}\\\\text{**}\\\\sqrt{\
+e}\\\\text{**}\\\\sqrt{f}\\\\text{**}\\\\sqrt{z}\\\\text{**}\\\\rho\\r\\n}{q^{\
+\\\\frac{5}{4}+\\\\frac{j}{2}+\\\\frac{m}{2}+\\\\frac{n}{2}}\\\\text{**}a^{5/\
+4}\\\\text{**}g},\\\\frac{q^{\\\\frac{1}{4} (-1+2 j+2 m+2 \
+n)}\\\\text{**}\\\\sqrt{b}\\\\text{**}\\\\sqrt{c}\\\\text{**}\\\\sqrt{d}\\\\\
+text{**}\\\\sqrt{e}\\\\text{**}\\\\sqrt{f}\\\\text{**}g\\\\text{**}\\\\sqrt{z}\
+}{a^{3/4}\\\\text{**}\\\\rho\\r\\n},\\\\frac{q^{\\\\frac{1}{4} (-3+2 j+2 m+2 \
+n)}\\\\text{**}\\\\sqrt{b}\\\\text{**}\\\\sqrt{c}\\\\text{**}\\\\sqrt{d}\\\\\
+text{**}\\\\sqrt{e}\\\\text{**}\\\\sqrt{f}\\\\text{**}g\\\\text{**}\\\\sqrt{z}\
+}{a^{3/4}\\\\text{**}\\\\rho\\r\\n},-\\\\frac{q^{\\\\frac{1}{4} (-3+2 j+2 m+2 \
+n)}\\\\text{**}\\\\sqrt{b}\\\\text{**}\\\\sqrt{c}\\\\text{**}\\\\sqrt{d}\\\\\
+text{**}\\\\sqrt{e}\\\\text{**}\\\\sqrt{f}\\\\text{**}g\\\\text{**}\\\\sqrt{z}\
+}{a^{3/4}\\\\text{**}\\\\rho\\r\\n},-\\\\frac{q^{\\\\frac{1}{4} (-1+2 j+2 m+2 \
+n)}\\\\text{**}\\\\sqrt{b}\\\\text{**}\\\\sqrt{c}\\\\text{**}\\\\sqrt{d}\\\\\
+text{**}\\\\sqrt{e}\\\\text{**}\\\\sqrt{f}\\\\text{**}g\\\\text{**}\\\\sqrt{z}\
+}{a^{3/4}\\\\text{**}\\\\rho\\r\\n},\\\\frac{q^{\\\\frac{3}{4}+\\\\frac{j}{2}+\
+\\\\frac{1}{2} \
+(1+m+n)}\\\\text{**}a^{5/4}\\\\text{**}g\\\\text{**}\\\\sqrt{z}}{\\\\sqrt{b}\\\
+\\text{**}\\\\sqrt{c}\\\\text{**}\\\\sqrt{d}\\\\text{**}\\\\sqrt{e}\\\\text{**\
+}\\\\sqrt{f}\\\\text{**}\\\\rho\\r\\n}\\\\right\\\\},q\\\\right]}d\\\\zeta }{\
+\\\\text{QPh}\\\\left[\\\\left\\\\{\\\\frac{q^{\\\\frac{3}{2}+2 m+2 \
+n}\\\\text{**}a^{5/2}}{b\\\\text{**}c\\\\text{**}d\\\\text{**}e}\\\\right\\\\}\
+,q,2 j\\\\right]\\\\text{**}\\\\text{QPh}\\\\left[\\\\left\\\\{q,\\\\frac{q^{\
+2\\r\\n(1+m+n)}\\\\text{**}a^2}{b\\\\text{**}c\\\\text{**}d},\\\\frac{q^{1+m+\
+n}\\\\text{**}a}{e},q^{\\\\frac{1}{2} (1+2 \
+(m+n))}\\\\text{**}\\\\sqrt{a},\\\\frac{q^{\\\\frac{5}{2}+m+n}\\\\text{**}a^{\
+5/2}}{b\\\\text{**}c\\\\text{**}d\\\\text{**}e\\\\text{**}f}\\\\right\\\\},q,\
+j\\\\right]}}{2\\r\\n\\\\pi  \
+q^m\\\\text{**}a^m\\\\text{**}\\\\text{QPh}\\\\left[\\\\left\\\\{\\\\frac{q^{\
+1+2 n}\\\\text{**}a^2}{b\\\\text{**}c\\\\text{**}d}\\\\right\\\\},q,2 \
+m\\\\right]\\\\text{**}\\\\text{QPh}\\\\left[\\\\left\\\\{q,q^{\\\\frac{1}{2}+\
+n}\\\\text{**}\\\\sqrt{a},\\\\frac{q^{\\\\frac{3}{2}+2\\r\\nn}\\\\text{**}a^{\
+3/2}}{b\\\\text{**}c},\\\\frac{q^{1+n}\\\\text{**}a}{d},\\\\frac{q^{1+n}\\\\\
+text{**}a}{e},\\\\frac{q^{1+n}\\\\text{**}a}{f}\\\\right\\\\},q,m\\\\right]\\\
+\\text{**}\\\\text{QPhI}\\\\left[\\\\left\\\\{f,\\\\frac{q}{f},\\\\frac{q^{\\\
+\\frac{5}{2}+m+n}\\\\text{**}a^{5/2}}{b\\\\text{**}c\\\\text{**}d\\\\text{**}\
+e\\\\text{**}z},\\\\frac{b\\\\text{**}c\\\\text{**}d\\\\text{**}e\\\\text{**}\
+z}{q^{\\\\frac{3}{2}+m+n}\\\\text{**}a^{5/2}},\\\\frac{b^2\\\\text{**}c^2\\\\\
+text{**}d^2\\\\text{**}e^2\\\\text{**}f^2\\\\text{**}z^2}{q^3\\\\text{**}a^4},\
+\\\\frac{q^{1+m+n}\\\\text{**}a}{f},\\\\frac{q^{\\\\frac{5}{2}+2\\r\\n(m+n)}\\\
+\\text{**}a^{5/2}}{b\\\\text{**}c\\\\text{**}d\\\\text{**}e}\\\\right\\\\},q\\\
+\\right]}}{q^{n/2}\\\\text{**}a^{n/2}\\\\text{**}\\\\text{QPh}\\\\left[\\\\\
+left\\\\{\\\\frac{\\\\sqrt{q}\\\\text{**}a^{3/2}}{b\\\\text{**}c}\\\\right\\\\\
+},q,2\\r\\nn\\\\right]\\\\text{**}\\\\text{QPh}\\\\left[\\\\left\\\\{q,\\\\\
+sqrt{q}\\\\text{**}\\\\sqrt{a},\\\\frac{q\\\\text{**}a}{b},\\\\frac{q\\\\text{\
+**}a}{c},\\\\frac{q\\\\text{**}a}{d},\\\\frac{q\\\\text{**}a}{e},\\\\frac{q\\\
+\\text{**}a}{f}\\\\right\\\\},q,n\\\\right]}\\\\]\\r\\n\\\\end{equation}\"\>"]\
+, "Output",
+ CellLabel->"Out[2]=",
+ CellID->531915111,ExpressionUUID->"7a5225e4-d336-492f-a149-1f8717d23235"]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, 
+  Closed]]]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, 
+       "RelatedFunction.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"See", " ", "Also"}], "SeeAlsoSection"]},
+      {Cell[TextData[Cell[BoxData[
+        TagBox[
+         FrameBox["\"\<XXXX\>\""],
+         "FunctionPlaceholder"]], "InlineFormula",
+        FontFamily->"Source Sans Pro",ExpressionUUID->
+        "f19e1bb3-9455-4aca-80c2-208293f48246"]], "SeeAlso",ExpressionUUID->
+        "e4571400-2349-4247-8db6-7742631dee86"]}
+     }]}
+  }]], "SeeAlsoSection",ExpressionUUID->"eaf45d66-af77-4d9f-9161-\
+492e0b176f7d"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"bcfb528c-ad06-45b0-b196-8383e49d9ea9"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"AddEquationNumberingToTeXString",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> $Failed, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 6, 6, 15, 48, 22.9436761}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "PeterBurbery`BasicHypergeometricFunctions`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Peter Burbery/ Basic Hypergeometric Functions Symbol", 
+    "language" -> "en", "paclet" -> 
+    "PeterBurbery/BasicHypergeometricFunctions", "status" -> "None", 
+    "summary" -> "AddEquationNumberingToTeXString[] XXXX", "synonyms" -> {}, 
+    "tabletags" -> {}, "title" -> "AddEquationNumberingToTeXString", 
+    "titlemodifier" -> "", "metadescription" -> "", "windowtitle" -> 
+    "AddEquationNumberingToTeXString", "type" -> "Symbol", "uri" -> 
+    "PeterBurbery/BasicHypergeometricFunctions/ref/\
+AddEquationNumberingToTeXString"}},
+CellContext->"Global`",
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (May 18, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.3 for Microsoft Windows (64-bit) (May 18, 2023)", 
+  StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"b8a2e125-d88b-48b6-9eed-4f1ad4b4325b"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[5718, 149, 1419, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"c6f53411-3b9c-496c-bc98-39ce8f83aa4d",
+   CellTags->"PrimaryExamplesSection",
+   CellID->48961296]},
+ "RasterizedOutput"->{
+  Cell[25970, 580, 1650, 33, 43, "Output",ExpressionUUID->"0d8c9c2f-6d8a-4f89-8173-06928d6bfa06",
+   CellTags->"RasterizedOutput",
+   CellID->426396195]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 51085, 1021},
+ {"RasterizedOutput", 51283, 1025}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[603, 21, 3637, 84, 56, "AnchorBarGrid",ExpressionUUID->"50bf8da3-1553-4104-93e9-453b93601c32",
+ CellID->1],
+Cell[4243, 107, 124, 0, 23, "ContextNameCell",ExpressionUUID->"3c5a71a6-d91f-46fe-a3dc-1a1a55351a3e"],
+Cell[CellGroupData[{
+Cell[4392, 111, 574, 14, 56, "ObjectNameGrid",ExpressionUUID->"f19c49c8-a29a-480f-8bdd-86f1fd331161"],
+Cell[4969, 127, 712, 17, 111, "Usage",ExpressionUUID->"931d5f02-bc37-44ba-8539-114df4352f85",
+ CellID->8225710]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5718, 149, 1419, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"c6f53411-3b9c-496c-bc98-39ce8f83aa4d",
+ CellTags->"PrimaryExamplesSection",
+ CellID->48961296],
+Cell[7140, 188, 233, 4, 26, "Input",ExpressionUUID->"e5eaf0aa-3cb3-46eb-b09f-32cfb354ea1e",
+ CellID->230650015],
+Cell[CellGroupData[{
+Cell[7398, 196, 1398, 36, 30, "ExampleSection",ExpressionUUID->"805efe5e-e8aa-4b20-a2fe-844871c5989e",
+ CellID->130842870],
+Cell[8799, 234, 423, 13, 38, "ExampleText",ExpressionUUID->"d89f55c1-632b-445e-ba3c-2e68ceb8ee3f",
+ CellID->501479086],
+Cell[CellGroupData[{
+Cell[9247, 251, 16720, 327, 55, "Input",ExpressionUUID->"381aca99-2770-478e-ba66-63af443ce97e",
+ CellID->472614081],
+Cell[25970, 580, 1650, 33, 43, "Output",ExpressionUUID->"0d8c9c2f-6d8a-4f89-8173-06928d6bfa06",
+ CellTags->"RasterizedOutput",
+ CellID->426396195]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27657, 618, 12338, 216, 35, "Input",ExpressionUUID->"9b003548-c9a2-4d8f-9d8a-5938b04479aa",
+ CellID->138005299],
+Cell[39998, 836, 8065, 109, 1614, "Output",ExpressionUUID->"7a5225e4-d336-492f-a149-1f8717d23235",
+ CellID->531915111]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, Closed]]]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[48305, 954, 699, 18, 70, "SeeAlsoSection",ExpressionUUID->"eaf45d66-af77-4d9f-9161-492e0b176f7d"],
+Cell[49007, 974, 78, 0, 70, "FooterCell",ExpressionUUID->"bcfb528c-ad06-45b0-b196-8383e49d9ea9"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

@@ -17,6 +17,12 @@ TeXString//ClearAll
 
 TeXString[input_] := ToString[TeXForm[input]]
 
+(*TeXString[input_Global`QPh] := QPhLaTeX[input]
+TeXString[input_Global`QPhI] := QPhILaTeX[input]*)
+
+(*TeXString[input_]/;StringMatchQ[SymbolName[Head[input]], 
+ "W" ~~ DigitCharacter ..]:=VeryWellPoisedBasicHypergeometricLaTeX[input]
+*)
 End[]; (* End `Private` *)
 
 EndPackage[];

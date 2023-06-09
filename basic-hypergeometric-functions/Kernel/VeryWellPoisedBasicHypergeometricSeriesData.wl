@@ -14,7 +14,7 @@ Begin["`Private`"];
 (* Define your public and private symbols here. *)
 
 VeryWellPoisedBasicHypergeometricSeriesData//ClearAll
-VeryWellPoisedBasicHypergeometricSeriesData[input_] := 
+VeryWellPoisedBasicHypergeometricSeriesData[input_?VeryWellPoisedBasicHypergeometricFunctionQ] := 
  Module[{first, secondtolast, last, totalnumberofnumeratorparameters, 
    totalnumberofdenominatorparameters}, leadingelement = First[input];
    base = input[[-2]]; argument = Last[input]; 

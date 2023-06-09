@@ -14,7 +14,7 @@ Begin["`Private`"];
 
 ClearAll[DeleteNonCommutativeMultiplyInTeXString]
 DeleteNonCommutativeMultiplyInTeXString[input_?StringQ] := 
- StringDelete["\\text{**}"][input]
+ StringDelete["**"][input]
 
 
 End[]; (* End `Private` *)

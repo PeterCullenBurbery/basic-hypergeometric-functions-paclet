@@ -1,7 +1,7 @@
 (* ::Package:: *)
 
 <<PeterBurbery`BasicHypergeometricFunctions`PositionQInFrontOfList`;
-<<PeterBurbery`BasicHypergeometricFunctions`RearrangeMultiplicativeSubExpressions`;
+
 <<PeterBurbery`BasicHypergeometricFunctions`UnsortedComplement`;
 <<PeterBurbery`BasicHypergeometricFunctions`QWithinExpressionQ`;
 <<PeterBurbery`BasicHypergeometricFunctions`DenominatorQ`;
@@ -9,9 +9,10 @@
 <<PeterBurbery`BasicHypergeometricFunctions`NumeratorTermQ`;
 <<PeterBurbery`BasicHypergeometricFunctions`DenominatorTermQ`;
 <<PeterBurbery`BasicHypergeometricFunctions`VeryWellPoisedBasicHypergeometricSeriesData`;
-<<PeterBurbery`BasicHypergeometricFunctions`FromVeryWellPoisedBasicHypergeometricSeriesToLaTeX`;
+<<PeterBurbery`BasicHypergeometricFunctions`BasicHypergeometricToLaTeX`;
 <<PeterBurbery`BasicHypergeometricFunctions`TeXString`;
 <<PeterBurbery`BasicHypergeometricFunctions`RearrangeAllMultiplicativeSubExpressions`;
+<<PeterBurbery`BasicHypergeometricFunctions`RearrangeMultiplicativeSubexpressions`;
 
 <<PeterBurbery`BasicHypergeometricFunctions`QPhIProcessForTeXFragment`;
 <<PeterBurbery`BasicHypergeometricFunctions`DeleteNonCommutativeMultiplyInTeXString`;
@@ -22,10 +23,41 @@
 <<PeterBurbery`BasicHypergeometricFunctions`TakeOutLastArgument`;
 <<PeterBurbery`BasicHypergeometricFunctions`AddSemicolonToQPochhammerTeXString`;
 <<PeterBurbery`BasicHypergeometricFunctions`DeleteQPhIInQPochhammerTeXString`;
-<<PeterBurbery`BasicHypergeometricFunctions`MakeLaTeXStringForQPhIExpression`;
+<<PeterBurbery`BasicHypergeometricFunctions`QPhILaTeX`;
 <<PeterBurbery`BasicHypergeometricFunctions`DeleteQPhInQPochammerTeXString`;
 <<PeterBurbery`BasicHypergeometricFunctions`AddEquationNumberingToTeXString`;
-<<PeterBurbery`BasicHypergeometricFunctions`ReplaceNIntegrateWithInactiveIntegrateAndInactivateSumAfterPlacingQInTheFrontOfAllMultiplicativeExpressions`;
+<<PeterBurbery`BasicHypergeometricFunctions`ReplaceAndInactivate`;
+<<PeterBurbery`BasicHypergeometricFunctions`QShiftedFactorialCases`;
+ <<PeterBurbery`BasicHypergeometricFunctions`InfinityPochhammerCases`;
+ <<PeterBurbery`BasicHypergeometricFunctions`WellPoisedHypergeometricCases`;
+<<PeterBurbery`BasicHypergeometricFunctions`VeryWellPoisedBasicHypergeometricLaTeX`;
+(*<<PeterBurbery`BasicHypergeometricFunctions`QPh`;
+<<PeterBurbery`BasicHypergeometricFunctions`QPhI`;*)(*I am removing these to avoid problems with the LaTeX*)
+<<PeterBurbery`BasicHypergeometricFunctions`LaTeXPreview`;
+<<PeterBurbery`BasicHypergeometricFunctions`WellPoisedHypergeometricSeries`;
+<<PeterBurbery`BasicHypergeometricFunctions`WrapWithBrackets`;
+<<PeterBurbery`BasicHypergeometricFunctions`VeryWellPoisedBasicHypergeometricSeriesData`;
+<<PeterBurbery`BasicHypergeometricFunctions`BracketsToParentheses`;
+<<PeterBurbery`BasicHypergeometricFunctions`QPhLaTeX`;
+<<PeterBurbery`BasicHypergeometricFunctions`RearrangeExpression`;
+<<PeterBurbery`BasicHypergeometricFunctions`RemoveMathMode`;
+<<PeterBurbery`BasicHypergeometricFunctions`TransformSum`;
+<<PeterBurbery`BasicHypergeometricFunctions`RearrangedExpressionLaTeX`;
+<<PeterBurbery`BasicHypergeometricFunctions`EquationArray`;
+<<PeterBurbery`BasicHypergeometricFunctions`ControlledPowerExpand`;
+<<PeterBurbery`BasicHypergeometricFunctions`NumeratorDenominatorTerms`;
+<<PeterBurbery`BasicHypergeometricFunctions`FractionQ`;
+<<PeterBurbery`BasicHypergeometricFunctions`WAndDigitsQ`;
+<<PeterBurbery`BasicHypergeometricFunctions`VeryWellPoisedBasicHypergeometricFunctionQ`;
+<<PeterBurbery`BasicHypergeometricFunctions`FractionWithNumeratorNotOneQ`;
+<<PeterBurbery`BasicHypergeometricFunctions`GeneralizedNotArrayQ`;
+<<PeterBurbery`BasicHypergeometricFunctions`FractionWithIndeterminateInNumeratorQ`;
+<<PeterBurbery`BasicHypergeometricFunctions`FractionNotRationalNumberQ`;
+<<PeterBurbery`BasicHypergeometricFunctions`VeryWellPoisedBasicHypergeometricFractionCases`;
+<<PeterBurbery`BasicHypergeometricFunctions`TransformExpression`;
+<<PeterBurbery`BasicHypergeometricFunctions`VeryWellPoisedHypergeometricToNumerator`;
+<<PeterBurbery`BasicHypergeometricFunctions`DeleteText`;
+<<PeterBurbery`BasicHypergeometricFunctions`TransformVeryWellPoisedHypergeometricLaTeX`;
+<<PeterBurbery`BasicHypergeometricFunctions`TransformToLaTeX`;
 
- 
 

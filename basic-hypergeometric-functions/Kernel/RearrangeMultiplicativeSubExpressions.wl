@@ -4,15 +4,18 @@
 
 (* Declare your packages public symbols here. *)
 
-PeterBurbery`BasicHypergeometricFunctions`RearrangeMultiplicativeSubExpressions;
+PeterBurbery`BasicHypergeometricFunctions`RearrangeMultiplicativeSubexpressions;
 
 Begin["`Private`"];
 
 (* Define your public and private symbols here. *)
-RearrangeMultiplicativeSubExpressions//ClearAll
+(*UnsortedComplement//ClearAll*)
+RearrangeMultiplicativeSubexpressions//ClearAll
+
+
 Attributes[
-  RearrangeMultiplicativeSubExpressions] = {HoldFirst}
-RearrangeMultiplicativeSubExpressions[input_] := 
+  RearrangeMultiplicativeSubexpressions] = {HoldFirst}
+RearrangeMultiplicativeSubexpressions[input_] := 
  Module[{firstoutput}, 
 firstoutput = 
   Inactivate[input, 
@@ -46,6 +49,8 @@ firstoutput =
      Global`nonqs : Repeated[_?(Head[#] == Symbol && # =!= Global`q &)], 
   Global`qs : Power[NonCommutativeMultiply[Global`q, _], _]] :> 
     NonCommutativeMultiply[Global`qs, Global`nonqs]}, All]]
+
+ 
 End[]; (* End `Private` *)
 
 EndPackage[];

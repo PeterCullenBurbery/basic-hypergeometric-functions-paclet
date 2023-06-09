@@ -18,8 +18,35 @@ PacletObject[
           "PeterBurbery`BasicHypergeometricFunctions`"
         },
         "Symbols" -> {
+          "PeterBurbery`BasicHypergeometricFunctions`AddEquationNumberingToTeXString",
+          "PeterBurbery`BasicHypergeometricFunctions`AddSemicolonToQPochhammerTeXString",
+          "PeterBurbery`BasicHypergeometricFunctions`AppendBaseToTeXString",
+          "PeterBurbery`BasicHypergeometricFunctions`BasicHypergeometricToLaTeX",
+          "PeterBurbery`BasicHypergeometricFunctions`DeleteAllWhitespaceCharactersExceptSpace",
+          "PeterBurbery`BasicHypergeometricFunctions`DeleteNonCommutativeMultiplyInTeXString",
+          "PeterBurbery`BasicHypergeometricFunctions`DeleteQPhIInQPochammerTeXString",
+          "PeterBurbery`BasicHypergeometricFunctions`DeleteQPhInQPochammerTeXString",
+          "PeterBurbery`BasicHypergeometricFunctions`DenominatorQ",
+          "PeterBurbery`BasicHypergeometricFunctions`DenominatorTermQ",
+          "PeterBurbery`BasicHypergeometricFunctions`InfinityPochhammerCases",
+          "PeterBurbery`BasicHypergeometricFunctions`MakeFirstListSequence",
+          "PeterBurbery`BasicHypergeometricFunctions`QPhILaTeX",
+          "PeterBurbery`BasicHypergeometricFunctions`MakeTeXFragment",
+          "PeterBurbery`BasicHypergeometricFunctions`NumeratorQ",
+          "PeterBurbery`BasicHypergeometricFunctions`NumeratorTermQ",
           "PeterBurbery`BasicHypergeometricFunctions`PositionQInFrontOfList",
-          "PeterBurbery`BasicHypergeometricFunctions`UnsortedComplement"
+          "PeterBurbery`BasicHypergeometricFunctions`QPhIProcessForTeXFragment",
+          "PeterBurbery`BasicHypergeometricFunctions`QShiftedFactorialCases",
+          "PeterBurbery`BasicHypergeometricFunctions`QWithinExpressionQ",
+          "PeterBurbery`BasicHypergeometricFunctions`RearrangeAllMultiplicativeSubExpressions",
+          "PeterBurbery`BasicHypergeometricFunctions`RearrangeMultiplicativeSubexpressions",
+          "PeterBurbery`BasicHypergeometricFunctions`ReplaceAndInactivate",
+          "PeterBurbery`BasicHypergeometricFunctions`TakeOutLastArgument",
+          "PeterBurbery`BasicHypergeometricFunctions`TeXString",
+          "PeterBurbery`BasicHypergeometricFunctions`UnsortedComplement",
+          "PeterBurbery`BasicHypergeometricFunctions`VeryWellPoisedBasicHypergeometricSeriesData",
+          "PeterBurbery`BasicHypergeometricFunctions`VeryWellPoisedBasicHypergeometricLaTeX",
+          "PeterBurbery`BasicHypergeometricFunctions`WellPoisedHypergeometricCases"
         }
       },
       {

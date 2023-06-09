@@ -1,0 +1,1696 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     82952,       1688]
+NotebookOptionsPosition[     76652,       1552]
+NotebookOutlinePosition[     77463,       1578]
+CellTagsIndexPosition[     77383,       1573]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["RearrangeExpression", "ObjectName",
+ CellID->1004189261,ExpressionUUID->"7a8ba60f-86da-443c-aa34-4b7280347856"],
+
+Cell[TextData[{
+ Cell["   ", "ModInfo",ExpressionUUID->"c9c0a5ea-b821-480c-aba9-05b4b3b7b2ab"],
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["RearrangeExpression",
+    BaseStyle->"Link",
+    ButtonData->
+     "paclet:PeterBurberyBasicHypergeometricFunctions/ref/\
+RearrangeExpression"], "[", 
+   StyleBox["expression", "TI"], "]"}]], "InlineFormula",ExpressionUUID->
+  "df7c58b5-3215-4f8f-b81d-e888e0d5e7a8"],
+ "\[LineSeparator]place q in the front of all multiplicative expressions in \
+expression"
+}], "Usage",
+ CellChangeTimes->{
+  3.895153244680488*^9, {3.895154041214855*^9, 3.8951540694655952`*^9}},
+ CellID->59901794,ExpressionUUID->"fd048827-b278-403b-aee0-8ba756c57c08"],
+
+Cell["NIntegrate is transformed to Integrate as well.", "Notes",
+ CellChangeTimes->{{3.8951540721622963`*^9, 3.8951540828686404`*^9}},
+ CellID->167999306,ExpressionUUID->"8339ab23-1eb9-46a8-9501-07024d830107"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "See Also",
+ Cell[BoxData[
+  TemplateBox[{"SeeAlso", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Insert links to any related reference (function) pages.", 
+        "MoreInfoText"], BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "f69a412a-463a-464b-aac6-116b6706fba0"]
+}], "SeeAlsoSection",
+ CellID->153324495,ExpressionUUID->"02d7e0d4-22d1-4bb4-aa55-43a74861efe9"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TagBox[
+   FrameBox["\<\"XXXX\"\>"],
+   "FunctionPlaceholder"]], "InlineSeeAlsoFunction",
+  TaggingRules->{"PageType" -> "Function"},ExpressionUUID->
+  "8336f687-1e4b-4336-ab34-1e905bb28f41"],
+ Cell[BoxData[
+  RowBox[{
+  Cell[TextData[StyleBox[
+   " \[FilledVerySmallSquare] ", "InlineSeparator"]],ExpressionUUID->
+    "854ffaf9-8cbe-4ddc-8870-3cce9408fa71"], 
+   DynamicModuleBox[{$CellContext`nbobj$$ = NotebookObject[
+    "c88b4f53-6d75-406c-9f6d-452660279d82", 
+     "86b96752-b4ed-4a25-8dab-8cc11efa7741"], $CellContext`cellobj$$ = 
+    CellObject[
+    "85d515d7-d40f-4cb2-8420-e7ca3d533641", 
+     "8dd1dcaa-4362-41f1-849f-29fa96a882b9"]}, 
+    TemplateBox[{
+      GraphicsBox[{{
+         Thickness[0.06], 
+         StrokeForm[
+          Hue[0.4167, 0.406, 0.502]], 
+         CircleBox[{0, 0}]}, {
+         Thickness[0.06], 
+         StrokeForm[
+          Hue[0.4167, 0.406, 0.502]], 
+         LineBox[{{0, 0.62}, {0, -0.62}}]}, {
+         Thickness[0.06], 
+         StrokeForm[
+          Hue[0.4167, 0.406, 0.502]], 
+         LineBox[{{-0.62, 0}, {0.62, 0}}]}}, 
+       ImagePadding -> {{1., 1.}, {2.4, 1.}}, ImageSize -> 16, 
+       PlotRange -> {{-1.06, 1.06}, {-1.06, 1.06}}, 
+       BaselinePosition -> (Center -> 
+        Center)], $CellContext`nbobj$$, $CellContext`cellobj$$},
+     "InlineListingAddButton"],
+    Initialization:>($CellContext`nbobj$$ = 
+      EvaluationNotebook[]; $CellContext`cellobj$$ = EvaluationCell[])]}]], 
+  "InlineListingAddButton",ExpressionUUID->
+  "85d515d7-d40f-4cb2-8420-e7ca3d533641"]
+}], "SeeAlso",
+ CellID->70870276,ExpressionUUID->"a66d2301-7fb4-438c-b1ac-18a18dc445ee"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Tech Notes",
+ Cell[BoxData[
+  TemplateBox[{"TechNotes", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell["Insert links to related tech notes.", "MoreInfoText"], BaseStyle -> 
+       "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "d7aedf60-5f7e-4b44-b59d-c80119266aa6"]
+}], "TechNotesSection",
+ CellID->27265365,ExpressionUUID->"155764aa-37d9-4587-aaee-3b922d2d2607"],
+
+Cell["XXXX", "Tutorials",
+ CellID->10257487,ExpressionUUID->"10aea475-18bc-4612-861c-53c0ec83b30b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Guides", "MoreAboutSection",
+ CellID->389392087,ExpressionUUID->"3c18becb-428b-4226-b538-a6a825a517e6"],
+
+Cell["XXXX", "MoreAbout",
+ CellID->491147871,ExpressionUUID->"e9220c54-bb79-45bc-a08a-951f2592b4a9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Related Links",
+ Cell[BoxData[
+  TemplateBox[{"RelatedLinks", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Insert links to any related page, including web pages.", 
+        "MoreInfoText"], BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "f17303ff-a19d-4c37-92f1-15418b72cd93"]
+}], "RelatedLinksSection",
+ CellID->28991012,ExpressionUUID->"73c9d976-589c-405c-ad7c-b9e9d729aabb"],
+
+Cell["XXXX", "RelatedLinks",
+ CellID->239120539,ExpressionUUID->"5d01f872-3b23-4c21-bdb5-4bfca3cb7f21"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Examples Initialization",
+ Cell[BoxData[
+  TemplateBox[{"ExamplesInitialization", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Input that is to be evaluated before any examples are run, e.g. \
+Needs[\[Ellipsis]].", "MoreInfoText"], BaseStyle -> "IFrameBox"]], 
+     "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "0836376b-c554-4c82-bbac-3f7c755ebb3d"]
+}], "ExamplesInitializationSection",
+ CellID->533148142,ExpressionUUID->"b72d42bf-bcf6-4818-9adf-ddf0a053972a"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PeterBurbery`BasicHypergeometricFunctions`\>\"", 
+  "]"}]], "ExampleInitialization",
+ CellID->90415650,ExpressionUUID->"86fdc8ed-79ca-4d74-af83-793df60f2463"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     StyleBox[
+      RowBox[{"Basic", " ", "Examples"}], "PrimaryExamplesSection"], 
+     ButtonBox[
+      RowBox[{
+       RowBox[{"More", " ", "Examples"}], " ", "\[RightTriangle]"}],
+      BaseStyle->"ExtendedExamplesLink",
+      ButtonData:>"ExtendedExamples"]}
+   }],
+  $Line = 0; Null]], "PrimaryExamplesSection",
+ CellID->59886769,ExpressionUUID->"a93e1339-7966-4789-bab8-2b072077ed87"],
+
+Cell["Rearrange expressions:", "ExampleText",
+ CellChangeTimes->{{3.895154194263036*^9, 3.8951541972191133`*^9}},
+ CellID->21676141,ExpressionUUID->"6debc0c4-46c3-4007-bd70-af871dd9d719"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ResourceData", "[", 
+   RowBox[{
+    RowBox[{"ResourceObject", "[", 
+     RowBox[{
+     "CloudObject", "[", 
+      "\"\<https://www.wolframcloud.com/obj/burbery1/DeployedResources/Data/\
+Basic-Hypergeometric-Series-Examples\>\"", "]"}], "]"}], ",", 
+    "\"\<BasicHypergeometricFunctionExamples\>\""}], "]"}], "[", 
+  RowBox[{"All", ",", "RearrangeExpression"}], "]"}]], "Input",
+ CellChangeTimes->{{3.895154167767125*^9, 3.8951541833379064`*^9}},
+ CellLabel->"In[18]:=",
+ CellID->151231810,ExpressionUUID->"4d3e8775-4a96-4ecd-9c4f-b7d12689def7"],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[
+   DynamicModuleBox[{TypeSystem`NestedGrid`PackagePrivate`$state$$ = <|
+    "InitialData" -> <|
+      1 -> $CellContext`W65[$CellContext`a, $CellContext`b, $CellContext`c, \
+$CellContext`d, $CellContext`q, $CellContext`z] == (Rational[1, 2]/Pi) (
+          NonCommutativeMultiply[
+            $CellContext`QPhI[{$CellContext`q, 
+              NonCommutativeMultiply[$CellContext`q^2, $CellContext`a^2]^(-1) 
+              NonCommutativeMultiply[$CellContext`b^2, $CellContext`c^2, \
+$CellContext`d^2, $CellContext`z^2], 
+              NonCommutativeMultiply[$CellContext`q, $CellContext`a], 
+              NonCommutativeMultiply[$CellContext`q^
+                Rational[3, 2], $CellContext`a^Rational[3, 2]]/
+              NonCommutativeMultiply[$CellContext`b, $CellContext`c, \
+$CellContext`d]}, $CellContext`q], 
+            Inactive[Sum][
+            NonCommutativeMultiply[$CellContext`d^$CellContext`j, 
+                $CellContext`QPh[{
+                 NonCommutativeMultiply[$CellContext`b, $CellContext`c]^(-1) 
+                  NonCommutativeMultiply[$CellContext`q^
+                    Rational[1, 2], $CellContext`a^
+                    Rational[3, 2]]}, $CellContext`q, 2 $CellContext`j], 
+                $CellContext`QPh[{$CellContext`q, $CellContext`b^(-1) 
+                  NonCommutativeMultiply[$CellContext`q, $CellContext`a], \
+$CellContext`c^(-1) NonCommutativeMultiply[$CellContext`q, $CellContext`a], 
+                  
+                  NonCommutativeMultiply[$CellContext`q^
+                   Rational[1, 2], $CellContext`a^Rational[1, 2]], 
+                  NonCommutativeMultiply[$CellContext`q^
+                    Rational[3, 2], $CellContext`a^Rational[3, 2]]/
+                  NonCommutativeMultiply[$CellContext`b, $CellContext`c, \
+$CellContext`d]}, $CellContext`q, $CellContext`j]]^(-1) 
+             NonCommutativeMultiply[$CellContext`q^($CellContext`j + 
+                Rational[1, 2] 
+                 NonCommutativeMultiply[-1 + $CellContext`j, \
+$CellContext`j]), (-1)^$CellContext`j, $CellContext`a^$CellContext`j, \
+$CellContext`f^$CellContext`j, 
+               $CellContext`QPh[{
+                NonCommutativeMultiply[$CellContext`b, $CellContext`c]^(-1) 
+                 NonCommutativeMultiply[$CellContext`q^
+                   Rational[3, 2], $CellContext`a^
+                   Rational[3, 2]]}, $CellContext`q, 2 $CellContext`j], 
+               $CellContext`QPh[{
+                NonCommutativeMultiply[$CellContext`b, $CellContext`c]^(-1) 
+                 NonCommutativeMultiply[$CellContext`q^
+                   Rational[1, 2], $CellContext`a^
+                   Rational[3, 2]], $CellContext`b^(-1) 
+                 NonCommutativeMultiply[$CellContext`q^
+                   Rational[1, 2], $CellContext`a^
+                   Rational[1, 2]], $CellContext`c^(-1) 
+                 NonCommutativeMultiply[$CellContext`q^
+                   Rational[1, 2], $CellContext`a^Rational[1, 2]], 
+                 NonCommutativeMultiply[$CellContext`b, $CellContext`c]^(-1) 
+                 NonCommutativeMultiply[$CellContext`q, $CellContext`a], \
+$CellContext`d}, $CellContext`q, $CellContext`j], 
+               Inactive[
+               Integrate][$CellContext`QPhI[{
+                   NonCommutativeMultiply[$CellContext`q^(Rational[3, 4] + 
+                    Rational[1, 2] $CellContext`j), $CellContext`a^
+                    Rational[3, 4], $CellContext`\[Rho]]/
+                    NonCommutativeMultiply[$CellContext`b^
+                    Rational[1, 2], $CellContext`c^
+                    Rational[1, 2], $CellContext`d^
+                    Rational[1, 2], $CellContext`g, $CellContext`z^
+                    Rational[1, 2]], 
+                    NonCommutativeMultiply[$CellContext`q^(Rational[3, 4] + 
+                    Rational[1, 2] $CellContext`j), $CellContext`a^
+                    Rational[3, 4], $CellContext`g]^(-1) 
+                    NonCommutativeMultiply[$CellContext`b^
+                    Rational[1, 2], $CellContext`c^
+                    Rational[1, 2], $CellContext`d^
+                    Rational[1, 2], $CellContext`z^
+                    Rational[1, 2], $CellContext`\[Rho]], 
+                    NonCommutativeMultiply[$CellContext`a^
+                    Rational[1, 4], $CellContext`\[Rho]]^(-1) 
+                    NonCommutativeMultiply[$CellContext`q^(Rational[1, 4] + 
+                    Rational[1, 2] $CellContext`j), $CellContext`b^
+                    Rational[1, 2], $CellContext`c^
+                    Rational[1, 2], $CellContext`d^
+                    Rational[1, 2], $CellContext`g, $CellContext`z^
+                    Rational[1, 2]], 
+                    NonCommutativeMultiply[$CellContext`a^
+                    Rational[1, 4], $CellContext`\[Rho]]^(-1) 
+                    NonCommutativeMultiply[$CellContext`q^(Rational[-1, 4] + 
+                    Rational[1, 2] $CellContext`j), $CellContext`b^
+                    Rational[1, 2], $CellContext`c^
+                    Rational[1, 2], $CellContext`d^
+                    Rational[1, 2], $CellContext`g, $CellContext`z^
+                    Rational[1, 2]], ((-1)/
+                    NonCommutativeMultiply[$CellContext`a^
+                    Rational[1, 4], $CellContext`\[Rho]]) 
+                    NonCommutativeMultiply[$CellContext`q^(Rational[-1, 4] + 
+                    Rational[1, 2] $CellContext`j), $CellContext`b^
+                    Rational[1, 2], $CellContext`c^
+                    Rational[1, 2], $CellContext`d^
+                    Rational[1, 2], $CellContext`g, $CellContext`z^
+                    Rational[1, 2]], ((-1)/
+                    NonCommutativeMultiply[$CellContext`a^
+                    Rational[1, 4], $CellContext`\[Rho]]) 
+                    NonCommutativeMultiply[$CellContext`q^(Rational[1, 4] + 
+                    Rational[1, 2] $CellContext`j), $CellContext`b^
+                    Rational[1, 2], $CellContext`c^
+                    Rational[1, 2], $CellContext`d^
+                    Rational[1, 2], $CellContext`g, $CellContext`z^
+                    Rational[1, 2]], 
+                    NonCommutativeMultiply[$CellContext`b^
+                    Rational[1, 2], $CellContext`c^
+                    Rational[1, 2], $CellContext`d^
+                    Rational[1, 2], $CellContext`\[Rho]]^(-1) 
+                    NonCommutativeMultiply[$CellContext`q^(Rational[3, 4] + 
+                    Rational[1, 2] $CellContext`j), $CellContext`a^
+                    Rational[3, 4], $CellContext`g, $CellContext`z^
+                    Rational[1, 2]]}, $CellContext`q]^(-1) $CellContext`QPhI[{
+                  NonCommutativeMultiply[$CellContext`q^(Rational[3, 4] + 
+                    Rational[1, 2] $CellContext`j), $CellContext`a^
+                    Rational[3, 4], $CellContext`f, $CellContext`\[Rho]]/
+                   NonCommutativeMultiply[$CellContext`b^
+                    Rational[1, 2], $CellContext`c^
+                    Rational[1, 2], $CellContext`d^
+                    Rational[1, 2], $CellContext`g, $CellContext`z^
+                    Rational[1, 2]], 
+                   NonCommutativeMultiply[$CellContext`a^
+                    Rational[3, 4], $CellContext`f, $CellContext`g]^(-1) 
+                   NonCommutativeMultiply[$CellContext`q^(Rational[1, 4] + 
+                    Rational[-1, 2] $CellContext`j), $CellContext`b^
+                    Rational[1, 2], $CellContext`c^
+                    Rational[1, 2], $CellContext`d^
+                    Rational[1, 2], $CellContext`z^
+                    Rational[1, 2], $CellContext`\[Rho]], 
+                   NonCommutativeMultiply[$CellContext`q^(Rational[3, 4] + 
+                    Rational[1, 2] $CellContext`j), $CellContext`a^
+                    Rational[3, 4], $CellContext`f, $CellContext`g]/
+                   NonCommutativeMultiply[$CellContext`b^
+                    Rational[1, 2], $CellContext`c^
+                    Rational[1, 2], $CellContext`d^
+                    Rational[1, 2], $CellContext`z^
+                    Rational[1, 2], $CellContext`\[Rho]], 
+                   NonCommutativeMultiply[$CellContext`a^
+                    Rational[3, 4], $CellContext`f, $CellContext`\[Rho]]^(-1) 
+                   NonCommutativeMultiply[$CellContext`q^(Rational[1, 4] + 
+                    Rational[-1, 2] $CellContext`j), $CellContext`b^
+                    Rational[1, 2], $CellContext`c^
+                    Rational[1, 2], $CellContext`d^
+                    Rational[1, 2], $CellContext`g, $CellContext`z^
+                    Rational[1, 2]], 
+                   NonCommutativeMultiply[$CellContext`d^
+                    Rational[1, 2], $CellContext`\[Rho]]^(-1) 
+                   NonCommutativeMultiply[$CellContext`q^(Rational[1, 4] + 
+                    Rational[1, 2] $CellContext`j), $CellContext`a^
+                    Rational[1, 4], $CellContext`b^
+                    Rational[1, 2], $CellContext`c^
+                    Rational[1, 2], $CellContext`g, $CellContext`z^
+                    Rational[1, 2]], 
+                   NonCommutativeMultiply[$CellContext`a^
+                    Rational[5, 4], $CellContext`\[Rho]]^(-1) 
+                   NonCommutativeMultiply[$CellContext`q^(Rational[-1, 4] + 
+                    Rational[1, 2] $CellContext`j), $CellContext`b^
+                    Rational[3, 2], $CellContext`c^
+                    Rational[3, 2], $CellContext`d^
+                    Rational[3, 2], $CellContext`g, $CellContext`z^
+                    Rational[3, 2]], 
+                   NonCommutativeMultiply[$CellContext`b^
+                    Rational[1, 2], $CellContext`c^
+                    Rational[1, 2], $CellContext`\[Rho]]^(-1) 
+                   NonCommutativeMultiply[$CellContext`q^(Rational[3, 4] + 
+                    Rational[3, 2] $CellContext`j), $CellContext`a^
+                    Rational[3, 4], $CellContext`d^
+                    Rational[1, 2], $CellContext`g, $CellContext`z^
+                    Rational[
+                    1, 2]]}, $CellContext`q], {$CellContext`\[Zeta], -Pi, 
+                 Pi}]], {$CellContext`j, 0, 
+              DirectedInfinity[
+              1]}]]/$CellContext`QPhI[{$CellContext`f, $CellContext`f^(-1) \
+$CellContext`q, 
+            NonCommutativeMultiply[$CellContext`q^
+              Rational[3, 2], $CellContext`a^Rational[3, 2], $CellContext`f]/
+            NonCommutativeMultiply[$CellContext`b, $CellContext`c, \
+$CellContext`d, $CellContext`z], 
+            NonCommutativeMultiply[$CellContext`q^
+               Rational[1, 2], $CellContext`a^
+               Rational[3, 2], $CellContext`f]^(-1) 
+            NonCommutativeMultiply[$CellContext`b, $CellContext`c, \
+$CellContext`d, $CellContext`z], 
+            NonCommutativeMultiply[$CellContext`q, $CellContext`a^2]^(-1) 
+            NonCommutativeMultiply[$CellContext`b^2, $CellContext`c^2, \
+$CellContext`d^2, $CellContext`z^2], $CellContext`d^(-1) 
+            NonCommutativeMultiply[$CellContext`q, $CellContext`a], 
+            NonCommutativeMultiply[$CellContext`b, $CellContext`c]^(-1) 
+            NonCommutativeMultiply[$CellContext`q^
+              Rational[3, 2], $CellContext`a^
+              Rational[3, 2]]}, $CellContext`q]), 
+       2 -> $CellContext`W87[$CellContext`a, $CellContext`b, $CellContext`c, \
+$CellContext`d, $CellContext`e, $CellContext`f, $CellContext`q, \
+$CellContext`z] == 
+        Inactive[Sum][
+         NonCommutativeMultiply[$CellContext`q^(
+              Rational[1, 2] $CellContext`n), $CellContext`a^(
+              Rational[1, 2] $CellContext`n), 
+             $CellContext`QPh[{
+              NonCommutativeMultiply[$CellContext`b, $CellContext`c]^(-1) 
+               NonCommutativeMultiply[$CellContext`q^
+                 Rational[1, 2], $CellContext`a^
+                 Rational[3, 2]]}, $CellContext`q, 2 $CellContext`n], 
+             $CellContext`QPh[{$CellContext`q, 
+               
+               NonCommutativeMultiply[$CellContext`q^
+                Rational[1, 2], $CellContext`a^
+                Rational[1, 2]], $CellContext`b^(-1) 
+               NonCommutativeMultiply[$CellContext`q, $CellContext`a], \
+$CellContext`c^(-1) 
+               NonCommutativeMultiply[$CellContext`q, $CellContext`a], \
+$CellContext`d^(-1) 
+               NonCommutativeMultiply[$CellContext`q, $CellContext`a], \
+$CellContext`e^(-1) 
+               NonCommutativeMultiply[$CellContext`q, $CellContext`a], \
+$CellContext`f^(-1) 
+               NonCommutativeMultiply[$CellContext`q, $CellContext`a]}, \
+$CellContext`q, $CellContext`n]]^(-1) 
+          NonCommutativeMultiply[$CellContext`b^$CellContext`n, \
+$CellContext`c^$CellContext`n, $CellContext`z^$CellContext`n, 
+            $CellContext`QPh[{
+              
+              NonCommutativeMultiply[$CellContext`q, $CellContext`a]}, \
+$CellContext`q, 2 $CellContext`n], 
+            $CellContext`QPh[{
+             NonCommutativeMultiply[$CellContext`b, $CellContext`c]^(-1) 
+              NonCommutativeMultiply[$CellContext`q^
+                Rational[1, 2], $CellContext`a^
+                Rational[3, 2]], $CellContext`b^(-1) 
+              NonCommutativeMultiply[$CellContext`q^
+                Rational[1, 2], $CellContext`a^
+                Rational[1, 2]], $CellContext`c^(-1) 
+              NonCommutativeMultiply[$CellContext`q^
+                Rational[1, 2], $CellContext`a^Rational[1, 2]], 
+              NonCommutativeMultiply[$CellContext`b, $CellContext`c]^(-1) 
+              NonCommutativeMultiply[$CellContext`q, $CellContext`a], \
+$CellContext`d, $CellContext`e, $CellContext`f}, $CellContext`q, \
+$CellContext`n], 
+            $CellContext`W76[
+             
+             NonCommutativeMultiply[$CellContext`q^(
+               2 $CellContext`n), $CellContext`a], 
+             NonCommutativeMultiply[$CellContext`b, $CellContext`c]/
+             NonCommutativeMultiply[$CellContext`q^
+              Rational[1, 2], $CellContext`a^Rational[1, 2]], 
+             
+             NonCommutativeMultiply[$CellContext`q^$CellContext`n, \
+$CellContext`d], 
+             
+             NonCommutativeMultiply[$CellContext`q^$CellContext`n, \
+$CellContext`e], 
+             
+             NonCommutativeMultiply[$CellContext`q^$CellContext`n, \
+$CellContext`f], $CellContext`q, $CellContext`z]], {$CellContext`n, 0, 
+           DirectedInfinity[1]}], 
+       3 -> $CellContext`W87[$CellContext`a, $CellContext`b, $CellContext`c, \
+$CellContext`d, $CellContext`e, $CellContext`f, $CellContext`q, \
+$CellContext`z] == 
+        Inactive[Sum][
+         NonCommutativeMultiply[$CellContext`q^(
+              Rational[1, 2] $CellContext`n), $CellContext`a^(
+              Rational[1, 2] $CellContext`n), 
+             $CellContext`QPh[{
+              NonCommutativeMultiply[$CellContext`b, $CellContext`c]^(-1) 
+               NonCommutativeMultiply[$CellContext`q^
+                 Rational[1, 2], $CellContext`a^
+                 Rational[3, 2]]}, $CellContext`q, 2 $CellContext`n], 
+             $CellContext`QPh[{$CellContext`q, 
+               
+               NonCommutativeMultiply[$CellContext`q^
+                Rational[1, 2], $CellContext`a^
+                Rational[1, 2]], $CellContext`b^(-1) 
+               NonCommutativeMultiply[$CellContext`q, $CellContext`a], \
+$CellContext`c^(-1) 
+               NonCommutativeMultiply[$CellContext`q, $CellContext`a], \
+$CellContext`d^(-1) 
+               NonCommutativeMultiply[$CellContext`q, $CellContext`a], \
+$CellContext`e^(-1) 
+               NonCommutativeMultiply[$CellContext`q, $CellContext`a], \
+$CellContext`f^(-1) 
+               NonCommutativeMultiply[$CellContext`q, $CellContext`a]}, \
+$CellContext`q, $CellContext`n]]^(-1) 
+          NonCommutativeMultiply[$CellContext`b^$CellContext`n, \
+$CellContext`c^$CellContext`n, $CellContext`z^$CellContext`n, 
+            $CellContext`QPh[{
+              
+              NonCommutativeMultiply[$CellContext`q, $CellContext`a]}, \
+$CellContext`q, 2 $CellContext`n], 
+            $CellContext`QPh[{
+             NonCommutativeMultiply[$CellContext`b, $CellContext`c]^(-1) 
+              NonCommutativeMultiply[$CellContext`q^
+                Rational[1, 2], $CellContext`a^
+                Rational[3, 2]], $CellContext`b^(-1) 
+              NonCommutativeMultiply[$CellContext`q^
+                Rational[1, 2], $CellContext`a^
+                Rational[1, 2]], $CellContext`c^(-1) 
+              NonCommutativeMultiply[$CellContext`q^
+                Rational[1, 2], $CellContext`a^Rational[1, 2]], 
+              NonCommutativeMultiply[$CellContext`b, $CellContext`c]^(-1) 
+              NonCommutativeMultiply[$CellContext`q, $CellContext`a], \
+$CellContext`d, $CellContext`e, $CellContext`f}, $CellContext`q, \
+$CellContext`n], 
+            Inactive[Sum][
+            NonCommutativeMultiply[$CellContext`q^$CellContext`m, \
+$CellContext`a^$CellContext`m, 
+                $CellContext`QPh[{
+                 NonCommutativeMultiply[$CellContext`q^(1 + 
+                    2 $CellContext`n), $CellContext`a^2]/
+                  NonCommutativeMultiply[$CellContext`b, $CellContext`c, \
+$CellContext`d]}, $CellContext`q, 2 $CellContext`m], 
+                $CellContext`QPh[{$CellContext`q, 
+                  
+                  NonCommutativeMultiply[$CellContext`q^(
+                    Rational[1, 2] + $CellContext`n), $CellContext`a^
+                   Rational[1, 2]], 
+                  NonCommutativeMultiply[$CellContext`b, $CellContext`c]^(-1) 
+                  NonCommutativeMultiply[$CellContext`q^(Rational[3, 2] + 
+                    2 $CellContext`n), $CellContext`a^
+                    Rational[3, 2]], $CellContext`d^(-1) 
+                  NonCommutativeMultiply[$CellContext`q^(
+                    1 + $CellContext`n), $CellContext`a], $CellContext`e^(-1) 
+                  NonCommutativeMultiply[$CellContext`q^(
+                    1 + $CellContext`n), $CellContext`a], $CellContext`f^(-1) 
+                  NonCommutativeMultiply[$CellContext`q^(
+                    1 + $CellContext`n), $CellContext`a]}, $CellContext`q, \
+$CellContext`m]]^(-1) 
+             NonCommutativeMultiply[$CellContext`b^$CellContext`m, \
+$CellContext`c^$CellContext`m, $CellContext`d^$CellContext`m, \
+$CellContext`z^$CellContext`m, 
+               $CellContext`QPh[{
+                 
+                 NonCommutativeMultiply[$CellContext`q^(1 + 
+                   2 $CellContext`n), $CellContext`a]}, $CellContext`q, 
+                2 $CellContext`m], 
+               $CellContext`QPh[{
+                NonCommutativeMultiply[$CellContext`q^(1 + 
+                    2 $CellContext`n), $CellContext`a^2]/
+                 NonCommutativeMultiply[$CellContext`b, $CellContext`c, \
+$CellContext`d], NonCommutativeMultiply[$CellContext`b, $CellContext`c]^(-1) 
+                 NonCommutativeMultiply[$CellContext`q^(
+                    1 + $CellContext`n), $CellContext`a], $CellContext`d^(-1) 
+                 NonCommutativeMultiply[$CellContext`q^
+                   Rational[1, 2], $CellContext`a^Rational[1, 2]], 
+                 NonCommutativeMultiply[$CellContext`q^(
+                    Rational[3, 2] + $CellContext`n), $CellContext`a^
+                   Rational[3, 2]]/
+                 NonCommutativeMultiply[$CellContext`b, $CellContext`c, \
+$CellContext`d], 
+                 
+                 NonCommutativeMultiply[$CellContext`q^$CellContext`n, \
+$CellContext`e], 
+                 
+                 NonCommutativeMultiply[$CellContext`q^$CellContext`n, \
+$CellContext`f]}, $CellContext`q, $CellContext`m], 
+               $CellContext`W65[
+                
+                NonCommutativeMultiply[$CellContext`q^(
+                  2 ($CellContext`m + $CellContext`n)), $CellContext`a], 
+                NonCommutativeMultiply[$CellContext`q, $CellContext`a]^(-1) 
+                NonCommutativeMultiply[$CellContext`b, $CellContext`c, \
+$CellContext`d], 
+                
+                NonCommutativeMultiply[$CellContext`q^($CellContext`m + \
+$CellContext`n), $CellContext`e], 
+                
+                NonCommutativeMultiply[$CellContext`q^($CellContext`m + \
+$CellContext`n), $CellContext`f], $CellContext`q, $CellContext`z]], \
+{$CellContext`m, 0, 
+              DirectedInfinity[1]}]], {$CellContext`n, 0, 
+           DirectedInfinity[1]}], 
+       4 -> $CellContext`W87[$CellContext`a, $CellContext`b, $CellContext`c, \
+$CellContext`d, $CellContext`e, $CellContext`f, $CellContext`q, \
+$CellContext`z] == 
+        Inactive[Sum][
+         NonCommutativeMultiply[$CellContext`q^(Rational[1, 2] $CellContext`n)
+              , $CellContext`a^(Rational[1, 2] $CellContext`n), 
+             $CellContext`QPh[{
+              NonCommutativeMultiply[$CellContext`b, $CellContext`c]^(-1) 
+               NonCommutativeMultiply[$CellContext`q^
+                 Rational[1, 2], $CellContext`a^
+                 Rational[3, 2]]}, $CellContext`q, 2 $CellContext`n], 
+             $CellContext`QPh[{$CellContext`q, 
+               
+               NonCommutativeMultiply[$CellContext`q^
+                Rational[1, 2], $CellContext`a^
+                Rational[1, 2]], $CellContext`b^(-1) 
+               NonCommutativeMultiply[$CellContext`q, $CellContext`a], \
+$CellContext`c^(-1) 
+               NonCommutativeMultiply[$CellContext`q, $CellContext`a], \
+$CellContext`d^(-1) 
+               NonCommutativeMultiply[$CellContext`q, $CellContext`a], \
+$CellContext`e^(-1) 
+               NonCommutativeMultiply[$CellContext`q, $CellContext`a], \
+$CellContext`f^(-1) 
+               NonCommutativeMultiply[$CellContext`q, $CellContext`a]}, \
+$CellContext`q, $CellContext`n]]^(-1) 
+          NonCommutativeMultiply[$CellContext`b^$CellContext`n, \
+$CellContext`c^$CellContext`n, $CellContext`z^$CellContext`n, 
+            $CellContext`QPh[{
+              
+              NonCommutativeMultiply[$CellContext`q, $CellContext`a]}, \
+$CellContext`q, 2 $CellContext`n], 
+            $CellContext`QPh[{
+             NonCommutativeMultiply[$CellContext`b, $CellContext`c]^(-1) 
+              NonCommutativeMultiply[$CellContext`q^
+                Rational[1, 2], $CellContext`a^
+                Rational[3, 2]], $CellContext`b^(-1) 
+              NonCommutativeMultiply[$CellContext`q^
+                Rational[1, 2], $CellContext`a^
+                Rational[1, 2]], $CellContext`c^(-1) 
+              NonCommutativeMultiply[$CellContext`q^
+                Rational[1, 2], $CellContext`a^Rational[1, 2]], 
+              NonCommutativeMultiply[$CellContext`b, $CellContext`c]^(-1) 
+              NonCommutativeMultiply[$CellContext`q, $CellContext`a], \
+$CellContext`d, $CellContext`e, $CellContext`f}, $CellContext`q, \
+$CellContext`n], 
+            Inactive[
+            Sum][((Rational[1, 2]/Pi)/
+              NonCommutativeMultiply[$CellContext`q^$CellContext`m, \
+$CellContext`a^$CellContext`m, 
+               $CellContext`QPh[{
+                NonCommutativeMultiply[$CellContext`q^(1 + 
+                    2 $CellContext`n), $CellContext`a^2]/
+                 NonCommutativeMultiply[$CellContext`b, $CellContext`c, \
+$CellContext`d]}, $CellContext`q, 2 $CellContext`m], 
+               $CellContext`QPh[{$CellContext`q, 
+                 
+                 NonCommutativeMultiply[$CellContext`q^(
+                   Rational[1, 2] + $CellContext`n), $CellContext`a^
+                  Rational[1, 2]], 
+                 NonCommutativeMultiply[$CellContext`b, $CellContext`c]^(-1) 
+                 NonCommutativeMultiply[$CellContext`q^(Rational[3, 2] + 
+                    2 $CellContext`n), $CellContext`a^
+                   Rational[3, 2]], $CellContext`d^(-1) 
+                 NonCommutativeMultiply[$CellContext`q^(
+                    1 + $CellContext`n), $CellContext`a], $CellContext`e^(-1) 
+                 NonCommutativeMultiply[$CellContext`q^(
+                    1 + $CellContext`n), $CellContext`a], $CellContext`f^(-1) 
+                 NonCommutativeMultiply[$CellContext`q^(
+                    1 + $CellContext`n), $CellContext`a]}, $CellContext`q, \
+$CellContext`m], 
+               $CellContext`QPhI[{$CellContext`f, $CellContext`f^(-1) \
+$CellContext`q, 
+                 NonCommutativeMultiply[$CellContext`q^(
+                    Rational[
+                    5, 2] + $CellContext`m + $CellContext`n), $CellContext`a^
+                   Rational[5, 2]]/
+                 NonCommutativeMultiply[$CellContext`b, $CellContext`c, \
+$CellContext`d, $CellContext`e, $CellContext`z], 
+                 NonCommutativeMultiply[$CellContext`q^(
+                    Rational[
+                    3, 2] + $CellContext`m + $CellContext`n), $CellContext`a^
+                    Rational[5, 2]]^(-1) 
+                 NonCommutativeMultiply[$CellContext`b, $CellContext`c, \
+$CellContext`d, $CellContext`e, $CellContext`z], 
+                 NonCommutativeMultiply[$CellContext`q^3, \
+$CellContext`a^4]^(-1) 
+                 NonCommutativeMultiply[$CellContext`b^2, $CellContext`c^2, \
+$CellContext`d^2, $CellContext`e^2, $CellContext`f^2, $CellContext`z^2], \
+$CellContext`f^(-1) 
+                 NonCommutativeMultiply[$CellContext`q^(
+                    1 + $CellContext`m + $CellContext`n), $CellContext`a], 
+                 NonCommutativeMultiply[$CellContext`q^(Rational[5, 2] + 
+                    2 ($CellContext`m + $CellContext`n)), $CellContext`a^
+                   Rational[5, 2]]/
+                 NonCommutativeMultiply[$CellContext`b, $CellContext`c, \
+$CellContext`d, $CellContext`e]}, $CellContext`q]]) 
+             NonCommutativeMultiply[$CellContext`b^$CellContext`m, \
+$CellContext`c^$CellContext`m, $CellContext`d^$CellContext`m, \
+$CellContext`z^$CellContext`m, 
+               $CellContext`QPh[{
+                 
+                 NonCommutativeMultiply[$CellContext`q^(1 + 
+                   2 $CellContext`n), $CellContext`a]}, $CellContext`q, 
+                2 $CellContext`m], 
+               $CellContext`QPh[{
+                NonCommutativeMultiply[$CellContext`q^(1 + 
+                    2 $CellContext`n), $CellContext`a^2]/
+                 NonCommutativeMultiply[$CellContext`b, $CellContext`c, \
+$CellContext`d], NonCommutativeMultiply[$CellContext`b, $CellContext`c]^(-1) 
+                 NonCommutativeMultiply[$CellContext`q^(
+                    1 + $CellContext`n), $CellContext`a], $CellContext`d^(-1) 
+                 NonCommutativeMultiply[$CellContext`q^
+                   Rational[1, 2], $CellContext`a^Rational[1, 2]], 
+                 NonCommutativeMultiply[$CellContext`q^(
+                    Rational[3, 2] + $CellContext`n), $CellContext`a^
+                   Rational[3, 2]]/
+                 NonCommutativeMultiply[$CellContext`b, $CellContext`c, \
+$CellContext`d], 
+                 
+                 NonCommutativeMultiply[$CellContext`q^$CellContext`n, \
+$CellContext`e], 
+                 
+                 NonCommutativeMultiply[$CellContext`q^$CellContext`n, \
+$CellContext`f]}, $CellContext`q, $CellContext`m], 
+               $CellContext`QPhI[{$CellContext`q, 
+                 NonCommutativeMultiply[$CellContext`q^4, \
+$CellContext`a^4]^(-1) 
+                 NonCommutativeMultiply[$CellContext`b^2, $CellContext`c^2, \
+$CellContext`d^2, $CellContext`e^2, $CellContext`f^2, $CellContext`z^2], 
+                 
+                 NonCommutativeMultiply[$CellContext`q^(1 + 
+                   2 ($CellContext`m + $CellContext`n)), $CellContext`a], 
+                 NonCommutativeMultiply[$CellContext`q^(
+                    Rational[
+                    5, 2] + $CellContext`m + $CellContext`n), $CellContext`a^
+                   Rational[5, 2]]/
+                 NonCommutativeMultiply[$CellContext`b, $CellContext`c, \
+$CellContext`d, $CellContext`e, $CellContext`f]}, $CellContext`q], 
+               Inactive[Sum][NonCommutativeMultiply[
+                   $CellContext`QPh[{
+                    NonCommutativeMultiply[$CellContext`q^(Rational[3, 2] + 
+                    2 $CellContext`m + 2 $CellContext`n), $CellContext`a^
+                    Rational[5, 2]]/
+                    NonCommutativeMultiply[$CellContext`b, $CellContext`c, \
+$CellContext`d, $CellContext`e]}, $CellContext`q, 2 $CellContext`j], 
+                   $CellContext`QPh[{$CellContext`q, 
+                    NonCommutativeMultiply[$CellContext`q^(
+                    2 (1 + $CellContext`m + $CellContext`n)), \
+$CellContext`a^2]/
+                    NonCommutativeMultiply[$CellContext`b, $CellContext`c, \
+$CellContext`d], $CellContext`e^(-1) 
+                    NonCommutativeMultiply[$CellContext`q^(
+                    1 + $CellContext`m + $CellContext`n), $CellContext`a], 
+                    
+                    NonCommutativeMultiply[$CellContext`q^(
+                    Rational[1, 2] (1 + 
+                    2 ($CellContext`m + $CellContext`n))), $CellContext`a^
+                    Rational[1, 2]], 
+                    NonCommutativeMultiply[$CellContext`q^(
+                    Rational[
+                    5, 2] + $CellContext`m + $CellContext`n), $CellContext`a^
+                    Rational[5, 2]]/
+                    NonCommutativeMultiply[$CellContext`b, $CellContext`c, \
+$CellContext`d, $CellContext`e, $CellContext`f]}, $CellContext`q, \
+$CellContext`j]]^(-1) 
+                NonCommutativeMultiply[$CellContext`q^(
+                   Rational[1, 2] 
+                    NonCommutativeMultiply[-1 + $CellContext`j, \
+$CellContext`j] + NonCommutativeMultiply[$CellContext`j, 
+                    1 + $CellContext`m + $CellContext`n]), \
+(-1)^$CellContext`j, $CellContext`a^$CellContext`j, 
+                  $CellContext`QPh[{
+                   NonCommutativeMultiply[$CellContext`q^(Rational[5, 2] + 
+                    2 ($CellContext`m + $CellContext`n)), $CellContext`a^
+                    Rational[5, 2]]/
+                    NonCommutativeMultiply[$CellContext`b, $CellContext`c, \
+$CellContext`d, $CellContext`e]}, $CellContext`q, 2 $CellContext`j], 
+                  $CellContext`QPh[{
+                   NonCommutativeMultiply[$CellContext`q^(Rational[3, 2] + 
+                    2 $CellContext`m + 2 $CellContext`n), $CellContext`a^
+                    Rational[5, 2]]/
+                    NonCommutativeMultiply[$CellContext`b, $CellContext`c, \
+$CellContext`d, $CellContext`e], 
+                    NonCommutativeMultiply[$CellContext`q^(
+                    Rational[
+                    3, 2] + $CellContext`m + $CellContext`n), $CellContext`a^
+                    Rational[3, 2]]/
+                    NonCommutativeMultiply[$CellContext`b, $CellContext`c, \
+$CellContext`d], $CellContext`e^(-1) 
+                    NonCommutativeMultiply[$CellContext`q^
+                    Rational[1, 2], $CellContext`a^Rational[1, 2]], 
+                    NonCommutativeMultiply[$CellContext`q^(
+                    2 + $CellContext`m + $CellContext`n), $CellContext`a^2]/
+                    NonCommutativeMultiply[$CellContext`b, $CellContext`c, \
+$CellContext`d, $CellContext`e], 
+                    
+                    NonCommutativeMultiply[$CellContext`q^($CellContext`m + \
+$CellContext`n), $CellContext`f]}, $CellContext`q, $CellContext`j], 
+                  Inactive[
+                  Integrate][$CellContext`QPhI[{
+                    NonCommutativeMultiply[$CellContext`q^(Rational[3, 4] + 
+                    Rational[1, 2] $CellContext`j + 
+                    Rational[1, 2] (
+                    1 + $CellContext`m + $CellContext`n)), $CellContext`a^
+                    Rational[5, 4], $CellContext`f^
+                    Rational[1, 2], $CellContext`\[Rho]]/
+                    NonCommutativeMultiply[$CellContext`b^
+                    Rational[1, 2], $CellContext`c^
+                    Rational[1, 2], $CellContext`d^
+                    Rational[1, 2], $CellContext`e^
+                    Rational[1, 2], $CellContext`g, $CellContext`z^
+                    Rational[1, 2]], 
+                    NonCommutativeMultiply[$CellContext`q^(Rational[1, 4] + 
+                    Rational[1, 2] $CellContext`j + 
+                    Rational[1, 2] $CellContext`m + 
+                    Rational[1, 2] $CellContext`n), $CellContext`a^
+                    Rational[5, 4], $CellContext`f^
+                    Rational[1, 2], $CellContext`g]^(-1) 
+                    NonCommutativeMultiply[$CellContext`b^
+                    Rational[1, 2], $CellContext`c^
+                    Rational[1, 2], $CellContext`d^
+                    Rational[1, 2], $CellContext`e^
+                    Rational[1, 2], $CellContext`z^
+                    Rational[1, 2], $CellContext`\[Rho]], 
+                    NonCommutativeMultiply[$CellContext`q^(Rational[3, 4] + 
+                    Rational[1, 2] $CellContext`j + 
+                    Rational[1, 2] (
+                    1 + $CellContext`m + $CellContext`n)), $CellContext`a^
+                    Rational[5, 4], $CellContext`f^
+                    Rational[1, 2], $CellContext`g]/
+                    NonCommutativeMultiply[$CellContext`b^
+                    Rational[1, 2], $CellContext`c^
+                    Rational[1, 2], $CellContext`d^
+                    Rational[1, 2], $CellContext`e^
+                    Rational[1, 2], $CellContext`z^
+                    Rational[1, 2], $CellContext`\[Rho]], 
+                    NonCommutativeMultiply[$CellContext`q^(Rational[1, 4] + 
+                    Rational[1, 2] $CellContext`j + 
+                    Rational[1, 2] $CellContext`m + 
+                    Rational[1, 2] $CellContext`n), $CellContext`a^
+                    Rational[5, 4], $CellContext`f^
+                    Rational[1, 2], $CellContext`\[Rho]]^(-1) 
+                    NonCommutativeMultiply[$CellContext`b^
+                    Rational[1, 2], $CellContext`c^
+                    Rational[1, 2], $CellContext`d^
+                    Rational[1, 2], $CellContext`e^
+                    Rational[1, 2], $CellContext`g, $CellContext`z^
+                    Rational[1, 2]], 
+                    NonCommutativeMultiply[$CellContext`a^
+                    Rational[1, 4], $CellContext`f^
+                    Rational[1, 2], $CellContext`\[Rho]]^(-1) 
+                    NonCommutativeMultiply[$CellContext`q^(Rational[1, 4] + 
+                    Rational[1, 2] $CellContext`j + 
+                    Rational[
+                    1, 2] (-1 + $CellContext`m + $CellContext`n)), \
+$CellContext`b^Rational[1, 2], $CellContext`c^Rational[1, 2], $CellContext`d^
+                    Rational[1, 2], $CellContext`e^
+                    Rational[1, 2], $CellContext`g, $CellContext`z^
+                    Rational[1, 2]], 
+                    NonCommutativeMultiply[$CellContext`a^
+                    Rational[11, 4], $CellContext`\[Rho]]^(-1) 
+                    NonCommutativeMultiply[$CellContext`q^(
+                    Rational[1, 4] (-7 + 2 $CellContext`j + 2 $CellContext`m + 
+                    2 $CellContext`n)), $CellContext`b^
+                    Rational[3, 2], $CellContext`c^
+                    Rational[3, 2], $CellContext`d^
+                    Rational[3, 2], $CellContext`e^
+                    Rational[3, 2], $CellContext`f^
+                    Rational[3, 2], $CellContext`g, $CellContext`z^
+                    Rational[3, 2]], 
+                    NonCommutativeMultiply[$CellContext`b^
+                    Rational[1, 2], $CellContext`c^
+                    Rational[1, 2], $CellContext`d^
+                    Rational[1, 2], $CellContext`e^
+                    Rational[1, 2], $CellContext`\[Rho]]^(-1) 
+                    NonCommutativeMultiply[$CellContext`q^(Rational[3, 4] + 
+                    Rational[3, 2] $CellContext`j + 
+                    Rational[1, 2] (1 + 
+                    3 ($CellContext`m + $CellContext`n))), $CellContext`a^
+                    Rational[5, 4], $CellContext`f^
+                    Rational[1, 2], $CellContext`g, $CellContext`z^
+                    Rational[1, 2]]}, $CellContext`q]/$CellContext`QPhI[{
+                    NonCommutativeMultiply[$CellContext`q^(Rational[3, 4] + 
+                    Rational[1, 2] $CellContext`j + 
+                    Rational[1, 2] (
+                    1 + $CellContext`m + $CellContext`n)), $CellContext`a^
+                    Rational[5, 4], $CellContext`\[Rho]]/
+                    NonCommutativeMultiply[$CellContext`b^
+                    Rational[1, 2], $CellContext`c^
+                    Rational[1, 2], $CellContext`d^
+                    Rational[1, 2], $CellContext`e^
+                    Rational[1, 2], $CellContext`f^
+                    Rational[1, 2], $CellContext`g, $CellContext`z^
+                    Rational[1, 2]], 
+                    NonCommutativeMultiply[$CellContext`q^(Rational[5, 4] + 
+                    Rational[1, 2] $CellContext`j + 
+                    Rational[1, 2] $CellContext`m + 
+                    Rational[1, 2] $CellContext`n), $CellContext`a^
+                    Rational[5, 4], $CellContext`g]^(-1) 
+                    NonCommutativeMultiply[$CellContext`b^
+                    Rational[1, 2], $CellContext`c^
+                    Rational[1, 2], $CellContext`d^
+                    Rational[1, 2], $CellContext`e^
+                    Rational[1, 2], $CellContext`f^
+                    Rational[1, 2], $CellContext`z^
+                    Rational[1, 2], $CellContext`\[Rho]], 
+                    NonCommutativeMultiply[$CellContext`a^
+                    Rational[3, 4], $CellContext`\[Rho]]^(-1) 
+                    NonCommutativeMultiply[$CellContext`q^(
+                    Rational[1, 4] (-1 + 2 $CellContext`j + 2 $CellContext`m + 
+                    2 $CellContext`n)), $CellContext`b^
+                    Rational[1, 2], $CellContext`c^
+                    Rational[1, 2], $CellContext`d^
+                    Rational[1, 2], $CellContext`e^
+                    Rational[1, 2], $CellContext`f^
+                    Rational[1, 2], $CellContext`g, $CellContext`z^
+                    Rational[1, 2]], 
+                    NonCommutativeMultiply[$CellContext`a^
+                    Rational[3, 4], $CellContext`\[Rho]]^(-1) 
+                    NonCommutativeMultiply[$CellContext`q^(
+                    Rational[1, 4] (-3 + 2 $CellContext`j + 2 $CellContext`m + 
+                    2 $CellContext`n)), $CellContext`b^
+                    Rational[1, 2], $CellContext`c^
+                    Rational[1, 2], $CellContext`d^
+                    Rational[1, 2], $CellContext`e^
+                    Rational[1, 2], $CellContext`f^
+                    Rational[1, 2], $CellContext`g, $CellContext`z^
+                    Rational[1, 2]], ((-1)/
+                    NonCommutativeMultiply[$CellContext`a^
+                    Rational[3, 4], $CellContext`\[Rho]]) 
+                    NonCommutativeMultiply[$CellContext`q^(
+                    Rational[1, 4] (-3 + 2 $CellContext`j + 2 $CellContext`m + 
+                    2 $CellContext`n)), $CellContext`b^
+                    Rational[1, 2], $CellContext`c^
+                    Rational[1, 2], $CellContext`d^
+                    Rational[1, 2], $CellContext`e^
+                    Rational[1, 2], $CellContext`f^
+                    Rational[1, 2], $CellContext`g, $CellContext`z^
+                    Rational[1, 2]], ((-1)/
+                    NonCommutativeMultiply[$CellContext`a^
+                    Rational[3, 4], $CellContext`\[Rho]]) 
+                    NonCommutativeMultiply[$CellContext`q^(
+                    Rational[1, 4] (-1 + 2 $CellContext`j + 2 $CellContext`m + 
+                    2 $CellContext`n)), $CellContext`b^
+                    Rational[1, 2], $CellContext`c^
+                    Rational[1, 2], $CellContext`d^
+                    Rational[1, 2], $CellContext`e^
+                    Rational[1, 2], $CellContext`f^
+                    Rational[1, 2], $CellContext`g, $CellContext`z^
+                    Rational[1, 2]], 
+                    NonCommutativeMultiply[$CellContext`q^(Rational[3, 4] + 
+                    Rational[1, 2] $CellContext`j + 
+                    Rational[1, 2] (
+                    1 + $CellContext`m + $CellContext`n)), $CellContext`a^
+                    Rational[5, 4], $CellContext`g, $CellContext`z^
+                    Rational[1, 2]]/
+                    NonCommutativeMultiply[$CellContext`b^
+                    Rational[1, 2], $CellContext`c^
+                    Rational[1, 2], $CellContext`d^
+                    Rational[1, 2], $CellContext`e^
+                    Rational[1, 2], $CellContext`f^
+                    Rational[
+                    1, 2], $CellContext`\[Rho]]}, $CellContext`q], \
+{$CellContext`\[Zeta], -Pi, Pi}]], {$CellContext`j, 0, 
+                 DirectedInfinity[1]}]], {$CellContext`m, 0, 
+              DirectedInfinity[1]}]], {$CellContext`n, 0, 
+           DirectedInfinity[1]}], 
+       5 -> $CellContext`W1211[$CellContext`a, $CellContext`b, \
+$CellContext`c, $CellContext`d, $CellContext`e, $CellContext`f, \
+$CellContext`g, $CellContext`h, $CellContext`i, $CellContext`j, \
+$CellContext`q, $CellContext`z] == QHypergeometricPFQ[{$CellContext`b, 
+           
+           NonCommutativeMultiply[$CellContext`q, $CellContext`a^
+            Rational[1, 2]], -
+           NonCommutativeMultiply[$CellContext`q, $CellContext`a^
+             Rational[
+              1, 2]], $CellContext`a, $CellContext`c, $CellContext`d, \
+$CellContext`e, $CellContext`f, $CellContext`g, $CellContext`h, \
+$CellContext`i, $CellContext`j}, {$CellContext`a^
+           Rational[1, 2], -$CellContext`a^
+            Rational[1, 2], $CellContext`b^(-1) 
+           NonCommutativeMultiply[$CellContext`q, $CellContext`a], \
+$CellContext`c^(-1) 
+           NonCommutativeMultiply[$CellContext`q, $CellContext`a], \
+$CellContext`d^(-1) 
+           NonCommutativeMultiply[$CellContext`q, $CellContext`a], \
+$CellContext`e^(-1) 
+           NonCommutativeMultiply[$CellContext`q, $CellContext`a], \
+$CellContext`f^(-1) 
+           NonCommutativeMultiply[$CellContext`q, $CellContext`a], \
+$CellContext`g^(-1) 
+           NonCommutativeMultiply[$CellContext`q, $CellContext`a], \
+$CellContext`h^(-1) 
+           NonCommutativeMultiply[$CellContext`q, $CellContext`a], \
+$CellContext`i^(-1) 
+           NonCommutativeMultiply[$CellContext`q, $CellContext`a], \
+$CellContext`j^(-1) 
+           NonCommutativeMultiply[$CellContext`q, $CellContext`a]}, \
+$CellContext`q, $CellContext`z]|>, "AllowEmbedding" -> True, "InitialShape" -> 
+     TypeSystem`PackageScope`Limited[
+       TypeSystem`PackageScope`ColumnShape[
+        TypeSystem`PackageScope`KeyValueShape[
+         TypeSystem`PackageScope`AtomShape[34], 
+         TypeSystem`PackageScope`UnknownShape[False]]], 5, 
+       DirectedInfinity[1], {}], "InitialType" -> TypeSystem`Assoc[
+       TypeSystem`Atom[Integer], TypeSystem`AnyType, 5], "Meta" -> <||>, 
+     "RowTarget" -> 20, "ColumnTarget" -> 10, "Shape" -> 
+     TypeSystem`PackageScope`AtomShape[10], "Type" -> TypeSystem`AnyType, 
+     "Path" -> {
+       Key[5]}, "DisplayedRowCount" -> 20, "DisplayedColumnCount" -> 10, 
+     "DataRowCount" -> 2, "DataColumnCount" -> 1, "SortPaths" -> {}, 
+     "SortDirections" -> {}, "HiddenItemsMap" -> Null, "UpdateType" -> 4|>, 
+    TypeSystem`NestedGrid`PackagePrivate`$outputID$$, 
+    TypeSystem`NestedGrid`PackagePrivate`$path$$ = {
+     Key[5]}, TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 1, 
+    TypeSystem`NestedGrid`PackagePrivate`$hPos$$ = 1, 
+    TypeSystem`NestedGrid`PackagePrivate`$grid$$ = 
+    DynamicModule[{TypeSystem`NestedGrid`PackagePrivate`renderedGrid = Deploy[
+        Style[
+         Grid[{{
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                 RowBox[{
+                   RowBox[{"W1211", "[", 
+                    
+                    RowBox[{
+                    "a", ",", "b", ",", "c", ",", "d", ",", "e", ",", "f", 
+                    ",", "g", ",", "h", ",", "i", ",", "j", ",", "q", ",", 
+                    "z"}], "]"}], "\[Equal]", 
+                   RowBox[{"QHypergeometricPFQ", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"b", ",", 
+                    RowBox[{"q", "**", 
+                    SqrtBox["a"]}], ",", 
+                    RowBox[{"-", 
+                    RowBox[{"q", "**", 
+                    SqrtBox["a"]}]}], ",", "a", ",", "c", ",", "d", ",", "e", 
+                    ",", "f", ",", "g", ",", "h", ",", "i", ",", "j"}], "}"}],
+                     ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    SqrtBox["a"], ",", 
+                    RowBox[{"-", 
+                    SqrtBox["a"]}], ",", 
+                    FractionBox[
+                    RowBox[{"q", "**", "a"}], "b"], ",", 
+                    FractionBox[
+                    RowBox[{"q", "**", "a"}], "c"], ",", 
+                    FractionBox[
+                    RowBox[{"q", "**", "a"}], "d"], ",", 
+                    FractionBox[
+                    RowBox[{"q", "**", "a"}], "e"], ",", 
+                    FractionBox[
+                    RowBox[{"q", "**", "a"}], "f"], ",", 
+                    FractionBox[
+                    RowBox[{"q", "**", "a"}], "g"], ",", 
+                    FractionBox[
+                    RowBox[{"q", "**", "a"}], "h"], ",", 
+                    FractionBox[
+                    RowBox[{"q", "**", "a"}], "i"], ",", 
+                    FractionBox[
+                    RowBox[{"q", "**", "a"}], "j"]}], "}"}], ",", "q", ",", 
+                    "z"}], "]"}]}], FontFamily -> Dynamic[
+                   CurrentValue[{"StyleHints", "CodeFont"}]], 
+                 ShowStringCharacters -> True]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               "64a0d074-1d1f-4832-a100-3cafa70d0c59"][{
+                 Key[5]}, "Item", False], "Mouse"], 
+              ImageSize -> {{10, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}}, 
+          BaseStyle -> {
+           ContextMenu -> 
+            Dynamic[TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
+              Which[TypeSystem`NestedGrid`PackagePrivate`$lastOutputID =!= 
+                "64a0d074-1d1f-4832-a100-3cafa70d0c59", {}, 
+                TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger === 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenuTrigger, 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu, True, 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenuTrigger = 
+                 TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu = 
+                 Block[{TypeSystem`NestedGrid`PackagePrivate`$globalScrollPos = \
+{TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$}}, 
+                   
+                   With[{TypeSystem`NestedGrid`PackagePrivate`lastPath$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPathType, 
+                    TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$\
+lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
+                    MatchQ[TypeSystem`NestedGrid`PackagePrivate`$lastPathType, 
+                    Alternatives["RowHeader", "ColumnHeader"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`headerHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$]], 
+                    TypeSystem`NestedGrid`PackagePrivate`allHidden$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`allHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`anyHidden$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`anyHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`columnSortDirection[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$[
+                    "SortPaths"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$[
+                    "SortDirections"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`haveData$ = Not[
+                    FailureQ[
+                    TypeSystem`NestedGrid`PackagePrivate`datasetInitialData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$]]], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$ = Not[
+                    FreeQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, Keys]]}, 
+                    Join[{
+                    If[
+                    Or[
+                    Not[TypeSystem`NestedGrid`PackagePrivate`haveData$], 
+                    Not[TypeSystem`NestedGrid`PackagePrivate`anyHidden$], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$], 
+                    Nothing, 
+                    MenuItem[
+                    "Show " <> 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Item", "", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "RowHeader", "Row", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "ColumnHeader", "Column", True, ""], 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    "64a0d074-1d1f-4832-a100-3cafa70d0c59"]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "remove"]], MenuEvaluator -> Automatic]], 
+                    If[
+                    Or[
+                    Not[TypeSystem`NestedGrid`PackagePrivate`haveData$], 
+                    TypeSystem`NestedGrid`PackagePrivate`pathEmptyQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$, 
+                    And[
+                    TypeSystem`NestedGrid`PackagePrivate`allHidden$, 
+                    TypeSystem`NestedGrid`PackagePrivate`headerHidden$]], 
+                    Nothing, 
+                    MenuItem[
+                    "Hide " <> 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Item", "", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "RowHeader", "Row", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "ColumnHeader", "Column", True, ""], 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    "64a0d074-1d1f-4832-a100-3cafa70d0c59"]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, "add"]], 
+                    MenuEvaluator -> Automatic]], Delimiter}, 
+                    If[
+                    And[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MatchQ[TypeSystem`NestedGrid`PackagePrivate`lastPathType$, 
+                    Alternatives["ColumnHeader", "KeyDummy"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$, 
+                    Not[TypeSystem`NestedGrid`PackagePrivate`allHidden$]], {
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    "Ascending", 
+                    MenuItem["Sort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    "64a0d074-1d1f-4832-a100-3cafa70d0c59"][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "Ascending"]], MenuEvaluator -> Automatic], Nothing], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    "Descending", 
+                    MenuItem["Reverse Sort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    "64a0d074-1d1f-4832-a100-3cafa70d0c59"][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "Descending"]], MenuEvaluator -> Automatic], Nothing], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    None, 
+                    MenuItem["Unsort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    "64a0d074-1d1f-4832-a100-3cafa70d0c59"][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, None]], 
+                    MenuEvaluator -> Automatic], Nothing], Delimiter}, {}], {
+                    MenuItem["Copy Position to Clipboard", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                    MenuEvaluator -> Automatic], 
+                    If[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MenuItem["Copy Data to Clipboard", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                    MenuEvaluator -> Automatic], Nothing], Delimiter, 
+                    MenuItem["Paste Position in New Cell", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                    MenuEvaluator -> Automatic], 
+                    If[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MenuItem["Paste Data in New Cell", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                    MenuEvaluator -> Automatic], Nothing]}]]]]], FontFamily -> 
+            "Source Sans Pro", FontSize -> 14, FontWeight -> Plain}, Dividers -> 
+          All, FrameStyle -> GrayLevel[0.7490196078431373], 
+          Spacings -> {0, 0}, Alignment -> Left, 
+          BaseStyle -> {
+           FontFamily -> "Source Sans Pro", FontSize -> 14, FontWeight -> 
+            Plain}], LineBreakWithin -> False, ContextMenu -> {}, NumberMarks -> 
+         False, ShowAutoStyles -> False]], 
+      TypeSystem`NestedGrid`PackagePrivate`initialQ = True}, 
+     Dynamic[
+      TypeSystem`NestedGrid`PackagePrivate`setupViewPath[
+      TypeSystem`NestedGrid`PackagePrivate`$path$$, If[
+         Not[TypeSystem`NestedGrid`PackagePrivate`initialQ], 
+         Module[{
+          TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = $Failed, 
+           TypeSystem`NestedGrid`PackagePrivate`tmpData$ = 
+           TypeSystem`NestedGrid`PackagePrivate`datasetData[
+            TypeSystem`NestedGrid`PackagePrivate`$state$$]}, 
+          TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = If[
+             FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpData$], 
+             TypeSystem`NestedGrid`PackagePrivate`renderedGrid, 
+             TypeSystem`NestedGrid`PackagePrivate`renderGrid[
+             TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+              "64a0d074-1d1f-4832-a100-3cafa70d0c59"][
+             TypeSystem`NestedGrid`PackagePrivate`tmpData$]]; If[
+            Not[
+             FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]], 
+            TypeSystem`NestedGrid`PackagePrivate`renderedGrid = 
+            TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]; Null]]; 
+       TypeSystem`NestedGrid`PackagePrivate`initialQ = False; 
+       TypeSystem`NestedGrid`PackagePrivate`$vPos$$; 
+       TypeSystem`NestedGrid`PackagePrivate`$hPos$$; If[
+         FailureQ[TypeSystem`NestedGrid`PackagePrivate`renderedGrid], 
+         TypeSystem`SparseGrid[
+          TypeSystem`H["(data no longer present)"]], 
+         TypeSystem`NestedGrid`PackagePrivate`renderedGrid]], 
+      TrackedSymbols :> {
+       TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$hPos$$}], 
+     DynamicModuleValues :> {}], 
+    TypeSystem`NestedGrid`PackagePrivate`$topBar$$ = Dynamic[
+     TypeSystem`NestedGrid`PackagePrivate`makeFramedBar[
+      TypeSystem`PackageScope`SubViewPathbar[
+      TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+       TypeSystem`NestedGrid`PackagePrivate`updateState[
+       TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+        TypeSystem`NestedGrid`PackagePrivate`localHold[
+        TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]]], 
+     TrackedSymbols :> {TypeSystem`NestedGrid`PackagePrivate`$path$$}], 
+    TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$ = Style[
+     Framed[
+      Dynamic[
+       Replace[
+       TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$, {
+        TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+           TypeSystem`NestedGrid`PackagePrivate`localHold[
+           TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][Null, 
+           Blank[]] -> "", TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+           TypeSystem`NestedGrid`PackagePrivate`localHold[
+           TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+           Pattern[TypeSystem`NestedGrid`PackagePrivate`path$, 
+            Blank[]], 
+           Pattern[TypeSystem`NestedGrid`PackagePrivate`pathType$, 
+            Blank[]], 
+           Pattern[TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$, 
+            Blank[]]] :> (
+          Increment[TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger]; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastPath = 
+           TypeSystem`NestedGrid`PackagePrivate`path$; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastPathType = 
+           TypeSystem`NestedGrid`PackagePrivate`pathType$; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastPathIsLeafHeader = 
+           TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastOutputID = 
+           TypeSystem`NestedGrid`PackagePrivate`localHold[
+            TypeSystem`NestedGrid`PackagePrivate`$outputID$$]; 
+          TypeSystem`NestedGrid`PackagePrivate`makePathTrail[
+           TypeSystem`NestedGrid`PackagePrivate`path$, 
+            TypeSystem`NestedGrid`PackagePrivate`makePathElements]), Null :> 
+         Spacer[10], Blank[] :> Spacer[10]}], 
+       TrackedSymbols :> {
+        TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$}], FrameStyle -> 
+      None, ImageMargins -> 0, FrameMargins -> 0, Alignment -> Top, 
+      ImageSize -> {Automatic, 15}], FontSize -> 1], 
+    TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$ = Null}, 
+    DynamicWrapperBox[
+     DynamicBox[ToBoxes[
+       Dataset`DatasetContent[
+       2, "Path" -> Hold[TypeSystem`NestedGrid`PackagePrivate`$path$$], 
+        "Grid" -> Hold[TypeSystem`NestedGrid`PackagePrivate`$grid$$], "State" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$state$$], "VPos" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$vPos$$], "HPos" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$hPos$$], "TopBar" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$topBar$$], "BottomBar" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$], "OutputID" -> 
+        Hold[
+          TypeSystem`NestedGrid`PackagePrivate`localHold[
+          TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]], StandardForm],
+      ImageSizeCache->{528., {34.8544921875, 40.1455078125}},
+      TrackedSymbols:>{
+       TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$grid$$}], 
+     TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$ = 
+     MouseAnnotation[],
+     ImageSizeCache->{528., {34.8544921875, 40.1455078125}}],
+    BaseStyle->{LineBreakWithin -> False},
+    DynamicModuleValues:>{},
+    Initialization:>(TypeSystem`NestedGrid`PackagePrivate`$outputID$$ = 
+     CreateUUID[]),
+    UnsavedVariables:>{TypeSystem`NestedGrid`PackagePrivate`$outputID$$}],
+   Deploy,
+   DefaultBaseStyle->"Deploy"],
+  Dataset`InterpretDataset[1],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{{3.895154168810124*^9, 3.895154188271171*^9}},
+ CellLabel->"Out[18]=",
+ CellID->188334759,ExpressionUUID->"7c438b0d-d1d4-42eb-8dbf-63aa9d2fd3c7"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "More Examples",
+ Cell[BoxData[
+  TemplateBox[{"MoreExamples", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell["Extended examples in standardized sections.", "MoreInfoText"], 
+       BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "2f4cc0f7-ed7d-424d-b524-94892a62bba7"]
+}], "ExtendedExamplesSection",
+ CellTags->"ExtendedExamples",
+ CellID->271308062,ExpressionUUID->"f679004a-b69d-4e91-8b00-9a98842e42b3"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Scope", "ExampleSection",ExpressionUUID->
+   "d29a1ed8-42ed-44ea-8914-055080945eba"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->601352075,ExpressionUUID->"0cacbb33-3a74-49d3-b0ee-3fa1240eeb96"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Generalizations & Extensions", "ExampleSection",ExpressionUUID->
+   "ac7d6d92-227a-403b-9f2e-4b57757289da"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->796797792,ExpressionUUID->"30ca7ba9-7fc8-4e83-8e97-7782cbbaf62f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Options", "ExampleSection",ExpressionUUID->
+   "ebc937ba-a5e7-43ef-aefa-be97c0ca3c28"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->314568175,ExpressionUUID->"7c404a68-b802-4c4d-a3fd-4ec4eafbc565"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "XXXX", "ExampleSubsection",ExpressionUUID->
+   "23d6bbf9-1736-4dea-92d1-5e0cf61111eb"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->590126326,ExpressionUUID->"e5f4a7b7-96d6-4116-b211-50fdf7819e11"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "XXXX", "ExampleSubsection",ExpressionUUID->
+   "9349a1be-6aa4-4d8f-a267-074396922139"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->593139265,ExpressionUUID->"dc80c406-59d6-4fbe-90be-f3454ab77df8"]
+}, Open  ]],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Applications", "ExampleSection",ExpressionUUID->
+   "175516d5-11c3-4ee4-b4a6-db61e544fe46"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->417844847,ExpressionUUID->"3fe0a2de-d5ea-49ca-a637-ae07f857a8f7"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Properties & Relations", "ExampleSection",ExpressionUUID->
+   "03748e95-e0b4-466f-a33f-855b116adf5b"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->11235265,ExpressionUUID->"aa1d3961-b627-474e-9436-574f49270dba"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Possible Issues", "ExampleSection",ExpressionUUID->
+   "bf1fa9ce-f507-4c61-afcc-030f1898c929"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->471558918,ExpressionUUID->"4d56c2fa-9545-4b6b-930a-929738a3c59f"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Interactive Examples", "ExampleSection",ExpressionUUID->
+   "fb8cfb24-3af4-4ca1-9ef2-cc007e8fae38"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->789243799,ExpressionUUID->"c852382e-c4b6-41c9-9802-69ea4abe462b"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Neat Examples", "ExampleSection",ExpressionUUID->
+   "3a380189-98bc-4d93-a6a5-a95130852f66"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->145580730,ExpressionUUID->"99d42473-1f04-4120-bf6f-76744873c467"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Metadata", "MetadataSection",
+ CellID->11336322,ExpressionUUID->"2fc1f69e-d4b4-43d9-b492-e63ced50e9ef"],
+
+Cell[TextData[{
+ "New in: ",
+ Cell["XX", "HistoryData",
+  CellTags->"New",ExpressionUUID->"ca657d76-3305-4aa3-a6d1-fe72653b6242"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified",ExpressionUUID->"84a03b24-f9c6-4394-9280-92b3f19efcc1"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete",ExpressionUUID->"f200db38-7a16-4ce2-958c-50c196cce755"]
+}], "History",
+ CellID->725283720,ExpressionUUID->"5fa14e67-3f7a-4c74-aecc-81013c8e23a5"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Categorization",
+ Cell[BoxData[
+  TemplateBox[{"Metadata", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Metadata such as page URI, context, and type of documentation page.", 
+        "MoreInfoText"], BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "0a9d0b45-ee12-4363-9124-f6d97f242152"]
+}], "CategorizationSection",
+ CellID->35664928,ExpressionUUID->"bb15769a-a36a-408d-9b95-2b54e661899d"],
+
+Cell["Symbol", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->144138670,ExpressionUUID->"64544662-c39f-4ca7-b19d-b3b8300c799b"],
+
+Cell["PeterBurbery/BasicHypergeometricFunctions", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->48881020,ExpressionUUID->"f2034419-8ee5-4d07-84af-068692c76af0"],
+
+Cell["PeterBurbery`BasicHypergeometricFunctions`", "Categorization",
+ CellLabel->"Context",
+ CellID->541827732,ExpressionUUID->"72c545fe-76d7-48db-b80d-cbc71f475a2d"],
+
+Cell["\<\
+PeterBurbery/BasicHypergeometricFunctions/ref/RearrangeExpression\
+\>", "Categorization",
+ CellLabel->"URI",
+ CellID->283465814,ExpressionUUID->"37255999-e5e5-4098-ae61-b6d6eeb961ee"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->414565854,ExpressionUUID->"1707aef3-52a8-4f76-a5af-61c9bb27194b"],
+
+Cell["XXXX", "Keywords",
+ CellID->84870926,ExpressionUUID->"aa0cf7ed-2158-44f6-837f-3a153bad94ac"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Syntax Templates", "TemplatesSection",
+ CellID->161780072,ExpressionUUID->"94bfb258-cf11-41de-ae4e-59b4fe5d1c08"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Additional Function Template",
+ CellID->81355801,ExpressionUUID->"62744b67-5d02-4287-8e8a-18cc7f338981"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Arguments Pattern",
+ CellID->133868256,ExpressionUUID->"e21985c5-a886-40b6-ac55-1c98f82ddf27"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Local Variables",
+ CellID->146156110,ExpressionUUID->"900b275a-8b1a-4648-99e4-b05c89ab0af3"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Color Equal Signs",
+ CellID->786760220,ExpressionUUID->"cd3a9bdf-5d72-4abb-94f7-9f6cd427db37"]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{1141.2, 579.6},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+TaggingRules-><|"Paclet" -> "PeterBurbery/BasicHypergeometricFunctions"|>,
+CellContext->"Global`",
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (May 18, 2023)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStylesExt.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"c88b4f53-6d75-406c-9f6d-452660279d82"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "ExtendedExamples"->{
+  Cell[70797, 1377, 487, 13, 57, "ExtendedExamplesSection",ExpressionUUID->"f679004a-b69d-4e91-8b00-9a98842e42b3",
+   CellTags->"ExtendedExamples",
+   CellID->271308062]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"ExtendedExamples", 77188, 1566}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 117, 1, 74, "ObjectName",ExpressionUUID->"7a8ba60f-86da-443c-aa34-4b7280347856",
+ CellID->1004189261],
+Cell[700, 25, 673, 16, 78, "Usage",ExpressionUUID->"fd048827-b278-403b-aee0-8ba756c57c08",
+ CellID->59901794],
+Cell[1376, 43, 209, 2, 27, "Notes",ExpressionUUID->"8339ab23-1eb9-46a8-9501-07024d830107",
+ CellID->167999306]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1622, 50, 458, 13, 39, "SeeAlsoSection",ExpressionUUID->"02d7e0d4-22d1-4bb4-aa55-43a74861efe9",
+ CellID->153324495],
+Cell[2083, 65, 1652, 42, 24, "SeeAlso",ExpressionUUID->"a66d2301-7fb4-438c-b1ac-18a18dc445ee",
+ CellID->70870276]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3772, 112, 434, 12, 40, "TechNotesSection",ExpressionUUID->"155764aa-37d9-4587-aaee-3b922d2d2607",
+ CellID->27265365],
+Cell[4209, 126, 99, 1, 19, "Tutorials",ExpressionUUID->"10aea475-18bc-4612-861c-53c0ec83b30b",
+ CellID->10257487]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4345, 132, 117, 1, 39, "MoreAboutSection",ExpressionUUID->"3c18becb-428b-4226-b538-a6a825a517e6",
+ CellID->389392087],
+Cell[4465, 135, 100, 1, 19, "MoreAbout",ExpressionUUID->"e9220c54-bb79-45bc-a08a-951f2592b4a9",
+ CellID->491147871]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4602, 141, 471, 13, 39, "RelatedLinksSection",ExpressionUUID->"73c9d976-589c-405c-ad7c-b9e9d729aabb",
+ CellID->28991012],
+Cell[5076, 156, 103, 1, 19, "RelatedLinks",ExpressionUUID->"5d01f872-3b23-4c21-bdb5-4bfca3cb7f21",
+ CellID->239120539]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5216, 162, 530, 14, 69, "ExamplesInitializationSection",ExpressionUUID->"b72d42bf-bcf6-4818-9adf-ddf0a053972a",
+ CellID->533148142],
+Cell[5749, 178, 200, 3, 45, "ExampleInitialization",ExpressionUUID->"86fdc8ed-79ca-4d74-af83-793df60f2463",
+ CellID->90415650]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5986, 186, 441, 12, 71, "PrimaryExamplesSection",ExpressionUUID->"a93e1339-7966-4789-bab8-2b072077ed87",
+ CellID->59886769],
+Cell[6430, 200, 187, 2, 24, "ExampleText",ExpressionUUID->"6debc0c4-46c3-4007-bd70-af871dd9d719",
+ CellID->21676141],
+Cell[CellGroupData[{
+Cell[6642, 206, 581, 13, 113, "Input",ExpressionUUID->"4d3e8775-4a96-4ecd-9c4f-b7d12689def7",
+ CellID->151231810],
+Cell[7226, 221, 63522, 1150, 87, "Output",ExpressionUUID->"7c438b0d-d1d4-42eb-8dbf-63aa9d2fd3c7",
+ CellID->188334759]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[70797, 1377, 487, 13, 57, "ExtendedExamplesSection",ExpressionUUID->"f679004a-b69d-4e91-8b00-9a98842e42b3",
+ CellTags->"ExtendedExamples",
+ CellID->271308062],
+Cell[71287, 1392, 241, 5, 35, "ExampleSection",ExpressionUUID->"0cacbb33-3a74-49d3-b0ee-3fa1240eeb96",
+ CellID->601352075],
+Cell[71531, 1399, 264, 5, 23, "ExampleSection",ExpressionUUID->"30ca7ba9-7fc8-4e83-8e97-7782cbbaf62f",
+ CellID->796797792],
+Cell[CellGroupData[{
+Cell[71820, 1408, 243, 5, 23, "ExampleSection",ExpressionUUID->"7c404a68-b802-4c4d-a3fd-4ec4eafbc565",
+ CellID->314568175],
+Cell[72066, 1415, 246, 5, 26, "ExampleSubsection",ExpressionUUID->"e5f4a7b7-96d6-4116-b211-50fdf7819e11",
+ CellID->590126326],
+Cell[72315, 1422, 246, 5, 22, "ExampleSubsection",ExpressionUUID->"dc80c406-59d6-4fbe-90be-f3454ab77df8",
+ CellID->593139265]
+}, Open  ]],
+Cell[72576, 1430, 248, 5, 35, "ExampleSection",ExpressionUUID->"3fe0a2de-d5ea-49ca-a637-ae07f857a8f7",
+ CellID->417844847],
+Cell[72827, 1437, 257, 5, 23, "ExampleSection",ExpressionUUID->"aa1d3961-b627-474e-9436-574f49270dba",
+ CellID->11235265],
+Cell[73087, 1444, 251, 5, 23, "ExampleSection",ExpressionUUID->"4d56c2fa-9545-4b6b-930a-929738a3c59f",
+ CellID->471558918],
+Cell[73341, 1451, 256, 5, 23, "ExampleSection",ExpressionUUID->"c852382e-c4b6-41c9-9802-69ea4abe462b",
+ CellID->789243799],
+Cell[73600, 1458, 249, 5, 23, "ExampleSection",ExpressionUUID->"99d42473-1f04-4120-bf6f-76744873c467",
+ CellID->145580730]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[73886, 1468, 109, 1, 72, "MetadataSection",ExpressionUUID->"2fc1f69e-d4b4-43d9-b492-e63ced50e9ef",
+ CellID->11336322],
+Cell[73998, 1471, 473, 11, 26, "History",ExpressionUUID->"5fa14e67-3f7a-4c74-aecc-81013c8e23a5",
+ CellID->725283720],
+Cell[CellGroupData[{
+Cell[74496, 1486, 483, 13, 21, "CategorizationSection",ExpressionUUID->"bb15769a-a36a-408d-9b95-2b54e661899d",
+ CellID->35664928],
+Cell[74982, 1501, 134, 2, 35, "Categorization",ExpressionUUID->"64544662-c39f-4ca7-b19d-b3b8300c799b",
+ CellID->144138670],
+Cell[75119, 1505, 168, 2, 35, "Categorization",ExpressionUUID->"f2034419-8ee5-4d07-84af-068692c76af0",
+ CellID->48881020],
+Cell[75290, 1509, 166, 2, 35, "Categorization",ExpressionUUID->"72c545fe-76d7-48db-b80d-cbc71f475a2d",
+ CellID->541827732],
+Cell[75459, 1513, 193, 4, 35, "Categorization",ExpressionUUID->"37255999-e5e5-4098-ae61-b6d6eeb961ee",
+ CellID->283465814]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[75689, 1522, 110, 1, 21, "KeywordsSection",ExpressionUUID->"1707aef3-52a8-4f76-a5af-61c9bb27194b",
+ CellID->414565854],
+Cell[75802, 1525, 98, 1, 70, "Keywords",ExpressionUUID->"aa0cf7ed-2158-44f6-837f-3a153bad94ac",
+ CellID->84870926]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[75937, 1531, 119, 1, 21, "TemplatesSection",ExpressionUUID->"94bfb258-cf11-41de-ae4e-59b4fe5d1c08",
+ CellID->161780072],
+Cell[76059, 1534, 147, 2, 70, "Template",ExpressionUUID->"62744b67-5d02-4287-8e8a-18cc7f338981",
+ CellID->81355801],
+Cell[76209, 1538, 137, 2, 70, "Template",ExpressionUUID->"e21985c5-a886-40b6-ac55-1c98f82ddf27",
+ CellID->133868256],
+Cell[76349, 1542, 135, 2, 70, "Template",ExpressionUUID->"900b275a-8b1a-4648-99e4-b05c89ab0af3",
+ CellID->146156110],
+Cell[76487, 1546, 137, 2, 70, "Template",ExpressionUUID->"cd3a9bdf-5d72-4abb-94f7-9f6cd427db37",
+ CellID->786760220]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+

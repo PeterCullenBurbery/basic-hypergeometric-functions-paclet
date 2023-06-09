@@ -1,0 +1,301 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11641,        291]
+NotebookOptionsPosition[      8358,        219]
+NotebookOutlinePosition[     10703,        277]
+CellTagsIndexPosition[     10618,        272]
+WindowTitle->VeryWellPoisedBasicHypergeometricSeriesData
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "PETER BURBERY/ BASIC HYPERGEOMETRIC FUNCTIONS SYMBOL", 
+           "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "b5a3c30a-0c61-4c80-8345-b668e6e93017"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "c4b3b52c-11f3-4209-a7ae-7c633d05fd42"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[Cell[BoxData[
+     TagBox[
+      ActionMenuBox[
+       FrameBox[Cell[TextData[{
+         "URL",
+         " ",
+         Cell[BoxData[
+          GraphicsBox[
+           {GrayLevel[0.66667], Thickness[0.13], 
+            LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+           AspectRatio->1,
+           ImageSize->20,
+           PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+          "b1224123-3a88-4138-803e-b90cbc9fa766"]
+        }],ExpressionUUID->"0da5ca4b-757e-4c93-862e-57842e67b468"],
+        StripOnInput->False],{
+       "\"PeterBurbery/BasicHypergeometricFunctions/ref/\
+VeryWellPoisedBasicHypergeometricSeriesData\"" :> None, 
+        "\"Copy Wolfram Documentation Center URL\"" :> 
+        Module[{DocumentationSearch`Private`nb$}, 
+          DocumentationSearch`Private`nb$ = 
+           NotebookPut[
+            Notebook[{
+              Cell["PeterBurbery/BasicHypergeometricFunctions/ref/\
+VeryWellPoisedBasicHypergeometricSeriesData"]}, Visible -> False]]; 
+          SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+          FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+          NotebookClose[DocumentationSearch`Private`nb$]; Null], Delimiter, 
+        "\"Copy web URL\"" :> 
+        Module[{DocumentationSearch`Private`nb$}, 
+          DocumentationSearch`Private`nb$ = 
+           NotebookPut[
+            Notebook[{
+              Cell[BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                  "http://reference.wolfram.com/language/PeterBurbery/\
+BasicHypergeometricFunctions/ref/VeryWellPoisedBasicHypergeometricSeriesData.\
+html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+              False]]; SelectionMove[
+           DocumentationSearch`Private`nb$, All, Notebook]; 
+          FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+          NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        "\"Go to web URL\"" :> 
+        FrontEndExecute[{
+          NotebookLocate[{
+            URL[If[TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$38887], 
+                "http://reference.wolfram.com/system-modeler/", 
+                "http://reference.wolfram.com/language/"] <> 
+              "PeterBurbery/BasicHypergeometricFunctions/ref/\
+VeryWellPoisedBasicHypergeometricSeriesData" <> ".html"], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"],
+      MouseAppearanceTag["LinkHand"]]],
+     LineSpacing->{1.4, 0},ExpressionUUID->
+     "0543c08e-9b1d-435e-9379-14bc64b1fd75"]], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "9170d092-300e-4c08-94ef-611c9b3d8a38"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"da6f9903-e91a-4184-a7ab-119bb0d49c61"],
+
+Cell["PeterBurbery`BasicHypergeometricFunctions`", "ContextNameCell",ExpressionUUID->"8979583c-8e7b-4231-98f3-c25592c19ab5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "VeryWellPoisedBasicHypergeometricSeriesData", "ObjectName",
+      ExpressionUUID->"c5c781d7-8af4-453e-a0b6-89087adf3b53"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"1f516ccf-005f-43f3-98ba-3dd81d37c892"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "e8bbd9c0-f6fa-4545-a661-32813055470f"]
+    }],ExpressionUUID->"22a45b91-fe8d-4eba-ba46-3a94cb67fe4b"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"f4fea32b-d23b-496c-8138-\
+0250ad799922"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{
+         Cell[
+          TextData["VeryWellPoisedBasicHypergeometricSeriesData"]], 
+         "paclet:PeterBurberyBasicHypergeometricFunctions/ref/\
+VeryWellPoisedBasicHypergeometricSeriesData", 
+         "PeterBurberyBasicHypergeometricFunctions Package Symbol"},
+        "PackageLink",
+        BaseStyle->"InlineFormula"], "[", "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "fca12e5c-36f4-4716-af58-2819947f3404"],
+     "\[LineSeparator]XXXX"
+    }],ExpressionUUID->"dd9c0454-581d-4db8-9c63-bc0bf4e6ce1b"]}
+  }]], "Usage",
+ CellID->348867664,ExpressionUUID->"0c71ea81-3bf2-48bf-bd05-b59764c0752d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"1c2bba8e-25bc-442b-b333-d5f463e89427"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"1c3fbbf4-897c-48bd-a1a7-caa8c0fa70f0"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(0)", "ExampleCount",ExpressionUUID->
+  "0d9e3c13-cf9c-4e2e-b9bf-83f657995b3e"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->331687813,ExpressionUUID->"a0486894-f283-4ef8-b78e-fa19b0b02f42"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PeterBurbery`BasicHypergeometricFunctions`\>\"", 
+  "]"}]], "Input", "ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->640520330,ExpressionUUID->"18b9a278-a013-4db0-8878-59aaf5201a2b"]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, 
+       "RelatedFunction.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"See", " ", "Also"}], "SeeAlsoSection"]},
+      {Cell[TextData[Cell[BoxData[
+        TagBox[
+         FrameBox["\"\<XXXX\>\""],
+         "FunctionPlaceholder"]], "InlineFormula",
+        FontFamily->"Source Sans Pro",ExpressionUUID->
+        "b4f27ede-7adc-4ba2-859c-00c5b874eca0"]], "SeeAlso",ExpressionUUID->
+        "fbd4f8cb-d31b-4362-a6fa-42c26702d68b"]}
+     }]}
+  }]], "SeeAlsoSection",ExpressionUUID->"f55be255-1117-432a-ac0b-\
+2c493aab8298"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"093f22ad-6d20-4291-a8c1-53a65bba23f0"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"VeryWellPoisedBasicHypergeometricSeriesData",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> $Failed, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 6, 6, 11, 40, 41.1899857}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "PeterBurbery`BasicHypergeometricFunctions`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Peter Burbery/ Basic Hypergeometric Functions Symbol", 
+    "language" -> "en", "paclet" -> 
+    "PeterBurbery/BasicHypergeometricFunctions", "status" -> "None", 
+    "summary" -> "VeryWellPoisedBasicHypergeometricSeriesData[] XXXX", 
+    "synonyms" -> {}, "tabletags" -> {}, "title" -> 
+    "VeryWellPoisedBasicHypergeometricSeriesData", "titlemodifier" -> "", 
+    "metadescription" -> "", "windowtitle" -> 
+    "VeryWellPoisedBasicHypergeometricSeriesData", "type" -> "Symbol", "uri" -> 
+    "PeterBurbery/BasicHypergeometricFunctions/ref/\
+VeryWellPoisedBasicHypergeometricSeriesData"}},
+CellContext->"Global`",
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (May 18, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.3 for Microsoft Windows (64-bit) (May 18, 2023)", 
+  StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"df191feb-c136-436e-8887-de66217ae212"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[5800, 149, 1420, 37, 70, "PrimaryExamplesSection",ExpressionUUID->"a0486894-f283-4ef8-b78e-fa19b0b02f42",
+   CellTags->"PrimaryExamplesSection",
+   CellID->331687813]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 10419, 265}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[615, 21, 3669, 84, 70, "AnchorBarGrid",ExpressionUUID->"da6f9903-e91a-4184-a7ab-119bb0d49c61",
+ CellID->1],
+Cell[4287, 107, 124, 0, 70, "ContextNameCell",ExpressionUUID->"8979583c-8e7b-4231-98f3-c25592c19ab5"],
+Cell[CellGroupData[{
+Cell[4436, 111, 586, 14, 70, "ObjectNameGrid",ExpressionUUID->"f4fea32b-d23b-496c-8138-0250ad799922"],
+Cell[5025, 127, 738, 17, 70, "Usage",ExpressionUUID->"0c71ea81-3bf2-48bf-bd05-b59764c0752d",
+ CellID->348867664]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5800, 149, 1420, 37, 70, "PrimaryExamplesSection",ExpressionUUID->"a0486894-f283-4ef8-b78e-fa19b0b02f42",
+ CellTags->"PrimaryExamplesSection",
+ CellID->331687813],
+Cell[7223, 188, 233, 4, 70, "Input",ExpressionUUID->"18b9a278-a013-4db0-8878-59aaf5201a2b",
+ CellID->640520330]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[7574, 197, 699, 18, 70, "SeeAlsoSection",ExpressionUUID->"f55be255-1117-432a-ac0b-2c493aab8298"],
+Cell[8276, 217, 78, 0, 70, "FooterCell",ExpressionUUID->"093f22ad-6d20-4291-a8c1-53a65bba23f0"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

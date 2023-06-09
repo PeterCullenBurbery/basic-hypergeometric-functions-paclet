@@ -1,0 +1,844 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     36642,        834]
+NotebookOptionsPosition[     31996,        732]
+NotebookOutlinePosition[     34508,        795]
+CellTagsIndexPosition[     34388,        789]
+WindowTitle->AddSemicolonToQPochhammerTeXString
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {GridBox[{
+      {
+       ItemBox[Cell[BoxData[
+         RowBox[{
+          TemplateBox[{12},
+           "Spacer1"], Cell[
+          "PETER BURBERY/ BASIC HYPERGEOMETRIC FUNCTIONS SYMBOL", 
+           "PacletNameCell",
+           TextAlignment->Center,ExpressionUUID->
+           "dc498cb8-d4bc-4732-8c24-0598c09592d3"], 
+          TemplateBox[{8},
+           "Spacer1"]}]],
+         TextAlignment->Center,ExpressionUUID->
+         "6ab2261b-8e5c-499d-bb09-b48e7883ac85"],
+        Background->RGBColor[0.490196, 0.576471, 0.690196],
+        ItemSize->Full], ""}
+     },
+     GridBoxAlignment->{"Rows" -> {{Center}}},
+     GridBoxItemSize->{"Columns" -> {Full, 
+         Scaled[0.02]}, "Rows" -> {{2.5}}}], Cell[TextData[Cell[BoxData[
+     TagBox[
+      ActionMenuBox[
+       FrameBox[Cell[TextData[{
+         "URL",
+         " ",
+         Cell[BoxData[
+          GraphicsBox[
+           {GrayLevel[0.66667], Thickness[0.13], 
+            LineBox[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]},
+           AspectRatio->1,
+           ImageSize->20,
+           PlotRange->{{-3, 4}, {-1, 1}}]],ExpressionUUID->
+          "c44cb7b7-2399-4f1f-a5aa-0b2a5576715c"]
+        }],ExpressionUUID->"a062b72c-642e-4e5e-aa4e-b3537ca0a74f"],
+        StripOnInput->False],{
+       "\"PeterBurbery/BasicHypergeometricFunctions/ref/\
+AddSemicolonToQPochhammerTeXString\"" :> None, 
+        "\"Copy Wolfram Documentation Center URL\"" :> 
+        Module[{DocumentationSearch`Private`nb$}, 
+          DocumentationSearch`Private`nb$ = 
+           NotebookPut[
+            Notebook[{
+              Cell["PeterBurbery/BasicHypergeometricFunctions/ref/\
+AddSemicolonToQPochhammerTeXString"]}, Visible -> False]]; 
+          SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+          FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+          NotebookClose[DocumentationSearch`Private`nb$]; Null], Delimiter, 
+        "\"Copy web URL\"" :> 
+        Module[{DocumentationSearch`Private`nb$}, 
+          DocumentationSearch`Private`nb$ = 
+           NotebookPut[
+            Notebook[{
+              Cell[BoxData[
+                MakeBoxes[
+                 Hyperlink[
+                  "http://reference.wolfram.com/language/PeterBurbery/\
+BasicHypergeometricFunctions/ref/AddSemicolonToQPochhammerTeXString.html"], 
+                  StandardForm]], "Input", TextClipboardType -> "PlainText"]},
+               Visible -> False]]; 
+          SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+          FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+          NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+        "\"Go to web URL\"" :> 
+        FrontEndExecute[{
+          NotebookLocate[{
+            URL[If[TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$57897], 
+                "http://reference.wolfram.com/system-modeler/", 
+                "http://reference.wolfram.com/language/"] <> 
+              "PeterBurbery/BasicHypergeometricFunctions/ref/\
+AddSemicolonToQPochhammerTeXString" <> ".html"], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"URLMenu"],
+      MouseAppearanceTag["LinkHand"]]],
+     LineSpacing->{1.4, 0},ExpressionUUID->
+     "5a4d70fd-4345-41e8-9150-33d1904f0963"]], "AnchorBar",
+     CacheGraphics->False,ExpressionUUID->
+     "6b25e09e-8dac-4f45-b48a-239040c2cf0c"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1,ExpressionUUID->"3e55c13a-533f-4103-8164-527f809c2f4f"],
+
+Cell["PeterBurbery`BasicHypergeometricFunctions`", "ContextNameCell",ExpressionUUID->"e6b3b093-0bce-4e0c-a88e-5be3264d7654"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {Cell[TextData[{
+     Cell[
+     "AddSemicolonToQPochhammerTeXString", "ObjectName",ExpressionUUID->
+      "062666fd-db0d-4701-96bd-8f9d5bdfc234"],
+     Cell[BoxData[
+      TemplateBox[{8},
+       "Spacer1"]],ExpressionUUID->"99f420c5-3d9a-4a39-8a96-08f7323ce341"],
+     Cell[BoxData[
+     ""], "ObjectNameTranslation",ExpressionUUID->
+      "d1459cf8-c541-4a89-b984-ea698c74ac8d"]
+    }],ExpressionUUID->"0afb4994-af80-4bd8-91fb-a33241b1c39e"], 
+    "\[SpanFromLeft]"}
+  }]], "ObjectNameGrid",ExpressionUUID->"f9dd8093-82c2-4af1-8c46-\
+c10e19481481"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{
+         Cell[
+          TextData["AddSemicolonToQPochhammerTeXString"]], 
+         "paclet:PeterBurberyBasicHypergeometricFunctions/ref/\
+AddSemicolonToQPochhammerTeXString", 
+         "PeterBurberyBasicHypergeometricFunctions Package Symbol"},
+        "PackageLink",
+        BaseStyle->"InlineFormula"], "[", "]"}]], "InlineFormula",
+      FontFamily->"Source Sans Pro",ExpressionUUID->
+      "eede45c4-93bb-48bf-9991-8b9e035935f7"],
+     "\[LineSeparator]XXXX"
+    }],ExpressionUUID->"600b68f4-0065-4502-b451-dab8b41be33c"]}
+  }]], "Usage",
+ CellID->322814487,ExpressionUUID->"c196cf3c-da14-4125-a839-e619331960a3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {
+       TaggingRules, "Openers", "PrimaryExamplesSection"}, Open], 
+      Alternatives[True, Open]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"6e6ccd81-8707-4053-aef9-62fb46e43e5e"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"c991af83-cade-451f-9c34-c90c4519fe50"],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "92207490-b4e3-4ae4-b51b-0833f5f02ee8"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellTags->"PrimaryExamplesSection",
+ CellID->77871227,ExpressionUUID->"bfe721a6-68d9-4629-bf66-c0e76056b4d8"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PeterBurbery`BasicHypergeometricFunctions`\>\"", 
+  "]"}]], "Input", "ExampleInitialization",
+ CellLabel->"In[1]:=",
+ CellID->112758733,ExpressionUUID->"e60678fb-24ac-4877-b6a6-8afba0cdc72e"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[ToBoxes[
+    If[
+     MatchQ[
+      CurrentValue[
+       EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"},
+        Closed], 
+      Alternatives[Open, True]], 
+     Style[
+      Graphics[{
+        Thickness[0.18], 
+        RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+        Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+       PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+      0.68 Inherited], 
+     Rotate[
+      Style[
+       Graphics[{
+         Thickness[0.18], 
+         RGBColor[0.8509803921568627, 0.396078431372549, 0], 
+         Line[{{-1.8, 0.5}, {0, 0}, {1.8, 0.5}}]}, AspectRatio -> 1, 
+        PlotRange -> {{-3, 4}, {-1, 1}}, ImageSize -> 20], Magnification -> 
+       0.68 Inherited], Rational[1, 2] Pi, {-1.65, -1}]]],
+   ImageSizeCache->{13.600000000000001`, {5., 8.600000000000001}}]],
+  ExpressionUUID->"c8d64693-3ef3-46f3-b432-eb89aa9d2c50"],
+ Cell[BoxData[
+  TemplateBox[{1},
+   "Spacer1"]],ExpressionUUID->"3d99126a-9e59-433f-b7de-e9ad5fc7e97b"],
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount",ExpressionUUID->
+  "6f55a382-ba33-4e50-a42f-927cca12e70f"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CacheGraphics->False,
+ CellID->383109230,ExpressionUUID->"944a487f-0b5c-4415-a4ec-37327a35b3cf"],
+
+Cell["Add a semicolon:", "ExampleText",
+ CellID->3761917,ExpressionUUID->"797c93e9-4c43-4bd2-a2ee-aa4c99420636"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ClickToCopy", "[", 
+  RowBox[{"\"\<example\>\"", ",", 
+   RowBox[{
+    InterpretationBox[
+     RowBox[{
+      TagBox["CloudExpression",
+       "SummaryHead"], "[", 
+      DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = 
+       "Ready"}, 
+       TemplateBox[{
+         PaneSelectorBox[{False -> GridBox[{{
+               PaneBox[
+                ButtonBox[
+                 DynamicBox[
+                  FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"],
+                   ImageSizeCache -> {10.0329375, {0., 10.0329375}}], 
+                 Appearance -> None, BaseStyle -> {}, 
+                 ButtonFunction :> (Typeset`open$$ = True), Evaluator -> 
+                 Automatic, Method -> "Preemptive"], 
+                Alignment -> {Center, Center}, ImageSize -> 
+                Dynamic[{
+                  Automatic, 
+                   3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
+               GraphicsBox[{
+                 Thickness[0.002777777777777778], {
+                  FaceForm[{
+                    RGBColor[
+                    0.6669999999999999, 0.6669999999999999, 
+                    0.6669999999999999], 
+                    Opacity[1.]}], 
+                  
+                  FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+                   3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+                   3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 
+                   3}}}, CompressedData["
+1:eJxTTMoPSmVmYGBgBGI1IGZigAKOEoeijIlvaw6nO1yteKlmKFPiUCWyzv2h
+W4aDj3mnY4J6iYMKW+NU58sIvjeITs2E84WaD5xaaJvjELfLk4dJvNgBbG5P
+HoR/vBDOB1ljvxTBB9vXUujwVSOm/1BrnoNsVIr1/eRCB67riwtsq/IcFDcA
+XXa7wGHLibJ981cUOliBGJtzHWxBCkqLHVpfB+6Qe5kB5++fL6V/d0IqnP8N
+ZO7MJIh/phQ5rPx4yTfpQILDstlHFDZYFToAVauwHYyHuBNm76NYB6BtUvqV
+hQ590/OEmj9Ew/l3ftZl7TEJgvMlQPoXujhYgty1Og/Oh4UPivztDAewBWdd
+HBa6bvv8NyTD4QKIIesK8f/FdIcNJZMlWK6ZOlxQuv2z7laaw4G575cfOy0D
+kbdMgfOdu3Oe/1ZMhPMfgDxYGOXQAPLnLDuHanvTuF2SIQ4zJFjC+Pb6wvng
+8J9bBOdXg9QXlcD54Hh8X+rgkyQQYdkTBec/WgoMMIdEOB/k/bsKKQ6PQeIa
+pZBwnZPmgJ6eAE5jA2M=
+                   "]]}, {
+                  FaceForm[{
+                    RGBColor[1., 1., 1.], 
+                    Opacity[1.]}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   79.59, 232.36700000000002`}, {98.72300000000001, 
+                   232.36700000000002`}, {98.72300000000001, 213.234}, {79.59,
+                    213.234}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   186.105, 232.36700000000002`}, {205.238, 
+                   232.36700000000002`}, {205.238, 213.234}, {186.105, 
+                   213.234}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   112.94500000000001`, 232.36700000000002`}, {170.082, 
+                   232.36700000000002`}, {170.082, 213.234}, {
+                   112.94500000000001`, 213.234}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   79.586, 195.691}, {136.723, 195.691}, {136.723, 176.558}, {
+                   79.586, 176.558}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   79.586, 124.258}, {136.723, 124.258}, {136.723, 105.125}, {
+                   79.586, 105.125}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   152.809, 124.258}, {209.946, 124.258}, {209.946, 
+                   105.125}, {152.809, 105.125}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   220.098, 124.258}, {277.235, 124.258}, {277.235, 
+                   105.125}, {220.098, 105.125}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   149.93800000000002`, 195.691}, {171.02, 195.691}, {171.02, 
+                   176.558}, {149.93800000000002`, 176.558}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   186.934, 195.691}, {208.012, 195.691}, {208.012, 
+                   176.558}, {186.934, 176.558}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   221.059, 195.691}, {242.141, 195.691}, {242.141, 
+                   176.558}, {221.059, 176.558}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   256.15200000000004`, 195.691}, {277.23400000000004`, 
+                   195.691}, {277.23400000000004`, 176.558}, {
+                   256.15200000000004`, 176.558}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   256.15200000000004`, 162.52700000000002`}, {
+                   277.23400000000004`, 162.52700000000002`}, {
+                   277.23400000000004`, 143.394}, {256.15200000000004`, 
+                   143.394}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   79.586, 162.52700000000002`}, {100.66799999999999`, 
+                   162.52700000000002`}, {100.66799999999999`, 143.394}, {
+                   79.586, 143.394}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   187.59, 162.52700000000002`}, {242.457, 
+                   162.52700000000002`}, {242.457, 143.394}, {187.59, 
+                   143.394}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   116.793, 162.52700000000002`}, {171.66, 
+                   162.52700000000002`}, {171.66, 143.394}, {116.793, 
+                   143.394}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   220.098, 232.36700000000002`}, {277.235, 
+                   232.36700000000002`}, {277.235, 213.234}, {220.098, 
+                   213.234}}}]}}, AspectRatio -> 1, Axes -> False, Background -> 
+                None, Frame -> None, FrameTicks -> None, 
+                ImageSize -> {Automatic, 
+                  Dynamic[
+                  3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification]), ImageSizeCache -> {45., {0., 9.}}]}, 
+                PlotRange -> {{0., 360.}, {0., 360.}}], 
+               GridBox[{{
+                  RowBox[{
+                    TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{
+                    "\"VeryWellPoisedBasicHypergeometricSourceData\""}, 
+                    "RowDefault"], "SummaryItem"]}]}, {
+                  RowBox[{
+                    TagBox["\"Owner: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    TemplateBox[{"\"burbery1\""}, "RowDefault"], 
+                    "SummaryItem"]}]}}, AutoDelete -> False, 
+                BaseStyle -> {
+                 ShowStringCharacters -> False, NumberMarks -> False, 
+                  PrintPrecision -> 3, ShowSyntaxStyles -> False}, 
+                GridBoxAlignment -> {
+                 "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                GridBoxSpacings -> {
+                 "Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}}, AutoDelete -> 
+             False, BaselinePosition -> {1, 1}, 
+             GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+             GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], True -> 
+           GridBox[{{
+               PaneBox[
+                ButtonBox[
+                 DynamicBox[
+                  FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"],
+                   ImageSizeCache -> {10.0329375, {0., 10.0329375}}], 
+                 Appearance -> None, BaseStyle -> {}, 
+                 ButtonFunction :> (Typeset`open$$ = False), Evaluator -> 
+                 Automatic, Method -> "Preemptive"], 
+                Alignment -> {Center, Center}, ImageSize -> 
+                Dynamic[{
+                  Automatic, 
+                   3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
+               GraphicsBox[{
+                 Thickness[0.002777777777777778], {
+                  FaceForm[{
+                    RGBColor[
+                    0.6669999999999999, 0.6669999999999999, 
+                    0.6669999999999999], 
+                    Opacity[1.]}], 
+                  
+                  FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+                   3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+                   3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 
+                   3}}}, CompressedData["
+1:eJxTTMoPSmVmYGBgBGI1IGZigAKOEoeijIlvaw6nO1yteKlmKFPiUCWyzv2h
+W4aDj3mnY4J6iYMKW+NU58sIvjeITs2E84WaD5xaaJvjELfLk4dJvNgBbG5P
+HoR/vBDOB1ljvxTBB9vXUujwVSOm/1BrnoNsVIr1/eRCB67riwtsq/IcFDcA
+XXa7wGHLibJ981cUOliBGJtzHWxBCkqLHVpfB+6Qe5kB5++fL6V/d0IqnP8N
+ZO7MJIh/phQ5rPx4yTfpQILDstlHFDZYFToAVauwHYyHuBNm76NYB6BtUvqV
+hQ590/OEmj9Ew/l3ftZl7TEJgvMlQPoXujhYgty1Og/Oh4UPivztDAewBWdd
+HBa6bvv8NyTD4QKIIesK8f/FdIcNJZMlWK6ZOlxQuv2z7laaw4G575cfOy0D
+kbdMgfOdu3Oe/1ZMhPMfgDxYGOXQAPLnLDuHanvTuF2SIQ4zJFjC+Pb6wvng
+8J9bBOdXg9QXlcD54Hh8X+rgkyQQYdkTBec/WgoMMIdEOB/k/bsKKQ6PQeIa
+pZBwnZPmgJ6eAE5jA2M=
+                   "]]}, {
+                  FaceForm[{
+                    RGBColor[1., 1., 1.], 
+                    Opacity[1.]}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   79.59, 232.36700000000002`}, {98.72300000000001, 
+                   232.36700000000002`}, {98.72300000000001, 213.234}, {79.59,
+                    213.234}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   186.105, 232.36700000000002`}, {205.238, 
+                   232.36700000000002`}, {205.238, 213.234}, {186.105, 
+                   213.234}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   112.94500000000001`, 232.36700000000002`}, {170.082, 
+                   232.36700000000002`}, {170.082, 213.234}, {
+                   112.94500000000001`, 213.234}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   79.586, 195.691}, {136.723, 195.691}, {136.723, 176.558}, {
+                   79.586, 176.558}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   79.586, 124.258}, {136.723, 124.258}, {136.723, 105.125}, {
+                   79.586, 105.125}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   152.809, 124.258}, {209.946, 124.258}, {209.946, 
+                   105.125}, {152.809, 105.125}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   220.098, 124.258}, {277.235, 124.258}, {277.235, 
+                   105.125}, {220.098, 105.125}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   149.93800000000002`, 195.691}, {171.02, 195.691}, {171.02, 
+                   176.558}, {149.93800000000002`, 176.558}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   186.934, 195.691}, {208.012, 195.691}, {208.012, 
+                   176.558}, {186.934, 176.558}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   221.059, 195.691}, {242.141, 195.691}, {242.141, 
+                   176.558}, {221.059, 176.558}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   256.15200000000004`, 195.691}, {277.23400000000004`, 
+                   195.691}, {277.23400000000004`, 176.558}, {
+                   256.15200000000004`, 176.558}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   256.15200000000004`, 162.52700000000002`}, {
+                   277.23400000000004`, 162.52700000000002`}, {
+                   277.23400000000004`, 143.394}, {256.15200000000004`, 
+                   143.394}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   79.586, 162.52700000000002`}, {100.66799999999999`, 
+                   162.52700000000002`}, {100.66799999999999`, 143.394}, {
+                   79.586, 143.394}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   187.59, 162.52700000000002`}, {242.457, 
+                   162.52700000000002`}, {242.457, 143.394}, {187.59, 
+                   143.394}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   116.793, 162.52700000000002`}, {171.66, 
+                   162.52700000000002`}, {171.66, 143.394}, {116.793, 
+                   143.394}}}], 
+                  
+                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                   220.098, 232.36700000000002`}, {277.235, 
+                   232.36700000000002`}, {277.235, 213.234}, {220.098, 
+                   213.234}}}]}}, AspectRatio -> 1, Axes -> False, Background -> 
+                None, Frame -> None, FrameTicks -> None, 
+                ImageSize -> {Automatic, 
+                  Dynamic[
+                  3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification]), ImageSizeCache -> {45., {0., 9.}}]}, 
+                PlotRange -> {{0., 360.}, {0., 360.}}], 
+               GridBox[{{
+                  RowBox[{
+                    TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{
+                    "\"VeryWellPoisedBasicHypergeometricSourceData\""}, 
+                    "RowDefault"], "SummaryItem"]}]}, {
+                  RowBox[{
+                    TagBox["\"Owner: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    TemplateBox[{"\"burbery1\""}, "RowDefault"], 
+                    "SummaryItem"]}]}, {
+                  RowBox[{
+                    TagBox["\"URI: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{
+                    "\"https://www.wolframcloud.com/obj/burbery1/\
+CloudExpression/VeryWellPoisedBasicHypergeometricSourceData\""}, 
+                    "RowDefault"], "SummaryItem"]}]}}, AutoDelete -> False, 
+                BaseStyle -> {
+                 ShowStringCharacters -> False, NumberMarks -> False, 
+                  PrintPrecision -> 3, ShowSyntaxStyles -> False}, 
+                GridBoxAlignment -> {
+                 "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+                GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                GridBoxSpacings -> {
+                 "Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}}, AutoDelete -> 
+             False, BaselinePosition -> {1, 1}, 
+             GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+             GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]}, 
+          Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+        "SummaryPanel"],
+       DynamicModuleValues:>{}], "]"}],
+     CloudExpression[
+     "https://www.wolframcloud.com/obj/burbery1/CloudExpression/\
+VeryWellPoisedBasicHypergeometricSourceData"],
+     Editable->False,
+     SelectWithContents->True,
+     Selectable->False], "[", "4", "]"}]}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`BasicHypergeometricFunctions`"],
+ CellLabel->"In[1]:=",
+ CellID->83894968,ExpressionUUID->"ddf887d1-2e61-4148-b06d-e2ad1038e54c"],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1:eJztWMttGzEQXTgXH6MSAl191CFXn4RcHQQ624hs6CIDcoAg6iAdqANVoArU
+gBpQB+ph85IHP4yH5IqrJLaDzAO8oGaH83kcDrl+d3N/dXvWNM3DOR5X118v
+F4vrbx/f4sen+cPsbj79/GH+ZXo3Xby/eQPhBf5u8fdz3AYCgUAgEAgEAoFA
+IBAI/Db2+/33p9huty8d1KsG+GmeAqS9dFCvGrbGhsNhMNYL4/E4GOuFZ2Ns
+t9uxqtfr9eFwcG/5arPZODkkkK9Wq9QahKVZ9NL+6j/q0nDKKdY7LbgIu7t6
+DWPYxfSFJ8YdmlkgQnoRBoMBMxJgmXJrHylQ33KCMTuJBSRQlg4k8AgXUsBb
+xQBlqwkgwtFoZA3OZrNSOkcZWy6XLjxIetHFYBAnV1CRu6WkHE9JONG5gwUI
+8QpyjPEEzykPUIB8MpnQiExRWa4ZiXRgEFxR6Na0kjFOhxeGJ2v1u5gJWh7a
+x4pChFYIbpkO96CYcQZRLa7ONdHxAA7xCjVpF5r5Ok05tTGnrokOxngJQTB2
+42unpL0oC+6gdC9T7owwO3jUwO61DmR5UCuzWWQ1XZ+EJuUdvrKMsaLS4qQ8
+7bdZqCYdyFjaY20TKO2L9rGll6zZfMmYijzLWBoG5dn16mCMr8CPS7bX8dp0
+Ig1V64uqyBpEFmnnd9b+FGPZQ/MoYyX0YiytMSLdrejVpKvJHTFqWWqtf7XG
+sp3nhBqrubQITLCy6elEAJOumRO8MLjW2hZ44PgExjjFHr6pryxjXO7KflUC
+mx6eLkf8dHHqTGH30A3NXTjTXEBj9qzkuC9jug6VNlEHY1xQrrh7VU+jqgVp
+qlyxFhDaKwfiTL9wGblVE6sQ8jJme9rJjMGIu93BtV0pe9DQIwMgbL6MmVdB
+vkXWnFLJWFvo1bBpfbGe3RVI/NjTX3dCARKesCcz5gAdtyNY2yVYzfQDh0CC
+9Ywp8lIP1P9S0tOc35VuHfUBqK82GtdesFNoXBcVDKymOJfB7I3CXWYcUn33
+2VvZxv8JuO0cOIpgrC+Csb4Ixvqi9OkRCAQCgUAgEPhP8AMDi/do
+    "], {{0, 22.}, {51., 0}}, {0, 255},
+    ColorFunction->RGBColor,
+    ImageResolution->{144., 144.},
+    SmoothingQuality->"High"],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  DefaultBaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{51., 22.},
+  PlotRange->{{0, 51.}, {0, 22.}}]], "Output",
+ CellTags->"RasterizedOutput",
+ CellLabel->"Out[1]=",
+ CellID->876597203,ExpressionUUID->"82a8cd64-8873-468f-8cf5-7688c322269c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AddSemicolonToQPochhammerTeXString", "[", 
+  RowBox[{"DeleteAllWhitespaceCharactersExceptSpace", "[", 
+   RowBox[{"MakeTeXFragment", "[", 
+    RowBox[{"ReplaceAndInactivate", "[", 
+     RowBox[{"QPh", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"q", ",", 
+         RowBox[{
+          SuperscriptBox["q", "n"], " ", 
+          SqrtBox[
+           RowBox[{"a", " ", "q"}]]}], ",", 
+         FractionBox[
+          RowBox[{
+           SuperscriptBox["q", 
+            RowBox[{"2", " ", "n"}]], " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"a", " ", "q"}], ")"}], 
+            RowBox[{"3", "/", "2"}]]}], 
+          RowBox[{"b", " ", "c"}]], ",", 
+         FractionBox[
+          RowBox[{"a", " ", 
+           SuperscriptBox["q", 
+            RowBox[{"1", "+", "n"}]]}], "d"], ",", 
+         FractionBox[
+          RowBox[{"a", " ", 
+           SuperscriptBox["q", 
+            RowBox[{"1", "+", "n"}]]}], "e"], ",", 
+         FractionBox[
+          RowBox[{"a", " ", 
+           SuperscriptBox["q", 
+            RowBox[{"1", "+", "n"}]]}], "f"]}], "}"}], ",", "q", ",", "m"}], 
+      "]"}], "]"}], "]"}], "]"}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`BasicHypergeometricFunctions`"],
+ CellLabel->"In[2]:=",
+ CellID->673893170,ExpressionUUID->"46c9ca9d-609d-46dd-ac4e-8481176a93ff"],
+
+Cell[BoxData["\<\"\\\\[\\\\text{QPh}\\\\left[\\\\left\\\\{q,q^{\\\\frac{1}{2}+\
+n}\\\\text{**}\\\\sqrt{a},\\\\frac{q^{\\\\frac{3}{2}+2 \
+n}\\\\text{**}a^{3/2}}{b\\\\text{**}c},\\\\frac{q^{1+n}\\\\text{**}a}{d},\\\\\
+frac{q^{1+n}\\\\text{**}a}{e},\\\\frac{q^{1+n}\\\\text{**}a}{f}\\\\right\\\\},\
+q;m\\\\right]\\\\]\"\>"], "Output",
+ CellLabel->"Out[2]=",
+ CellID->160569643,ExpressionUUID->"2b61dad0-b305-4351-b7c6-560ce3e2a57a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Identity", "[", 
+  RowBox[{"DeleteAllWhitespaceCharactersExceptSpace", "[", 
+   RowBox[{"MakeTeXFragment", "[", 
+    RowBox[{"ReplaceAndInactivate", "[", 
+     RowBox[{"QPh", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"q", ",", 
+         RowBox[{
+          SuperscriptBox["q", "n"], " ", 
+          SqrtBox[
+           RowBox[{"a", " ", "q"}]]}], ",", 
+         FractionBox[
+          RowBox[{
+           SuperscriptBox["q", 
+            RowBox[{"2", " ", "n"}]], " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"a", " ", "q"}], ")"}], 
+            RowBox[{"3", "/", "2"}]]}], 
+          RowBox[{"b", " ", "c"}]], ",", 
+         FractionBox[
+          RowBox[{"a", " ", 
+           SuperscriptBox["q", 
+            RowBox[{"1", "+", "n"}]]}], "d"], ",", 
+         FractionBox[
+          RowBox[{"a", " ", 
+           SuperscriptBox["q", 
+            RowBox[{"1", "+", "n"}]]}], "e"], ",", 
+         FractionBox[
+          RowBox[{"a", " ", 
+           SuperscriptBox["q", 
+            RowBox[{"1", "+", "n"}]]}], "f"]}], "}"}], ",", "q", ",", "m"}], 
+      "]"}], "]"}], "]"}], "]"}], "]"}]], "Input",
+ CellProlog:>Needs["PeterBurbery`BasicHypergeometricFunctions`"],
+ CellLabel->"In[3]:=",
+ CellID->191586315,ExpressionUUID->"992c3c41-f182-46a7-a1a1-1acdee997eac"],
+
+Cell[BoxData["\<\"\\\\[\\\\text{QPh}\\\\left[\\\\left\\\\{q,q^{\\\\frac{1}{2}+\
+n}\\\\text{**}\\\\sqrt{a},\\\\frac{q^{\\\\frac{3}{2}+2 \
+n}\\\\text{**}a^{3/2}}{b\\\\text{**}c},\\\\frac{q^{1+n}\\\\text{**}a}{d},\\\\\
+frac{q^{1+n}\\\\text{**}a}{e},\\\\frac{q^{1+n}\\\\text{**}a}{f}\\\\right\\\\},\
+q,m\\\\right]\\\\]\"\>"], "Output",
+ CellLabel->"Out[3]=",
+ CellID->301217440,ExpressionUUID->"e57614ac-ef38-491b-aa30-83c04de32609"]
+}, Open  ]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, 
+  Closed]]]]
+}, Dynamic[CurrentValue[
+ EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, 
+  Closed]]]],
+
+Cell[BoxData[GridBox[{
+   {
+    DynamicBox[FEPrivate`ImportImage[
+      FrontEnd`FileName[{"Documentation", "FooterIcons"}, 
+       "RelatedFunction.png"]],
+     ImageSizeCache->{50., {27., 33.}}], GridBox[{
+      {
+       StyleBox[
+        RowBox[{"See", " ", "Also"}], "SeeAlsoSection"]},
+      {Cell[TextData[Cell[BoxData[
+        TagBox[
+         FrameBox["\"\<XXXX\>\""],
+         "FunctionPlaceholder"]], "InlineFormula",
+        FontFamily->"Source Sans Pro",ExpressionUUID->
+        "72d2d852-1263-433f-999a-2be26c543945"]], "SeeAlso",ExpressionUUID->
+        "a933f441-43b7-47b3-9d43-372d6f62c4e6"]}
+     }]}
+  }]], "SeeAlsoSection",ExpressionUUID->"6873c3b8-96d6-4899-9057-\
+3af419f6a91e"],
+
+Cell[" ", "FooterCell",ExpressionUUID->"35e108ac-3245-4f6d-bf47-52b551f0e8b7"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{900, 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"AddSemicolonToQPochhammerTeXString",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "", "LinkTrails" -> "", 
+  "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "Openers" -> {
+   "PrimaryExamplesSection" -> Open, "ExampleSection" -> {"0" -> Open}}, 
+  "NewStyles" -> True, "CitationPopupData" -> $Failed, "ShowCitation" -> 
+  False, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2023, 6, 6, 15, 48, 25.1493745}", 
+    "history" -> {"XX", "", "", ""}, "context" -> 
+    "PeterBurbery`BasicHypergeometricFunctions`", "keywords" -> {}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Peter Burbery/ Basic Hypergeometric Functions Symbol", 
+    "language" -> "en", "paclet" -> 
+    "PeterBurbery/BasicHypergeometricFunctions", "status" -> "None", 
+    "summary" -> "AddSemicolonToQPochhammerTeXString[] XXXX", 
+    "synonyms" -> {}, "tabletags" -> {}, "title" -> 
+    "AddSemicolonToQPochhammerTeXString", "titlemodifier" -> "", 
+    "metadescription" -> "", "windowtitle" -> 
+    "AddSemicolonToQPochhammerTeXString", "type" -> "Symbol", "uri" -> 
+    "PeterBurbery/BasicHypergeometricFunctions/ref/\
+AddSemicolonToQPochhammerTeXString"}},
+CellContext->"Global`",
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (May 18, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "13.3 for Microsoft Windows (64-bit) (May 18, 2023)", 
+  StyleDefinitions -> "Default.nb"],
+ExpressionUUID->"a852f8a6-9739-495b-8ab3-52654af1b413"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[5744, 149, 1419, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"bfe721a6-68d9-4629-bf66-c0e76056b4d8",
+   CellTags->"PrimaryExamplesSection",
+   CellID->77871227]},
+ "RasterizedOutput"->{
+  Cell[25684, 568, 1650, 33, 43, "Output",ExpressionUUID->"82a8cd64-8873-468f-8cf5-7688c322269c",
+   CellTags->"RasterizedOutput",
+   CellID->876597203]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 34012, 778},
+ {"RasterizedOutput", 34210, 782}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[606, 21, 3649, 84, 56, "AnchorBarGrid",ExpressionUUID->"3e55c13a-533f-4103-8164-527f809c2f4f",
+ CellID->1],
+Cell[4258, 107, 124, 0, 23, "ContextNameCell",ExpressionUUID->"e6b3b093-0bce-4e0c-a88e-5be3264d7654"],
+Cell[CellGroupData[{
+Cell[4407, 111, 577, 14, 56, "ObjectNameGrid",ExpressionUUID->"f9dd8093-82c2-4af1-8c46-c10e19481481"],
+Cell[4987, 127, 720, 17, 111, "Usage",ExpressionUUID->"c196cf3c-da14-4125-a839-e619331960a3",
+ CellID->322814487]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5744, 149, 1419, 37, 35, "PrimaryExamplesSection",ExpressionUUID->"bfe721a6-68d9-4629-bf66-c0e76056b4d8",
+ CellTags->"PrimaryExamplesSection",
+ CellID->77871227],
+Cell[7166, 188, 233, 4, 26, "Input",ExpressionUUID->"e60678fb-24ac-4877-b6a6-8afba0cdc72e",
+ CellID->112758733],
+Cell[CellGroupData[{
+Cell[7424, 196, 1398, 36, 30, "ExampleSection",ExpressionUUID->"944a487f-0b5c-4415-a4ec-37327a35b3cf",
+ CellID->383109230],
+Cell[8825, 234, 112, 1, 38, "ExampleText",ExpressionUUID->"797c93e9-4c43-4bd2-a2ee-aa4c99420636",
+ CellID->3761917],
+Cell[CellGroupData[{
+Cell[8962, 239, 16719, 327, 55, "Input",ExpressionUUID->"ddf887d1-2e61-4148-b06d-e2ad1038e54c",
+ CellID->83894968],
+Cell[25684, 568, 1650, 33, 43, "Output",ExpressionUUID->"82a8cd64-8873-468f-8cf5-7688c322269c",
+ CellTags->"RasterizedOutput",
+ CellID->876597203]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27371, 606, 1362, 37, 67, "Input",ExpressionUUID->"46c9ca9d-609d-46dd-ac4e-8481176a93ff",
+ CellID->673893170],
+Cell[28736, 645, 429, 6, 66, "Output",ExpressionUUID->"2b61dad0-b305-4351-b7c6-560ce3e2a57a",
+ CellID->160569643]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29202, 656, 1336, 37, 67, "Input",ExpressionUUID->"992c3c41-f182-46a7-a1a1-1acdee997eac",
+ CellID->191586315],
+Cell[30541, 695, 429, 6, 66, "Output",ExpressionUUID->"e57614ac-ef38-491b-aa30-83c04de32609",
+ CellID->301217440]
+}, Open  ]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, Closed]]]]
+}, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
+Cell[31212, 710, 699, 18, 70, "SeeAlsoSection",ExpressionUUID->"6873c3b8-96d6-4899-9057-3af419f6a91e"],
+Cell[31914, 730, 78, 0, 70, "FooterCell",ExpressionUUID->"35e108ac-3245-4f6d-bf47-52b551f0e8b7"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
