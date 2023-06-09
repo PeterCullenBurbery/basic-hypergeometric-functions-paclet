@@ -17,10 +17,15 @@ Begin["`Private`"];
 (* Define your public and private symbols here. *)
 
 InactivateExpression // ClearAll
-InactivateExpression[input_] := 
+(*InactivateExpression[input_] := 
  Inactivate[input, 
   Alternatives @@ {Times, Sum, NIntegrate, Integrate, NSum, D, 
-    Derivative}]
+    Derivative}]*)
+    InactivateExpression // ClearAll
+    Attributes[InactivateExpression]={HoldFirst}
+InactivateExpression[input_] := 
+ Inactivate[input, 
+  Times | Sum | NIntegrate | Integrate | NSum | D | Derivative]
 
 End[]; (* End `Private` *)
 

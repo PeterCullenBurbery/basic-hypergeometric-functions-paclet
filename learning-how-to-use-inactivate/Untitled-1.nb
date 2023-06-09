@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1256327,      30670]
-NotebookOptionsPosition[   1223102,      30187]
-NotebookOutlinePosition[   1223537,      30204]
-CellTagsIndexPosition[   1223494,      30201]
+NotebookDataLength[   1257939,      30931]
+NotebookOptionsPosition[   1223119,      30427]
+NotebookOutlinePosition[   1223554,      30444]
+CellTagsIndexPosition[   1223511,      30441]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -29838,351 +29838,591 @@ Cell["I can make a function to safely inactivate an expression:", "Text",
   3.8953104649862375`*^9}},ExpressionUUID->"ca178976-65ca-46cb-a30a-\
 3d8f9084057c"],
 
-Cell[CellGroupData[{
-
-Cell[BoxData[
+Cell[BoxData[{
+ RowBox[{"InactivateExpression", "//", "ClearAll"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"InactivateExpression", "[", "input_", "]"}], ":=", 
   RowBox[{"Inactivate", "[", 
-   RowBox[{
-    RowBox[{"CaputoD", "[", 
-     RowBox[{
-      SuperscriptBox["x", 
-       RowBox[{"1", "/", "3"}]], ",", 
-      RowBox[{"{", 
-       RowBox[{"x", ",", 
-        RowBox[{"5", "/", "3"}]}], "}"}]}], "]"}], ",", 
+   RowBox[{"input", ",", 
     RowBox[{"Alternatives", "@@", 
-     RowBox[{"Join", "[", 
+     RowBox[{"{", 
       RowBox[{
-       RowBox[{"{", "CaputoD", "}"}], ",", 
+      "Times", ",", "Sum", ",", "NIntegrate", ",", "Integrate", ",", "NSum", 
+       ",", "D", ",", "Derivative"}], "}"}]}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.8953104679423523`*^9, 3.895310511131687*^9}},
+ CellLabel->
+  "In[145]:=",ExpressionUUID->"ecc2d41f-6391-4358-8d3e-c6dd9d562e79"],
+
+Cell["\<\
+Now the function is part of the paclet so it needs to be removed from the \
+Global scope.\
+\>", "Text",
+ CellChangeTimes->{{3.8953106069423647`*^9, 
+  3.8953106194825606`*^9}},ExpressionUUID->"1aca005e-62e3-484d-b295-\
+4f8c9cff416a"],
+
+Cell[BoxData[
+ RowBox[{"Remove", "[", "Global`InactivateExpression", "]"}]], "Input",
+ CellChangeTimes->{{3.8953106036298666`*^9, 3.895310622952757*^9}},
+ CellLabel->
+  "In[147]:=",ExpressionUUID->"d2b23f04-6234-4619-a0db-ceed6d9bd738"],
+
+Cell[BoxData[
+ RowBox[{"<<", "PeterBurbery`BasicHypergeometricFunctions`"}]], "Input",
+ CellChangeTimes->{{3.8953106248341775`*^9, 3.8953106347617283`*^9}},
+ CellLabel->
+  "In[155]:=",ExpressionUUID->"d1bd98c5-6ca0-4e5c-99a3-aa105e25f38e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"InactivateExpression", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"g", "'"}], "[", "0", "]"}], "*", 
+   RowBox[{
+    RowBox[{"f", "'"}], "[", "0", "]"}], 
+   FractionBox[
+    RowBox[{
+     FractionBox["p", "q"], 
+     RowBox[{"NIntegrate", "[", 
+      RowBox[{
+       RowBox[{"q", " ", "p"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"p", ",", "1", ",", "Infinity"}], "}"}]}], "]"}], 
+     RowBox[{"(", 
+      RowBox[{"p", "+", "q"}], ")"}], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       FractionBox[
+        RowBox[{"p", "+", "q"}], 
+        RowBox[{"q", "+", 
+         RowBox[{"2", "p"}]}]], ")"}], "p"], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       FractionBox[
+        RowBox[{"p", "+", 
+         RowBox[{"2", "q"}]}], 
+        RowBox[{"q", "+", 
+         RowBox[{"3", "p"}]}]], ")"}], 
+      RowBox[{"p", "+", "q"}]]}], 
+    RowBox[{
+     RowBox[{"(", 
+      FractionBox[
+       RowBox[{"p", "+", 
+        RowBox[{"3", "q"}]}], 
+       RowBox[{"q", "+", 
+        RowBox[{"4", "p"}]}]], ")"}], 
+     RowBox[{"Integrate", "[", 
+      RowBox[{"x", ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", 
+         RowBox[{"-", "Infinity"}], ",", "Infinity"}], "}"}]}], "]"}]}]], 
+   RowBox[{"NSum", "[", 
+    RowBox[{
+     SuperscriptBox["k", 
+      RowBox[{"-", "1"}]], ",", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", "1", ",", "\[Infinity]"}], "}"}]}], "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.895310636644761*^9, 3.8953106769988623`*^9}},
+ CellLabel->
+  "In[156]:=",ExpressionUUID->"0714ed5e-29ed-4553-acae-bf868f0ca60c"],
+
+Cell[BoxData["2.`*^-7"], "EchoTiming",
+ CellChangeTimes->{
+  3.895310861417593*^9},ExpressionUUID->"1f05c467-ad0f-4ec1-8777-\
+dc2be69d7369"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     TemplateBox[{"Derivative"},
+      "InactiveHead",
+      BaseStyle->"Inactive",
+      SyntaxForm->"Symbol",
+      Tooltip->"Inactive[Derivative]"], "[", "1", "]"}], "[", "g", "]"}], "[",
+    "0", "]"}], 
+  TagBox["\[Times]",
+   "InactiveToken",
+   BaseStyle->"Inactive",
+   SyntaxForm->"a*b"], 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     TemplateBox[{"Derivative"},
+      "InactiveHead",
+      BaseStyle->"Inactive",
+      SyntaxForm->"Symbol",
+      Tooltip->"Inactive[Derivative]"], "[", "1", "]"}], "[", "f", "]"}], "[",
+    "0", "]"}], 
+  TagBox["\[Times]",
+   "InactiveToken",
+   BaseStyle->"Inactive",
+   SyntaxForm->"a*b"], 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"p", 
+      TagBox["\[Times]",
+       "InactiveToken",
+       BaseStyle->"Inactive",
+       SyntaxForm->"a*b"], 
+      FractionBox["1", "q"]}], ")"}], 
+    TagBox["\[Times]",
+     "InactiveToken",
+     BaseStyle->"Inactive",
+     SyntaxForm->"a*b"], 
+    RowBox[{
+     TemplateBox[{"NIntegrate"},
+      "InactiveHead",
+      BaseStyle->"Inactive",
+      SyntaxForm->"Symbol",
+      Tooltip->"Inactive[NIntegrate]"], "[", 
+     RowBox[{
+      RowBox[{"q", 
+       TagBox["\[Times]",
+        "InactiveToken",
+        BaseStyle->"Inactive",
+        SyntaxForm->"a*b"], "p"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"p", ",", "1", ",", "\[Infinity]"}], "}"}]}], "]"}], 
+    TagBox["\[Times]",
+     "InactiveToken",
+     BaseStyle->"Inactive",
+     SyntaxForm->"a*b"], 
+    RowBox[{"(", 
+     RowBox[{"p", "+", "q"}], ")"}], 
+    TagBox["\[Times]",
+     "InactiveToken",
+     BaseStyle->"Inactive",
+     SyntaxForm->"a*b"], 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"p", "+", "q"}], ")"}], 
+       TagBox["\[Times]",
+        "InactiveToken",
+        BaseStyle->"Inactive",
+        SyntaxForm->"a*b"], 
+       FractionBox["1", 
+        RowBox[{"q", "+", 
+         RowBox[{"2", 
+          TagBox["\[Times]",
+           "InactiveToken",
+           BaseStyle->"Inactive",
+           SyntaxForm->"a*b"], "p"}]}]]}], ")"}], "p"], 
+    TagBox["\[Times]",
+     "InactiveToken",
+     BaseStyle->"Inactive",
+     SyntaxForm->"a*b"], 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"p", "+", 
+         RowBox[{"2", 
+          TagBox["\[Times]",
+           "InactiveToken",
+           BaseStyle->"Inactive",
+           SyntaxForm->"a*b"], "q"}]}], ")"}], 
+       TagBox["\[Times]",
+        "InactiveToken",
+        BaseStyle->"Inactive",
+        SyntaxForm->"a*b"], 
+       FractionBox["1", 
+        RowBox[{"q", "+", 
+         RowBox[{"3", 
+          TagBox["\[Times]",
+           "InactiveToken",
+           BaseStyle->"Inactive",
+           SyntaxForm->"a*b"], "p"}]}]]}], ")"}], 
+     RowBox[{"p", "+", "q"}]], 
+    TagBox["\[Times]",
+     "InactiveToken",
+     BaseStyle->"Inactive",
+     SyntaxForm->"a*b"], 
+    FractionBox["1", 
+     RowBox[{
+      RowBox[{"(", 
        RowBox[{
-        InterpretationBox[
-         RowBox[{
-          TagBox["CloudExpression",
-           "SummaryHead"], "[", 
-          
-          DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = 
-           "Ready"}, 
-           TemplateBox[{
-             PaneSelectorBox[{False -> GridBox[{{
-                   PaneBox[
-                    ButtonBox[
-                    DynamicBox[
-                    FEPrivate`FrontEndResource[
-                    "FEBitmaps", "SummaryBoxOpener"]], 
-                    ButtonFunction :> (Typeset`open$$ = True), Appearance -> 
-                    None, BaseStyle -> {}, Evaluator -> Automatic, Method -> 
-                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
-                    Dynamic[{
-                    Automatic, 
-                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
-                    Magnification])}]], 
-                   GraphicsBox[{
-                    Thickness[0.002777777777777778], {
-                    FaceForm[{
-                    RGBColor[
-                    0.6669999999999999, 0.6669999999999999, 
-                    0.6669999999999999], 
-                    Opacity[1.]}], 
-                    
-                    FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
-                    3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
-                    3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 
-                    3}}}, CompressedData["
-1:eJxTTMoPSmVmYGBgBGI1IGZigAKOEoeijIlvaw6nO1yteKlmKFPiUCWyzv2h
-W4aDj3mnY4J6iYMKW+NU58sIvjeITs2E84WaD5xaaJvjELfLk4dJvNgBbG5P
-HoR/vBDOB1ljvxTBB9vXUujwVSOm/1BrnoNsVIr1/eRCB67riwtsq/IcFDcA
-XXa7wGHLibJ981cUOliBGJtzHWxBCkqLHVpfB+6Qe5kB5++fL6V/d0IqnP8N
-ZO7MJIh/phQ5rPx4yTfpQILDstlHFDZYFToAVauwHYyHuBNm76NYB6BtUvqV
-hQ590/OEmj9Ew/l3ftZl7TEJgvMlQPoXujhYgty1Og/Oh4UPivztDAewBWdd
-HBa6bvv8NyTD4QKIIesK8f/FdIcNJZMlWK6ZOlxQuv2z7laaw4G575cfOy0D
-kbdMgfOdu3Oe/1ZMhPMfgDxYGOXQAPLnLDuHanvTuF2SIQ4zJFjC+Pb6wvng
-8J9bBOdXg9QXlcD54Hh8X+rgkyQQYdkTBec/WgoMMIdEOB/k/bsKKQ6PQeIa
-pZBwnZPmgJ6eAE5jA2M=
-                    "]]}, {
-                    FaceForm[{
-                    RGBColor[1., 1., 1.], 
-                    Opacity[1.]}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    79.59, 232.36700000000002`}, {98.72300000000001, 
-                    232.36700000000002`}, {98.72300000000001, 213.234}, {
-                    79.59, 213.234}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    186.105, 232.36700000000002`}, {205.238, 
-                    232.36700000000002`}, {205.238, 213.234}, {186.105, 
-                    213.234}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    112.94500000000001`, 232.36700000000002`}, {170.082, 
-                    232.36700000000002`}, {170.082, 213.234}, {
-                    112.94500000000001`, 213.234}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    79.586, 195.691}, {136.723, 195.691}, {136.723, 
-                    176.558}, {79.586, 176.558}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    79.586, 124.258}, {136.723, 124.258}, {136.723, 
-                    105.125}, {79.586, 105.125}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    152.809, 124.258}, {209.946, 124.258}, {209.946, 
-                    105.125}, {152.809, 105.125}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    220.098, 124.258}, {277.235, 124.258}, {277.235, 
-                    105.125}, {220.098, 105.125}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    149.93800000000002`, 195.691}, {171.02, 195.691}, {171.02,
-                     176.558}, {149.93800000000002`, 176.558}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    186.934, 195.691}, {208.012, 195.691}, {208.012, 
-                    176.558}, {186.934, 176.558}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    221.059, 195.691}, {242.141, 195.691}, {242.141, 
-                    176.558}, {221.059, 176.558}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    256.15200000000004`, 195.691}, {277.23400000000004`, 
-                    195.691}, {277.23400000000004`, 176.558}, {
-                    256.15200000000004`, 176.558}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    256.15200000000004`, 162.52700000000002`}, {
-                    277.23400000000004`, 162.52700000000002`}, {
-                    277.23400000000004`, 143.394}, {256.15200000000004`, 
-                    143.394}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    79.586, 162.52700000000002`}, {100.66799999999999`, 
-                    162.52700000000002`}, {100.66799999999999`, 143.394}, {
-                    79.586, 143.394}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    187.59, 162.52700000000002`}, {242.457, 
-                    162.52700000000002`}, {242.457, 143.394}, {187.59, 
-                    143.394}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    116.793, 162.52700000000002`}, {171.66, 
-                    162.52700000000002`}, {171.66, 143.394}, {116.793, 
-                    143.394}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    220.098, 232.36700000000002`}, {277.235, 
-                    232.36700000000002`}, {277.235, 213.234}, {220.098, 
-                    213.234}}}]}}, PlotRange -> {{0., 360.}, {0., 360.}}, 
-                    AspectRatio -> 1, Axes -> False, Background -> None, 
-                    Frame -> None, FrameTicks -> None, 
-                    ImageSize -> {Automatic, 
-                    Dynamic[
-                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
-                    Magnification]), ImageSizeCache -> {45., {0., 9.}}]}], 
-                   GridBox[{{
-                    RowBox[{
-                    TagBox["\"Name: \"", "SummaryItemAnnotation"], 
-                    "\[InvisibleSpace]", 
-                    TagBox[
-                    TemplateBox[{"\"HeadsToInactivate\""}, "RowDefault"], 
-                    "SummaryItem"]}]}, {
-                    RowBox[{
-                    TagBox["\"Owner: \"", "SummaryItemAnnotation"], 
-                    "\[InvisibleSpace]", 
-                    TagBox[
-                    TemplateBox[{"\"burbery1\""}, "RowDefault"], 
-                    "SummaryItem"]}]}}, 
-                    GridBoxAlignment -> {
-                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
-                    AutoDelete -> False, 
-                    GridBoxItemSize -> {
-                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
-                    GridBoxSpacings -> {
-                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
-                    BaseStyle -> {
-                    ShowStringCharacters -> False, NumberMarks -> False, 
-                    PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
-                 GridBoxAlignment -> {
-                  "Columns" -> {{Left}}, "Rows" -> {{Top}}}, AutoDelete -> 
-                 False, GridBoxItemSize -> {
-                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
-                 BaselinePosition -> {1, 1}], True -> GridBox[{{
-                   PaneBox[
-                    ButtonBox[
-                    DynamicBox[
-                    FEPrivate`FrontEndResource[
-                    "FEBitmaps", "SummaryBoxCloser"]], 
-                    ButtonFunction :> (Typeset`open$$ = False), Appearance -> 
-                    None, BaseStyle -> {}, Evaluator -> Automatic, Method -> 
-                    "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
-                    Dynamic[{
-                    Automatic, 
-                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
-                    Magnification])}]], 
-                   GraphicsBox[{
-                    Thickness[0.002777777777777778], {
-                    FaceForm[{
-                    RGBColor[
-                    0.6669999999999999, 0.6669999999999999, 
-                    0.6669999999999999], 
-                    Opacity[1.]}], 
-                    
-                    FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
-                    3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
-                    3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 
-                    3}}}, CompressedData["
-1:eJxTTMoPSmVmYGBgBGI1IGZigAKOEoeijIlvaw6nO1yteKlmKFPiUCWyzv2h
-W4aDj3mnY4J6iYMKW+NU58sIvjeITs2E84WaD5xaaJvjELfLk4dJvNgBbG5P
-HoR/vBDOB1ljvxTBB9vXUujwVSOm/1BrnoNsVIr1/eRCB67riwtsq/IcFDcA
-XXa7wGHLibJ981cUOliBGJtzHWxBCkqLHVpfB+6Qe5kB5++fL6V/d0IqnP8N
-ZO7MJIh/phQ5rPx4yTfpQILDstlHFDZYFToAVauwHYyHuBNm76NYB6BtUvqV
-hQ590/OEmj9Ew/l3ftZl7TEJgvMlQPoXujhYgty1Og/Oh4UPivztDAewBWdd
-HBa6bvv8NyTD4QKIIesK8f/FdIcNJZMlWK6ZOlxQuv2z7laaw4G575cfOy0D
-kbdMgfOdu3Oe/1ZMhPMfgDxYGOXQAPLnLDuHanvTuF2SIQ4zJFjC+Pb6wvng
-8J9bBOdXg9QXlcD54Hh8X+rgkyQQYdkTBec/WgoMMIdEOB/k/bsKKQ6PQeIa
-pZBwnZPmgJ6eAE5jA2M=
-                    "]]}, {
-                    FaceForm[{
-                    RGBColor[1., 1., 1.], 
-                    Opacity[1.]}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    79.59, 232.36700000000002`}, {98.72300000000001, 
-                    232.36700000000002`}, {98.72300000000001, 213.234}, {
-                    79.59, 213.234}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    186.105, 232.36700000000002`}, {205.238, 
-                    232.36700000000002`}, {205.238, 213.234}, {186.105, 
-                    213.234}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    112.94500000000001`, 232.36700000000002`}, {170.082, 
-                    232.36700000000002`}, {170.082, 213.234}, {
-                    112.94500000000001`, 213.234}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    79.586, 195.691}, {136.723, 195.691}, {136.723, 
-                    176.558}, {79.586, 176.558}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    79.586, 124.258}, {136.723, 124.258}, {136.723, 
-                    105.125}, {79.586, 105.125}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    152.809, 124.258}, {209.946, 124.258}, {209.946, 
-                    105.125}, {152.809, 105.125}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    220.098, 124.258}, {277.235, 124.258}, {277.235, 
-                    105.125}, {220.098, 105.125}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    149.93800000000002`, 195.691}, {171.02, 195.691}, {171.02,
-                     176.558}, {149.93800000000002`, 176.558}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    186.934, 195.691}, {208.012, 195.691}, {208.012, 
-                    176.558}, {186.934, 176.558}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    221.059, 195.691}, {242.141, 195.691}, {242.141, 
-                    176.558}, {221.059, 176.558}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    256.15200000000004`, 195.691}, {277.23400000000004`, 
-                    195.691}, {277.23400000000004`, 176.558}, {
-                    256.15200000000004`, 176.558}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    256.15200000000004`, 162.52700000000002`}, {
-                    277.23400000000004`, 162.52700000000002`}, {
-                    277.23400000000004`, 143.394}, {256.15200000000004`, 
-                    143.394}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    79.586, 162.52700000000002`}, {100.66799999999999`, 
-                    162.52700000000002`}, {100.66799999999999`, 143.394}, {
-                    79.586, 143.394}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    187.59, 162.52700000000002`}, {242.457, 
-                    162.52700000000002`}, {242.457, 143.394}, {187.59, 
-                    143.394}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    116.793, 162.52700000000002`}, {171.66, 
-                    162.52700000000002`}, {171.66, 143.394}, {116.793, 
-                    143.394}}}], 
-                    
-                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
-                    220.098, 232.36700000000002`}, {277.235, 
-                    232.36700000000002`}, {277.235, 213.234}, {220.098, 
-                    213.234}}}]}}, PlotRange -> {{0., 360.}, {0., 360.}}, 
-                    AspectRatio -> 1, Axes -> False, Background -> None, 
-                    Frame -> None, FrameTicks -> None, 
-                    ImageSize -> {Automatic, 
-                    Dynamic[
-                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
-                    Magnification]), ImageSizeCache -> {45., {0., 9.}}]}], 
-                   GridBox[{{
-                    RowBox[{
-                    TagBox["\"Name: \"", "SummaryItemAnnotation"], 
-                    "\[InvisibleSpace]", 
-                    TagBox[
-                    TemplateBox[{"\"HeadsToInactivate\""}, "RowDefault"], 
-                    "SummaryItem"]}]}, {
-                    RowBox[{
-                    TagBox["\"Owner: \"", "SummaryItemAnnotation"], 
-                    "\[InvisibleSpace]", 
-                    TagBox[
-                    TemplateBox[{"\"burbery1\""}, "RowDefault"], 
-                    "SummaryItem"]}]}, {
-                    RowBox[{
-                    TagBox["\"URI: \"", "SummaryItemAnnotation"], 
-                    "\[InvisibleSpace]", 
-                    TagBox[
-                    
-                    TemplateBox[{
-                    "\"https://www.wolframcloud.com/obj/burbery1/\
-CloudExpression/HeadsToInactivate\""}, "RowDefault"], "SummaryItem"]}]}}, 
-                    GridBoxAlignment -> {
-                    "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
-                    AutoDelete -> False, 
-                    GridBoxItemSize -> {
-                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
-                    GridBoxSpacings -> {
-                    "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
-                    BaseStyle -> {
-                    ShowStringCharacters -> False, NumberMarks -> False, 
-                    PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
-                 GridBoxAlignment -> {
-                  "Columns" -> {{Left}}, "Rows" -> {{Top}}}, AutoDelete -> 
-                 False, GridBoxItemSize -> {
-                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
-                 BaselinePosition -> {1, 1}]}, 
-              Dynamic[Typeset`open$$], ImageSize -> Automatic]},
-            "SummaryPanel"],
-           DynamicModuleValues:>{}], "]"}],
-         CloudExpression[
-         "https://www.wolframcloud.com/obj/burbery1/CloudExpression/\
-HeadsToInactivate"],
-         Editable->False,
-         SelectWithContents->True,
-         Selectable->False], "[", "]"}]}], "]"}]}]}], "]"}]}]], "Input",
- CellChangeTimes->{{3.8953104679423523`*^9, 
-  3.89531048415384*^9}},ExpressionUUID->"ecc2d41f-6391-4358-8d3e-\
-c6dd9d562e79"],
+        RowBox[{"(", 
+         RowBox[{"p", "+", 
+          RowBox[{"3", 
+           TagBox["\[Times]",
+            "InactiveToken",
+            BaseStyle->"Inactive",
+            SyntaxForm->"a*b"], "q"}]}], ")"}], 
+        TagBox["\[Times]",
+         "InactiveToken",
+         BaseStyle->"Inactive",
+         SyntaxForm->"a*b"], 
+        FractionBox["1", 
+         RowBox[{"q", "+", 
+          RowBox[{"4", 
+           TagBox["\[Times]",
+            "InactiveToken",
+            BaseStyle->"Inactive",
+            SyntaxForm->"a*b"], "p"}]}]]}], ")"}], 
+      TagBox["\[Times]",
+       "InactiveToken",
+       BaseStyle->"Inactive",
+       SyntaxForm->"a*b"], 
+      TemplateBox[{"x", "x", 
+        RowBox[{
+          RowBox[{"(", 
+            RowBox[{"-", "1"}], ")"}], 
+          TagBox[
+          "\[Times]", "InactiveToken", BaseStyle -> "Inactive", SyntaxForm -> 
+           "a*b"], "\[Infinity]"}], "\[Infinity]"},
+       "InactiveIntegrate",
+       DisplayFunction->(RowBox[{
+          SubsuperscriptBox[
+           StyleBox["\[Integral]", "Inactive"], #3, #4], 
+          RowBox[{#, 
+            RowBox[{
+              StyleBox["\[DifferentialD]", "Inactive"], #2}]}]}]& ),
+       InterpretationFunction->(RowBox[{
+          RowBox[{"Inactive", "[", "Integrate", "]"}], "[", 
+          RowBox[{#, ",", 
+            RowBox[{"{", 
+              RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )]}]]}], ")"}], 
+  TagBox["\[Times]",
+   "InactiveToken",
+   BaseStyle->"Inactive",
+   SyntaxForm->"a*b"], 
+  RowBox[{
+   TemplateBox[{"NSum"},
+    "InactiveHead",
+    BaseStyle->"Inactive",
+    SyntaxForm->"Symbol",
+    Tooltip->"Inactive[NSum]"], "[", 
+   RowBox[{
+    FractionBox["1", "k"], ",", 
+    RowBox[{"{", 
+     RowBox[{"k", ",", "1", ",", "\[Infinity]"}], "}"}]}], "]"}]}]], "Output",
+ CellChangeTimes->{3.8953106964496956`*^9, 3.8953108278546247`*^9, 
+  3.8953108637102146`*^9},
+ CellLabel->
+  "Out[156]=",ExpressionUUID->"98c07e08-33bf-4c91-95e2-4111724d17bc"]
+}, Open  ]],
+
+Cell["\<\
+I had to give the function the attribute HoldFirst to make it work.\
+\>", "Text",
+ CellChangeTimes->{{3.8953108820293207`*^9, 
+  3.895310892076376*^9}},ExpressionUUID->"eeb610eb-142a-4f73-83f5-\
+96628531b148"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Inactivate", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"g", "'"}], "[", "0", "]"}], "*", 
+    RowBox[{
+     RowBox[{"f", "'"}], "[", "0", "]"}], 
+    FractionBox[
+     RowBox[{
+      FractionBox["p", "q"], 
+      RowBox[{"NIntegrate", "[", 
+       RowBox[{
+        RowBox[{"q", " ", "p"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"p", ",", "1", ",", "Infinity"}], "}"}]}], "]"}], 
+      RowBox[{"(", 
+       RowBox[{"p", "+", "q"}], ")"}], 
+      SuperscriptBox[
+       RowBox[{"(", 
+        FractionBox[
+         RowBox[{"p", "+", "q"}], 
+         RowBox[{"q", "+", 
+          RowBox[{"2", "p"}]}]], ")"}], "p"], 
+      SuperscriptBox[
+       RowBox[{"(", 
+        FractionBox[
+         RowBox[{"p", "+", 
+          RowBox[{"2", "q"}]}], 
+         RowBox[{"q", "+", 
+          RowBox[{"3", "p"}]}]], ")"}], 
+       RowBox[{"p", "+", "q"}]]}], 
+     RowBox[{
+      RowBox[{"(", 
+       FractionBox[
+        RowBox[{"p", "+", 
+         RowBox[{"3", "q"}]}], 
+        RowBox[{"q", "+", 
+         RowBox[{"4", "p"}]}]], ")"}], 
+      RowBox[{"Integrate", "[", 
+       RowBox[{"x", ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", 
+          RowBox[{"-", "Infinity"}], ",", "Infinity"}], "}"}]}], "]"}]}]], 
+    RowBox[{"NSum", "[", 
+     RowBox[{
+      SuperscriptBox["k", 
+       RowBox[{"-", "1"}]], ",", 
+      RowBox[{"{", 
+       RowBox[{"k", ",", "1", ",", "\[Infinity]"}], "}"}]}], "]"}]}], ",", 
+   RowBox[{"Alternatives", "@@", 
+    RowBox[{"{", 
+     RowBox[{
+     "Times", ",", "Sum", ",", "NIntegrate", ",", "Integrate", ",", "NSum", 
+      ",", "D", ",", "Derivative"}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.895310724904211*^9, 3.8953107288180127`*^9}},
+ CellLabel->
+  "In[150]:=",ExpressionUUID->"2971afd0-ed0f-432c-8e7b-a277bc6f9bb3"],
 
 Cell[BoxData["3.`*^-7"], "EchoTiming",
  CellChangeTimes->{
-  3.895310487413725*^9},ExpressionUUID->"9544960f-220d-489e-9546-\
-858217d0959b"]
+  3.8953107296303453`*^9},ExpressionUUID->"1e17e139-9b23-492e-9799-\
+bd8f039e8190"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     TemplateBox[{"Derivative"},
+      "InactiveHead",
+      BaseStyle->"Inactive",
+      SyntaxForm->"Symbol",
+      Tooltip->"Inactive[Derivative]"], "[", "1", "]"}], "[", "g", "]"}], "[",
+    "0", "]"}], 
+  TagBox["\[Times]",
+   "InactiveToken",
+   BaseStyle->"Inactive",
+   SyntaxForm->"a*b"], 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     TemplateBox[{"Derivative"},
+      "InactiveHead",
+      BaseStyle->"Inactive",
+      SyntaxForm->"Symbol",
+      Tooltip->"Inactive[Derivative]"], "[", "1", "]"}], "[", "f", "]"}], "[",
+    "0", "]"}], 
+  TagBox["\[Times]",
+   "InactiveToken",
+   BaseStyle->"Inactive",
+   SyntaxForm->"a*b"], 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"p", 
+      TagBox["\[Times]",
+       "InactiveToken",
+       BaseStyle->"Inactive",
+       SyntaxForm->"a*b"], 
+      FractionBox["1", "q"]}], ")"}], 
+    TagBox["\[Times]",
+     "InactiveToken",
+     BaseStyle->"Inactive",
+     SyntaxForm->"a*b"], 
+    RowBox[{
+     TemplateBox[{"NIntegrate"},
+      "InactiveHead",
+      BaseStyle->"Inactive",
+      SyntaxForm->"Symbol",
+      Tooltip->"Inactive[NIntegrate]"], "[", 
+     RowBox[{
+      RowBox[{"q", 
+       TagBox["\[Times]",
+        "InactiveToken",
+        BaseStyle->"Inactive",
+        SyntaxForm->"a*b"], "p"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"p", ",", "1", ",", "\[Infinity]"}], "}"}]}], "]"}], 
+    TagBox["\[Times]",
+     "InactiveToken",
+     BaseStyle->"Inactive",
+     SyntaxForm->"a*b"], 
+    RowBox[{"(", 
+     RowBox[{"p", "+", "q"}], ")"}], 
+    TagBox["\[Times]",
+     "InactiveToken",
+     BaseStyle->"Inactive",
+     SyntaxForm->"a*b"], 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"p", "+", "q"}], ")"}], 
+       TagBox["\[Times]",
+        "InactiveToken",
+        BaseStyle->"Inactive",
+        SyntaxForm->"a*b"], 
+       FractionBox["1", 
+        RowBox[{"q", "+", 
+         RowBox[{"2", 
+          TagBox["\[Times]",
+           "InactiveToken",
+           BaseStyle->"Inactive",
+           SyntaxForm->"a*b"], "p"}]}]]}], ")"}], "p"], 
+    TagBox["\[Times]",
+     "InactiveToken",
+     BaseStyle->"Inactive",
+     SyntaxForm->"a*b"], 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"p", "+", 
+         RowBox[{"2", 
+          TagBox["\[Times]",
+           "InactiveToken",
+           BaseStyle->"Inactive",
+           SyntaxForm->"a*b"], "q"}]}], ")"}], 
+       TagBox["\[Times]",
+        "InactiveToken",
+        BaseStyle->"Inactive",
+        SyntaxForm->"a*b"], 
+       FractionBox["1", 
+        RowBox[{"q", "+", 
+         RowBox[{"3", 
+          TagBox["\[Times]",
+           "InactiveToken",
+           BaseStyle->"Inactive",
+           SyntaxForm->"a*b"], "p"}]}]]}], ")"}], 
+     RowBox[{"p", "+", "q"}]], 
+    TagBox["\[Times]",
+     "InactiveToken",
+     BaseStyle->"Inactive",
+     SyntaxForm->"a*b"], 
+    FractionBox["1", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"p", "+", 
+          RowBox[{"3", 
+           TagBox["\[Times]",
+            "InactiveToken",
+            BaseStyle->"Inactive",
+            SyntaxForm->"a*b"], "q"}]}], ")"}], 
+        TagBox["\[Times]",
+         "InactiveToken",
+         BaseStyle->"Inactive",
+         SyntaxForm->"a*b"], 
+        FractionBox["1", 
+         RowBox[{"q", "+", 
+          RowBox[{"4", 
+           TagBox["\[Times]",
+            "InactiveToken",
+            BaseStyle->"Inactive",
+            SyntaxForm->"a*b"], "p"}]}]]}], ")"}], 
+      TagBox["\[Times]",
+       "InactiveToken",
+       BaseStyle->"Inactive",
+       SyntaxForm->"a*b"], 
+      TemplateBox[{"x", "x", 
+        RowBox[{
+          RowBox[{"(", 
+            RowBox[{"-", "1"}], ")"}], 
+          TagBox[
+          "\[Times]", "InactiveToken", BaseStyle -> "Inactive", SyntaxForm -> 
+           "a*b"], "\[Infinity]"}], "\[Infinity]"},
+       "InactiveIntegrate",
+       DisplayFunction->(RowBox[{
+          SubsuperscriptBox[
+           StyleBox["\[Integral]", "Inactive"], #3, #4], 
+          RowBox[{#, 
+            RowBox[{
+              StyleBox["\[DifferentialD]", "Inactive"], #2}]}]}]& ),
+       InterpretationFunction->(RowBox[{
+          RowBox[{"Inactive", "[", "Integrate", "]"}], "[", 
+          RowBox[{#, ",", 
+            RowBox[{"{", 
+              RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )]}]]}], ")"}], 
+  TagBox["\[Times]",
+   "InactiveToken",
+   BaseStyle->"Inactive",
+   SyntaxForm->"a*b"], 
+  RowBox[{
+   TemplateBox[{"NSum"},
+    "InactiveHead",
+    BaseStyle->"Inactive",
+    SyntaxForm->"Symbol",
+    Tooltip->"Inactive[NSum]"], "[", 
+   RowBox[{
+    FractionBox["1", "k"], ",", 
+    RowBox[{"{", 
+     RowBox[{"k", ",", "1", ",", "\[Infinity]"}], "}"}]}], "]"}]}]], "Output",
+ CellChangeTimes->{3.8953107319873104`*^9},
+ CellLabel->
+  "Out[150]=",ExpressionUUID->"e507d3e8-f598-417e-a7a4-af4229bd14f9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Definition", "[", "InactivateExpression", "]"}]], "Input",
+ CellChangeTimes->{{3.8953107376765327`*^9, 3.8953107438149104`*^9}},
+ CellLabel->
+  "In[151]:=",ExpressionUUID->"48220518-095c-4d07-81d8-a00216068cc2"],
+
+Cell[BoxData["7.`*^-7"], "EchoTiming",
+ CellChangeTimes->{
+  3.89531074406728*^9},ExpressionUUID->"16f1523c-eb3b-4f23-b133-aeb5fa8b943b"],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {GridBox[{
+       {
+        RowBox[{
+         RowBox[{
+         "InactivateExpression", "[", 
+          "PeterBurbery`BasicHypergeometricFunctions`Private`input_", "]"}], ":=", 
+         RowBox[{"Inactivate", "[", 
+          RowBox[{
+          "PeterBurbery`BasicHypergeometricFunctions`Private`input", ",", 
+           RowBox[{"Alternatives", "@@", 
+            RowBox[{"{", 
+             RowBox[{
+             "Times", ",", "Sum", ",", "NIntegrate", ",", "Integrate", ",", 
+              "NSum", ",", "D", ",", "Derivative"}], "}"}]}]}], "]"}]}]}
+      },
+      BaselinePosition->{Baseline, {1, 1}},
+      GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+      GridBoxItemSize->{"Columns" -> {{
+           Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+   },
+   BaselinePosition->{Baseline, {1, 1}},
+   GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+  Definition[PeterBurbery`BasicHypergeometricFunctions`InactivateExpression],
+  Editable->False]], "Output",
+ CellChangeTimes->{3.8953107463606367`*^9},
+ CellLabel->
+  "Out[151]=",ExpressionUUID->"8c2965b9-93b1-4890-a703-f28c2bc332e6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Alternatives", "@@", 
+  RowBox[{"{", 
+   RowBox[{
+   "Times", ",", "Sum", ",", "NIntegrate", ",", "Integrate", ",", "NSum", ",",
+     "D", ",", "Derivative"}], "}"}]}]], "Input",
+ CellLabel->
+  "In[152]:=",ExpressionUUID->"475ffb6c-4584-4d73-ac25-b14120b5ff66"],
+
+Cell[BoxData["1.`*^-6"], "EchoTiming",
+ CellChangeTimes->{
+  3.8953107641763678`*^9},ExpressionUUID->"38fcf9c2-24a7-4d50-a42e-\
+d8a188eb8b6e"],
+
+Cell[BoxData[
+ RowBox[{"Times", "|", "Sum", "|", "NIntegrate", "|", "Integrate", "|", 
+  "NSum", "|", "D", "|", "Derivative"}]], "Output",
+ CellChangeTimes->{3.8953107665328856`*^9},
+ CellLabel->
+  "Out[152]=",ExpressionUUID->"92e21a43-0d12-47f5-860a-ae56232d1203"]
 }, Open  ]]
 },
 WindowSize->{1152, 585.6},
@@ -30530,19 +30770,19 @@ Cell[898152, 23142, 623, 12, 81, "Output",ExpressionUUID->"2abe7865-120f-4d86-a3
 Cell[898790, 23157, 171, 3, 35, "Text",ExpressionUUID->"5668d288-243d-40ee-9c26-78cf8af34e06"],
 Cell[898964, 23162, 398, 10, 28, "Input",ExpressionUUID->"0f010904-11f4-40cb-b956-27a977e26a50"],
 Cell[CellGroupData[{
-Cell[899387, 23176, 387, 9, 48, "Input",ExpressionUUID->"07f0751a-44b9-441e-b609-084fd7df859e"],
+Cell[899387, 23176, 387, 9, 28, "Input",ExpressionUUID->"07f0751a-44b9-441e-b609-084fd7df859e"],
 Cell[899777, 23187, 142, 3, 23, "EchoTiming",ExpressionUUID->"4a3187b0-d487-46b2-bcda-a00d56e6ded6"],
 Cell[899922, 23192, 15096, 300, 62, "Output",ExpressionUUID->"27b1009d-981c-430c-b737-082216a0af57"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[915055, 23497, 19207, 397, 353, "Input",ExpressionUUID->"f29cd5d1-b135-472a-88d2-cc4921443ba5"],
+Cell[915055, 23497, 19207, 397, 204, "Input",ExpressionUUID->"f29cd5d1-b135-472a-88d2-cc4921443ba5"],
 Cell[934265, 23896, 140, 3, 23, "EchoTiming",ExpressionUUID->"98fd01f1-2c51-47dc-9f6a-2a9965021e2b"],
-Cell[934408, 23901, 4680, 153, 135, "Output",ExpressionUUID->"e31c7c8e-3b87-4ada-988e-98468ecfc6a2"]
+Cell[934408, 23901, 4680, 153, 71, "Output",ExpressionUUID->"e31c7c8e-3b87-4ada-988e-98468ecfc6a2"]
 }, Open  ]],
 Cell[939103, 24057, 182, 3, 35, "Text",ExpressionUUID->"2e76b11c-3a4d-476a-8736-b99e62555b79"],
 Cell[939288, 24062, 242, 5, 26, "ExampleDelimiter",ExpressionUUID->"b151dd24-3185-4b33-a73f-67b6412567e3",
  CellID->441910361],
-Cell[939533, 24069, 440, 12, 63, "Text",ExpressionUUID->"ae42f70a-fca0-4d8a-a122-a8b786eb5e3c",
+Cell[939533, 24069, 440, 12, 40, "Text",ExpressionUUID->"ae42f70a-fca0-4d8a-a122-a8b786eb5e3c",
  CellID->6142801],
 Cell[939976, 24083, 386, 11, 48, "Input",ExpressionUUID->"ffd03c32-049b-47fa-bc7b-abb0bf2cf9bc",
  CellID->705645909],
@@ -30566,12 +30806,12 @@ Cell[943557, 24204, 226, 5, 32, "Output",ExpressionUUID->"e79bd1d1-ed1c-4c04-945
 Cell[943798, 24212, 443, 12, 35, "Text",ExpressionUUID->"23aea4f4-f114-45e9-b602-a37856ba1e13",
  CellID->1896598326],
 Cell[CellGroupData[{
-Cell[944266, 24228, 487, 13, 48, "Input",ExpressionUUID->"14700f11-096d-4954-b83b-9ba788b6ed76",
+Cell[944266, 24228, 487, 13, 28, "Input",ExpressionUUID->"14700f11-096d-4954-b83b-9ba788b6ed76",
  CellID->51973810],
 Cell[944756, 24243, 142, 3, 23, "EchoTiming",ExpressionUUID->"374adf53-7886-4ab6-b70b-5a7610c0e93c"],
 Cell[944901, 24248, 40547, 762, 251, "Output",ExpressionUUID->"1d23ade5-e624-49b8-b34e-af0b2b4ca874"]
 }, Open  ]],
-Cell[985463, 25013, 693, 21, 63, "Text",ExpressionUUID->"86bcbc59-3bc3-4086-902d-634ff2e579d2",
+Cell[985463, 25013, 693, 21, 40, "Text",ExpressionUUID->"86bcbc59-3bc3-4086-902d-634ff2e579d2",
  CellID->1165536176],
 Cell[CellGroupData[{
 Cell[986181, 25038, 318, 9, 28, "Input",ExpressionUUID->"60d15c06-3ec1-4974-83b2-1a50982e9e91",
@@ -30580,7 +30820,7 @@ Cell[986502, 25049, 143, 3, 23, "EchoTiming",ExpressionUUID->"25d7553a-c6eb-4e14
 Cell[986648, 25054, 1714, 53, 82, "Output",ExpressionUUID->"ee697fc1-bbff-46ba-bbfa-3f4145e0d4eb"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[988399, 25112, 16906, 330, 88, "Input",ExpressionUUID->"507feb6a-6f55-490e-9bc6-f497c0a75044"],
+Cell[988399, 25112, 16906, 330, 58, "Input",ExpressionUUID->"507feb6a-6f55-490e-9bc6-f497c0a75044"],
 Cell[1005308, 25444, 403, 10, 39, "Message",ExpressionUUID->"13752f20-4489-4e69-a36d-d73d25c5c92b"],
 Cell[1005714, 25456, 407, 10, 28, "Message",ExpressionUUID->"24150b57-12d0-4947-863b-d3fd723763e5"],
 Cell[1006124, 25468, 405, 10, 39, "Message",ExpressionUUID->"ba9b7d72-e56d-4c66-8f15-253319880c29"],
@@ -30668,9 +30908,30 @@ Cell[1204963, 29821, 140, 3, 23, "EchoTiming",ExpressionUUID->"d4ea8741-7c6a-481
 Cell[1205106, 29826, 262, 6, 47, "Output",ExpressionUUID->"63b5d299-c902-4ad4-b892-0b2209c0b018"]
 }, Open  ]],
 Cell[1205383, 29835, 203, 3, 35, "Text",ExpressionUUID->"ca178976-65ca-46cb-a30a-3d8f9084057c"],
+Cell[1205589, 29840, 587, 13, 48, "Input",ExpressionUUID->"ecc2d41f-6391-4358-8d3e-c6dd9d562e79"],
+Cell[1206179, 29855, 243, 6, 35, "Text",ExpressionUUID->"1aca005e-62e3-484d-b295-4f8c9cff416a"],
+Cell[1206425, 29863, 236, 4, 28, "Input",ExpressionUUID->"d2b23f04-6234-4619-a0db-ceed6d9bd738"],
+Cell[1206664, 29869, 239, 4, 28, "Input",ExpressionUUID->"d1bd98c5-6ca0-4e5c-99a3-aa105e25f38e"],
 Cell[CellGroupData[{
-Cell[1205611, 29842, 17332, 337, 58, "Input",ExpressionUUID->"ecc2d41f-6391-4358-8d3e-c6dd9d562e79"],
-Cell[1222946, 30181, 140, 3, 23, "EchoTiming",ExpressionUUID->"9544960f-220d-489e-9546-858217d0959b"]
+Cell[1206928, 29877, 1565, 52, 69, "Input",ExpressionUUID->"0714ed5e-29ed-4553-acae-bf868f0ca60c"],
+Cell[1208496, 29931, 140, 3, 23, "EchoTiming",ExpressionUUID->"1f05c467-ad0f-4ec1-8777-dc2be69d7369"],
+Cell[1208639, 29936, 4994, 173, 93, "Output",ExpressionUUID->"98c07e08-33bf-4c91-95e2-4111724d17bc"]
+}, Open  ]],
+Cell[1213648, 30112, 219, 5, 35, "Text",ExpressionUUID->"eeb610eb-142a-4f73-83f5-96628531b148"],
+Cell[CellGroupData[{
+Cell[1213892, 30121, 1807, 57, 101, "Input",ExpressionUUID->"2971afd0-ed0f-432c-8e7b-a277bc6f9bb3"],
+Cell[1215702, 30180, 142, 3, 23, "EchoTiming",ExpressionUUID->"1e17e139-9b23-492e-9799-bd8f039e8190"],
+Cell[1215847, 30185, 4943, 172, 93, "Output",ExpressionUUID->"e507d3e8-f598-417e-a7a4-af4229bd14f9"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1220827, 30362, 235, 4, 28, "Input",ExpressionUUID->"48220518-095c-4d07-81d8-a00216068cc2"],
+Cell[1221065, 30368, 137, 2, 23, "EchoTiming",ExpressionUUID->"16f1523c-eb3b-4f23-b133-aeb5fa8b943b"],
+Cell[1221205, 30372, 1163, 28, 52, "Output",ExpressionUUID->"8c2965b9-93b1-4890-a703-f28c2bc332e6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1222405, 30405, 285, 7, 28, "Input",ExpressionUUID->"475ffb6c-4584-4d73-ac25-b14120b5ff66"],
+Cell[1222693, 30414, 142, 3, 23, "EchoTiming",ExpressionUUID->"38fcf9c2-24a7-4d50-a42e-d8a188eb8b6e"],
+Cell[1222838, 30419, 265, 5, 33, "Output",ExpressionUUID->"92e21a43-0d12-47f5-860a-ae56232d1203"]
 }, Open  ]]
 }
 ]
