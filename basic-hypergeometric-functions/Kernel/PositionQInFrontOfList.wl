@@ -5,7 +5,7 @@
 (* Declare your packages public symbols here. *)
 
 PeterBurbery`BasicHypergeometricFunctions`PositionQInFrontOfList;
-PeterBurbery`BasicHypergeometricFunctions`UnsortedComplement;
+
 
 Begin["`Private`"];
 
