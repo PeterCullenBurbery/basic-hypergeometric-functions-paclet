@@ -59,5 +59,5 @@
 <<PeterBurbery`BasicHypergeometricFunctions`DeleteText`;
 <<PeterBurbery`BasicHypergeometricFunctions`TransformVeryWellPoisedHypergeometricLaTeX`;
 <<PeterBurbery`BasicHypergeometricFunctions`TransformToLaTeX`;
-
+<<PeterBurbery`BasicHypergeometricFunctions`InactivateExpression`;
 
