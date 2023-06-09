@@ -4,19 +4,17 @@
 
 (* Declare your packages public symbols here. *)
 
-PeterBurbery`BasicHypergeometricFunctions`ReplaceNIntegrateWithInactiveIntegrateAndInactivateSumAfterPlacingQ;
+PeterBurbery`BasicHypergeometricFunctions`ReplaceAndInactivate;
 
 Begin["`Private`"];
 
 (* Define your public and private symbols here. *)
 (*UnsortedComplement//ClearAll*)
-ReplaceNIntegrateWithInactiveIntegrateAndInactivateSumAfterPlacingQ//ClearAll
+ReplaceAndInactivate//ClearAll
 
 Attributes[
-   ReplaceNIntegrateWithInactiveIntegrateAndInactivateSumAfterPlacingQ\
-InTheFrontOfAllMultiplicativeExpressions] = {HoldFirst}; 
-ReplaceNIntegrateWithInactiveIntegrateAndInactivateSumAfterPlacingQInT\
-heFrontOfAllMultiplicativeExpressions[input_] := 
+   ReplaceAndInactivate] = {HoldFirst}; 
+ReplaceAndInactivate[input_] := 
  RearrangeMultiplicativeSubExpressions //@ 
    Inactivate[input, 
     Sum | NIntegrate] /. {Inactive[NIntegrate][

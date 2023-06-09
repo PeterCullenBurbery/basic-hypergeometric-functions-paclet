@@ -28,3 +28,4 @@
 <<PeterBurbery`BasicHypergeometricFunctions`ReplaceNIntegrateWithInactiveIntegrateAndInactivateSumAfterPlacingQInTheFrontOfAllMultiplicativeExpressions`;
 
  
+
