@@ -16,13 +16,17 @@ Begin["`Private`"];
 
 InactivateExpression // ClearAll
 
-Inactivate::usage = "InactivateExpression[input] inactivates Times,Sum, NSum, Integrate, and NIntegrate in input."
+InactivateExpression::usage = "InactivateExpression[expr] inactivates Times, Sum, NSum, Integrate, and NIntegrate in expr."
 
 SetAttributes[InactivateExpression, HoldAll]
 
-InactivateExpression[input_] :=
-  Inactivate[input, Alternatives @@ {Times, Sum, NIntegrate, Integrate,
+InactivateExpression[expr_] :=
+  Inactivate[expr, Alternatives @@ {Times, Sum, NIntegrate, Integrate,
      NSum, D, Derivative}]
+
+
+
+     InactivateExpression[args___] := Null /; CheckArguments[InactivateExpression[args], 1] 
 
 End[]; (* End `Private` *)
 
