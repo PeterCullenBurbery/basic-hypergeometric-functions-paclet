@@ -118,3 +118,13 @@
 <<PeterBurbery`BasicHypergeometricFunctions`UnevaluatedHead`;
 
 <<PeterBurbery`BasicHypergeometricFunctions`HeldExpressionQ`;
+
+<<PeterBurbery`BasicHypergeometricFunctions`InactiveExpressionQ`;
+
+<<PeterBurbery`BasicHypergeometricFunctions`OnlyIntegralAndSum`;
+
+<<PeterBurbery`BasicHypergeometricFunctions`AllowedExpressionQ`;
+
+<<PeterBurbery`BasicHypergeometricFunctions`FractionToPowerQ`
+
+<<PeterBurbery`BasicHypergeometricFunctions`PolynomializeFractionPower`;

@@ -4,7 +4,7 @@ BeginPackage["PeterBurbery`BasicHypergeometricFunctions`"];
 
 (* Declare your packages public symbols here. *)
 
-PeterBurbery`BasicHypergeometricFunctions`ReplaceAndInactivate;
+PeterBurbery`BasicHypergeometricFunctions`QHypergeometricPFQLaTeX;
 
 Begin["`Private`"];
 
@@ -12,18 +12,18 @@ Begin["`Private`"];
 
 (*UnsortedComplement//ClearAll*)
 
-ReplaceAndInactivate // ClearAll
+QHypergeometricPFQLaTeX // ClearAll
 
-Attributes[ReplaceAndInactivate] = {HoldFirst};
+Attributes[QHypergeometricPFQLaTeX] = {HoldFirst};
 
-ReplaceAndInactivate[input_ ? (!EquationQ[#]&)] :=
+QHypergeometricPFQLaTeX[input_ ? (!EquationQ[#]&)] :=
   RearrangeMultiplicativeSubexpressions //@ FullSimplify[Inactivate[input,
      Sum | NIntegrate] /. {Inactive[NIntegrate][f_, {x_, xmin_, xmax_}, ___
     ] :> Inactive[Integrate][f, {x, xmin, xmax}]}]
 
 (*This could cause problems where things would move*)
 
-ReplaceAndInactivate[input_ ? (EquationQ[#]&)] :=
+QHypergeometricPFQLaTeX[input_ ? (EquationQ[#]&)] :=
   ApplySides[
     Function[{side},
       RearrangeMultiplicativeSubexpressions //@ FullSimplify[ReplaceAll[

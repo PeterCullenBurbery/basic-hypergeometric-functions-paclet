@@ -4,16 +4,16 @@ BeginPackage["PeterBurbery`BasicHypergeometricFunctions`"];
 
 (* Declare your packages public symbols here. *)
 
-PeterBurbery`BasicHypergeometricFunctions`FractionQ;
+PeterBurbery`BasicHypergeometricFunctions`FractionToPowerQ;
 
 Begin["`Private`"];
 
 (* Define your public and private symbols here. *)
 
-FractionQ // ClearAll
+FractionToPowerQ // ClearAll
 
-FractionQ[input_] :=
-  Denominator[input] =!= 1
+FractionToPowerQ[input_] :=
+  MatchQ[input,(_?FractionQ)^_]
 
 (*There could be a bug with this not marking 1/(b**c) as a fraction.*)
 
