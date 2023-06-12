@@ -13,8 +13,8 @@ Begin["`Private`"];
 ProcessTeX // ClearAll
 
 ProcessTeX::usage = "ProcessTeX[str] removes ** for noncommutative multiplication and removes whitespace except spaces in str."
-
-SetAttribues[ProcessTeX, {Listable}]
+(* 
+SetAttributes[ProcessTeX, {Listable}] *)
 
 ProcessTeX[str_ ? (StringQ[#]&)] :=
     StringReplace[{"\\text{" ~~ r : Shortest[___] ~~ "}" :> r}][StringDelete[

@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     37241,        988]
-NotebookOptionsPosition[     29969,        831]
-NotebookOutlinePosition[     30812,        858]
-CellTagsIndexPosition[     30733,        853]
+NotebookDataLength[     21091,        582]
+NotebookOptionsPosition[     14463,        439]
+NotebookOutlinePosition[     15305,        466]
+CellTagsIndexPosition[     15226,        461]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -216,7 +216,7 @@ Cell[BoxData[
 University\\\\GitHub\\\\basic-hypergeometric-functions-paclet\\\\basic-\
 hypergeometric-functions\\\\Kernel\>\""}], "]"}]}], ";"}]], "Input",
  CellChangeTimes->{{3.8955704738973846`*^9, 3.895570485010003*^9}},
- CellLabel->"In[133]:=",
+ CellLabel->"In[179]:=",
  CellID->658679715,ExpressionUUID->"90cf5cc5-18aa-4e86-ba17-32d0ca32c4f6"],
 
 Cell[BoxData[
@@ -252,405 +252,13 @@ Cell[BoxData["True"], "Output",
  CellID->119657592,ExpressionUUID->"4e43a9cc-8a33-4ff3-a611-6e13df5ca299"]
 }, Open  ]],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[
- RowBox[{"Attributes", "[", "EquationQ", "]"}]], "Input",
- CellChangeTimes->{{3.895570560875444*^9, 3.8955705665918155`*^9}},
- CellLabel->"In[147]:=",
- CellID->553456220,ExpressionUUID->"57fd079d-5cab-455a-9687-fe3eaf1708d6"],
-
-Cell[BoxData[
- RowBox[{"{", "HoldAll", "}"}]], "Output",
- CellChangeTimes->{{3.8955705648468056`*^9, 3.895570595436926*^9}, {
-   3.8955706316437626`*^9, 3.895570652106267*^9}, 3.8955707071895*^9},
- CellLabel->"Out[147]=",
- CellID->117826930,ExpressionUUID->"be6c9223-80ee-472f-a03f-b2170ccaf244"]
-}, Open  ]],
-
-Cell[BoxData[
- RowBox[{"SetAttributes", "[", 
-  RowBox[{"EquationQ", ",", 
-   RowBox[{"{", "HoldAll", "}"}]}], "]"}]], "Input",
- CellChangeTimes->{{3.8955706813424745`*^9, 3.895570686094364*^9}},
- CellID->631789277,ExpressionUUID->"babc1829-b6c5-4648-a0c6-6597644f97bc"],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"?", "EquationQ"}]], "Input",
- CellChangeTimes->{{3.895570666145533*^9, 3.895570668041911*^9}},
- CellLabel->"In[145]:=",
- CellID->539567137,ExpressionUUID->"bd891207-0264-4e13-aab0-e0abd7a109bf"],
-
-Cell[BoxData[
- InterpretationBox[
-  StyleBox[
-   FrameBox[
-    DynamicModuleBox[{System`InformationDump`open$$ = True, 
-     System`InformationDump`mouseOver$$ = False}, 
-     PaneSelectorBox[{True->
-      TagBox[GridBox[{
-         {
-          ItemBox[
-           PaneBox[
-            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
-             StripOnInput->False,
-             BaseStyle -> None],
-            FrameMargins->{{4, 0}, {-1, 1}}],
-           BaseStyle->"InformationTitleBackground",
-           StripOnInput->False], 
-          ItemBox[
-           PaneBox[
-            TooltipBox[
-             ButtonBox[
-              PaneSelectorBox[{False->
-               
-               DynamicBox[FEPrivate`FrontEndResource[
-                "FEBitmaps", "InformationHelpIcon"],
-                ImageSizeCache->{13., {4., 9.}}], True->
-               
-               DynamicBox[FEPrivate`FrontEndResource[
-                "FEBitmaps", "InformationHelpIconHot"],
-                ImageSizeCache->{13., {4., 9.}}]}, Dynamic[
-                CurrentValue["MouseOver"]]],
-              Appearance->None,
-              BaseStyle->"Link",
-              
-              ButtonData->
-               "paclet:PeterBurbery/BasicHypergeometricFunctions/ref/\
-EquationQ",
-              
-              ButtonNote->
-               "paclet:PeterBurbery/BasicHypergeometricFunctions/ref/\
-EquationQ"],
-             
-             "\"paclet:PeterBurbery/BasicHypergeometricFunctions/ref/\
-EquationQ\""],
-            FrameMargins->{{0, 4}, {0, 2}}],
-           BaseStyle->"InformationTitleBackground",
-           StripOnInput->False]},
-         {
-          ItemBox[
-           PaneBox[
-            
-            StyleBox["\<\"EquationQ[expr] returns True if expr is an \
-equation, and False otherwise.\"\>", "InformationUsageText",
-             StripOnInput->False,
-             LineSpacing->{1.5, 1.5, 3.}],
-            FrameMargins->{{10, 10}, {8, 10}}],
-           BaseStyle->"InformationUsageSubtitleBackground",
-           StripOnInput->False], 
-          ItemBox["\<\"\"\>",
-           BaseStyle->"InformationUsageSubtitleBackground",
-           StripOnInput->False]},
-         {
-          PaneBox[
-           TagBox[GridBox[{
-              {
-               StyleBox[
-                TagBox[
-                 TooltipBox[
-                  StyleBox["\<\" Definitions\"\>", "InformationRowLabel",
-                   StripOnInput->False],
-                  "\"Definitions\"",
-                  TooltipStyle->"TextStyling"],
-                 Annotation[#, "Definitions", "Tooltip"]& ], "DialogStyle",
-                StripOnInput->False]},
-              {
-               TemplateBox[{"\"\[ThinSpace]\"", 
-                 GridBox[{{
-                    RowBox[{
-                    
-                    RowBox[{
-                    "EquationQ", "[", 
-                    "PeterBurbery`BasicHypergeometricFunctions`Private`b_", 
-                    "]"}], ":=", 
-                    RowBox[{
-                    
-                    RowBox[{
-                    "UnevaluatedHead", "[", 
-                    "PeterBurbery`BasicHypergeometricFunctions`Private`b", 
-                    "]"}], "===", "Equal"}]}]}, {" "}, {
-                    RowBox[{
-                    
-                    RowBox[{
-                    "EquationQ", "[", 
-                    "PeterBurbery`BasicHypergeometricFunctions`Private`args___\
-", "]"}], ":=", 
-                    RowBox[{"Null", "/;", 
-                    RowBox[{"CheckArguments", "[", 
-                    RowBox[{
-                    
-                    RowBox[{"EquationQ", "[", 
-                    "PeterBurbery`BasicHypergeometricFunctions`Private`args", 
-                    "]"}], ",", "1"}], "]"}]}]}]}, {" "}}, 
-                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
-                  DefaultBaseStyle -> "Column", 
-                  GridBoxItemSize -> {
-                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
-                "RowDefault"]}
-             },
-             DefaultBaseStyle->"Column",
-             GridBoxAlignment->{"Columns" -> {{Left}}},
-             
-             GridBoxItemSize->{
-              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-            "Column"],
-           FrameMargins->{{6, 0}, {3, 6}}], "\<\"\"\>"},
-         {
-          PaneBox[GridBox[{
-             {
-              
-              DynamicModuleBox[{System`InformationDump`open$$ = {
-               False, False, False, False, False, False}}, 
-               StyleBox[GridBox[{
-                  {
-                   TagBox[
-                    TooltipBox[
-                    StyleBox["\<\" Documentation\"\>", "InformationRowLabel",
-                    StripOnInput->False],
-                    "\"Documentation\"",
-                    TooltipStyle->"TextStyling"],
-                    Annotation[#, "Documentation", "Tooltip"]& ], 
-                   TemplateBox[{
-                    
-                    TemplateBox[{
-                    "\"Local \[RightGuillemet]\"", 
-                    "paclet:PeterBurbery/BasicHypergeometricFunctions/ref/\
-EquationQ", "paclet:PeterBurbery/BasicHypergeometricFunctions/ref/EquationQ", 
-                    "Link", {
-                    RGBColor[0.9686274509803922, 0.4666666666666667, 0.]}, 
-                    BaseStyle -> {
-                    RGBColor[0.0784313725490196, 0.1568627450980392, 0.6]}}, 
-                    "HyperlinkTemplate"]},
-                    "RowDefault"]},
-                  {
-                   TagBox[
-                    TooltipBox[
-                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
-                    StripOnInput->False],
-                    "\"FullName\"",
-                    TooltipStyle->"TextStyling"],
-                    
-                    Annotation[#, "FullName", 
-                    "Tooltip"]& ], \
-"\<\"PeterBurbery`BasicHypergeometricFunctions`EquationQ\"\>"}
-                 },
-                 AutoDelete->False,
-                 GridBoxAlignment->{"Columns" -> {Right, Left}},
-                 GridBoxDividers->None,
-                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
-                 GridBoxSpacings->{"Columns" -> {
-                    Offset[0.27999999999999997`], {
-                    Offset[0.5599999999999999]}, 
-                    Offset[0.27999999999999997`]}, "Rows" -> {
-                    Offset[0.2], {
-                    Offset[0.8]}, 
-                    Offset[0.2]}}], "DialogStyle",
-                StripOnInput->False],
-               DynamicModuleValues:>{}]}
-            },
-            DefaultBaseStyle->"Column",
-            GridBoxAlignment->{"Columns" -> {{Left}}},
-            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
-            
-            GridBoxItemSize->{
-             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
-            GridBoxSpacings->{"Columns" -> {
-                Offset[0.27999999999999997`], {
-                 Offset[0.5599999999999999]}, 
-                Offset[0.27999999999999997`]}, "Rows" -> {
-                Offset[0.2], {
-                 Offset[3.6]}, 
-                Offset[0.2]}}],
-           FrameMargins->{{6, 6}, {6, 3}}], ""},
-         {
-          ItemBox[
-           TagBox[
-            ButtonBox[
-             PaneSelectorBox[{False->
-              
-              DynamicBox[FEPrivate`FrontEndResource[
-               "FEBitmaps", "UpPointerOpener"],
-               ImageSizeCache->{10., {3., 7.}}], True->
-              
-              DynamicBox[FEPrivate`FrontEndResource[
-               "FEBitmaps", "UpPointerOpenerHot"],
-               ImageSizeCache->{10., {3., 7.}}]}, Dynamic[
-              System`InformationDump`mouseOver$$]],
-             Alignment->Left,
-             Appearance->{"Default" -> None},
-             
-             ButtonFunction:>FEPrivate`Set[
-              System`InformationDump`open$$, False],
-             Evaluator->Automatic,
-             FrameMargins->{{9, 0}, {0, 0}},
-             ImageMargins->0,
-             ImageSize->Full,
-             Method->"Preemptive"],
-            
-            EventHandlerTag[{
-             "MouseEntered" :> 
-              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
-              "MouseExited" :> 
-              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
-              Method -> "Preemptive", PassEventsDown -> Automatic, 
-              PassEventsUp -> True}]],
-           BaseStyle->"InformationTitleBackground",
-           StripOnInput->False], "\[SpanFromLeft]"}
-        },
-        AutoDelete->False,
-        FrameStyle->Directive[
-          GrayLevel[0.8], 
-          Thickness[Tiny]],
-        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
-        GridBoxDividers->{
-         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
-        GridBoxItemSize->{
-         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-       "Grid"], False->
-      TagBox[GridBox[{
-         {
-          ItemBox[
-           PaneBox[
-            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
-             StripOnInput->False],
-            FrameMargins->{{4, 0}, {-1, 1}}],
-           BaseStyle->"InformationTitleBackground",
-           StripOnInput->False], 
-          ItemBox[
-           PaneBox[
-            TooltipBox[
-             ButtonBox[
-              PaneSelectorBox[{False->
-               
-               DynamicBox[FEPrivate`FrontEndResource[
-                "FEBitmaps", "InformationHelpIcon"],
-                ImageSizeCache->{13., {4., 9.}}], True->
-               
-               DynamicBox[FEPrivate`FrontEndResource[
-                "FEBitmaps", "InformationHelpIconHot"],
-                ImageSizeCache->{13., {4., 9.}}]}, Dynamic[
-                CurrentValue["MouseOver"]]],
-              Appearance->None,
-              BaseStyle->"Link",
-              
-              ButtonData->
-               "paclet:PeterBurbery/BasicHypergeometricFunctions/ref/\
-EquationQ",
-              
-              ButtonNote->
-               "paclet:PeterBurbery/BasicHypergeometricFunctions/ref/\
-EquationQ"],
-             
-             "\"paclet:PeterBurbery/BasicHypergeometricFunctions/ref/\
-EquationQ\""],
-            FrameMargins->{{0, 4}, {0, 2}}],
-           BaseStyle->"InformationTitleBackground",
-           StripOnInput->False]},
-         {
-          ItemBox[
-           PaneBox[
-            
-            StyleBox["\<\"EquationQ[expr] returns True if expr is an \
-equation, and False otherwise.\"\>", "InformationUsageText",
-             StripOnInput->False,
-             LineSpacing->{1.5, 1.5, 3.}],
-            FrameMargins->{{10, 10}, {8, 10}}],
-           BaseStyle->"InformationUsageSubtitleBackground",
-           StripOnInput->False], 
-          ItemBox["\<\"\"\>",
-           BaseStyle->"InformationUsageSubtitleBackground",
-           StripOnInput->False]},
-         {
-          ItemBox[
-           TagBox[
-            ButtonBox[
-             PaneSelectorBox[{False->
-              
-              DynamicBox[FEPrivate`FrontEndResource[
-               "FEBitmaps", "DownPointerOpener"],
-               ImageSizeCache->{10., {3., 7.}}], True->
-              
-              DynamicBox[FEPrivate`FrontEndResource[
-               "FEBitmaps", "DownPointerOpenerHot"],
-               ImageSizeCache->{10., {3., 7.}}]}, Dynamic[
-              System`InformationDump`mouseOver$$]],
-             Alignment->Left,
-             Appearance->{"Default" -> None},
-             
-             ButtonFunction:>FEPrivate`Set[
-              System`InformationDump`open$$, True],
-             Evaluator->Automatic,
-             FrameMargins->{{9, 0}, {0, 0}},
-             ImageMargins->0,
-             ImageSize->Full,
-             Method->"Preemptive"],
-            
-            EventHandlerTag[{
-             "MouseEntered" :> 
-              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
-              "MouseExited" :> 
-              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
-              Method -> "Preemptive", PassEventsDown -> Automatic, 
-              PassEventsUp -> True}]],
-           BaseStyle->"InformationTitleBackground",
-           StripOnInput->False], "\[SpanFromLeft]"}
-        },
-        AutoDelete->False,
-        FrameStyle->Directive[
-          GrayLevel[0.8], 
-          Thickness[Tiny]],
-        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
-        GridBoxDividers->{
-         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
-        GridBoxItemSize->{
-         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-       "Grid"]}, Dynamic[System`InformationDump`open$$],
-      BaselinePosition->Baseline,
-      FrameMargins->0,
-      ImageSize->Automatic],
-     DynamicModuleValues:>{}],
-    BaseStyle->"InformationGridFrame",
-    StripOnInput->False], "InformationGridPlain",
-   StripOnInput->False],
-  InformationData[<|
-   "ObjectType" -> "Symbol", "Usage" -> 
-    "EquationQ[expr] returns True if expr is an equation, and False \
-otherwise.", 
-    "Documentation" -> <|
-     "Local" -> 
-      "paclet:PeterBurbery/BasicHypergeometricFunctions/ref/EquationQ"|>, 
-    "OwnValues" -> None, "UpValues" -> None, "DownValues" -> 
-    Information`InformationValueForm[
-     DownValues, PeterBurbery`BasicHypergeometricFunctions`EquationQ, {
-      PeterBurbery`BasicHypergeometricFunctions`EquationQ[
-         Pattern[PeterBurbery`BasicHypergeometricFunctions`Private`b, 
-          Blank[]]] :> 
-       PeterBurbery`BasicHypergeometricFunctions`UnevaluatedHead[
-         PeterBurbery`BasicHypergeometricFunctions`Private`b] === Equal, 
-       PeterBurbery`BasicHypergeometricFunctions`EquationQ[
-         Pattern[PeterBurbery`BasicHypergeometricFunctions`Private`args, 
-          BlankNullSequence[]]] :> Condition[Null, 
-         CheckArguments[
-          PeterBurbery`BasicHypergeometricFunctions`EquationQ[
-          PeterBurbery`BasicHypergeometricFunctions`Private`args], 1]]}], 
-    "SubValues" -> None, "DefaultValues" -> None, "NValues" -> None, 
-    "FormatValues" -> None, "Options" -> None, "Attributes" -> {}, "FullName" -> 
-    "PeterBurbery`BasicHypergeometricFunctions`EquationQ"|>, 
-   False]]], "Output",
- CellChangeTimes->{3.8955706682941647`*^9, 3.895570699804303*^9},
- CellLabel->"Out[145]=",
- CellID->23157014,ExpressionUUID->"01169994-1061-4ef5-9b52-59c2b0337bf5"]
-}, Open  ]],
-
-Cell[BoxData[
- RowBox[{"Remove", "[", "PeterBurbery`BasicHypergeometricFunctions`EquationQ",
-   "]"}]], "Input",
- CellChangeTimes->{{3.895570634065118*^9, 3.8955706466910896`*^9}},
- CellLabel->"In[141]:=",
- CellID->718468078,ExpressionUUID->"aad70efb-a9b2-4012-81ae-ed90e1045ebb"]
+ RowBox[{"EquationQ", "[", 
+  RowBox[{"2", "==", "2"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8955704321215534`*^9, 3.8955704354998026`*^9}, 
+   3.8955707262610455`*^9},
+ CellLabel->"In[148]:=",
+ CellID->469869160,ExpressionUUID->"a0b7dea7-fb9e-4069-b2ae-557b8400daae"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -845,14 +453,14 @@ ExpressionUUID->"0c9bf5cd-b9b8-4e2a-aa83-67eaac88b5f3"
 (*CellTagsOutline
 CellTagsIndex->{
  "ExtendedExamples"->{
-  Cell[24132, 657, 486, 13, 57, "ExtendedExamplesSection",ExpressionUUID->"8489c04c-35d0-4f5a-b024-fbb173a0cc77",
+  Cell[8626, 265, 486, 13, 57, "ExtendedExamplesSection",ExpressionUUID->"8489c04c-35d0-4f5a-b024-fbb173a0cc77",
    CellTags->"ExtendedExamples",
    CellID->65239696]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"ExtendedExamples", 30540, 846}
+ {"ExtendedExamples", 15034, 454}
  }
 *)
 (*NotebookFileOutline
@@ -910,83 +518,69 @@ Cell[7755, 239, 256, 5, 25, "Input",ExpressionUUID->"ad77f722-ccec-40ee-8271-94c
 Cell[8014, 246, 276, 5, 24, "Output",ExpressionUUID->"4e43a9cc-8a33-4ff3-a611-6e13df5ca299",
  CellID->119657592]
 }, Open  ]],
-Cell[CellGroupData[{
-Cell[8327, 256, 239, 4, 25, "Input",ExpressionUUID->"57fd079d-5cab-455a-9687-fe3eaf1708d6",
- CellID->553456220],
-Cell[8569, 262, 296, 5, 24, "Output",ExpressionUUID->"be6c9223-80ee-472f-a03f-b2170ccaf244",
- CellID->117826930]
-}, Open  ]],
-Cell[8880, 270, 270, 5, 25, "Input",ExpressionUUID->"babc1829-b6c5-4648-a0c6-6597644f97bc",
- CellID->631789277],
-Cell[CellGroupData[{
-Cell[9175, 279, 218, 4, 25, "Input",ExpressionUUID->"bd891207-0264-4e13-aab0-e0abd7a109bf",
- CellID->539567137],
-Cell[9396, 285, 14404, 359, 348, "Output",ExpressionUUID->"01169994-1061-4ef5-9b52-59c2b0337bf5",
- CellID->23157014]
-}, Open  ]],
-Cell[23815, 647, 280, 5, 25, "Input",ExpressionUUID->"aad70efb-a9b2-4012-81ae-ed90e1045ebb",
- CellID->718468078]
+Cell[8305, 254, 284, 6, 25, "Input",ExpressionUUID->"a0b7dea7-fb9e-4069-b2ae-557b8400daae",
+ CellID->469869160]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[24132, 657, 486, 13, 57, "ExtendedExamplesSection",ExpressionUUID->"8489c04c-35d0-4f5a-b024-fbb173a0cc77",
+Cell[8626, 265, 486, 13, 57, "ExtendedExamplesSection",ExpressionUUID->"8489c04c-35d0-4f5a-b024-fbb173a0cc77",
  CellTags->"ExtendedExamples",
  CellID->65239696],
-Cell[24621, 672, 241, 5, 35, "ExampleSection",ExpressionUUID->"4a169e32-4378-4278-9f86-dfcbdb391128",
+Cell[9115, 280, 241, 5, 35, "ExampleSection",ExpressionUUID->"4a169e32-4378-4278-9f86-dfcbdb391128",
  CellID->208670434],
-Cell[24865, 679, 263, 5, 23, "ExampleSection",ExpressionUUID->"bc2bef1e-3961-47c2-9f83-dd8c9f3050c8",
+Cell[9359, 287, 263, 5, 23, "ExampleSection",ExpressionUUID->"bc2bef1e-3961-47c2-9f83-dd8c9f3050c8",
  CellID->43933664],
 Cell[CellGroupData[{
-Cell[25153, 688, 243, 5, 23, "ExampleSection",ExpressionUUID->"10177692-3e95-46bc-9ca7-4ab4945cb989",
+Cell[9647, 296, 243, 5, 23, "ExampleSection",ExpressionUUID->"10177692-3e95-46bc-9ca7-4ab4945cb989",
  CellID->830463972],
-Cell[25399, 695, 246, 5, 26, "ExampleSubsection",ExpressionUUID->"cc9ec28c-3216-4f84-a2da-af257c6ff5fa",
+Cell[9893, 303, 246, 5, 26, "ExampleSubsection",ExpressionUUID->"cc9ec28c-3216-4f84-a2da-af257c6ff5fa",
  CellID->376426678],
-Cell[25648, 702, 245, 5, 22, "ExampleSubsection",ExpressionUUID->"8f0a306e-e832-4e1b-abe4-ad8f8cb4f573",
+Cell[10142, 310, 245, 5, 22, "ExampleSubsection",ExpressionUUID->"8f0a306e-e832-4e1b-abe4-ad8f8cb4f573",
  CellID->92695868]
 }, Open  ]],
-Cell[25908, 710, 248, 5, 35, "ExampleSection",ExpressionUUID->"e68ec353-2152-49db-974d-31fa1630725c",
+Cell[10402, 318, 248, 5, 35, "ExampleSection",ExpressionUUID->"e68ec353-2152-49db-974d-31fa1630725c",
  CellID->368664096],
-Cell[26159, 717, 258, 5, 23, "ExampleSection",ExpressionUUID->"d34f9a9c-5ddf-4210-a0b0-009831645c9b",
+Cell[10653, 325, 258, 5, 23, "ExampleSection",ExpressionUUID->"d34f9a9c-5ddf-4210-a0b0-009831645c9b",
  CellID->163664889],
-Cell[26420, 724, 250, 5, 23, "ExampleSection",ExpressionUUID->"0f6a8694-3528-4601-be90-024e5896e648",
+Cell[10914, 332, 250, 5, 23, "ExampleSection",ExpressionUUID->"0f6a8694-3528-4601-be90-024e5896e648",
  CellID->77624274],
-Cell[26673, 731, 256, 5, 23, "ExampleSection",ExpressionUUID->"0c6d6013-3324-4bca-a10e-0ee8a1c19be9",
+Cell[11167, 339, 256, 5, 23, "ExampleSection",ExpressionUUID->"0c6d6013-3324-4bca-a10e-0ee8a1c19be9",
  CellID->926715178],
-Cell[26932, 738, 249, 5, 23, "ExampleSection",ExpressionUUID->"bf3d317b-4b27-4a65-b517-ebc3d2fa007a",
+Cell[11426, 346, 249, 5, 23, "ExampleSection",ExpressionUUID->"bf3d317b-4b27-4a65-b517-ebc3d2fa007a",
  CellID->549857286]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[27218, 748, 110, 1, 72, "MetadataSection",ExpressionUUID->"6bb7a541-93c9-4dd2-8083-0143fdc38f61",
+Cell[11712, 356, 110, 1, 72, "MetadataSection",ExpressionUUID->"6bb7a541-93c9-4dd2-8083-0143fdc38f61",
  CellID->577010124],
-Cell[27331, 751, 473, 11, 26, "History",ExpressionUUID->"6fb49fa8-ee40-4e42-ad85-a7f3b19618bd",
+Cell[11825, 359, 473, 11, 26, "History",ExpressionUUID->"6fb49fa8-ee40-4e42-ad85-a7f3b19618bd",
  CellID->217446755],
 Cell[CellGroupData[{
-Cell[27829, 766, 484, 13, 21, "CategorizationSection",ExpressionUUID->"7608f9f1-73cf-4be7-a540-39e5061a411b",
+Cell[12323, 374, 484, 13, 21, "CategorizationSection",ExpressionUUID->"7608f9f1-73cf-4be7-a540-39e5061a411b",
  CellID->268000455],
-Cell[28316, 781, 133, 2, 35, "Categorization",ExpressionUUID->"1d8dd100-d78c-4702-aa63-a10b86e5e781",
+Cell[12810, 389, 133, 2, 35, "Categorization",ExpressionUUID->"1d8dd100-d78c-4702-aa63-a10b86e5e781",
  CellID->86926292],
-Cell[28452, 785, 169, 2, 35, "Categorization",ExpressionUUID->"36939383-d558-4184-a012-d51c053db9b9",
+Cell[12946, 393, 169, 2, 35, "Categorization",ExpressionUUID->"36939383-d558-4184-a012-d51c053db9b9",
  CellID->219216458],
-Cell[28624, 789, 166, 2, 35, "Categorization",ExpressionUUID->"46214bba-c71d-4c37-ae1b-5ec2e3646500",
+Cell[13118, 397, 166, 2, 35, "Categorization",ExpressionUUID->"46214bba-c71d-4c37-ae1b-5ec2e3646500",
  CellID->976473280],
-Cell[28793, 793, 177, 3, 35, "Categorization",ExpressionUUID->"5eb4d707-5b17-4223-8aea-6c5618ecaf04",
+Cell[13287, 401, 177, 3, 35, "Categorization",ExpressionUUID->"5eb4d707-5b17-4223-8aea-6c5618ecaf04",
  CellID->234624795]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[29007, 801, 109, 1, 21, "KeywordsSection",ExpressionUUID->"d8ea9d0a-36f6-4d71-8bfd-e3f4d0a86579",
+Cell[13501, 409, 109, 1, 21, "KeywordsSection",ExpressionUUID->"d8ea9d0a-36f6-4d71-8bfd-e3f4d0a86579",
  CellID->57155641],
-Cell[29119, 804, 99, 1, 70, "Keywords",ExpressionUUID->"babdc09c-50cb-474c-afee-41aae5d01179",
+Cell[13613, 412, 99, 1, 70, "Keywords",ExpressionUUID->"babdc09c-50cb-474c-afee-41aae5d01179",
  CellID->285802137]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[29255, 810, 119, 1, 21, "TemplatesSection",ExpressionUUID->"a28f9a70-a6cc-42f1-8792-4a58d827aafc",
+Cell[13749, 418, 119, 1, 21, "TemplatesSection",ExpressionUUID->"a28f9a70-a6cc-42f1-8792-4a58d827aafc",
  CellID->172664633],
-Cell[29377, 813, 147, 2, 70, "Template",ExpressionUUID->"7b77d68d-daeb-4a92-bace-3017880e86d3",
+Cell[13871, 421, 147, 2, 70, "Template",ExpressionUUID->"7b77d68d-daeb-4a92-bace-3017880e86d3",
  CellID->65073553],
-Cell[29527, 817, 137, 2, 70, "Template",ExpressionUUID->"16bb45f3-9e2e-4d48-8774-25dc4fc8b05e",
+Cell[14021, 425, 137, 2, 70, "Template",ExpressionUUID->"16bb45f3-9e2e-4d48-8774-25dc4fc8b05e",
  CellID->420872416],
-Cell[29667, 821, 134, 2, 70, "Template",ExpressionUUID->"f29a89ac-c399-4615-8dbf-4863fcffe113",
+Cell[14161, 429, 134, 2, 70, "Template",ExpressionUUID->"f29a89ac-c399-4615-8dbf-4863fcffe113",
  CellID->29640011],
-Cell[29804, 825, 137, 2, 70, "Template",ExpressionUUID->"614d0e17-e1ef-4b93-bf32-90627babd167",
+Cell[14298, 433, 137, 2, 70, "Template",ExpressionUUID->"614d0e17-e1ef-4b93-bf32-90627babd167",
  CellID->105157583]
 }, Closed]]
 }, Open  ]]

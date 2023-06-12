@@ -4,7 +4,7 @@ BeginPackage["PeterBurbery`BasicHypergeometricFunctions`"];
 
 (* Declare your packages public symbols here. *)
 
-PeterBurbery`BasicHypergeometricFunctions`PositionQInFrontOfList;
+PositionQInFrontOfList;
 
 Begin["`Private`"];
 
@@ -13,14 +13,15 @@ Begin["`Private`"];
 PositionQInFrontOfList // ClearAll
 
 PositionQInFrontOfList[input_?VectorQ] :=
-  (* Module[{list},
-    list = Cases[Global`q | Global`q^_ | Sin[Global`q] | Sin[Global`q^_]][input];
-    Join[list, UnsortedComplement[input, list]]
-  ] *)
-  Module[{list},
-    list = Cases[Global`q | Global`q^_ ][input];
+(* Module[{list},
+  list = Cases[Global`q | Global`q^_ | Sin[Global`q] | Sin[Global`q^_]][input];
+  Join[list, UnsortedComplement[input, list]]
+] *)Module[{list},
+    list = Cases[Global`q | Global`q^_][input];
     Join[list, Complement[input, list]]
   ]
+PositionQInFrontOfList[args___] :=
+    Null /; CheckArguments[PositionQInFrontOfList[args], 1]
 End[]; (* End `Private` *)
 
 EndPackage[];

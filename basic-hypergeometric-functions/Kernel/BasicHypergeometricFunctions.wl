@@ -1,5 +1,6 @@
 (* ::Package:: *)
 
+
 <<PeterBurbery`BasicHypergeometricFunctions`PositionQInFrontOfList`;
 
 <<PeterBurbery`BasicHypergeometricFunctions`UnsortedComplement`;
@@ -128,3 +129,5 @@
 <<PeterBurbery`BasicHypergeometricFunctions`FractionToPowerQ`
 
 <<PeterBurbery`BasicHypergeometricFunctions`PolynomializeFractionPower`;
+
+<<PeterBurbery`BasicHypergeometricFunctions`QHypergeometricPFQExpressionQ`;

@@ -14,25 +14,16 @@ Begin["`Private`"];
 
 QHypergeometricPFQLaTeX // ClearAll
 
-Attributes[QHypergeometricPFQLaTeX] = {HoldFirst};
+QHypergeometricPFQLaTeX::usage = "QHypergeometricPFQLaTeX[input] returns a LaTeX string for the Q-hypergeometric PFQ function input."
 
-QHypergeometricPFQLaTeX[input_ ? (!EquationQ[#]&)] :=
-  RearrangeMultiplicativeSubexpressions //@ FullSimplify[Inactivate[input,
-     Sum | NIntegrate] /. {Inactive[NIntegrate][f_, {x_, xmin_, xmax_}, ___
-    ] :> Inactive[Integrate][f, {x, xmin, xmax}]}]
+SetAttributes[QHypergeometricPFQLaTeX, {Listable}]
 
-(*This could cause problems where things would move*)
+QHypergeometricPFQLaTeX[input_ ? (QHypergeometricPFQExpressionQ[#]&)] :=
+    TemplateApply["\\qhyp{<* #length1 *>}{<* #length2 *>}{<* StringRiffle[Table[StringDelete[StringDelete[ToString[TeXForm[n]],\"**\"],\"\\\\text{}\"],{n,#list1}] ,\",\"]*>}{<* StringRiffle[Table[StringDelete[StringDelete[ToString[TeXForm[n]],\"**\"],\"\\\\text{}\"],{n,#list2}] ,\",\"]*>}{<* StringRiffle[Table[StringDelete[StringDelete[ToString[TeXForm[n]],\"**\"],\"\\\\text{}\"],{n,{#base,#argument}}] ,\",\"]*>}",
+         QHypergeometricPFQData[input]]
 
-QHypergeometricPFQLaTeX[input_ ? (EquationQ[#]&)] :=
-  ApplySides[
-    Function[{side},
-      RearrangeMultiplicativeSubexpressions //@ FullSimplify[ReplaceAll[
-        {Inactive[NIntegrate][f_, {x_, xmin_, xmax_}, ___] :> Inactive[Integrate
-        ][f, {x, xmin, xmax}]}][side]]
-    ]
-    ,
-    Inactivate[input, Sum | NIntegrate]
-  ]
+QHypergeometricPFQLaTeX[args___] :=
+    Null /; CheckArguments[QHypergeometricPFQLaTeX[args], 1]
 
 End[]; (* End `Private` *)
 
