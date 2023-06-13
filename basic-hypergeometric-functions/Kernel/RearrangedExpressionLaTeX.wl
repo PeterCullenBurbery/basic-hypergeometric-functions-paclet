@@ -14,23 +14,52 @@ Begin["`Private`"];
 
 RearrangedExpressionLaTeX // ClearAll
 
-RearrangedExpressionLaTeX[input : _ ? (# =!= Hold && # =!= HoldForm&)[
-    __] | _] :=
-  ProcessTeX[StringReplace[
+RearrangedExpressionLaTeX // ClearAll
+
+RearrangedExpressionLaTeX[input_ ? (!HeldExpressionQ[#]&)] :=
+    ProcessTeX[StringReplace[
         {
+            "\\, _{" ~~ length1 : Repeated[DigitCharacter] ~~ "}" ~~ 
+                Shortest[__] ~~ "{" ~~ length2 : Repeated[DigitCharacter] ~~ "}" ~~ Shortest[
+                ___] ~~ "(" ~~ list1 : Shortest[__] ~~ ";" ~~ list2 : Shortest[__] ~~
+                 ";" ~~ base : Shortest[__] ~~ "," ~~ argument : Shortest[__] ~~ Shortest[
+                ___] ~~ ")" :>
+                QHypergeometricPFQDataToLaTeX[
+                    <|
+                        "length1" ->
+
+                            ToExpression[length1, TeXForm] + Count[Table[
+                                ToExpression[n, TeXForm], {n, StringSplit[list1, ","]}], PlusMinus[_]
+                                ]
+                        ,
+                        "length2" ->
+         
+
+                            ToExpression[length2, TeXForm] + Count[Table[
+                                ToExpression[n, TeXForm], {n, StringSplit[list2, ","]}], PlusMinus[_]
+                                ]
+                        ,
+                        "list1" -> Table[ToExpression[n, TeXForm], {n,
+                             StringSplit[list1, ","]}]
+                        ,
+                        "list2" -> Table[ToExpression[n, TeXForm], {n,
+                             StringSplit[list2, ","]}]
+                        ,
+                        "base" -> ToExpression[base, TeXForm]
+                        ,
+                        "argument" -> ToExpression[argument, TeXForm]
+                            
+                    |>
+                ]
+            ,
             s : ("\\text{W" ~~ DigitCharacter.. ~~ "}" ~~ "\\left(" ~~
                  Shortest[__] ~~ "\\right)") :> ProcessTeX[VeryWellPoisedBasicHypergeometricLaTeX[
-                ToExpression[s, TeXForm]]](*for very well poised basic hypergeometric Latex
-                
-                
-                
-                
-                
-                
-        *),
+                ToExpression[s, TeXForm]]]
+            ,
             s : ("\\text{W" ~~ DigitCharacter.. ~~ "}" ~~ "(" ~~ Shortest[
                 __] ~~ ")") :> ProcessTeX[VeryWellPoisedBasicHypergeometricLaTeX[ToExpression[
-                s, TeXForm]]](*for very well poised basic hypergeometric Latex*),
+                s, TeXForm]]]
+            ,
             s : ("\\text{QPh}" ~~ "(" | "\\left(" ~~ "\\{" | "\\left\\{"
                  ~~ Shortest[__] ~~ "\\}" | "\\right\\}" ~~ "," ~~ Shortest[__] ~~ ","
                  ~~ Shortest[__] ~~ ")" | "\\right)") :> QPhLaTeX[ReplaceAndInactivate[
@@ -42,247 +71,71 @@ RearrangedExpressionLaTeX[input : _ ? (# =!= Hold && # =!= HoldForm&)[
             ,
             "\\underset{" ~~ lower : Shortest[__] ~~ "}{\\overset{" ~~
                  upper : Shortest[__] ~~ "}{\\sum" ~~ Shortest[___] ~~ "}}" :> "\\sum_{"
-                 <> lower <> "}^{" <> upper <> "}"(* ,
-            "\\, _{" ~~ length1 : Repeated[DigitCharacter] ~~ "}" ~~ 
-    
-    
-    
-                Shortest[__] ~~ "{" ~~ length2 : Repeated[DigitCharacter] ~~ "}" ~~ Shortest[
-    
-    
-    
-                ___] ~~ "(" ~~ list1 : Shortest[__] ~~ ";" ~~ list2 : Shortest[__] ~~
-    
-    
-    
-                 ";" ~~ base : Shortest[__] ~~ "," ~~ argument : Shortest[__] ~~ Shortest[
-    
-    
-    
-                ___] ~~ ")" :> QHypergeometricPFQDataToLaTeX[<|"length1" -> ToExpression[
-    
-    
-    
-                length1, TeXForm], "length2" -> ToExpression[length2, TeXForm], "list1"
-    
-    
-    
-                 -> Table[ToExpression[n, TeXForm], {n, StringSplit[list1, ","]}], "list2"
-    
-    
-    
-                 -> Table[ToExpression[n, TeXForm], {n, StringSplit[list2, ","]}], "base"
-    
-    
-    
-                 -> ToExpression[base, TeXForm], "argument" -> ToExpression[argument,
-    
-    
-    
-                 TeXForm]|>](* "\\, _{" ~~ length1 : Repeated[DigitCharacter] ~~ "}" ~~  
-    
-    
-    *)
-                
-            
-Shortest[__] ~~ "{" ~~ length2 : Repeated[DigitCharacter] ~~ "}" ~~ Shortest[
-    
-    
-    
-    
-
-___] ~~ "(" ~~ list1 : Shortest[__] ~~ ";" ~~ list2 : Shortest[__] ~~
-    
-    
-    
-    
-
- ";" ~~ base : Shortest[__] ~~ "," ~~ argument : Shortest[__] ~~ Shortest[
-    
-    
-    
-    
-
-___] ~~ ")" :> QHypergeometricPFQDataToLaTeX[<|"length1" -> ToExpression[
-    
-    
-    
-    
-
-length1, TeXForm], "length2" -> ToExpression[length2, TeXForm], "list1"
-    
-    
-    
-    
-
- -> Table[ToExpression[n, TeXForm], {n, StringSplit[list1, ","]}], "list2"
-    
-    
-    
-    
-
- -> Table[ToExpression[n, TeXForm], {n, StringSplit[list2, ","]}], "base"
-    
-    
-    
-    
-
- -> ToExpression[base, TeXForm], "argument" -> ToExpression[argument,
-    
-    
-    
-    
-
- TeXForm]|>] *)
+                 <> lower <> "}^{" <> upper <> "}"
         }
-    ][TeXString[PolynomializeFractionPower[VeryWellPoisedHypergeometricToNumerator[
-        Activate[Echo @ RearrangeExpression[input], Sum]]]]]]
+    ][TeXString[AddPlusMinus[PolynomializeFractionPower[VeryWellPoisedHypergeometricToNumerator[
+        Activate[RearrangeExpression[input], Sum]]]]]]]
 
-(* ProcessTeX[StringReplace[{s : ("\\text{W" ~~ DigitCharacter.. ~~ "}" 
-    ~~ "\\left(" ~~ Shortest[__] ~~ "\\right)") :> ProcessTeX[VeryWellPoisedBasicHypergeometricLaTeX[
-    ToExpression[s, TeXForm]]](*for very well poised basic hypergeometric Latex
-    *), s : ("\\text{W" ~~ DigitCharacter.. ~~ "}" ~~ "(" ~~ Shortest[__]
-     ~~ ")") :> ProcessTeX[VeryWellPoisedBasicHypergeometricLaTeX[ToExpression[
-    s, TeXForm]]](*for very well poised basic hypergeometric Latex*), s :
-     ("\\text{QPh}" ~~ "(" | "\\left(" ~~ "\\{" | "\\left\\{" ~~ Shortest[
-    __] ~~ "\\}" | "\\right\\}" ~~ "," ~~ Shortest[__] ~~ "," ~~ Shortest[
-    __] ~~ ")" | "\\right)") :> QPhLaTeX[ReplaceAndInactivate[ToExpression[
-    s, TeXForm]]], s : ("\\text{QPhI}" ~~ "(" | "\\left(" ~~ "\\{" | "\\left\\{"
-     ~~ Shortest[__] ~~ "\\}" | "\\right\\}" ~~ "," ~~ Shortest[__] ~~ ")"
-     | "\\right)") :> QPhILaTeX[ToExpression[s, TeXForm]], "\\underset{" 
-    ~~ lower : Shortest[__] ~~ "}{\\overset{" ~~ upper : Shortest[__] ~~ 
-    "}{\\sum" ~~ Shortest[___] ~~ "}}" :> "\\sum_{" <> lower <> "}^{" <> 
-    upper <> "}", "\\, _{" ~~ length1 : Repeated[DigitCharacter] ~~ "}" ~~
-     Shortest[__] ~~ "{" ~~ length2 : Repeated[DigitCharacter] ~~ "}" ~~ 
-    Shortest[___] ~~ "(" ~~ list1 : Shortest[__] ~~ ";" ~~ list2 : Shortest[
-    __] ~~ ";" ~~ base : Shortest[__] ~~ "," ~~ argument : Shortest[__] ~~
-     Shortest[___] ~~ ")" :> QHypergeometricPFQDataToLaTeX[<|"length1" ->
-     ToExpression[length1, TeXForm], "length2" -> ToExpression[length2, TeXForm
-    ], "list1" -> Table[ToExpression[n, TeXForm], {n, StringSplit[list1, 
-    ","]}], "list2" -> Table[ToExpression[n, TeXForm], {n, StringSplit[list2,
-     ","]}], "base" -> ToExpression[base, TeXForm], "argument" -> ToExpression[
-    argument, TeXForm]|>],"\\, _{" ~~ length1 : Repeated[DigitCharacter] ~~ "}" ~~
-         Shortest[__] ~~ "{" ~~ length2 : Repeated[DigitCharacter] ~~ "}" ~~ 
-        Shortest[___] ~~ "(" ~~ list1 : Shortest[__] ~~ ";" ~~ list2 : Shortest[
-        __] ~~ ";" ~~ base : Shortest[__] ~~ "," ~~ argument : Shortest[__] ~~
-         Shortest[___] ~~ ")" :> QHypergeometricPFQDataToLaTeX[<|"length1" ->
-         ToExpression[length1, TeXForm], "length2" -> ToExpression[length2, TeXForm
-        ], "list1" -> Table[ToExpression[n, TeXForm], {n, StringSplit[list1, 
-        ","]}], "list2" -> Table[ToExpression[n, TeXForm], {n, StringSplit[list2,
-         ","]}], "base" -> ToExpression[base, TeXForm], "argument" -> ToExpression[
-        argument, TeXForm]|>]}][TeXString[PolynomializeFractionPower[VeryWellPoisedHypergeometricToNumerator[
-    Activate[Echo @ RearrangeExpression[\!\(\*
-TagBox["input",
-HoldForm]\)
-    ], Sum]]]]]] *)
+RearrangedExpressionLaTeX[input_ ? (HeldExpressionQ[#]&)] :=
+    First[Table[ProcessTeX[StringReplace[
+        {
+            "\\, _{" ~~ length1 : Repeated[DigitCharacter] ~~ "}" ~~ 
+                Shortest[__] ~~ "{" ~~ length2 : Repeated[DigitCharacter] ~~ "}" ~~ Shortest[
+                ___] ~~ "(" ~~ list1 : Shortest[__] ~~ ";" ~~ list2 : Shortest[__] ~~
+                 ";" ~~ base : Shortest[__] ~~ "," ~~ argument : Shortest[__] ~~ Shortest[
+                ___] ~~ ")" :>
+                QHypergeometricPFQDataToLaTeX[
+                    <|
+                        "length1" ->
 
-RearrangedExpressionLaTeX[input : (Hold | HoldForm)[__]] :=
-    Function[n,
-            ProcessTeX[StringReplace[
-                {
-                    s : ("\\text{W" ~~ DigitCharacter.. ~~ "}" ~~ "\\left("
-                         ~~ Shortest[__] ~~ "\\right)") :> ProcessTeX[VeryWellPoisedBasicHypergeometricLaTeX[
-                        ToExpression[s, TeXForm]]](*for very well poised basic hypergeometric Latex
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                *),
-                    s : ("\\text{W" ~~ DigitCharacter.. ~~ "}" ~~ "("
-                         ~~ Shortest[__] ~~ ")") :> ProcessTeX[VeryWellPoisedBasicHypergeometricLaTeX[
-                        ToExpression[s, TeXForm]]](*for very well poised basic hypergeometric Latex
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        *) ,
-                    s : ("\\text{QPh}" ~~ "(" | "\\left(" ~~ "\\{" | 
-                        "\\left\\{" ~~ Shortest[__] ~~ "\\}" | "\\right\\}" ~~ "," ~~ Shortest[
-                        __] ~~ "," ~~ Shortest[__] ~~ ")" | "\\right)") :> QPhLaTeX[ReplaceAndInactivate[
-                        ToExpression[s, TeXForm]]]
-                    ,
-                    s : ("\\text{QPhI}" ~~ "(" | "\\left(" ~~ "\\{" |
-                         "\\left\\{" ~~ Shortest[__] ~~ "\\}" | "\\right\\}" ~~ "," ~~ Shortest[
-                        __] ~~ ")" | "\\right)") :> QPhILaTeX[ToExpression[s, TeXForm]](* ,
-                   "\\underset{" ~~ lower : Shortest[__] ~~ "}{\\overset{"
-    
-    
-    
-                        ~~ upper : Shortest[__] ~~ "}{\\sum" ~~ Shortest[___] ~~ "}}" :> "\\sum_{"
-    
-    
-    
-                        <> lower <> "}^{" <> upper <> "}",
-                        "\\, _{" ~~ length1 : Repeated[DigitCharacter] ~~ "}" ~~ 
-    
-    
-    
- Shortest[__] ~~ "{" ~~ length2 : Repeated[DigitCharacter] ~~ "}" ~~ 
-    
-    
-    
- Shortest[___] ~~ "(" ~~ list1 : Shortest[__] ~~ ";" ~~ 
- list2 : Shortest[__] ~~ ";" ~~ base : Shortest[__] ~~ "," ~~ 
- argument : Shortest[__] ~~ Shortest[___] ~~ ")" :> 
-QHypergeometricPFQDataToLaTeX[<|
-  "length1" -> ToExpression[length1, TeXForm], 
-  "length2" -> ToExpression[length2, TeXForm], 
-  "list1" -> 
-   Table[ToExpression[n, TeXForm], {n, StringSplit[list1, ","]}], 
-  "list2" -> 
-   Table[ToExpression[n, TeXForm], {n, StringSplit[list2, ","]}], 
-  "base" -> ToExpression[base, TeXForm], 
-  "argument" -> ToExpression[argument, TeXForm]|>] *)
-                }
-            ][TeXString[PolynomializeFractionPower[VeryWellPoisedHypergeometricToNumerator[
-                Activate[RearrangeExpression[n], Sum]]]]]]
-        ] @@ input
+                            ToExpression[length1, TeXForm] + Count[Table[
+                                ToExpression[n, TeXForm], {n, StringSplit[list1, ","]}], PlusMinus[_]
+                                ]
+                        ,
+                        "length2" ->
 
-(* 
-RearrangedExpressionLaTeX[input_Hold] :=
-    StringReplace[StringReplace[DeleteNonCommutativeMultiplyInTeXString[
-        Activate[ReplaceAndInactivate[#], Sum]], {s : ("\\text{W" ~~ DigitCharacter
-        .. ~~ "}" ~~ "\\left(" ~~ Shortest[__] ~~ "\\right)") :> (StringReplace[
-        {"\\text{" ~~ r : Shortest[__] ~~ "}" :> r}][VeryWellPoisedBasicHypergeometricLaTeX[
-        ToExpression[s, TeXForm]]]), s : ("\\text{QPh}" ~~ "(" | "\\left(" ~~
-         "\\{" | "\\left\\{" ~~ Shortest[__] ~~ "\\}" | "\\right\\}" ~~ "," ~~
-         Shortest[__] ~~ "," ~~ Shortest[__] ~~ ")" | "\\right)") :> QPhLaTeX[
-        ReplaceAndInactivate[ToExpression[s, TeXForm]]], s : ("\\text{QPhI}" 
-        ~~ "(" | "\\left(" ~~ "\\{" | "\\left\\{" ~~ Shortest[__] ~~ "\\}" | 
-        "\\right\\}" ~~ "," ~~ Shortest[__] ~~ ")" | "\\right)") :> QPhILaTeX[
-        ToExpression[s, TeXForm]], "\\underset{" ~~ lower : Shortest[__] ~~ "}{\\overset{"
-         ~~ upper : Shortest[__] ~~ "}{\\sum" ~~ Shortest[___] ~~ "}}" :> "\\sum_{"
-         <> lower <> "}^{" <> upper <> "}", s : ("\\text{W" ~~ DigitCharacter
-        .. ~~ "}" ~~ "(" ~~ Shortest[__] ~~ ")") :> VeryWellPoisedBasicHypergeometricLaTeX[
-        ToExpression[s, TeXForm]]}], {"\\text{" ~~ s : Shortest[__] ~~ "}" :>
-         s}]& @@ (input)
+                            ToExpression[length2, TeXForm] + Count[Table[
+                                ToExpression[n, TeXForm], {n, StringSplit[list2, ","]}], PlusMinus[_]
+                                ]
+                        ,
+                        "list1" -> Table[ToExpression[n, TeXForm], {n,
+                             StringSplit[list1, ","]}]
+                        ,
+                        "list2" -> Table[ToExpression[n, TeXForm], {n,
+                             StringSplit[list2, ","]}]
+                        ,
+                        "base" -> ToExpression[base, TeXForm]
+                        ,
+                        "argument" -> ToExpression[argument, TeXForm]
+                            
+                    |>
+                ]
+            ,
+            s : ("\\text{W" ~~ DigitCharacter.. ~~ "}" ~~ "\\left(" ~~
+                 Shortest[__] ~~ "\\right)") :> ProcessTeX[VeryWellPoisedBasicHypergeometricLaTeX[
+                ToExpression[s, TeXForm]]]
+            ,
+            s : ("\\text{W" ~~ DigitCharacter.. ~~ "}" ~~ "(" ~~ Shortest[
+                __] ~~ ")") :> ProcessTeX[VeryWellPoisedBasicHypergeometricLaTeX[ToExpression[
+                s, TeXForm]]]
+            ,
+            s : ("\\text{QPh}" ~~ "(" | "\\left(" ~~ "\\{" | "\\left\\{"
+                 ~~ Shortest[__] ~~ "\\}" | "\\right\\}" ~~ "," ~~ Shortest[__] ~~ ","
+                 ~~ Shortest[__] ~~ ")" | "\\right)") :> QPhLaTeX[ReplaceAndInactivate[
+                ToExpression[s, TeXForm]]]
+            ,
+            s : ("\\text{QPhI}" ~~ "(" | "\\left(" ~~ "\\{" | "\\left\\{"
+                 ~~ Shortest[__] ~~ "\\}" | "\\right\\}" ~~ "," ~~ Shortest[__] ~~ ")"
+                 | "\\right)") :> QPhILaTeX[ToExpression[s, TeXForm]]
+            ,
+            "\\underset{" ~~ lower : Shortest[__] ~~ "}{\\overset{" ~~
+                 upper : Shortest[__] ~~ "}{\\sum" ~~ Shortest[___] ~~ "}}" :> "\\sum_{"
+                 <> lower <> "}^{" <> upper <> "}"
+        }
+    ][TeXString[AddPlusMinus[PolynomializeFractionPower[VeryWellPoisedHypergeometricToNumerator[
+        Activate[RearrangeExpression[currentitem], Sum]]]]]]], {currentitem, 
+        {input}}]]
 
-RearrangedExpressionLaTeX[input_HoldForm] :=
-    StringReplace[StringReplace[DeleteNonCommutativeMultiplyInTeXString[
-        Activate[ReplaceAndInactivate[#], Sum]], {s : ("\\text{W" ~~ DigitCharacter
-        .. ~~ "}" ~~ "\\left(" ~~ Shortest[__] ~~ "\\right)") :> (StringReplace[
-        {"\\text{" ~~ r : Shortest[__] ~~ "}" :> r}][VeryWellPoisedBasicHypergeometricLaTeX[
-        ToExpression[s, TeXForm]]]), s : ("\\text{QPh}" ~~ "(" | "\\left(" ~~
-         "\\{" | "\\left\\{" ~~ Shortest[__] ~~ "\\}" | "\\right\\}" ~~ "," ~~
-         Shortest[__] ~~ "," ~~ Shortest[__] ~~ ")" | "\\right)") :> QPhLaTeX[
-        ReplaceAndInactivate[ToExpression[s, TeXForm]]], s : ("\\text{QPhI}" 
-        ~~ "(" | "\\left(" ~~ "\\{" | "\\left\\{" ~~ Shortest[__] ~~ "\\}" | 
-        "\\right\\}" ~~ "," ~~ Shortest[__] ~~ ")" | "\\right)") :> QPhILaTeX[
-        ToExpression[s, TeXForm]], "\\underset{" ~~ lower : Shortest[__] ~~ "}{\\overset{"
-         ~~ upper : Shortest[__] ~~ "}{\\sum" ~~ Shortest[___] ~~ "}}" :> "\\sum_{"
-         <> lower <> "}^{" <> upper <> "}", s : ("\\text{W" ~~ DigitCharacter
-        .. ~~ "}" ~~ "(" ~~ Shortest[__] ~~ ")") :> VeryWellPoisedBasicHypergeometricLaTeX[
-        ToExpression[s, TeXForm]]}], {"\\text{" ~~ s : Shortest[__] ~~ "}" :>
-         s}]& @@ (input) *)
 
 End[]; (* End `Private` *)
 

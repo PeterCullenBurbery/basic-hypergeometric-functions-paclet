@@ -29,45 +29,14 @@ testRearrangedExpressionLaTeX[input_ ? (!HeldExpressionQ[#]&)] :=
                 QHypergeometricPFQDataToLaTeX[
                     <|
                         "length1" ->
-                              (*ToExpression[length1,TeXForm]+Count[ToExpression[
-                                
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-                            
-                            
-                            
-list1,TeXForm],PlusMinus[_]]*)
+
                             ToExpression[length1, TeXForm] + Count[Table[
                                 ToExpression[n, TeXForm], {n, StringSplit[list1, ","]}], PlusMinus[_]
                                 ]
                         ,
                         "length2" ->
-                              (*ToExpression[length2,TeXForm]+Count[ToExpression[
-                                
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-                            
-                            
-                            
-list2,TeXForm],PlusMinus[_]]*)
+         
+
                             ToExpression[length2, TeXForm] + Count[Table[
                                 ToExpression[n, TeXForm], {n, StringSplit[list2, ","]}], PlusMinus[_]
                                 ]
@@ -120,45 +89,13 @@ testRearrangedExpressionLaTeX[input_ ? (HeldExpressionQ[#]&)] :=
                 QHypergeometricPFQDataToLaTeX[
                     <|
                         "length1" ->
-                              (*ToExpression[length1,TeXForm]+Count[ToExpression[
-                                
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-                            
-                            
-                            
-list1,TeXForm],PlusMinus[_]]*)
+
                             ToExpression[length1, TeXForm] + Count[Table[
                                 ToExpression[n, TeXForm], {n, StringSplit[list1, ","]}], PlusMinus[_]
                                 ]
                         ,
                         "length2" ->
-                              (*ToExpression[length2,TeXForm]+Count[ToExpression[
-                                
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-                            
-                            
-                            
-list2,TeXForm],PlusMinus[_]]*)
+
                             ToExpression[length2, TeXForm] + Count[Table[
                                 ToExpression[n, TeXForm], {n, StringSplit[list2, ","]}], PlusMinus[_]
                                 ]
@@ -213,45 +150,13 @@ newtestRearrangedExpressionLaTeX[input_ /; HeldExpressionQ[input] ===
                 QHypergeometricPFQDataToLaTeX[
                     <|
                         "length1" ->
-                              (*ToExpression[length1,TeXForm]+Count[ToExpression[
-                                
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-                            
-                            
-                            
-list1,TeXForm],PlusMinus[_]]*)
+
                             ToExpression[length1, TeXForm] + Count[Table[
                                 ToExpression[n, TeXForm], {n, StringSplit[list1, ","]}], PlusMinus[_]
                                 ]
                         ,
                         "length2" ->
-                              (*ToExpression[length2,TeXForm]+Count[ToExpression[
-                                
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-                            
-                            
-                            
-list2,TeXForm],PlusMinus[_]]*)
+
                             ToExpression[length2, TeXForm] + Count[Table[
                                 ToExpression[n, TeXForm], {n, StringSplit[list2, ","]}], PlusMinus[_]
                                 ]
