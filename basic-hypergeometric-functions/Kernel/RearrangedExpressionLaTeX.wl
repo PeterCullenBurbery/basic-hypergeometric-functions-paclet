@@ -14,7 +14,7 @@ Begin["`Private`"];
 
 RearrangedExpressionLaTeX // ClearAll
 
-
+(* SetAtttributes[RearrangedExpressionLaTeX,{HoldAll}] *)
 
 RearrangedExpressionLaTeX[input_ ? (!HeldExpressionQ[#]&)] :=
     ProcessTeX[StringReplace[
