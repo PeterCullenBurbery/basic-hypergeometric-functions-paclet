@@ -14,7 +14,7 @@ Begin["`Private`"];
 
 RearrangedExpressionLaTeX // ClearAll
 
-RearrangedExpressionLaTeX // ClearAll
+
 
 RearrangedExpressionLaTeX[input_ ? (!HeldExpressionQ[#]&)] :=
     ProcessTeX[StringReplace[
@@ -73,8 +73,7 @@ RearrangedExpressionLaTeX[input_ ? (!HeldExpressionQ[#]&)] :=
                  upper : Shortest[__] ~~ "}{\\sum" ~~ Shortest[___] ~~ "}}" :> "\\sum_{"
                  <> lower <> "}^{" <> upper <> "}"
         }
-    ][TeXString[AddPlusMinus[PolynomializeFractionPower[VeryWellPoisedHypergeometricToNumerator[
-        Activate[RearrangeExpression[input], Sum]]]]]]]
+    ][TeXString[Activate[ApplyTransformationsToExpression[input],Sum]]]]
 
 RearrangedExpressionLaTeX[input_ ? (HeldExpressionQ[#]&)] :=
     First[Table[ProcessTeX[StringReplace[
@@ -132,8 +131,7 @@ RearrangedExpressionLaTeX[input_ ? (HeldExpressionQ[#]&)] :=
                  upper : Shortest[__] ~~ "}{\\sum" ~~ Shortest[___] ~~ "}}" :> "\\sum_{"
                  <> lower <> "}^{" <> upper <> "}"
         }
-    ][TeXString[AddPlusMinus[PolynomializeFractionPower[VeryWellPoisedHypergeometricToNumerator[
-        Activate[RearrangeExpression[currentitem], Sum]]]]]]], {currentitem, 
+    ][TeXString[Activate[ApplyTransformationsToExpression[currentitem],Sum]]]], {currentitem, 
         {input}}]]
 
 

@@ -15,13 +15,21 @@ TransformExpression//ClearAll
 TransformExpression[input_?GeneralizedNotArrayQ]:=Module[{groupData, 
   instancesOfVeryWellPoisedBasicHypergeometricFunctionsInNumerator, 
   otherNumeratorTerms, numerator, 
-  denominator}, {numerator, denominator} = 
-  NumeratorDenominator[input]; 
+  denominator}, {numerator, denominator} = NumeratorDenominator[input];
  groupData = 
-  GroupBy[VeryWellPoisedBasicHypergeometricFunctionQ[#] &][
-   List @@ numerator]; 
+  
+   Which[Head[numerator] === Times, 
+    GroupBy[VeryWellPoisedBasicHypergeometricFunctionQ[#] &][
+     List @@ numerator], WAndDigitsQ[Head[numerator]], 
+    GroupBy[VeryWellPoisedBasicHypergeometricFunctionQ[#] &][
+     List@numerator], Head[numerator] === NonCommutativeMultiply, 
+    GroupBy[VeryWellPoisedBasicHypergeometricFunctionQ[#] &][
+     List @@ numerator]];
  instancesOfVeryWellPoisedBasicHypergeometricFunctionsInNumerator = 
-  groupData[True]; otherNumeratorTerms = groupData[False]; 
+  groupData[True];
+ otherNumeratorTerms = 
+  Which[KeyExistsQ[groupData, False], 
+   groupData[False], ! KeyExistsQ[groupData, False], 1];
  NonCommutativeMultiply[
   Divide @@ {NonCommutativeMultiply @@ otherNumeratorTerms, 
     denominator}, 

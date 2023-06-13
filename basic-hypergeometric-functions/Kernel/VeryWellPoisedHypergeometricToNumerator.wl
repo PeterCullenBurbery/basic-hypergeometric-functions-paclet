@@ -16,8 +16,8 @@ Begin["`Private`"];
 VeryWellPoisedHypergeometricToNumerator//ClearAll
 VeryWellPoisedHypergeometricToNumerator[input_] := 
  input /. {x_?FractionQ /; 
-     MemberQ[x, _?VeryWellPoisedBasicHypergeometricFunctionQ, All] ===
-       True :> TransformExpression[x]}
+ And @@ {MemberQ[x, _?VeryWellPoisedBasicHypergeometricFunctionQ, 
+     All] === True, MemberQ[x, Sum, All, Heads -> True] === False}:> TransformExpression[x]}
 
 End[]; (* End `Private` *)
 

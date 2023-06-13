@@ -17,7 +17,10 @@ PositionQInFrontOfList[input_?VectorQ] :=
   list = Cases[Global`q | Global`q^_ | Sin[Global`q] | Sin[Global`q^_]][input];
   Join[list, UnsortedComplement[input, list]]
 ] *)Module[{list},
-    list = Cases[Global`q | Global`q^_][input];
+    list = Cases[(_?(Function[{symbol}, 
+   
+     Quiet[StringMatchQ[Quiet[FullSymbolName[symbol],General::strse], 
+      "*`q"],StringMatchQ::strse], {}]))^_.][input];
     Join[list, Complement[input, list]]
   ]
 PositionQInFrontOfList[args___] :=

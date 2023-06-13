@@ -8,13 +8,13 @@
 
 PeterBurbery`BasicHypergeometricFunctions`QPhLaTeX;
 
-
+(* Global`QPh; *)
 Begin["`Private`"];
 
 (* Define your public and private symbols here. *)
 QPhLaTeX//ClearAll
 SetAttributes[QPhLaTeX, {Listable}]
-QPhLaTeX[input_Global`QPh] := 
+(* QPhLaTeX[input_Global`QPh] := 
 RemoveMathMode[AddSemicolonToQPochhammerTeXString[
  AppendBaseToTeXString[
   BracketsToParentheses[
@@ -25,9 +25,20 @@ RemoveMathMode[AddSemicolonToQPochhammerTeXString[
        TakeOutLastArgument[
         MakeFirstListSequence[
          ReplaceAndInactivate[input]]]]]]]], 
-  Last[input]]]]
+  Last[input]]]] *)
 
-           
+     QPhLaTeX[input_] := 
+RemoveMathMode[AddSemicolonToQPochhammerTeXString[
+ AppendBaseToTeXString[
+  BracketsToParentheses[
+   DeleteAllWhitespaceCharactersExceptSpace[
+    DeleteQPhInQPochammerTeXString[
+     DeleteNonCommutativeMultiplyInTeXString[
+      MakeTeXFragment[
+       TakeOutLastArgument[
+        MakeFirstListSequence[
+         ReplaceAndInactivate[input]]]]]]]], 
+  Last[input]]]]      
 
 End[]; (* End `Private` *)
 
