@@ -147,5 +147,4 @@
 
 <<PeterBurbery`BasicHypergeometricFunctions`QPhIExpressionQ`;
 
-
-
+<<PeterBurbery`BasicHypergeometricFunctions`TransformFraction`;
