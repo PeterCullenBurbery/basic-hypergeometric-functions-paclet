@@ -6,6 +6,7 @@ BeginPackage["PeterBurbery`BasicHypergeometricFunctions`"];
 
 PeterBurbery`BasicHypergeometricFunctions`QPhILaTeX;
 
+
 Begin["`Private`"];
 
 (* Define your public and private symbols here. *)
@@ -14,11 +15,13 @@ QPhILaTeX // ClearAll
 
 SetAttributes[QPhILaTeX, {Listable}]
 
-QPhILaTeX[input : (_ ? (Function[{symbol}, Quiet[StringMatchQ[Quiet[FullSymbolName[
-  symbol], General::strse], "*`QPhI"], StringMatchQ::strse], {}]))[___]
-  ] :=
-  QPhLaTeX[input /. {QPhI[list : _ ? (Function[{list}, ListQ[list], {
-    }]), base_] :> QPh[list, base, Infinity]}]
+QPhILaTeX[input_?QPhIExpressionQ] :=
+(* QPhLaTeX[input /. {QPhI[list : _ ? (Function[{list}, ListQ[
+  (* list], {}]), base_] :> QPh[list, base, Infinity]}] *)input /. {(_?QPhIExpressionQ
+  )[list : _ ? (Function[{list}, ListQ[list], {}]), base_] :> QPh[list,
+   base, Infinity]} *)QPhLaTeX[input /. {(_ ? (Function[{symbol}, Quiet[StringMatchQ[
+  Quiet[FullSymbolName[symbol], General::strse], "*`QPhI"], StringMatchQ
+  ::strse], {}]))[l : _?ListQ, base_] :> Global`QPh[l, base, Infinity]}]
 
 (* RemoveMathMode[AddSemicolonToQPochhammerTeXString[
  AppendBaseToTeXString[

@@ -17,7 +17,7 @@ ReplaceAndInactivate // ClearAll
 Attributes[ReplaceAndInactivate] = {HoldFirst};
 
 ReplaceAndInactivate[input_ ? (!EquationQ[#]&)] :=
-  RearrangeMultiplicativeSubexpressions //@ FullSimplify[Inactivate[input,
+  RearrangeMultiplicativeSubexpressions //@ FullSimplify[PowerExpand@Inactivate[input,
      Sum | NIntegrate] /. {Inactive[NIntegrate][f_, {x_, xmin_, xmax_}, ___
     ] :> Inactive[Integrate][f, {x, xmin, xmax}]}]
 
@@ -26,7 +26,7 @@ ReplaceAndInactivate[input_ ? (!EquationQ[#]&)] :=
 ReplaceAndInactivate[input_ ? (EquationQ[#]&)] :=
   ApplySides[
     Function[{side},
-      RearrangeMultiplicativeSubexpressions //@ FullSimplify[ReplaceAll[
+      RearrangeMultiplicativeSubexpressions //@ FullSimplify[PowerExpand@ReplaceAll[
         {Inactive[NIntegrate][f_, {x_, xmin_, xmax_}, ___] :> Inactive[Integrate
         ][f, {x, xmin, xmax}]}][side]]
     ]

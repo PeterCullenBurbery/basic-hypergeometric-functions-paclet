@@ -144,3 +144,8 @@
 <<PeterBurbery`BasicHypergeometricFunctions`PutSemicolonBeforeLastTerm`;
 
 <<PeterBurbery`BasicHypergeometricFunctions`StringAppend`;
+
+<<PeterBurbery`BasicHypergeometricFunctions`QPhIExpressionQ`;
+
+
+
