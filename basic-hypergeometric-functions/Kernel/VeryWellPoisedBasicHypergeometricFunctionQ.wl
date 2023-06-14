@@ -25,7 +25,8 @@ VeryWellPoisedBasicHypergeometricFunctionQ[input_ ? (!StringQ[#]&)] :=
       ? (GeneralizedNotArrayQ[#]&)]]}]}
   ]
 
-VeryWellPoisedBasicHypergeometricFunctionQ[input_?StringQ] :=
+VeryWellPoisedBasicHypergeometricFunctionQ[input_ ? (Function[{s}, StringQ[
+  s], {}])] :=
   input
 
 End[]; (* End `Private` *)

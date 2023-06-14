@@ -12,7 +12,7 @@ Begin["`Private`"];
 
 BracketsToParentheses // ClearAll
 
-BracketsToParentheses[input_?StringQ] :=
+BracketsToParentheses[input_ ? (Function[{s}, StringQ[s], {}])] :=
   StringReplacePart[StringDelete[input, Alternatives @@ {"\\left", "\\right"
     }], {"\\left(", "\\right)"}, {{3, 3}, {-3, -3}}]
 

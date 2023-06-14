@@ -135,6 +135,12 @@
 
 <<PeterBurbery`BasicHypergeometricFunctions`ApplyTransformationsToExpression`;
 
-
 <<PeterBurbery`BasicHypergeometricFunctions`FractionData`;
+
 <<PeterBurbery`BasicHypergeometricFunctions`ListToNonCommutativeMultiply`;
+
+<<PeterBurbery`BasicHypergeometricFunctions`StringReplaceGeneralized`;
+
+<<PeterBurbery`BasicHypergeometricFunctions`PutSemicolonBeforeLastTerm`;
+
+<<PeterBurbery`BasicHypergeometricFunctions`StringAppend`;
