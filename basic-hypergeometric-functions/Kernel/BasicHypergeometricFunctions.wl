@@ -153,4 +153,4 @@
 
 <<PeterBurbery`BasicHypergeometricFunctions`LaTeXExpressionData`;
 
-<<PeterBurbery`BasicHypergeometricFunctions`NeedToBreakLaTeX`;
+<<PeterBurbery`BasicHypergeometricFunctions`NeedToBreakLaTeXQ`;
