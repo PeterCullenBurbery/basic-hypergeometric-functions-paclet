@@ -1,3 +1,5 @@
+(* ::Package:: *)
+
 BeginPackage["PeterBurbery`BasicHypergeometricFunctions`"];
 
 PeterBurbery`BasicHypergeometricFunctions`FractionData;

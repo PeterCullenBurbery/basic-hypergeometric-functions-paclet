@@ -150,3 +150,5 @@
 <<PeterBurbery`BasicHypergeometricFunctions`TransformFraction`;
 
 <<PeterBurbery`BasicHypergeometricFunctions`PowerData`;
+
+<<PeterBurbery`BasicHypergeometricFunctions`LaTeXExpressionData`;
