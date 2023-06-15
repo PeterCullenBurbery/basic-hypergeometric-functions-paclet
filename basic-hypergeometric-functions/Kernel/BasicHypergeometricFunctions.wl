@@ -152,3 +152,5 @@
 <<PeterBurbery`BasicHypergeometricFunctions`PowerData`;
 
 <<PeterBurbery`BasicHypergeometricFunctions`LaTeXExpressionData`;
+
+<<PeterBurbery`BasicHypergeometricFunctions`NeedToBreakLaTeX`;
