@@ -17,18 +17,23 @@ ReplaceAndInactivate // ClearAll
 Attributes[ReplaceAndInactivate] = {HoldFirst};
 
 ReplaceAndInactivate[input_ ? (!EquationQ[#]&)] :=
-  RearrangeMultiplicativeSubexpressions //@ FullSimplify[PowerExpand@Inactivate[input,
-     Sum | NIntegrate] /. {Inactive[NIntegrate][f_, {x_, xmin_, xmax_}, ___
-    ] :> Inactive[Integrate][f, {x, xmin, xmax}]}]
+  RearrangeMultiplicativeSubexpressions //@
+    FullSimplify[                                               PowerExpand 
+      
+@ Inactivate[input, Sum | NIntegrate] /. {Inactive[NIntegrate][f_, 
+  {x_, xmin_, xmax_}, ___] :> Inactive[Integrate][f, {x, xmin, xmax}]}
+    ]
 
 (*This could cause problems where things would move*)
 
 ReplaceAndInactivate[input_ ? (EquationQ[#]&)] :=
   ApplySides[
     Function[{side},
-      RearrangeMultiplicativeSubexpressions //@ FullSimplify[PowerExpand@ReplaceAll[
-        {Inactive[NIntegrate][f_, {x_, xmin_, xmax_}, ___] :> Inactive[Integrate
-        ][f, {x, xmin, xmax}]}][side]]
+      RearrangeMultiplicativeSubexpressions //@
+        FullSimplify[PowerExpand@
+        ReplaceAll[{Inactive[NIntegrate][f_, {x_, xmin_, xmax_}, ___
+  ] :> Inactive[Integrate][f, {x, xmin, xmax}]}][side]
+        ]
     ]
     ,
     Inactivate[input, Sum | NIntegrate]

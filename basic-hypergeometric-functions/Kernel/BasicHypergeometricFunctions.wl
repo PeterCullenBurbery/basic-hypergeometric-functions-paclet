@@ -148,3 +148,5 @@
 <<PeterBurbery`BasicHypergeometricFunctions`QPhIExpressionQ`;
 
 <<PeterBurbery`BasicHypergeometricFunctions`TransformFraction`;
+
+<<PeterBurbery`BasicHypergeometricFunctions`PowerData`;

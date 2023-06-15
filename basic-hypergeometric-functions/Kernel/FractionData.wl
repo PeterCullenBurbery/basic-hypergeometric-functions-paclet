@@ -6,7 +6,7 @@ Begin["`Private`"];
 
 FractionData // ClearAll
 
-FractionData::usage = "FractionData[x] transforms x so it is the product of a fraction to a power, then a fraction, then a sum, then a very well poised basic hypergeometric series."
+FractionData::usage = "FractionData[x] gives data on a fraction."
 
 FractionData[x_] :=
   Module[{numerator, denominator, basicData, listData, interestingData,
