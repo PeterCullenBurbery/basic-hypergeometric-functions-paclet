@@ -34,8 +34,8 @@ which is Extension->Automatic, or keep Modulus nonzero and set \
 Extension->None. For more details see the error message \
 ref/message/General/mext.", 
    OptionValue[Modulus] === 0 || OptionValue[Extension] === None, 
-   PolynomialGCD[input, 
-     Sequence @@ FilterRules[options, Options[PolynomialGCD]]] === 1]]
+   PolynomialLCM[input, 
+     Sequence @@ FilterRules[options, Options[PolynomialGCD]]]-Times[input] === 0]]
 (* ClearAll[PolynomialCoprimeQ]
 
 PolynomialCoprimeQ::usage = "PolynomialCoprimeQ[polynomial1,polynomial2,\[Ellipsis]] returns True when polynomial1,polynomial2,\[Ellipsis] are coprime and False when they are not.";
