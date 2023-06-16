@@ -154,3 +154,5 @@
 <<PeterBurbery`BasicHypergeometricFunctions`LaTeXExpressionData`;
 
 <<PeterBurbery`BasicHypergeometricFunctions`NeedToBreakLaTeXQ`;
+
+<<PeterBurbery`BasicHypergeometricFunctions`PolynomialCoprimeQ`;

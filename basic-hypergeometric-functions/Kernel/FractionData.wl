@@ -49,9 +49,17 @@ FractionData[x_] :=
     interestingData["numerator"] = Join[interestingData["numerator"],
        <|"q-powers" -> Cases[listData["numerator"]["list"], (_ ? (Function[
       {symbol}, Quiet[StringMatchQ[Quiet[FullSymbolName[symbol], General::strse
-      ], "*`q"], StringMatchQ::strse], {}])) ^ _]|>]
-       (*I'm just adding q-powers to the numerator.That's why I \
-don't use Table here.*);
+      ], "*`q"], StringMatchQ::strse], {}])) ^ _], "integrals" -> Cases[listData[
+      "numerator"]["list"], (Inactive[Integrate] | Integrate)[integrand_, {
+      variableOfIntegration_, lowerBound_, upperBound_}]], "products" -> Cases[
+      listData["numerator"]["list"], (Inactive[Product] | Product)[factor_,
+       {variable_, lowerBound_, upperBound_}]], "derivatives" -> Cases[listData[
+      "numerator"]["list"], (Inactive[D] | D)[_ .., _ | {_, _} | {{_, _}..}
+      ]]|>]
+ (*I'm just adding q-powers to the numerator.That's why I don't use \
+  
+  
+Table here.*);
     organizedData = AssociationThread[{"numerator", "denominator"} ->
        Table[<|"notinterestingdata" -> Complement[listData[term]["list"], Catenate[
       Values[interestingData[term]]]]|>, {term, {"numerator", "denominator"
@@ -62,8 +70,9 @@ don't use Table here.*);
       ];
     postData(*this goes on the right hand side of the fraction*)= AssociationThread[
       {"numerator", "denominator"} -> Table[<|"postData" -> Catenate[Table[
-      interestingData[term][value], {value, {"sums", "very-well-poised-basic-hypergeometric-cases"
-      }}]]|>, {term, {"numerator", "denominator"}}]];
+      interestingData[term][value], {value, {"derivatives", "sums", "integrals",
+       "products", "very-well-poised-basic-hypergeometric-cases"}}]]|>, {term,
+       {"numerator", "denominator"}}]];
     postDataProduct = AssociationThread[{"numerator", "denominator"} 
       -> Table[<|"postDataProduct" -> ListToNonCommutativeMultiply[postData[
       term]["postData"]]|>, {term, {"numerator", "denominator"}}]];
@@ -99,7 +108,12 @@ Table here.*)
       "totalproductlist"], 1]|>;
     totalProductProduct = <|"totalProductProduct" -> ListToNonCommutativeMultiply[
       deletedCasesData["deletedCasesData"]]|>;
- (*allData=<|"smaller-fraction-data"->smallerFractionData,"combined-\
+ (*allData=<|"smaller-fraction-data"->smallerFractionData,"combined-  \
+  
+  
+
+  
+  
   
   
 data"->combinedData,"totalProductList"->totalProductList,\
@@ -109,6 +123,12 @@ deletedCasesData|>;
     Join[combinedData, smallerFractionData, totalProductList, totalProductProduct,
        deletedCasesData]
   (*allData["totalProductProduct"]["totalProductProduct"]*)]
+
+FractionData[x_, property_] :=
+  FractionData[x][property]
+
+FractionData[x_, properties : _?VectorQ] :=
+  FractionData[x][#]& /@ properties
 
 FractionData[args___] :=
   Null /; CheckArguments[FractionData[args], 1]

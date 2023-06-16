@@ -18,6 +18,8 @@ ApplyTransformationsToExpression::usage = "ApplyTransformationsToExpression[expr
 
 (* ApplyTransformationsToExpression[input_]:=PolynomializeFractionPower[Activate[MoveHypergeometricFromNumeratorToPolynomial[RearrangeExpression[input]]//.{fraction:(_?FractionQ):>PolynomializeFractionPower[fraction]},Sum]] *)
 
+(*this first definition might not be up to date.*)
+
 ApplyTransformationsToExpression[input_] :=
   ReplaceRepeated[{p_^n_ q_^n_ :> (p q) ^ n, p_^n_ ** q_^n_ :> (p ** 
     q) ^ n, Sqrt[p_] Sqrt[q_] :> Sqrt[p q], NonCommutativeMultiply[Sqrt[p_
@@ -27,6 +29,19 @@ ApplyTransformationsToExpression[input_] :=
      {variable_, lower_, upper_}, ___] :> Inactive[Sum][summand, {variable,
      lower, upper}]}][input]], NIntegrate::ilim] //. {x_?FractionQ /; !ListQ[
     x] :> RearrangeExpression @ TransformFraction[x]}]
+
+ApplyTransformationsToExpression[input_ /; MatchQ[input, (HoldForm | 
+  Hold)[_]]] :=
+  ReplaceRepeated[{p_^n_ q_^n_ :> (p q) ^ n, p_^n_ ** q_^n_ :> (p ** 
+    q) ^ n, Sqrt[p_] Sqrt[q_] :> Sqrt[p q], NonCommutativeMultiply[Sqrt[p_
+    ], Sqrt[q_]] :> Sqrt[p ** q]}] @ AddPlusMinus[Quiet[RearrangeExpression[
+    ReplaceAll[{NIntegrate[integrand_, {variable_, lower_, upper_}, ___] 
+    :> Inactive[Integrate][integrand, {variable, lower, upper}], Sum[summand_,
+     {variable_, lower_, upper_}, ___] :> Inactive[Sum][summand, {variable,
+     lower, upper}]}][Function[{x}, Inactivate[x, Integrate | NIntegrate 
+    | Sum | NSum | Product | NProduct|D], {HoldAll}] @@ input]], NIntegrate
+    ::ilim] //. {x_?FractionQ /; !ListQ[x] :> RearrangeExpression @ TransformFraction[
+    x]}]
 
 ApplyTransformationsToExpression[args___] :=
   Null /; CheckArguments[ApplyTransformationsToExpression[args], 1]
