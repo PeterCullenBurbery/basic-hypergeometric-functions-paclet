@@ -156,3 +156,5 @@
 <<PeterBurbery`BasicHypergeometricFunctions`NeedToBreakLaTeXQ`;
 
 <<PeterBurbery`BasicHypergeometricFunctions`PolynomialCoprimeQ`;
+
+<<PeterBurbery`BasicHypergeometricFunctions`PolynomializeFractionPower`;
