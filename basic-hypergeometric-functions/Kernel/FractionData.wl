@@ -47,9 +47,11 @@ FractionData[x_] :=
        lowerBound_, upperBound_}]]|>, {term, {"numerator", "denominator"}}]
       ];
     interestingData["numerator"] = Join[interestingData["numerator"],
-       <|"q-powers" -> Cases[FractionData[expr]["numerator"]["list"], q^_]|>
-      ];(*I'm just adding q-powers to the numerator. That's why I don't use Table here.
-      *)
+       <|"q-powers" -> Cases[listData["numerator"]["list"], (_ ? (Function[
+      {symbol}, Quiet[StringMatchQ[Quiet[FullSymbolName[symbol], General::strse
+      ], "*`q"], StringMatchQ::strse], {}])) ^ _]|>]
+       (*I'm just adding q-powers to the numerator.That's why I \
+don't use Table here.*);
     organizedData = AssociationThread[{"numerator", "denominator"} ->
        Table[<|"notinterestingdata" -> Complement[listData[term]["list"], Catenate[
       Values[interestingData[term]]]]|>, {term, {"numerator", "denominator"
@@ -58,21 +60,23 @@ FractionData[x_] :=
       <|"notinterestingdataProduct" -> ListToNonCommutativeMultiply[organizedData[
       term]["notinterestingdata"]]|>, {term, {"numerator", "denominator"}}]
       ];
-    (*this goes on the right hand side of the fraction*)postData = AssociationThread[
+    postData(*this goes on the right hand side of the fraction*)= AssociationThread[
       {"numerator", "denominator"} -> Table[<|"postData" -> Catenate[Table[
       interestingData[term][value], {value, {"sums", "very-well-poised-basic-hypergeometric-cases"
       }}]]|>, {term, {"numerator", "denominator"}}]];
     postDataProduct = AssociationThread[{"numerator", "denominator"} 
       -> Table[<|"postDataProduct" -> ListToNonCommutativeMultiply[postData[
       term]["postData"]]|>, {term, {"numerator", "denominator"}}]];
-    (*this goes on the left hand sid of the fraction*)preData = AssociationThread[
+    preData(*this goes on the left hand side of the fraction*)= AssociationThread[
       {"numerator", "denominator"} -> Table[<|"preData" -> Catenate[Table[interestingData[
       term][value], {value, {"fraction-power-cases"}}]]|>, {term, {"numerator",
        "denominator"}}]];
+ (*I'm just adding q-powers to the numerator.That's why I don't use \
+  
+  
+Table here.*)
     preData["numerator"]["preData"] = Join[preData["numerator"]["preData"
-      ], interestingData["numerator"]["q-powers"]];(*I'm just adding q-powers to the numerator. That's why I don't use Table here.
-      
-      *)
+      ], interestingData["numerator"]["q-powers"]];
     preDataProduct = AssociationThread[{"numerator", "denominator"} ->
        Table[<|"preDataProduct" -> ListToNonCommutativeMultiply[preData[term
       ]["preData"]]|>, {term, {"numerator", "denominator"}}]];
@@ -83,9 +87,9 @@ FractionData[x_] :=
     smallerFractionData =
       <|
         "smaller-fraction" ->
-          Divide @@                      (*Table[combinedData[term][
+          Divide @@               (*Table[combinedData[term][
 "notinterestingdataProduct"],{term,{"numerator",
-"denominator"}}]*){combinedData["numerator"]["notinterestingdataProduct"
+"denominator"}}]*) {combinedData["numerator"]["notinterestingdataProduct"
   ], basicData["denominator"]["value"]}
       |>;
     totalProductList = <|"totalproductlist" -> {preDataProduct["numerator"
@@ -95,16 +99,16 @@ FractionData[x_] :=
       "totalproductlist"], 1]|>;
     totalProductProduct = <|"totalProductProduct" -> ListToNonCommutativeMultiply[
       deletedCasesData["deletedCasesData"]]|>;
-(* allData = <|"smaller-fraction-data" -> smallerFractionData, "combined-data"
+ (*allData=<|"smaller-fraction-data"->smallerFractionData,"combined-\
   
   
-   -> combinedData, "totalProductList" -> totalProductList, "totalProductProduct"
-  
-  
-   -> totalProductProduct, "deletedCasesData" -> deletedCasesData|>;
-   allData  *) Join[combinedData, smallerFractionData, totalProductList,
-   totalProductProduct, deletedCasesData]
-  (* allData["totalProductProduct"]["totalProductProduct"] *)]
+data"->combinedData,"totalProductList"->totalProductList,\
+"totalProductProduct"->totalProductProduct,"deletedCasesData"->\
+deletedCasesData|>;
+ allData*)
+    Join[combinedData, smallerFractionData, totalProductList, totalProductProduct,
+       deletedCasesData]
+  (*allData["totalProductProduct"]["totalProductProduct"]*)]
 
 FractionData[args___] :=
   Null /; CheckArguments[FractionData[args], 1]
