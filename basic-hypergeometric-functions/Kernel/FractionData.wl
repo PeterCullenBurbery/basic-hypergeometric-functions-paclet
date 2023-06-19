@@ -46,12 +46,13 @@ FractionData[x_] :=
       Cases[listData[term]["list"], (Sum | Inactive[Sum])[summand:___, {variableOfSummation_,
        lowerBound_, upperBound_}]]|>, {term, {"numerator", "denominator"}}]
       ];
-    interestingData["numerator"] = Join[interestingData["numerator"],
+ interestingData["numerator"] = Join[interestingData["numerator"],
        <|"q-powers" -> Cases[listData["numerator"]["list"], (_ ? (Function[
       {symbol}, Quiet[StringMatchQ[Quiet[FullSymbolName[symbol], General::strse
-      ], "*`q"], StringMatchQ::strse], {}])) ^ _], "integrals" -> Cases[listData[
+      ], "*`q"], StringMatchQ::strse], {}])) ^ _], "integrals" -> Join[Cases[listData[
       "numerator"]["list"], (Inactive[Integrate] | Integrate)[integrand_, {
-      variableOfIntegration_, lowerBound_, upperBound_}]], "products" -> Cases[
+      variableOfIntegration_, lowerBound_, upperBound_}]],Cases[listData[
+      "numerator"]["list"],(Integrate|Inactive[Integrate])[integrand_,variable_]]], "products" -> Cases[
       listData["numerator"]["list"], (Inactive[Product] | Product)[factor_,
        {variable_, lowerBound_, upperBound_}]], "derivatives" -> Cases[listData[
       "numerator"]["list"], (Inactive[D] | D)[_ .., _ | {_, _} | {{_, _}..}

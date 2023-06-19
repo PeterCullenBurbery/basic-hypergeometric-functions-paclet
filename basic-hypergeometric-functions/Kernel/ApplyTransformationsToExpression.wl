@@ -6,9 +6,11 @@ PeterBurbery`BasicHypergeometricFunctions`ApplyTransformationsToExpression;
 
 Begin["`Private`"];
 
-(* ::Section:: *)
 
+
+(* ::Section:: *)
 (*ApplyTransformationsToExpression*)
+
 
 ApplyTransformationsToExpression // ClearAll
 
@@ -27,8 +29,10 @@ ApplyTransformationsToExpression[input_] :=
     ReplaceAll[{NIntegrate[integrand_, {variable_, lower_, upper_}, ___] 
     :> Inactive[Integrate][integrand, {variable, lower, upper}], Sum[summand_,
      {variable_, lower_, upper_}, ___] :> Inactive[Sum][summand, {variable,
-     lower, upper}]}][input]], NIntegrate::ilim] //. {x_?FractionQ /; !ListQ[
-    x] :> RearrangeExpression @ TransformFraction[x]}]
+     lower, upper}]}][Function[{x}, Inactivate[x, Integrate | NIntegrate 
+    | Sum | NSum | Product | NProduct | D], {HoldAll}] @ input]], NIntegrate
+    ::ilim] //. {x_?FractionQ /; !ListQ[x] :> RearrangeExpression @ TransformFraction[
+    x]}]
 
 ApplyTransformationsToExpression[input_ /; MatchQ[input, (HoldForm | 
   Hold)[_]]] :=
@@ -39,7 +43,7 @@ ApplyTransformationsToExpression[input_ /; MatchQ[input, (HoldForm |
     :> Inactive[Integrate][integrand, {variable, lower, upper}], Sum[summand_,
      {variable_, lower_, upper_}, ___] :> Inactive[Sum][summand, {variable,
      lower, upper}]}][Function[{x}, Inactivate[x, Integrate | NIntegrate 
-    | Sum | NSum | Product | NProduct|D], {HoldAll}] @@ input]], NIntegrate
+    | Sum | NSum | Product | NProduct | D], {HoldAll}] @@ input]], NIntegrate
     ::ilim] //. {x_?FractionQ /; !ListQ[x] :> RearrangeExpression @ TransformFraction[
     x]}]
 
