@@ -42,19 +42,19 @@ FractionData[x_] :=
     interestingData = AssociationThread[{"numerator", "denominator"} 
       -> Table[<|"very-well-poised-basic-hypergeometric-cases" -> Cases[listData[
       term]["list"], _?VeryWellPoisedBasicHypergeometricFunctionQ], "fraction-power-cases"
-       -> Cases[listData[term]["list"], (_?FractionQ) ^ power_], "sums" -> 
+       -> Cases[listData[term]["list"], (_?FractionQ) ^ power_,All], "sums" -> 
       Cases[listData[term]["list"], (Sum | Inactive[Sum])[summand:___, {variableOfSummation_,
-       lowerBound_, upperBound_}]]|>, {term, {"numerator", "denominator"}}]
+       lowerBound_, upperBound_}],All]|>, {term, {"numerator", "denominator"}}]
       ];
  interestingData["numerator"] = Join[interestingData["numerator"],
        <|"q-powers" -> Cases[listData["numerator"]["list"], (_ ? (Function[
       {symbol}, Quiet[StringMatchQ[Quiet[FullSymbolName[symbol], General::strse
-      ], "*`q"], StringMatchQ::strse], {}])) ^ _], "integrals" -> Join[Cases[listData[
+      ], "*`q"], StringMatchQ::strse], {}])) ^ _,All], "integrals" -> Join[Cases[listData[
       "numerator"]["list"], (Inactive[Integrate] | Integrate)[integrand_, {
-      variableOfIntegration_, lowerBound_, upperBound_}]],Cases[listData[
-      "numerator"]["list"],(Integrate|Inactive[Integrate])[integrand_,variable_]]], "products" -> Cases[
+      variableOfIntegration_, lowerBound_, upperBound_}],All],Cases[listData[
+      "numerator"]["list"],(Integrate|Inactive[Integrate])[integrand_,variable_],All]], "products" -> Cases[
       listData["numerator"]["list"], (Inactive[Product] | Product)[factor_,
-       {variable_, lowerBound_, upperBound_}]], "derivatives" -> Cases[listData[
+       {variable_, lowerBound_, upperBound_}],All], "derivatives" -> Cases[listData[
       "numerator"]["list"], (Inactive[D] | D)[_ .., _ | {_, _} | {{_, _}..}
       ]]|>]
  (*I'm just adding q-powers to the numerator.That's why I don't use \
