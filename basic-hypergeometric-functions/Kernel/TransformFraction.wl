@@ -17,7 +17,7 @@ TransformFraction // ClearAll
 TransformFraction::usage = "TransformFraction[x] transforms x so it is the product of a fraction to a power, then a fraction, then a sum, then a very well poised basic hypergeometric series."
 
 TransformFraction[input_] :=
-  FractionData[input]["totalProductProduct"]
+  FractionData[input]["final-product"]
 
 End[]; (* End `Private` *)
 

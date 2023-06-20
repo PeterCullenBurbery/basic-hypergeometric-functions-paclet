@@ -20,8 +20,9 @@ TransformList[n : {_ ..}] :=(*Switch[PutNumbersInFrontOfList[n],{_Symbol},First@
      multiplyNumbers, listWithQInFront},
         putnumbersinfront = PutNumbersInFrontOfList[n];
         numericGather = Extract[putnumbersinfront, #]& /@ {DeleteElements[
-            Position[putnumbersinfront, _?NumericQ], {{0}, {}}], DeleteElements[Position[
-            putnumbersinfront, _ ? (!NumericQ[#]&)], {{0}, {}}]};
+            Position[putnumbersinfront, _?NumericQ, {1}, Heads -> False], {{0}, {
+            }}], DeleteElements[Position[putnumbersinfront, _ ? (!NumericQ[#]&), 
+            {1}, Heads -> False], {{0}, {}}]};
         gatherSimilarSymbols = MapAt[Gather, {{-1}}] @ numericGather;
             
         multiplySimilarSymbols = MapAt[Times @@@ #&, {{-1}}][gatherSimilarSymbols

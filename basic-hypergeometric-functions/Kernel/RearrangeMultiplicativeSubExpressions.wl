@@ -34,9 +34,9 @@ RearrangeMultiplicativeSubexpressions[input_] :=
     Replace[Replace[DeleteCases[firstoutput /. OrderlessPatternSequence[
       Global`numbers : (_?NumericQ..), Global`symbols : (_Symbol...), Global`powers
        : (_^_. ..)] ** (Global`plus : ((+__)...)) :> TransformFraction[Times
-       @@ Global`numbers ListToNonCommutativeMultiply @ PositionQInFrontOfList[
-      Join[{Global`symbols}, {Global`powers}, {Global`plus}]]], NonCommutativeMultiply[
-      ], All], NonCommutativeMultiply[Global`x_] :> Global`x, All], {NonCommutativeMultiply[
+       @@ Global`numbers TransformList @ PositionQInFrontOfList[Join[{Global`symbols
+      }, {Global`powers}, {Global`plus}]]], NonCommutativeMultiply[], All],
+       NonCommutativeMultiply[Global`x_] :> Global`x, All], {NonCommutativeMultiply[
       Global`nonqs : Repeated[_ ? (Head[#] == Symbol && # =!= Global`q&)], 
       Global`qs : Power[NonCommutativeMultiply[Global`q, _], _]] :> NonCommutativeMultiply[
       Global`qs, Global`nonqs]}, All]
