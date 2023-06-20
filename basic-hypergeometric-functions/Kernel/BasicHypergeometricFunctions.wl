@@ -158,3 +158,5 @@
 <<PeterBurbery`BasicHypergeometricFunctions`PolynomialCoprimeQ`;
 
 <<PeterBurbery`BasicHypergeometricFunctions`PolynomializeFractionPower`;
+
+<<PeterBurbery`BasicHypergeometricFunctions`NonCommutativeMultiplyToTimes`;
