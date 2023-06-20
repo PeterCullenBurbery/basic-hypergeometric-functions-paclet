@@ -21,7 +21,7 @@ PositionQInFrontOfList[input_?VectorQ] :=
    
      Quiet[StringMatchQ[Quiet[FullSymbolName[symbol],General::strse], 
       "*`q"],StringMatchQ::strse], {}]))^_.][input];
-    Join[list, Complement[input, list]]
+    Join[list, UnsortedComplement[input, list]]
   ]
 PositionQInFrontOfList[args___] :=
     Null /; CheckArguments[PositionQInFrontOfList[args], 1]

@@ -1,0 +1,1446 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     51574,       1438]
+NotebookOptionsPosition[     47465,       1361]
+NotebookOutlinePosition[     47899,       1378]
+CellTagsIndexPosition[     47856,       1375]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"fractionData", "=", 
+  RowBox[{"FractionData", "[", 
+   RowBox[{
+    RowBox[{"ReplaceAll", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"expr", ":", 
+        RowBox[{"Global`sum", "[", 
+         RowBox[{"summand_", ",", "variable_"}], "]"}]}], ":>", 
+       RowBox[{
+        RowBox[{"Composition", "[", 
+         RowBox[{
+          RowBox[{"ReplaceAt", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"Global`sum", "->", 
+              RowBox[{"Inactive", "[", "Sum", "]"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"{", "0", "}"}], "}"}]}], "]"}], ",", 
+          RowBox[{"ReplaceAt", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"_", "?", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"#", "=!=", "Global`sum"}], "&"}], ")"}]}], 
+              "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"m", ",", "0", ",", "Infinity"}], "}"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"{", "2", "}"}], "}"}]}], "]"}]}], "]"}], "[", "expr", 
+        "]"}]}], "}"}], "]"}], "[", 
+    FractionBox[
+     RowBox[{"p", " ", 
+      RowBox[{"Global`sum", "[", 
+       RowBox[{
+        SuperscriptBox["q", 
+         RowBox[{
+          FractionBox["1", "4"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "3"}], "+", 
+            RowBox[{"2", " ", "j"}], "+", 
+            RowBox[{"2", " ", "m"}], "+", 
+            RowBox[{"2", " ", "n"}]}], ")"}]}]], ",", "m"}], "]"}]}], 
+     RowBox[{"2", " ", "k", " ", "\[Pi]", " ", "r"}]], "]"}], 
+   "]"}]}]], "Input",
+ CellLabel->
+  "In[462]:=",ExpressionUUID->"c85c6934-4f98-46f8-aced-e709eec2b7b0"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"numerator\"\>", "\[Rule]", 
+    RowBox[{"\[LeftAssociation]", 
+     RowBox[{
+      RowBox[{"\<\"value\"\>", "\[Rule]", 
+       RowBox[{"p", " ", 
+        TemplateBox[{
+          SuperscriptBox["q", 
+           RowBox[{
+             FractionBox["1", "4"], " ", 
+             RowBox[{"(", 
+               RowBox[{
+                 RowBox[{"-", "3"}], "+", 
+                 RowBox[{"2", " ", "j"}], "+", 
+                 RowBox[{"2", " ", "m"}], "+", 
+                 RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", "\[Infinity]"},
+         "InactiveSum",
+         DisplayFunction->(RowBox[{
+            UnderoverscriptBox[
+             StyleBox["\[Sum]", "Inactive"], 
+             RowBox[{#2, "=", #3}], #4], #}]& ),
+         InterpretationFunction->(RowBox[{
+            RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+            RowBox[{#, ",", 
+              RowBox[{"{", 
+                RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )]}]}], ",", 
+      RowBox[{"\<\"head\"\>", "\[Rule]", "Times"}], ",", 
+      RowBox[{"\<\"length\"\>", "\[Rule]", "2"}], ",", 
+      RowBox[{"\<\"list\"\>", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"p", " ", 
+         TemplateBox[{
+           SuperscriptBox["q", 
+            RowBox[{
+              FractionBox["1", "4"], " ", 
+              RowBox[{"(", 
+                RowBox[{
+                  RowBox[{"-", "3"}], "+", 
+                  RowBox[{"2", " ", "j"}], "+", 
+                  RowBox[{"2", " ", "m"}], "+", 
+                  RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", 
+           "\[Infinity]"},
+          "InactiveSum",
+          DisplayFunction->(RowBox[{
+             UnderoverscriptBox[
+              StyleBox["\[Sum]", "Inactive"], 
+              RowBox[{#2, "=", #3}], #4], #}]& ),
+          InterpretationFunction->(RowBox[{
+             RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+             RowBox[{#, ",", 
+               RowBox[{"{", 
+                 RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )]}], 
+        "}"}]}], ",", 
+      RowBox[{"\<\"very-well-poised-basic-hypergeometric-cases\"\>", 
+       "\[Rule]", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"\<\"fraction-power-cases\"\>", "\[Rule]", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"\<\"sums\"\>", "\[Rule]", 
+       RowBox[{"{", 
+        TemplateBox[{
+          SuperscriptBox["q", 
+           RowBox[{
+             FractionBox["1", "4"], " ", 
+             RowBox[{"(", 
+               RowBox[{
+                 RowBox[{"-", "3"}], "+", 
+                 RowBox[{"2", " ", "j"}], "+", 
+                 RowBox[{"2", " ", "m"}], "+", 
+                 RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", "\[Infinity]"},
+         "InactiveSum",
+         DisplayFunction->(RowBox[{
+            UnderoverscriptBox[
+             StyleBox["\[Sum]", "Inactive"], 
+             RowBox[{#2, "=", #3}], #4], #}]& ),
+         InterpretationFunction->(RowBox[{
+            RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+            RowBox[{#, ",", 
+              RowBox[{"{", 
+                RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )], "}"}]}], 
+      ",", 
+      RowBox[{"\<\"q-powers\"\>", "\[Rule]", 
+       RowBox[{"{", 
+        SuperscriptBox["q", 
+         RowBox[{
+          FractionBox["1", "4"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "3"}], "+", 
+            RowBox[{"2", " ", "j"}], "+", 
+            RowBox[{"2", " ", "m"}], "+", 
+            RowBox[{"2", " ", "n"}]}], ")"}]}]], "}"}]}], ",", 
+      RowBox[{"\<\"integrals\"\>", "\[Rule]", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"\<\"products\"\>", "\[Rule]", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"\<\"derivatives\"\>", "\[Rule]", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"\<\"notinterestingdata\"\>", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"p", " ", 
+         TemplateBox[{
+           SuperscriptBox["q", 
+            RowBox[{
+              FractionBox["1", "4"], " ", 
+              RowBox[{"(", 
+                RowBox[{
+                  RowBox[{"-", "3"}], "+", 
+                  RowBox[{"2", " ", "j"}], "+", 
+                  RowBox[{"2", " ", "m"}], "+", 
+                  RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", 
+           "\[Infinity]"},
+          "InactiveSum",
+          DisplayFunction->(RowBox[{
+             UnderoverscriptBox[
+              StyleBox["\[Sum]", "Inactive"], 
+              RowBox[{#2, "=", #3}], #4], #}]& ),
+          InterpretationFunction->(RowBox[{
+             RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+             RowBox[{#, ",", 
+               RowBox[{"{", 
+                 RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )]}], 
+        "}"}]}], ",", 
+      RowBox[{"\<\"notinterestingdataProduct\"\>", "\[Rule]", 
+       RowBox[{"p", " ", 
+        TemplateBox[{
+          SuperscriptBox["q", 
+           RowBox[{
+             FractionBox["1", "4"], " ", 
+             RowBox[{"(", 
+               RowBox[{
+                 RowBox[{"-", "3"}], "+", 
+                 RowBox[{"2", " ", "j"}], "+", 
+                 RowBox[{"2", " ", "m"}], "+", 
+                 RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", "\[Infinity]"},
+         "InactiveSum",
+         DisplayFunction->(RowBox[{
+            UnderoverscriptBox[
+             StyleBox["\[Sum]", "Inactive"], 
+             RowBox[{#2, "=", #3}], #4], #}]& ),
+         InterpretationFunction->(RowBox[{
+            RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+            RowBox[{#, ",", 
+              RowBox[{"{", 
+                RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )]}]}], ",", 
+      RowBox[{"\<\"postData\"\>", "\[Rule]", 
+       RowBox[{"{", 
+        TemplateBox[{
+          SuperscriptBox["q", 
+           RowBox[{
+             FractionBox["1", "4"], " ", 
+             RowBox[{"(", 
+               RowBox[{
+                 RowBox[{"-", "3"}], "+", 
+                 RowBox[{"2", " ", "j"}], "+", 
+                 RowBox[{"2", " ", "m"}], "+", 
+                 RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", "\[Infinity]"},
+         "InactiveSum",
+         DisplayFunction->(RowBox[{
+            UnderoverscriptBox[
+             StyleBox["\[Sum]", "Inactive"], 
+             RowBox[{#2, "=", #3}], #4], #}]& ),
+         InterpretationFunction->(RowBox[{
+            RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+            RowBox[{#, ",", 
+              RowBox[{"{", 
+                RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )], "}"}]}], 
+      ",", 
+      RowBox[{"\<\"postDataProduct\"\>", "\[Rule]", 
+       TemplateBox[{
+         SuperscriptBox["q", 
+          RowBox[{
+            FractionBox["1", "4"], " ", 
+            RowBox[{"(", 
+              RowBox[{
+                RowBox[{"-", "3"}], "+", 
+                RowBox[{"2", " ", "j"}], "+", 
+                RowBox[{"2", " ", "m"}], "+", 
+                RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", "\[Infinity]"},
+        "InactiveSum",
+        DisplayFunction->(RowBox[{
+           UnderoverscriptBox[
+            StyleBox["\[Sum]", "Inactive"], 
+            RowBox[{#2, "=", #3}], #4], #}]& ),
+        InterpretationFunction->(RowBox[{
+           RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+           RowBox[{#, ",", 
+             RowBox[{"{", 
+               RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )]}], ",", 
+      RowBox[{"\<\"preData\"\>", "\[Rule]", 
+       RowBox[{"{", 
+        SuperscriptBox["q", 
+         RowBox[{
+          FractionBox["1", "4"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "3"}], "+", 
+            RowBox[{"2", " ", "j"}], "+", 
+            RowBox[{"2", " ", "m"}], "+", 
+            RowBox[{"2", " ", "n"}]}], ")"}]}]], "}"}]}], ",", 
+      RowBox[{"\<\"preDataProduct\"\>", "\[Rule]", 
+       SuperscriptBox["q", 
+        RowBox[{
+         FractionBox["1", "4"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "3"}], "+", 
+           RowBox[{"2", " ", "j"}], "+", 
+           RowBox[{"2", " ", "m"}], "+", 
+           RowBox[{"2", " ", "n"}]}], ")"}]}]]}]}], "\[RightAssociation]"}]}],
+    ",", 
+   RowBox[{"\<\"denominator\"\>", "\[Rule]", 
+    RowBox[{"\[LeftAssociation]", 
+     RowBox[{
+      RowBox[{"\<\"value\"\>", "\[Rule]", 
+       RowBox[{"2", " ", "k", " ", "\[Pi]", " ", "r"}]}], ",", 
+      RowBox[{"\<\"head\"\>", "\[Rule]", "Times"}], ",", 
+      RowBox[{"\<\"length\"\>", "\[Rule]", "4"}], ",", 
+      RowBox[{"\<\"list\"\>", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"2", " ", "k", " ", "\[Pi]", " ", "r"}], "}"}]}], ",", 
+      RowBox[{"\<\"very-well-poised-basic-hypergeometric-cases\"\>", 
+       "\[Rule]", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"\<\"fraction-power-cases\"\>", "\[Rule]", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"\<\"sums\"\>", "\[Rule]", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"\<\"notinterestingdata\"\>", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"2", " ", "k", " ", "\[Pi]", " ", "r"}], "}"}]}], ",", 
+      RowBox[{"\<\"notinterestingdataProduct\"\>", "\[Rule]", 
+       RowBox[{"2", " ", "k", " ", "\[Pi]", " ", "r"}]}], ",", 
+      RowBox[{"\<\"postData\"\>", "\[Rule]", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"\<\"postDataProduct\"\>", "\[Rule]", "1"}], ",", 
+      RowBox[{"\<\"preData\"\>", "\[Rule]", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"\<\"preDataProduct\"\>", "\[Rule]", "1"}]}], 
+     "\[RightAssociation]"}]}], ",", 
+   RowBox[{"\<\"smaller-fraction\"\>", "\[Rule]", 
+    FractionBox[
+     RowBox[{"p", " ", 
+      TemplateBox[{
+        SuperscriptBox["q", 
+         RowBox[{
+           FractionBox["1", "4"], " ", 
+           RowBox[{"(", 
+             RowBox[{
+               RowBox[{"-", "3"}], "+", 
+               RowBox[{"2", " ", "j"}], "+", 
+               RowBox[{"2", " ", "m"}], "+", 
+               RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", "\[Infinity]"},
+       "InactiveSum",
+       DisplayFunction->(RowBox[{
+          UnderoverscriptBox[
+           StyleBox["\[Sum]", "Inactive"], 
+           RowBox[{#2, "=", #3}], #4], #}]& ),
+       InterpretationFunction->(RowBox[{
+          RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+          RowBox[{#, ",", 
+            RowBox[{"{", 
+              RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )]}], 
+     RowBox[{"2", " ", "k", " ", "\[Pi]", " ", "r"}]]}], ",", 
+   RowBox[{"\<\"totalproductlist\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      SuperscriptBox["q", 
+       RowBox[{
+        FractionBox["1", "4"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "3"}], "+", 
+          RowBox[{"2", " ", "j"}], "+", 
+          RowBox[{"2", " ", "m"}], "+", 
+          RowBox[{"2", " ", "n"}]}], ")"}]}]], ",", 
+      FractionBox[
+       RowBox[{"p", " ", 
+        TemplateBox[{
+          SuperscriptBox["q", 
+           RowBox[{
+             FractionBox["1", "4"], " ", 
+             RowBox[{"(", 
+               RowBox[{
+                 RowBox[{"-", "3"}], "+", 
+                 RowBox[{"2", " ", "j"}], "+", 
+                 RowBox[{"2", " ", "m"}], "+", 
+                 RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", "\[Infinity]"},
+         "InactiveSum",
+         DisplayFunction->(RowBox[{
+            UnderoverscriptBox[
+             StyleBox["\[Sum]", "Inactive"], 
+             RowBox[{#2, "=", #3}], #4], #}]& ),
+         InterpretationFunction->(RowBox[{
+            RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+            RowBox[{#, ",", 
+              RowBox[{"{", 
+                RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )]}], 
+       RowBox[{"2", " ", "k", " ", "\[Pi]", " ", "r"}]], ",", 
+      TemplateBox[{
+        SuperscriptBox["q", 
+         RowBox[{
+           FractionBox["1", "4"], " ", 
+           RowBox[{"(", 
+             RowBox[{
+               RowBox[{"-", "3"}], "+", 
+               RowBox[{"2", " ", "j"}], "+", 
+               RowBox[{"2", " ", "m"}], "+", 
+               RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", "\[Infinity]"},
+       "InactiveSum",
+       DisplayFunction->(RowBox[{
+          UnderoverscriptBox[
+           StyleBox["\[Sum]", "Inactive"], 
+           RowBox[{#2, "=", #3}], #4], #}]& ),
+       InterpretationFunction->(RowBox[{
+          RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+          RowBox[{#, ",", 
+            RowBox[{"{", 
+              RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )]}], "}"}]}], 
+   ",", 
+   RowBox[{"\<\"totalProductProduct\"\>", "\[Rule]", 
+    RowBox[{
+     SuperscriptBox["q", 
+      RowBox[{
+       FractionBox["1", "4"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "3"}], "+", 
+         RowBox[{"2", " ", "j"}], "+", 
+         RowBox[{"2", " ", "m"}], "+", 
+         RowBox[{"2", " ", "n"}]}], ")"}]}]], "**", 
+     FractionBox[
+      RowBox[{"p", " ", 
+       TemplateBox[{
+         SuperscriptBox["q", 
+          RowBox[{
+            FractionBox["1", "4"], " ", 
+            RowBox[{"(", 
+              RowBox[{
+                RowBox[{"-", "3"}], "+", 
+                RowBox[{"2", " ", "j"}], "+", 
+                RowBox[{"2", " ", "m"}], "+", 
+                RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", "\[Infinity]"},
+        "InactiveSum",
+        DisplayFunction->(RowBox[{
+           UnderoverscriptBox[
+            StyleBox["\[Sum]", "Inactive"], 
+            RowBox[{#2, "=", #3}], #4], #}]& ),
+        InterpretationFunction->(RowBox[{
+           RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+           RowBox[{#, ",", 
+             RowBox[{"{", 
+               RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )]}], 
+      RowBox[{"2", " ", "k", " ", "\[Pi]", " ", "r"}]], "**", 
+     TemplateBox[{
+       SuperscriptBox["q", 
+        RowBox[{
+          FractionBox["1", "4"], " ", 
+          RowBox[{"(", 
+            RowBox[{
+              RowBox[{"-", "3"}], "+", 
+              RowBox[{"2", " ", "j"}], "+", 
+              RowBox[{"2", " ", "m"}], "+", 
+              RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", "\[Infinity]"},
+      "InactiveSum",
+      DisplayFunction->(RowBox[{
+         UnderoverscriptBox[
+          StyleBox["\[Sum]", "Inactive"], 
+          RowBox[{#2, "=", #3}], #4], #}]& ),
+      InterpretationFunction->(RowBox[{
+         RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+         RowBox[{#, ",", 
+           RowBox[{"{", 
+             RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )]}]}], ",", 
+   RowBox[{"\<\"deletedCasesData\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      SuperscriptBox["q", 
+       RowBox[{
+        FractionBox["1", "4"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "3"}], "+", 
+          RowBox[{"2", " ", "j"}], "+", 
+          RowBox[{"2", " ", "m"}], "+", 
+          RowBox[{"2", " ", "n"}]}], ")"}]}]], ",", 
+      FractionBox[
+       RowBox[{"p", " ", 
+        TemplateBox[{
+          SuperscriptBox["q", 
+           RowBox[{
+             FractionBox["1", "4"], " ", 
+             RowBox[{"(", 
+               RowBox[{
+                 RowBox[{"-", "3"}], "+", 
+                 RowBox[{"2", " ", "j"}], "+", 
+                 RowBox[{"2", " ", "m"}], "+", 
+                 RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", "\[Infinity]"},
+         "InactiveSum",
+         DisplayFunction->(RowBox[{
+            UnderoverscriptBox[
+             StyleBox["\[Sum]", "Inactive"], 
+             RowBox[{#2, "=", #3}], #4], #}]& ),
+         InterpretationFunction->(RowBox[{
+            RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+            RowBox[{#, ",", 
+              RowBox[{"{", 
+                RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )]}], 
+       RowBox[{"2", " ", "k", " ", "\[Pi]", " ", "r"}]], ",", 
+      TemplateBox[{
+        SuperscriptBox["q", 
+         RowBox[{
+           FractionBox["1", "4"], " ", 
+           RowBox[{"(", 
+             RowBox[{
+               RowBox[{"-", "3"}], "+", 
+               RowBox[{"2", " ", "j"}], "+", 
+               RowBox[{"2", " ", "m"}], "+", 
+               RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", "\[Infinity]"},
+       "InactiveSum",
+       DisplayFunction->(RowBox[{
+          UnderoverscriptBox[
+           StyleBox["\[Sum]", "Inactive"], 
+           RowBox[{#2, "=", #3}], #4], #}]& ),
+       InterpretationFunction->(RowBox[{
+          RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+          RowBox[{#, ",", 
+            RowBox[{"{", 
+              RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )]}], "}"}]}]}],
+   "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{3.8962654406912394`*^9},
+ CellLabel->
+  "Out[462]=",ExpressionUUID->"4d6bbf16-0a50-4d88-824a-e3df8fd1abec"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"transformedFraction", "=", 
+  RowBox[{"TransformFraction", "[", 
+   RowBox[{
+    RowBox[{"ReplaceAll", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"expr", ":", 
+        RowBox[{"Global`sum", "[", 
+         RowBox[{"summand_", ",", "variable_"}], "]"}]}], ":>", 
+       RowBox[{
+        RowBox[{"Composition", "[", 
+         RowBox[{
+          RowBox[{"ReplaceAt", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"Global`sum", "->", 
+              RowBox[{"Inactive", "[", "Sum", "]"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"{", "0", "}"}], "}"}]}], "]"}], ",", 
+          RowBox[{"ReplaceAt", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"_", "?", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"#", "=!=", "Global`sum"}], "&"}], ")"}]}], 
+              "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"m", ",", "0", ",", "Infinity"}], "}"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"{", "2", "}"}], "}"}]}], "]"}]}], "]"}], "[", "expr", 
+        "]"}]}], "}"}], "]"}], "[", 
+    FractionBox[
+     RowBox[{"p", " ", 
+      RowBox[{"Global`sum", "[", 
+       RowBox[{
+        SuperscriptBox["q", 
+         RowBox[{
+          FractionBox["1", "4"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "3"}], "+", 
+            RowBox[{"2", " ", "j"}], "+", 
+            RowBox[{"2", " ", "m"}], "+", 
+            RowBox[{"2", " ", "n"}]}], ")"}]}]], ",", "m"}], "]"}]}], 
+     RowBox[{"2", " ", "k", " ", "\[Pi]", " ", "r"}]], "]"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.896265448147169*^9, 3.8962654694221315`*^9}},
+ CellLabel->
+  "In[463]:=",ExpressionUUID->"a80d3d05-b047-4f82-86a7-9dc4f2a50efe"],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["q", 
+   RowBox[{
+    FractionBox["1", "4"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "3"}], "+", 
+      RowBox[{"2", " ", "j"}], "+", 
+      RowBox[{"2", " ", "m"}], "+", 
+      RowBox[{"2", " ", "n"}]}], ")"}]}]], "**", 
+  FractionBox[
+   RowBox[{"p", " ", 
+    TemplateBox[{
+      SuperscriptBox["q", 
+       RowBox[{
+         FractionBox["1", "4"], " ", 
+         RowBox[{"(", 
+           RowBox[{
+             RowBox[{"-", "3"}], "+", 
+             RowBox[{"2", " ", "j"}], "+", 
+             RowBox[{"2", " ", "m"}], "+", 
+             RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", "\[Infinity]"},
+     "InactiveSum",
+     DisplayFunction->(RowBox[{
+        UnderoverscriptBox[
+         StyleBox["\[Sum]", "Inactive"], 
+         RowBox[{#2, "=", #3}], #4], #}]& ),
+     InterpretationFunction->(RowBox[{
+        RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+        RowBox[{#, ",", 
+          RowBox[{"{", 
+            RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )]}], 
+   RowBox[{"2", " ", "k", " ", "\[Pi]", " ", "r"}]], "**", 
+  TemplateBox[{
+    SuperscriptBox["q", 
+     RowBox[{
+       FractionBox["1", "4"], " ", 
+       RowBox[{"(", 
+         RowBox[{
+           RowBox[{"-", "3"}], "+", 
+           RowBox[{"2", " ", "j"}], "+", 
+           RowBox[{"2", " ", "m"}], "+", 
+           RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", "\[Infinity]"},
+   "InactiveSum",
+   DisplayFunction->(RowBox[{
+      UnderoverscriptBox[
+       StyleBox["\[Sum]", "Inactive"], 
+       RowBox[{#2, "=", #3}], #4], #}]& ),
+   InterpretationFunction->(RowBox[{
+      RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+      RowBox[{#, ",", 
+        RowBox[{"{", 
+          RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )]}]], "Output",
+ CellChangeTimes->{3.8962654697256384`*^9},
+ CellLabel->
+  "Out[463]=",ExpressionUUID->"c3c82ee7-ce55-4758-b28a-fff7b3180708"]
+}, Open  ]],
+
+Cell[TextData[{
+ "The bug is that the sum ",
+ Cell[BoxData[
+  TemplateBox[{
+    SuperscriptBox["q", 
+     RowBox[{
+       FractionBox["1", "4"], " ", 
+       RowBox[{"(", 
+         RowBox[{
+           RowBox[{"-", "3"}], "+", 
+           RowBox[{"2", " ", "j"}], "+", 
+           RowBox[{"2", " ", "m"}], "+", 
+           RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", "\[Infinity]"},
+   "InactiveSum",
+   DisplayFunction->(RowBox[{
+      UnderoverscriptBox[
+       StyleBox["\[Sum]", "Inactive"], 
+       RowBox[{#2, "=", #3}], #4], #}]& ),
+   InterpretationFunction->(RowBox[{
+      RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+      RowBox[{#, ",", 
+        RowBox[{"{", 
+          RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )]], "Output",
+  CellChangeTimes->{3.896265488886815*^9},ExpressionUUID->
+  "04ddfba4-3870-409a-8529-206403f5d3c5"],
+ " is duplicated. sums includes ",
+ Cell[BoxData[
+  TemplateBox[{
+    SuperscriptBox["q", 
+     RowBox[{
+       FractionBox["1", "4"], " ", 
+       RowBox[{"(", 
+         RowBox[{
+           RowBox[{"-", "3"}], "+", 
+           RowBox[{"2", " ", "j"}], "+", 
+           RowBox[{"2", " ", "m"}], "+", 
+           RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", "\[Infinity]"},
+   "InactiveSum",
+   DisplayFunction->(RowBox[{
+      UnderoverscriptBox[
+       StyleBox["\[Sum]", "Inactive"], 
+       RowBox[{#2, "=", #3}], #4], #}]& ),
+   InterpretationFunction->(RowBox[{
+      RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+      RowBox[{#, ",", 
+        RowBox[{"{", 
+          RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )]], "Output",
+  CellChangeTimes->{3.896265488886815*^9},ExpressionUUID->
+  "cd3d0776-7c8b-4949-bc71-5b6b0494006c"],
+ ", but notinterestingdata includes ",
+ Cell[BoxData[
+  TemplateBox[{
+    SuperscriptBox["q", 
+     RowBox[{
+       FractionBox["1", "4"], " ", 
+       RowBox[{"(", 
+         RowBox[{
+           RowBox[{"-", "3"}], "+", 
+           RowBox[{"2", " ", "j"}], "+", 
+           RowBox[{"2", " ", "m"}], "+", 
+           RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", "\[Infinity]"},
+   "InactiveSum",
+   DisplayFunction->(RowBox[{
+      UnderoverscriptBox[
+       StyleBox["\[Sum]", "Inactive"], 
+       RowBox[{#2, "=", #3}], #4], #}]& ),
+   InterpretationFunction->(RowBox[{
+      RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+      RowBox[{#, ",", 
+        RowBox[{"{", 
+          RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )]], "Output",
+  CellChangeTimes->{3.896265488886815*^9},ExpressionUUID->
+  "ca3da335-238e-4119-a947-fe471a3c6b5f"],
+ ", which is not what we want."
+}], "Text",
+ CellChangeTimes->{{3.8962654727219486`*^9, 
+  3.896265528502283*^9}},ExpressionUUID->"74402556-08be-4d16-88aa-\
+82d46094b9cb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"fractionData", "[", "\"\<numerator\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.896265484257399*^9, 3.896265488491043*^9}},
+ CellLabel->
+  "In[464]:=",ExpressionUUID->"1d9579b9-3f64-46d4-82c2-4826fdeeb0c3"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"value\"\>", "\[Rule]", 
+    RowBox[{"p", " ", 
+     TemplateBox[{
+       SuperscriptBox["q", 
+        RowBox[{
+          FractionBox["1", "4"], " ", 
+          RowBox[{"(", 
+            RowBox[{
+              RowBox[{"-", "3"}], "+", 
+              RowBox[{"2", " ", "j"}], "+", 
+              RowBox[{"2", " ", "m"}], "+", 
+              RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", "\[Infinity]"},
+      "InactiveSum",
+      DisplayFunction->(RowBox[{
+         UnderoverscriptBox[
+          StyleBox["\[Sum]", "Inactive"], 
+          RowBox[{#2, "=", #3}], #4], #}]& ),
+      InterpretationFunction->(RowBox[{
+         RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+         RowBox[{#, ",", 
+           RowBox[{"{", 
+             RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )]}]}], ",", 
+   RowBox[{"\<\"head\"\>", "\[Rule]", "Times"}], ",", 
+   RowBox[{"\<\"length\"\>", "\[Rule]", "2"}], ",", 
+   RowBox[{"\<\"list\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"p", " ", 
+      TemplateBox[{
+        SuperscriptBox["q", 
+         RowBox[{
+           FractionBox["1", "4"], " ", 
+           RowBox[{"(", 
+             RowBox[{
+               RowBox[{"-", "3"}], "+", 
+               RowBox[{"2", " ", "j"}], "+", 
+               RowBox[{"2", " ", "m"}], "+", 
+               RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", "\[Infinity]"},
+       "InactiveSum",
+       DisplayFunction->(RowBox[{
+          UnderoverscriptBox[
+           StyleBox["\[Sum]", "Inactive"], 
+           RowBox[{#2, "=", #3}], #4], #}]& ),
+       InterpretationFunction->(RowBox[{
+          RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+          RowBox[{#, ",", 
+            RowBox[{"{", 
+              RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )]}], "}"}]}], 
+   ",", 
+   RowBox[{"\<\"very-well-poised-basic-hypergeometric-cases\"\>", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"\<\"fraction-power-cases\"\>", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"\<\"sums\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     TemplateBox[{
+       SuperscriptBox["q", 
+        RowBox[{
+          FractionBox["1", "4"], " ", 
+          RowBox[{"(", 
+            RowBox[{
+              RowBox[{"-", "3"}], "+", 
+              RowBox[{"2", " ", "j"}], "+", 
+              RowBox[{"2", " ", "m"}], "+", 
+              RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", "\[Infinity]"},
+      "InactiveSum",
+      DisplayFunction->(RowBox[{
+         UnderoverscriptBox[
+          StyleBox["\[Sum]", "Inactive"], 
+          RowBox[{#2, "=", #3}], #4], #}]& ),
+      InterpretationFunction->(RowBox[{
+         RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+         RowBox[{#, ",", 
+           RowBox[{"{", 
+             RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )], "}"}]}], ",", 
+   RowBox[{"\<\"q-powers\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     SuperscriptBox["q", 
+      RowBox[{
+       FractionBox["1", "4"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "3"}], "+", 
+         RowBox[{"2", " ", "j"}], "+", 
+         RowBox[{"2", " ", "m"}], "+", 
+         RowBox[{"2", " ", "n"}]}], ")"}]}]], "}"}]}], ",", 
+   RowBox[{"\<\"integrals\"\>", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"\<\"products\"\>", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"\<\"derivatives\"\>", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"\<\"notinterestingdata\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"p", " ", 
+      TemplateBox[{
+        SuperscriptBox["q", 
+         RowBox[{
+           FractionBox["1", "4"], " ", 
+           RowBox[{"(", 
+             RowBox[{
+               RowBox[{"-", "3"}], "+", 
+               RowBox[{"2", " ", "j"}], "+", 
+               RowBox[{"2", " ", "m"}], "+", 
+               RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", "\[Infinity]"},
+       "InactiveSum",
+       DisplayFunction->(RowBox[{
+          UnderoverscriptBox[
+           StyleBox["\[Sum]", "Inactive"], 
+           RowBox[{#2, "=", #3}], #4], #}]& ),
+       InterpretationFunction->(RowBox[{
+          RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+          RowBox[{#, ",", 
+            RowBox[{"{", 
+              RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )]}], "}"}]}], 
+   ",", 
+   RowBox[{"\<\"notinterestingdataProduct\"\>", "\[Rule]", 
+    RowBox[{"p", " ", 
+     TemplateBox[{
+       SuperscriptBox["q", 
+        RowBox[{
+          FractionBox["1", "4"], " ", 
+          RowBox[{"(", 
+            RowBox[{
+              RowBox[{"-", "3"}], "+", 
+              RowBox[{"2", " ", "j"}], "+", 
+              RowBox[{"2", " ", "m"}], "+", 
+              RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", "\[Infinity]"},
+      "InactiveSum",
+      DisplayFunction->(RowBox[{
+         UnderoverscriptBox[
+          StyleBox["\[Sum]", "Inactive"], 
+          RowBox[{#2, "=", #3}], #4], #}]& ),
+      InterpretationFunction->(RowBox[{
+         RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+         RowBox[{#, ",", 
+           RowBox[{"{", 
+             RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )]}]}], ",", 
+   RowBox[{"\<\"postData\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     TemplateBox[{
+       SuperscriptBox["q", 
+        RowBox[{
+          FractionBox["1", "4"], " ", 
+          RowBox[{"(", 
+            RowBox[{
+              RowBox[{"-", "3"}], "+", 
+              RowBox[{"2", " ", "j"}], "+", 
+              RowBox[{"2", " ", "m"}], "+", 
+              RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", "\[Infinity]"},
+      "InactiveSum",
+      DisplayFunction->(RowBox[{
+         UnderoverscriptBox[
+          StyleBox["\[Sum]", "Inactive"], 
+          RowBox[{#2, "=", #3}], #4], #}]& ),
+      InterpretationFunction->(RowBox[{
+         RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+         RowBox[{#, ",", 
+           RowBox[{"{", 
+             RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )], "}"}]}], ",", 
+   RowBox[{"\<\"postDataProduct\"\>", "\[Rule]", 
+    TemplateBox[{
+      SuperscriptBox["q", 
+       RowBox[{
+         FractionBox["1", "4"], " ", 
+         RowBox[{"(", 
+           RowBox[{
+             RowBox[{"-", "3"}], "+", 
+             RowBox[{"2", " ", "j"}], "+", 
+             RowBox[{"2", " ", "m"}], "+", 
+             RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", "\[Infinity]"},
+     "InactiveSum",
+     DisplayFunction->(RowBox[{
+        UnderoverscriptBox[
+         StyleBox["\[Sum]", "Inactive"], 
+         RowBox[{#2, "=", #3}], #4], #}]& ),
+     InterpretationFunction->(RowBox[{
+        RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+        RowBox[{#, ",", 
+          RowBox[{"{", 
+            RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )]}], ",", 
+   RowBox[{"\<\"preData\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     SuperscriptBox["q", 
+      RowBox[{
+       FractionBox["1", "4"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "3"}], "+", 
+         RowBox[{"2", " ", "j"}], "+", 
+         RowBox[{"2", " ", "m"}], "+", 
+         RowBox[{"2", " ", "n"}]}], ")"}]}]], "}"}]}], ",", 
+   RowBox[{"\<\"preDataProduct\"\>", "\[Rule]", 
+    SuperscriptBox["q", 
+     RowBox[{
+      FractionBox["1", "4"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "3"}], "+", 
+        RowBox[{"2", " ", "j"}], "+", 
+        RowBox[{"2", " ", "m"}], "+", 
+        RowBox[{"2", " ", "n"}]}], ")"}]}]]}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{3.896265488886815*^9},
+ CellLabel->
+  "Out[464]=",ExpressionUUID->"bf5e0a59-774b-4f15-9e67-35535ce7d3d6"]
+}, Open  ]],
+
+Cell["These are the data types we are currently interested in:", "Text",
+ CellChangeTimes->{{3.896265639370751*^9, 
+  3.8962656555129175`*^9}},ExpressionUUID->"79bbda8e-e49c-4882-b50a-\
+4ae0c094e9f0"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"interestingDataTypes", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "\"\<very-well-poised-basic-hypergeometric-cases\>\"", ",", 
+     "\"\<fraction-power-cases\>\"", ",", "\"\<sums\>\"", ",", 
+     "\"\<q-powers\>\"", ",", "\"\<integrals\>\"", ",", "\"\<products\>\""}], 
+    "}"}]}], ";"}]], "Input",
+ CellLabel->
+  "In[465]:=",ExpressionUUID->"ad40aa07-8af8-4e03-a3ed-04fc0b5957ef"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"   ", 
+  RowBox[{"Lookup", "[", 
+   RowBox[{
+    RowBox[{"fractionData", "[", "\"\<numerator\>\"", "]"}], ",", 
+    "interestingDataTypes"}], "]"}]}]], "Input",
+ CellChangeTimes->{3.8962656666228905`*^9},
+ CellLabel->
+  "In[466]:=",ExpressionUUID->"07eb0095-8f00-45da-878d-b9d432d42e12"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", 
+    TemplateBox[{
+      SuperscriptBox["q", 
+       RowBox[{
+         FractionBox["1", "4"], " ", 
+         RowBox[{"(", 
+           RowBox[{
+             RowBox[{"-", "3"}], "+", 
+             RowBox[{"2", " ", "j"}], "+", 
+             RowBox[{"2", " ", "m"}], "+", 
+             RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", "\[Infinity]"},
+     "InactiveSum",
+     DisplayFunction->(RowBox[{
+        UnderoverscriptBox[
+         StyleBox["\[Sum]", "Inactive"], 
+         RowBox[{#2, "=", #3}], #4], #}]& ),
+     InterpretationFunction->(RowBox[{
+        RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+        RowBox[{#, ",", 
+          RowBox[{"{", 
+            RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )], "}"}], ",", 
+   RowBox[{"{", 
+    SuperscriptBox["q", 
+     RowBox[{
+      FractionBox["1", "4"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "3"}], "+", 
+        RowBox[{"2", " ", "j"}], "+", 
+        RowBox[{"2", " ", "m"}], "+", 
+        RowBox[{"2", " ", "n"}]}], ")"}]}]], "}"}], ",", 
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.896265667431775*^9},
+ CellLabel->
+  "Out[466]=",ExpressionUUID->"68ee2ce2-0609-4006-a750-09d399389b36"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"   ", 
+  RowBox[{"Lookup", "[", 
+   RowBox[{
+    RowBox[{"fractionData", "[", "\"\<denominator\>\"", "]"}], ",", 
+    "interestingDataTypes"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.8962656666228905`*^9, 3.896265675889694*^9}},
+ CellLabel->
+  "In[467]:=",ExpressionUUID->"363d5235-c955-47c8-aaa9-71516efb4735"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"Missing", "[", 
+    RowBox[{"\<\"KeyAbsent\"\>", ",", "\<\"q-powers\"\>"}], "]"}], ",", 
+   RowBox[{"Missing", "[", 
+    RowBox[{"\<\"KeyAbsent\"\>", ",", "\<\"integrals\"\>"}], "]"}], ",", 
+   RowBox[{"Missing", "[", 
+    RowBox[{"\<\"KeyAbsent\"\>", ",", "\<\"products\"\>"}], "]"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.8962656762943177`*^9},
+ CellLabel->
+  "Out[467]=",ExpressionUUID->"070037e3-3db2-4d57-bd3a-509efdebbeb5"]
+}, Open  ]],
+
+Cell["We need to use deletemissing.", "Text",
+ CellChangeTimes->{{3.896265680195026*^9, 
+  3.8962656854810257`*^9}},ExpressionUUID->"4a550eb2-7531-4a81-8bbb-\
+40254e27ea1b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DeleteMissing", "[", 
+  RowBox[{"Lookup", "[", 
+   RowBox[{
+    RowBox[{"fractionData", "[", "\"\<denominator\>\"", "]"}], ",", 
+    "interestingDataTypes"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8962656863830485`*^9, 
+  3.896265693086068*^9}},ExpressionUUID->"cfc9a084-5c84-4658-a1e3-\
+d7cdfe9cac35"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.8962656889845724`*^9},
+ CellLabel->
+  "Out[468]=",ExpressionUUID->"0fb5e166-8254-4074-83bc-dc5de567828c"]
+}, Open  ]],
+
+Cell["Then we need to catenate:", "Text",
+ CellChangeTimes->{{3.8962656985656977`*^9, 
+  3.896265702152923*^9}},ExpressionUUID->"901f4b1b-0d05-4b7b-a4a3-\
+53d79d22cef1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Catenate", "[", 
+  RowBox[{"DeleteMissing", "[", 
+   RowBox[{"Lookup", "[", 
+    RowBox[{
+     RowBox[{"fractionData", "[", "\"\<denominator\>\"", "]"}], ",", 
+     "interestingDataTypes"}], "]"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.896265702690504*^9, 3.8962657042129326`*^9}},
+ CellLabel->
+  "In[469]:=",ExpressionUUID->"a487a795-c380-432d-9733-07ffcc2aad45"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{3.8962657045307636`*^9},
+ CellLabel->
+  "Out[469]=",ExpressionUUID->"fc6733b7-e533-46c4-87fa-745c651db9c8"]
+}, Open  ]],
+
+Cell["Numerator:", "Text",
+ CellChangeTimes->{{3.8962657095268593`*^9, 
+  3.896265711036111*^9}},ExpressionUUID->"008bd506-ba75-4c26-a303-\
+19d8910277a4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Catenate", "[", 
+  RowBox[{"DeleteMissing", "[", 
+   RowBox[{"Lookup", "[", 
+    RowBox[{
+     RowBox[{"fractionData", "[", "\"\<numerator\>\"", "]"}], ",", 
+     "interestingDataTypes"}], "]"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.896265702690504*^9, 3.8962657187912116`*^9}},
+ CellLabel->
+  "In[470]:=",ExpressionUUID->"298bd2c9-44b5-427e-8f2b-59dafae8dc54"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{
+     SuperscriptBox["q", 
+      RowBox[{
+        FractionBox["1", "4"], " ", 
+        RowBox[{"(", 
+          RowBox[{
+            RowBox[{"-", "3"}], "+", 
+            RowBox[{"2", " ", "j"}], "+", 
+            RowBox[{"2", " ", "m"}], "+", 
+            RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", "\[Infinity]"},
+    "InactiveSum",
+    DisplayFunction->(RowBox[{
+       UnderoverscriptBox[
+        StyleBox["\[Sum]", "Inactive"], 
+        RowBox[{#2, "=", #3}], #4], #}]& ),
+    InterpretationFunction->(RowBox[{
+       RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+       RowBox[{#, ",", 
+         RowBox[{"{", 
+           RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )], ",", 
+   SuperscriptBox["q", 
+    RowBox[{
+     FractionBox["1", "4"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "3"}], "+", 
+       RowBox[{"2", " ", "j"}], "+", 
+       RowBox[{"2", " ", "m"}], "+", 
+       RowBox[{"2", " ", "n"}]}], ")"}]}]]}], "}"}]], "Output",
+ CellChangeTimes->{3.896265719179709*^9},
+ CellLabel->
+  "Out[470]=",ExpressionUUID->"ae1c6e33-fdd7-4d01-965d-e21f32bd1ab6"]
+}, Open  ]],
+
+Cell["Now we need to delete these cases.", "Text",
+ CellChangeTimes->{{3.896265727148285*^9, 
+  3.896265735120681*^9}},ExpressionUUID->"be547f71-3ba8-4f0e-8318-\
+0e5688b3bc5d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"fractionData", "[", "\"\<numerator\>\"", "]"}], "[", 
+  "\"\<list\>\"", "]"}]], "Input",
+ CellLabel->
+  "In[471]:=",ExpressionUUID->"7e4f9a0b-18c3-418c-8a0c-c2ad21ffee3e"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"p", " ", 
+   TemplateBox[{
+     SuperscriptBox["q", 
+      RowBox[{
+        FractionBox["1", "4"], " ", 
+        RowBox[{"(", 
+          RowBox[{
+            RowBox[{"-", "3"}], "+", 
+            RowBox[{"2", " ", "j"}], "+", 
+            RowBox[{"2", " ", "m"}], "+", 
+            RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", "\[Infinity]"},
+    "InactiveSum",
+    DisplayFunction->(RowBox[{
+       UnderoverscriptBox[
+        StyleBox["\[Sum]", "Inactive"], 
+        RowBox[{#2, "=", #3}], #4], #}]& ),
+    InterpretationFunction->(RowBox[{
+       RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+       RowBox[{#, ",", 
+         RowBox[{"{", 
+           RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.8962657581984897`*^9},
+ CellLabel->
+  "Out[471]=",ExpressionUUID->"e17cc4f2-8392-4db2-a159-9a0648a9caf5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"fractionData", "[", "\"\<numerator\>\"", "]"}], "[", 
+    "\"\<list\>\"", "]"}], ",", 
+   RowBox[{"Alternatives", "@@", 
+    RowBox[{"Catenate", "[", 
+     RowBox[{"DeleteMissing", "[", 
+      RowBox[{"Lookup", "[", 
+       RowBox[{
+        RowBox[{"fractionData", "[", "\"\<numerator\>\"", "]"}], ",", 
+        "interestingDataTypes"}], "]"}], "]"}], "]"}]}], ",", "All"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8962657359329567`*^9, 3.896265781489647*^9}},
+ CellLabel->
+  "In[473]:=",ExpressionUUID->"88d00c50-0b30-4435-bdd6-65dbcec33246"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   SuperscriptBox["q", 
+    RowBox[{
+     FractionBox["1", "4"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "3"}], "+", 
+       RowBox[{"2", " ", "j"}], "+", 
+       RowBox[{"2", " ", "m"}], "+", 
+       RowBox[{"2", " ", "n"}]}], ")"}]}]], ",", 
+   TemplateBox[{
+     SuperscriptBox["q", 
+      RowBox[{
+        FractionBox["1", "4"], " ", 
+        RowBox[{"(", 
+          RowBox[{
+            RowBox[{"-", "3"}], "+", 
+            RowBox[{"2", " ", "j"}], "+", 
+            RowBox[{"2", " ", "m"}], "+", 
+            RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", "\[Infinity]"},
+    "InactiveSum",
+    DisplayFunction->(RowBox[{
+       UnderoverscriptBox[
+        StyleBox["\[Sum]", "Inactive"], 
+        RowBox[{#2, "=", #3}], #4], #}]& ),
+    InterpretationFunction->(RowBox[{
+       RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+       RowBox[{#, ",", 
+         RowBox[{"{", 
+           RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.8962657765496635`*^9, 3.896265781762301*^9}},
+ CellLabel->
+  "Out[473]=",ExpressionUUID->"dff9aebc-5365-4b0e-9eef-febe63d521b8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DeleteCases", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"fractionData", "[", "\"\<numerator\>\"", "]"}], "[", 
+    "\"\<list\>\"", "]"}], ",", 
+   RowBox[{"Alternatives", "@@", 
+    RowBox[{"Catenate", "[", 
+     RowBox[{"DeleteMissing", "[", 
+      RowBox[{"Lookup", "[", 
+       RowBox[{
+        RowBox[{"fractionData", "[", "\"\<numerator\>\"", "]"}], ",", 
+        "interestingDataTypes"}], "]"}], "]"}], "]"}]}], ",", "All"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8962657359329567`*^9, 3.8962657882282476`*^9}},
+ CellLabel->
+  "In[474]:=",ExpressionUUID->"0eb0d16b-5ca8-4d2b-8ac9-a110a4da479c"],
+
+Cell[BoxData[
+ RowBox[{"{", "p", "}"}]], "Output",
+ CellChangeTimes->{3.8962657887148046`*^9},
+ CellLabel->
+  "Out[474]=",ExpressionUUID->"916e3484-0ade-4e6b-aef3-7e62a70f90e2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Keys", "[", 
+  RowBox[{"fractionData", "[", "\"\<numerator\>\"", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8962658837725086`*^9, 3.8962658925958033`*^9}},
+ CellLabel->
+  "In[475]:=",ExpressionUUID->"1c2aeb03-1a46-40d4-bbff-0b044a307a3f"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"value\"\>", ",", "\<\"head\"\>", ",", "\<\"length\"\>", 
+   ",", "\<\"list\"\>", 
+   ",", "\<\"very-well-poised-basic-hypergeometric-cases\"\>", 
+   ",", "\<\"fraction-power-cases\"\>", ",", "\<\"sums\"\>", 
+   ",", "\<\"q-powers\"\>", ",", "\<\"integrals\"\>", ",", "\<\"products\"\>",
+    ",", "\<\"derivatives\"\>", ",", "\<\"notinterestingdata\"\>", 
+   ",", "\<\"notinterestingdataProduct\"\>", ",", "\<\"postData\"\>", 
+   ",", "\<\"postDataProduct\"\>", ",", "\<\"preData\"\>", 
+   ",", "\<\"preDataProduct\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.8962658929483476`*^9},
+ CellLabel->
+  "Out[475]=",ExpressionUUID->"3c86fb20-fe80-4c1f-a409-69dab613576c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DictionaryWordQ", "[", "\"\<interesting\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.8962659027553654`*^9, 3.8962659073503923`*^9}},
+ CellLabel->
+  "In[476]:=",ExpressionUUID->"08409c02-f77a-4cb7-b335-963e0eb5b0ce"],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.8962659078904114`*^9},
+ CellLabel->
+  "Out[476]=",ExpressionUUID->"e0fc1d39-127b-4032-b3af-9680a438757e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"<|", 
+  RowBox[{"\"\<interesting-data\>\"", "->", 
+   RowBox[{"Cases", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"fractionData", "[", "\"\<numerator\>\"", "]"}], "[", 
+      "\"\<list\>\"", "]"}], ",", 
+     RowBox[{"Alternatives", "@@", 
+      RowBox[{"Catenate", "[", 
+       RowBox[{"DeleteMissing", "[", 
+        RowBox[{"Lookup", "[", 
+         RowBox[{
+          RowBox[{"fractionData", "[", "\"\<numerator\>\"", "]"}], ",", 
+          "interestingDataTypes"}], "]"}], "]"}], "]"}]}], ",", "All"}], 
+    "]"}]}], "|>"}]], "Input",
+ CellChangeTimes->{{3.896265877217966*^9, 3.896265921203829*^9}},
+ CellLabel->
+  "In[477]:=",ExpressionUUID->"0cb2c0e3-4650-450b-a8ee-8e53110d4fab"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{"\<\"interesting-data\"\>", "\[Rule]", 
+   RowBox[{"{", 
+    RowBox[{
+     SuperscriptBox["q", 
+      RowBox[{
+       FractionBox["1", "4"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "3"}], "+", 
+         RowBox[{"2", " ", "j"}], "+", 
+         RowBox[{"2", " ", "m"}], "+", 
+         RowBox[{"2", " ", "n"}]}], ")"}]}]], ",", 
+     TemplateBox[{
+       SuperscriptBox["q", 
+        RowBox[{
+          FractionBox["1", "4"], " ", 
+          RowBox[{"(", 
+            RowBox[{
+              RowBox[{"-", "3"}], "+", 
+              RowBox[{"2", " ", "j"}], "+", 
+              RowBox[{"2", " ", "m"}], "+", 
+              RowBox[{"2", " ", "n"}]}], ")"}]}]], "m", "0", "\[Infinity]"},
+      "InactiveSum",
+      DisplayFunction->(RowBox[{
+         UnderoverscriptBox[
+          StyleBox["\[Sum]", "Inactive"], 
+          RowBox[{#2, "=", #3}], #4], #}]& ),
+      InterpretationFunction->(RowBox[{
+         RowBox[{"Inactive", "[", "Sum", "]"}], "[", 
+         RowBox[{#, ",", 
+           RowBox[{"{", 
+             RowBox[{#2, ",", #3, ",", #4}], "}"}]}], "]"}]& )]}], "}"}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{3.896265922713606*^9},
+ CellLabel->
+  "Out[477]=",ExpressionUUID->"022361ca-886f-4988-a2d1-3d67db0e9d26"]
+}, Open  ]]
+},
+WindowSize->{576, 585.6},
+WindowMargins->{{
+  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (May 18, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"45c1e134-ce18-4893-9939-706439bad57e"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1753, 50, 204, "Input",ExpressionUUID->"c85c6934-4f98-46f8-aced-e709eec2b7b0"],
+Cell[2336, 74, 16687, 434, 811, "Output",ExpressionUUID->"4d6bbf16-0a50-4d88-824a-e3df8fd1abec"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19060, 513, 1833, 51, 204, "Input",ExpressionUUID->"a80d3d05-b047-4f82-86a7-9dc4f2a50efe"],
+Cell[20896, 566, 1913, 56, 64, "Output",ExpressionUUID->"c3c82ee7-ce55-4758-b28a-fff7b3180708"]
+}, Open  ]],
+Cell[22824, 625, 2705, 77, 89, "Text",ExpressionUUID->"74402556-08be-4d16-88aa-82d46094b9cb"],
+Cell[CellGroupData[{
+Cell[25554, 706, 230, 4, 28, "Input",ExpressionUUID->"1d9579b9-3f64-46d4-82c2-4826fdeeb0c3"],
+Cell[25787, 712, 7546, 207, 376, "Output",ExpressionUUID->"bf5e0a59-774b-4f15-9e67-35535ce7d3d6"]
+}, Open  ]],
+Cell[33348, 922, 200, 3, 35, "Text",ExpressionUUID->"79bbda8e-e49c-4882-b50a-4ae0c094e9f0"],
+Cell[33551, 927, 414, 10, 86, "Input",ExpressionUUID->"ad40aa07-8af8-4e03-a3ed-04fc0b5957ef"],
+Cell[CellGroupData[{
+Cell[33990, 941, 311, 8, 28, "Input",ExpressionUUID->"07eb0095-8f00-45da-878d-b9d432d42e12"],
+Cell[34304, 951, 1338, 40, 56, "Output",ExpressionUUID->"68ee2ce2-0609-4006-a750-09d399389b36"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35679, 996, 337, 8, 28, "Input",ExpressionUUID->"363d5235-c955-47c8-aaa9-71516efb4735"],
+Cell[36019, 1006, 574, 15, 52, "Output",ExpressionUUID->"070037e3-3db2-4d57-bd3a-509efdebbeb5"]
+}, Open  ]],
+Cell[36608, 1024, 173, 3, 35, "Text",ExpressionUUID->"4a550eb2-7531-4a81-8bbb-40254e27ea1b"],
+Cell[CellGroupData[{
+Cell[36806, 1031, 334, 8, 48, "Input",ExpressionUUID->"cfc9a084-5c84-4658-a1e3-d7cdfe9cac35"],
+Cell[37143, 1041, 267, 8, 32, "Output",ExpressionUUID->"0fb5e166-8254-4074-83bc-dc5de567828c"]
+}, Open  ]],
+Cell[37425, 1052, 169, 3, 35, "Text",ExpressionUUID->"901f4b1b-0d05-4b7b-a4a3-53d79d22cef1"],
+Cell[CellGroupData[{
+Cell[37619, 1059, 396, 9, 67, "Input",ExpressionUUID->"a487a795-c380-432d-9733-07ffcc2aad45"],
+Cell[38018, 1070, 172, 4, 32, "Output",ExpressionUUID->"fc6733b7-e533-46c4-87fa-745c651db9c8"]
+}, Open  ]],
+Cell[38205, 1077, 154, 3, 35, "Text",ExpressionUUID->"008bd506-ba75-4c26-a303-19d8910277a4"],
+Cell[CellGroupData[{
+Cell[38384, 1084, 394, 9, 67, "Input",ExpressionUUID->"298bd2c9-44b5-427e-8f2b-59dafae8dc54"],
+Cell[38781, 1095, 1145, 34, 56, "Output",ExpressionUUID->"ae1c6e33-fdd7-4d01-965d-e21f32bd1ab6"]
+}, Open  ]],
+Cell[39941, 1132, 176, 3, 35, "Text",ExpressionUUID->"be547f71-3ba8-4f0e-8318-0e5688b3bc5d"],
+Cell[CellGroupData[{
+Cell[40142, 1139, 206, 5, 28, "Input",ExpressionUUID->"7e4f9a0b-18c3-418c-8a0c-c2ad21ffee3e"],
+Cell[40351, 1146, 896, 26, 56, "Output",ExpressionUUID->"e17cc4f2-8392-4db2-a159-9a0648a9caf5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[41284, 1177, 619, 16, 105, "Input",ExpressionUUID->"88d00c50-0b30-4435-bdd6-65dbcec33246"],
+Cell[41906, 1195, 1174, 35, 56, "Output",ExpressionUUID->"dff9aebc-5365-4b0e-9eef-febe63d521b8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[43117, 1235, 627, 16, 105, "Input",ExpressionUUID->"0eb0d16b-5ca8-4d2b-8ac9-a110a4da479c"],
+Cell[43747, 1253, 177, 4, 32, "Output",ExpressionUUID->"916e3484-0ade-4e6b-aef3-7e62a70f90e2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[43961, 1262, 265, 5, 28, "Input",ExpressionUUID->"1c2aeb03-1a46-40d4-bbff-0b044a307a3f"],
+Cell[44229, 1269, 710, 13, 109, "Output",ExpressionUUID->"3c86fb20-fe80-4c1f-a409-69dab613576c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[44976, 1287, 239, 4, 28, "Input",ExpressionUUID->"08409c02-f77a-4cb7-b335-963e0eb5b0ce"],
+Cell[45218, 1293, 158, 3, 32, "Output",ExpressionUUID->"e0fc1d39-127b-4032-b3af-9680a438757e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[45413, 1301, 714, 18, 124, "Input",ExpressionUUID->"0cb2c0e3-4650-450b-a8ee-8e53110d4fab"],
+Cell[46130, 1321, 1319, 37, 56, "Output",ExpressionUUID->"022361ca-886f-4988-a2d1-3d67db0e9d26"]
+}, Open  ]]
+}
+]
+*)
+

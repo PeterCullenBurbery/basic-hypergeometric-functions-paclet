@@ -11,10 +11,10 @@ FractionData // ClearAll
 FractionData::usage = "FractionData[x] gives data on a fraction."
 
 FractionData[x_] :=
-  Module[{numerator, denominator, basicData, listData, interestingData,
+  Module[{interestingDataTypes,numerator, denominator, basicData, listData, interestingData,
      organizedData, moreData, postData, postDataProduct, preData, preDataProduct,
      combinedData, smallerFractionData, allData, totalProductList, totalProductProduct,
-     deletedCasesData},
+     deletedCasesData},interestingDataTypes={"very-well-poised-basic-hypergeometric-cases","fraction-power-cases","sums","q-powers","integrals","products"};
     {numerator, denominator} = NumeratorDenominator[x];
     basicData = AssociationThread[{"numerator", "denominator"} -> Table[
       <|"value" -> term, "head" -> Head[term], "length" -> Length[term]|>, 
