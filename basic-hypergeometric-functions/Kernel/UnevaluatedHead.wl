@@ -1,8 +1,8 @@
 (* ::Package:: *)
 
 (* ::Package:: *)
-
 (**)
+
 
 BeginPackage["PeterBurbery`BasicHypergeometricFunctions`"];
 
@@ -16,7 +16,7 @@ Begin["`Private`"];
 
 UnevaluatedHead // ClearAll
 
-UnevaluatedHead::usage = "UnevaluatedHead[expr] finds the head of expr without evaluating it."
+UnevaluatedHead::usage = "UnevaluatedHead[expr] finds the head of expr without evaluating it.";
 
 
 SetAttributes[UnevaluatedHead, HoldAll]

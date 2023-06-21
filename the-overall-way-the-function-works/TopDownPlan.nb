@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    606030,      14621]
-NotebookOptionsPosition[    595700,      14442]
-NotebookOutlinePosition[    596137,      14459]
-CellTagsIndexPosition[    596094,      14456]
+NotebookDataLength[    641897,      15364]
+NotebookOptionsPosition[    630444,      15171]
+NotebookOutlinePosition[    630860,      15187]
+CellTagsIndexPosition[    630817,      15184]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -14438,11 +14438,739 @@ UnevaluatedHead"|>, False], {}, TestID ->
  CellChangeTimes->{3.896367113257978*^9},
  CellLabel->
   "Out[376]=",ExpressionUUID->"b1f9040e-3e17-4517-a261-40a2aa1861aa"]
-}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{"Quiet", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Get", "/@", 
+       RowBox[{"FileNames", "[", 
+        RowBox[{
+        "\"\<*.wl\>\"", ",", 
+         "\"\<C:\\\\Users\\\\Peter\\\\OneDrive - Marshall \
+University\\\\GitHub\\\\basic-hypergeometric-functions-paclet\\\\basic-\
+hypergeometric-functions\\\\Kernel\>\""}], "]"}]}], ";"}], ",", 
+     RowBox[{"Get", "::", "noopen"}]}], "]"}], ",", "4"}], "]"}]], "Input",
+ CellChangeTimes->{{3.896368470096614*^9, 3.8963684700986137`*^9}},
+ CellLabel->
+  "In[470]:=",ExpressionUUID->"269bf142-5aee-4b7e-9667-653735f65a03"],
+
+Cell[BoxData[
+ RowBox[{"Remove", "[", "Global`EnsureHeld", "]"}]], "Input",
+ CellChangeTimes->{{3.8963684937577047`*^9, 3.8963684982594767`*^9}},
+ CellLabel->
+  "In[466]:=",ExpressionUUID->"b2475e5a-f0e2-4cba-a733-1369cb716652"],
+
+Cell[BoxData[
+ RowBox[{"Remove", "[", "Global`IsHeld", "]"}]], "Input",
+ CellChangeTimes->{{3.8963684937577047`*^9, 3.8963685026184626`*^9}},
+ CellLabel->
+  "In[467]:=",ExpressionUUID->"92518287-7231-4ecc-a5bd-7cf9a7e069fa"],
+
+Cell[BoxData[
+ RowBox[{"Remove", "[", "Global`MakeFunctionsExact", "]"}]], "Input",
+ CellChangeTimes->{{3.8963684937577047`*^9, 3.8963685058591185`*^9}},
+ CellLabel->
+  "In[468]:=",ExpressionUUID->"f0e777f7-f4b5-49a8-8a44-fda0108258f2"],
+
+Cell[BoxData[
+ RowBox[{"Remove", "[", "Global`RemoveWorkingPrecision", "]"}]], "Input",
+ CellChangeTimes->{{3.8963684937577047`*^9, 3.8963685106944866`*^9}},
+ CellLabel->
+  "In[469]:=",ExpressionUUID->"d3b600a3-a912-4109-bde0-d999f88fbd7c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "InactivateIntegralProductSum"}]], "Input",
+ CellChangeTimes->{{3.896368575388379*^9, 3.896368578476411*^9}},
+ CellLabel->
+  "In[471]:=",ExpressionUUID->"6fe9c0e8-4069-4d2d-aa9e-88fa005b5c77"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = False, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"InactivateIntegralProductSum[input] takes an \
+expression as input, ensures it is held to prevent evaluation, removes any \
+options from numerical functions, converts numerical functions to their exact \
+counterparts, and then inactivates all instances of Integrate, Sum, and \
+Product. It returns the transformed, inactive expression.\"\>", 
+             "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[
+           TagBox[GridBox[{
+              {
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  StyleBox["\<\" Definitions\"\>", "InformationRowLabel",
+                   StripOnInput->False],
+                  "\"Definitions\"",
+                  TooltipStyle->"TextStyling"],
+                 Annotation[#, "Definitions", "Tooltip"]& ], "DialogStyle",
+                StripOnInput->False]},
+              {
+               TemplateBox[{"\"\[ThinSpace]\"", 
+                 GridBox[{{
+                    RowBox[{
+                    
+                    RowBox[{
+                    "InactivateIntegralProductSum", "[", "input_", "]"}], 
+                    ":=", 
+                    RowBox[{"ReleaseHold", "[", 
+                    RowBox[{
+                    RowBox[{"ReplaceAll", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Integrate", "\[Rule]", 
+                    RowBox[{"Inactive", "[", "Integrate", "]"}]}], ",", 
+                    RowBox[{"Product", "\[Rule]", 
+                    RowBox[{"Inactive", "[", "Product", "]"}]}], ",", 
+                    RowBox[{"Sum", "\[Rule]", 
+                    RowBox[{"Inactive", "[", "Sum", "]"}]}]}], "}"}], "]"}], 
+                    "[", 
+                    RowBox[{
+                    TagBox[
+                    RowBox[{"Removed", "[", "\"MakeFunctionsExact\"", "]"}], 
+                    False, Editable -> False], "[", 
+                    RowBox[{"RemoveNumericalFunctionOptions", "[", 
+                    RowBox[{
+                    InterpretationBox[
+                    TagBox[
+                    FrameBox[
+                    PaneBox[
+                    GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    AdjustmentBox[
+                    "\"[\[FilledSmallSquare]]\"", BoxBaselineShift -> -0.25, 
+                    BoxMargins -> {{0, 0}, {-1, -1}}], "ResourceFunctionIcon",
+                     FontColor -> GrayLevel[0.45]], ShowStringCharacters -> 
+                    False, FontFamily -> "Source Sans Pro Black", FontSize -> 
+                    0.65 Inherited, FontWeight -> "Heavy", 
+                    PrivateFontOptions -> {"OperatorSubstitution" -> False}], 
+                    StyleBox[
+                    RowBox[{
+                    StyleBox["\"EnsureHeld\"", "ResourceFunctionLabel"], 
+                    " "}], ShowAutoStyles -> False, ShowStringCharacters -> 
+                    False, FontSize -> 0.9 Inherited, FontColor -> 
+                    GrayLevel[0.1]]}}, 
+                    GridBoxSpacings -> {"Columns" -> {{0.25}}}], Alignment -> 
+                    Left, BaseStyle -> {
+                    LineSpacing -> {0, 0}, LineBreakWithin -> False}, 
+                    BaselinePosition -> Baseline, 
+                    FrameMargins -> {{3, 0}, {0, 0}}], Background -> 
+                    RGBColor[0.968627, 0.976471, 0.984314], BaselinePosition -> 
+                    Baseline, DefaultBaseStyle -> {}, 
+                    FrameMargins -> {{0, 0}, {1, 1}}, FrameStyle -> 
+                    RGBColor[0.831373, 0.847059, 0.85098], RoundingRadius -> 
+                    4], {"FunctionResourceBox", 
+                    GrayLevel[0.45], "\"EnsureHeld\""}, TagBoxNote -> 
+                    "FunctionResourceBox"], 
+                    ResourceFunction[
+                    
+                    ResourceObject[<|
+                    "Name" -> "EnsureHeld", "UUID" -> 
+                    "454e9185-e741-4b75-8ded-6c381c3187db", "ResourceType" -> 
+                    "Function", "Description" -> 
+                    "Checks an expression and holds it if it is not already \
+held", "ResourceLocations" -> {
+                    CloudObject[
+                    "https://www.wolframcloud.com/obj/burbery1/Resources/454/\
+454e9185-e741-4b75-8ded-6c381c3187db"]}, "Version" -> None, 
+                    "Keywords" -> {"Evaluation Control", 
+                    "Symbolic Computation", "Hold Expression", 
+                    "Expression Manipulation"}, 
+                    "Categories" -> {
+                    "Core Language & Structure", 
+                    "Higher Mathematical Computation", 
+                    "Programming Utilities", 
+                    "Symbolic & Numeric Computation"}, 
+                    "Compatibility" -> <|
+                    "WolframLanguageVersionRequired" -> "13.0+", 
+                    "OperatingSystem" -> {"Windows", "MacOSX", "Unix"}, 
+                    "Features" -> {}, 
+                    "EvaluationEnvironment" -> {
+                    "Session", "WebEvaluation", "BatchJob", "Script", 
+                    "WebAPI", "Subkernel", "Scheduled"}, "CloudSupport" -> 
+                    True|>, "ContributorInformation" -> <|
+                    "ContributedBy" -> "Peter Cullen Burbery"|>, 
+                    "DefinitionNotebook" -> 
+                    CloudObject[
+                    "https://www.wolframcloud.com/obj/burbery1/\
+DeployedResources/Function/EnsureHeld/EnsureHeld-DefinitionNotebook.nb"], 
+                    "Documentation" -> <|"Usage" -> {<|"Usage" -> BoxData[
+                    RowBox[{
+                    StyleBox[
+                    RowBox[{
+                    StyleBox["ResourceFunction", "ResourceFunctionSymbol"], 
+                    "[", 
+                    StyleBox["\"EnsureHeld\"", "ResourceFunctionName"], "]"}],
+                     "ResourceFunctionHandle"], "[", 
+                    StyleBox["input", "TI"], "]"}]], "Description" -> 
+                    TextData[{"checks whether the ", 
+                    Cell[
+                    BoxData[
+                    StyleBox["input", "TI"]], "InlineFormula", FontFamily -> 
+                    "Source Sans Pro"], 
+                    " is an unheld expression. If it is, it holds the \
+expression. If the input is already a held expression, it returns the input \
+unchanged."}]|>}|>, "DocumentationLink" -> 
+                    URL["https://www.wolframcloud.com/obj/burbery1/\
+DeployedResources/Function/EnsureHeld"], "ExampleNotebook" -> 
+                    CloudObject[
+                    "https://www.wolframcloud.com/obj/burbery1/\
+DeployedResources/Function/EnsureHeld/EnsureHeld-ExampleNotebook.nb"], 
+                    "ExampleNotebookData" -> Automatic, "FunctionLocation" -> 
+                    CloudObject[
+                    "https://www.wolframcloud.com/obj/burbery1/Resources/454/\
+454e9185-e741-4b75-8ded-6c381c3187db/download/DefinitionData"], 
+                    "PageHeaderClickToCopy" -> 
+                    "ResourceObject[CloudObject[\"https://www.wolframcloud.\
+com/obj/burbery1/DeployedResources/Function/EnsureHeld\"]]", 
+                    "RelatedSymbols" -> {
+                    "Hold", "HoldForm", "HoldComplete", "HoldPattern", 
+                    "Unevaluated"}, 
+                    "SeeAlso" -> {"HoldArguments", "MapAtEvaluate", 
+                    "ReplaceAllUnheld", "UnevaluatedAssociation"}, 
+                    "ShortName" -> "EnsureHeld", "SymbolName" -> 
+                    "FunctionRepository`$454e9185e7414b758ded6c381c3187db`\
+EnsureHeld", "VerificationTests" -> HoldComplete[
+                    VerificationTest[
+                    Information["EnsureHeld", LongForm -> False], 
+                    
+                    InformationData[<|"ObjectType" -> "Symbol", "Usage" -> 
+                    "EnsureHeld[input] checks whether the input is an unheld \
+expression. If it is, it holds the expression. If the input is already a held \
+expression, it returns the input unchanged.", "Documentation" -> None, 
+                    "OwnValues" -> None, "UpValues" -> None, "DownValues" -> 
+                    Information`InformationValueForm[DownValues, 
+                    ResourceFunction["EnsureHeld"], {
+                    ResourceFunction["EnsureHeld"][
+                    Pattern[ResourceObjectTest`input, 
+                    Blank[]]] :> 
+                    Module[{ResourceObjectTest`placeholder}, 
+                    ResourceObjectTest`placeholder = Unique[]; Which[
+                    ResourceObjectTest`IsHeld[ResourceObjectTest`input], 
+                    ResourceObjectTest`input, 
+                    And[
+                    Not[
+                    ResourceObjectTest`IsHeld[ResourceObjectTest`input]], 
+                    PeterBurbery`BasicHypergeometricFunctions`UnevaluatedHead[
+                    ResourceObjectTest`input] === Symbol, 
+                    MatchQ[
+                    Head[ResourceObjectTest`input], 
+                    Alternatives[Hold, HoldForm]]], ResourceObjectTest`input, 
+                    And[
+                    Not[
+                    ResourceObjectTest`IsHeld[ResourceObjectTest`input]], 
+                    PeterBurbery`BasicHypergeometricFunctions`UnevaluatedHead[
+                    ResourceObjectTest`input] === Symbol, 
+                    Not[
+                    MatchQ[
+                    Head[ResourceObjectTest`input], 
+                    Alternatives[Hold, HoldForm]]]], 
+                    ReplaceAll[
+                    ResourceObjectTest`placeholder[
+                    Evaluate[ResourceObjectTest`input]], {
+                    ResourceObjectTest`placeholder -> Hold}], True, 
+                    Hold[ResourceObjectTest`input]]]}], "SubValues" -> None, 
+                    "DefaultValues" -> None, "NValues" -> None, 
+                    "FormatValues" -> None, "Options" -> None, 
+                    "Attributes" -> {HoldAll}, "FullName" -> 
+                    "Global`EnsureHeld"|>, False], {}, TestID -> 
+                    "EnsureHeld-0001"], 
+                    VerificationTest[
+                    Information["IsHeld", LongForm -> False], 
+                    
+                    InformationData[<|"ObjectType" -> "Symbol", "Usage" -> 
+                    "IsHeld[input] returns True if the input is a held \
+expression, and False otherwise. A held expression is an expression that is \
+held by Hold or HoldForm.", "Documentation" -> None, "OwnValues" -> None, 
+                    "UpValues" -> None, "DownValues" -> 
+                    Information`InformationValueForm[
+                    DownValues, ResourceObjectTest`IsHeld, {
+                    ResourceObjectTest`IsHeld[
+                    Pattern[ResourceObjectTest`input, 
+                    Blank[]]] :> MatchQ[
+                    PeterBurbery`BasicHypergeometricFunctions`UnevaluatedHead[
+                    ResourceObjectTest`input], 
+                    Alternatives[HoldForm, Hold]]}], "SubValues" -> None, 
+                    "DefaultValues" -> None, "NValues" -> None, 
+                    "FormatValues" -> None, "Options" -> None, 
+                    "Attributes" -> {HoldAll}, "FullName" -> 
+                    "Global`IsHeld"|>, False], {}, TestID -> 
+                    "EnsureHeld-0002"], 
+                    VerificationTest[
+                    Information["UnevaluatedHead", LongForm -> False], 
+                    
+                    InformationData[<|"ObjectType" -> "Symbol", "Usage" -> 
+                    "UnevaluatedHead[input] gives the head of the input \
+without evaluating the input. This is useful when you need to inspect the \
+structure of an expression without causing side effects due to evaluation.", 
+                    "Documentation" -> None, "OwnValues" -> None, "UpValues" -> 
+                    None, "DownValues" -> Information`InformationValueForm[
+                    DownValues, 
+                    PeterBurbery`BasicHypergeometricFunctions`UnevaluatedHead,\
+ {PeterBurbery`BasicHypergeometricFunctions`UnevaluatedHead[
+                    Pattern[ResourceObjectTest`expr, 
+                    Blank[]]] :> Head[
+                    Unevaluated[ResourceObjectTest`expr]]}], "SubValues" -> 
+                    None, "DefaultValues" -> None, "NValues" -> None, 
+                    "FormatValues" -> None, "Options" -> None, 
+                    "Attributes" -> {HoldAll}, "FullName" -> 
+                    "PeterBurbery`BasicHypergeometricFunctions`\
+UnevaluatedHead"|>, False], {}, TestID -> "EnsureHeld-0003"]]|>]], Selectable -> 
+                    False], "[", "input", "]"}], "]"}], "]"}], "]"}], 
+                    "]"}]}]}, {" "}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]},
+                "RowDefault"]}
+             },
+             DefaultBaseStyle->"Column",
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Column"],
+           FrameMargins->{{6, 0}, {3, 6}}], "\<\"\"\>"},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Attributes\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Attributes\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Attributes", "Tooltip"]& ], 
+                   RowBox[{"{", "HoldAll", "}"}]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"Global`InactivateIntegralProductSum\"\
+\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->{{6, 6}, {6, 3}}], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"InactivateIntegralProductSum[input] takes an \
+expression as input, ensures it is held to prevent evaluation, removes any \
+options from numerical functions, converts numerical functions to their exact \
+counterparts, and then inactivates all instances of Integrate, Sum, and \
+Product. It returns the transformed, inactive expression.\"\>", 
+             "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{10., {3., 7.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{10., {3., 7.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[<|
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "InactivateIntegralProductSum[input] takes an expression as input, \
+ensures it is held to prevent evaluation, removes any options from numerical \
+functions, converts numerical functions to their exact counterparts, and then \
+inactivates all instances of Integrate, Sum, and Product. It returns the \
+transformed, inactive expression.", "Documentation" -> None, "OwnValues" -> 
+    None, "UpValues" -> None, "DownValues" -> 
+    Information`InformationValueForm[
+     DownValues, $CellContext`InactivateIntegralProductSum, \
+{$CellContext`InactivateIntegralProductSum[
+         Pattern[$CellContext`input, 
+          Blank[]]] :> ReleaseHold[
+         ReplaceAll[{
+          Integrate -> Inactive[Integrate], Product -> Inactive[Product], Sum -> 
+           Inactive[Sum]}][
+          Removed["MakeFunctionsExact"][
+           $CellContext`RemoveNumericalFunctionOptions[
+            ResourceFunction[
+             
+             ResourceObject[<|
+              "Name" -> "EnsureHeld", "UUID" -> 
+               "454e9185-e741-4b75-8ded-6c381c3187db", "ResourceType" -> 
+               "Function", "Description" -> 
+               "Checks an expression and holds it if it is not already held", 
+               "ResourceLocations" -> {
+                 CloudObject[
+                 "https://www.wolframcloud.com/obj/burbery1/Resources/454/\
+454e9185-e741-4b75-8ded-6c381c3187db"]}, "Version" -> None, 
+               "Keywords" -> {
+                "Evaluation Control", "Symbolic Computation", 
+                 "Hold Expression", "Expression Manipulation"}, 
+               "Categories" -> {
+                "Core Language & Structure", 
+                 "Higher Mathematical Computation", "Programming Utilities", 
+                 "Symbolic & Numeric Computation"}, 
+               "Compatibility" -> <|
+                "WolframLanguageVersionRequired" -> "13.0+", 
+                 "OperatingSystem" -> {"Windows", "MacOSX", "Unix"}, 
+                 "Features" -> {}, 
+                 "EvaluationEnvironment" -> {
+                  "Session", "WebEvaluation", "BatchJob", "Script", "WebAPI", 
+                   "Subkernel", "Scheduled"}, "CloudSupport" -> True|>, 
+               "ContributorInformation" -> <|
+                "ContributedBy" -> "Peter Cullen Burbery"|>, 
+               "DefinitionNotebook" -> 
+               CloudObject[
+                "https://www.wolframcloud.com/obj/burbery1/DeployedResources/\
+Function/EnsureHeld/EnsureHeld-DefinitionNotebook.nb"], 
+               "Documentation" -> <|"Usage" -> {<|"Usage" -> BoxData[
+                    RowBox[{
+                    StyleBox[
+                    RowBox[{
+                    StyleBox["ResourceFunction", "ResourceFunctionSymbol"], 
+                    "[", 
+                    StyleBox["\"EnsureHeld\"", "ResourceFunctionName"], "]"}],
+                     "ResourceFunctionHandle"], "[", 
+                    StyleBox["input", "TI"], "]"}]], "Description" -> 
+                    TextData[{"checks whether the ", 
+                    Cell[
+                    BoxData[
+                    StyleBox["input", "TI"]], "InlineFormula", FontFamily -> 
+                    "Source Sans Pro"], 
+                    " is an unheld expression. If it is, it holds the \
+expression. If the input is already a held expression, it returns the input \
+unchanged."}]|>}|>, "DocumentationLink" -> 
+               URL["https://www.wolframcloud.com/obj/burbery1/\
+DeployedResources/Function/EnsureHeld"], "ExampleNotebook" -> 
+               CloudObject[
+                "https://www.wolframcloud.com/obj/burbery1/DeployedResources/\
+Function/EnsureHeld/EnsureHeld-ExampleNotebook.nb"], "ExampleNotebookData" -> 
+               Automatic, "FunctionLocation" -> 
+               CloudObject[
+                "https://www.wolframcloud.com/obj/burbery1/Resources/454/\
+454e9185-e741-4b75-8ded-6c381c3187db/download/DefinitionData"], 
+               "PageHeaderClickToCopy" -> 
+               "ResourceObject[CloudObject[\"https://www.wolframcloud.com/obj/\
+burbery1/DeployedResources/Function/EnsureHeld\"]]", 
+               "RelatedSymbols" -> {
+                "Hold", "HoldForm", "HoldComplete", "HoldPattern", 
+                 "Unevaluated"}, 
+               "SeeAlso" -> {
+                "HoldArguments", "MapAtEvaluate", "ReplaceAllUnheld", 
+                 "UnevaluatedAssociation"}, "ShortName" -> "EnsureHeld", 
+               "SymbolName" -> 
+               "FunctionRepository`$454e9185e7414b758ded6c381c3187db`\
+EnsureHeld", "VerificationTests" -> HoldComplete[
+                 VerificationTest[
+                  Information["EnsureHeld", LongForm -> False], 
+                  
+                  InformationData[<|
+                   "ObjectType" -> "Symbol", "Usage" -> 
+                    "EnsureHeld[input] checks whether the input is an unheld \
+expression. If it is, it holds the expression. If the input is already a held \
+expression, it returns the input unchanged.", "Documentation" -> None, 
+                    "OwnValues" -> None, "UpValues" -> None, "DownValues" -> 
+                    Information`InformationValueForm[DownValues, 
+                    ResourceFunction["EnsureHeld"], {
+                    ResourceFunction["EnsureHeld"][
+                    Pattern[ResourceObjectTest`input, 
+                    Blank[]]] :> 
+                    Module[{ResourceObjectTest`placeholder}, 
+                    ResourceObjectTest`placeholder = Unique[]; Which[
+                    ResourceObjectTest`IsHeld[ResourceObjectTest`input], 
+                    ResourceObjectTest`input, 
+                    And[
+                    Not[
+                    ResourceObjectTest`IsHeld[ResourceObjectTest`input]], 
+                    PeterBurbery`BasicHypergeometricFunctions`UnevaluatedHead[
+                    ResourceObjectTest`input] === Symbol, 
+                    MatchQ[
+                    Head[ResourceObjectTest`input], 
+                    Alternatives[Hold, HoldForm]]], ResourceObjectTest`input, 
+                    And[
+                    Not[
+                    ResourceObjectTest`IsHeld[ResourceObjectTest`input]], 
+                    PeterBurbery`BasicHypergeometricFunctions`UnevaluatedHead[
+                    ResourceObjectTest`input] === Symbol, 
+                    Not[
+                    MatchQ[
+                    Head[ResourceObjectTest`input], 
+                    Alternatives[Hold, HoldForm]]]], 
+                    ReplaceAll[
+                    ResourceObjectTest`placeholder[
+                    Evaluate[ResourceObjectTest`input]], {
+                    ResourceObjectTest`placeholder -> Hold}], True, 
+                    Hold[ResourceObjectTest`input]]]}], "SubValues" -> None, 
+                    "DefaultValues" -> None, "NValues" -> None, 
+                    "FormatValues" -> None, "Options" -> None, 
+                    "Attributes" -> {HoldAll}, "FullName" -> 
+                    "Global`EnsureHeld"|>, False], {}, TestID -> 
+                  "EnsureHeld-0001"], 
+                 VerificationTest[
+                  Information["IsHeld", LongForm -> False], 
+                  
+                  InformationData[<|
+                   "ObjectType" -> "Symbol", "Usage" -> 
+                    "IsHeld[input] returns True if the input is a held \
+expression, and False otherwise. A held expression is an expression that is \
+held by Hold or HoldForm.", "Documentation" -> None, "OwnValues" -> None, 
+                    "UpValues" -> None, "DownValues" -> 
+                    Information`InformationValueForm[
+                    DownValues, ResourceObjectTest`IsHeld, {
+                    ResourceObjectTest`IsHeld[
+                    Pattern[ResourceObjectTest`input, 
+                    Blank[]]] :> MatchQ[
+                    PeterBurbery`BasicHypergeometricFunctions`UnevaluatedHead[
+                    ResourceObjectTest`input], 
+                    Alternatives[HoldForm, Hold]]}], "SubValues" -> None, 
+                    "DefaultValues" -> None, "NValues" -> None, 
+                    "FormatValues" -> None, "Options" -> None, 
+                    "Attributes" -> {HoldAll}, "FullName" -> 
+                    "Global`IsHeld"|>, False], {}, TestID -> 
+                  "EnsureHeld-0002"], 
+                 VerificationTest[
+                  Information["UnevaluatedHead", LongForm -> False], 
+                  
+                  InformationData[<|
+                   "ObjectType" -> "Symbol", "Usage" -> 
+                    "UnevaluatedHead[input] gives the head of the input \
+without evaluating the input. This is useful when you need to inspect the \
+structure of an expression without causing side effects due to evaluation.", 
+                    "Documentation" -> None, "OwnValues" -> None, "UpValues" -> 
+                    None, "DownValues" -> 
+                    Information`InformationValueForm[
+                    DownValues, 
+                    PeterBurbery`BasicHypergeometricFunctions`UnevaluatedHead,\
+ {PeterBurbery`BasicHypergeometricFunctions`UnevaluatedHead[
+                    Pattern[ResourceObjectTest`expr, 
+                    Blank[]]] :> Head[
+                    Unevaluated[ResourceObjectTest`expr]]}], "SubValues" -> 
+                    None, "DefaultValues" -> None, "NValues" -> None, 
+                    "FormatValues" -> None, "Options" -> None, 
+                    "Attributes" -> {HoldAll}, "FullName" -> 
+                    "PeterBurbery`BasicHypergeometricFunctions`\
+UnevaluatedHead"|>, False], {}, TestID -> 
+                  "EnsureHeld-0003"]]|>]][$CellContext`input]]]]]}], 
+    "SubValues" -> None, "DefaultValues" -> None, "NValues" -> None, 
+    "FormatValues" -> None, "Options" -> None, "Attributes" -> {HoldAll}, 
+    "FullName" -> "Global`InactivateIntegralProductSum"|>, False]]], "Output",
+ CellChangeTimes->{3.896368578889577*^9},
+ CellLabel->
+  "Out[471]=",ExpressionUUID->"b488ee0f-05e4-4ed4-bddb-2da9aab69f7e"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"PacletDataRebuild", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.8963686631825523`*^9, 3.8963686660353346`*^9}},
+ CellLabel->
+  "In[559]:=",ExpressionUUID->"669699a9-fbbb-4055-b94b-b39379932b1e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PacletDirectoryLoad", "[", 
+  "\"\<C:\\\\Users\\\\Peter\\\\OneDrive - Marshall \
+University\\\\basic-hypergeometric-functions-paclet\\\\basic-hypergeometric-\
+functions\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.8963686783054085`*^9, 3.896368707759104*^9}},
+ CellLabel->
+  "In[560]:=",ExpressionUUID->"153ec4a9-cc37-4f76-aaf1-1af5fe47e23a"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"C:\\\\Users\\\\Peter\\\\OneDrive - Marshall \
+University\\\\GitHub\\\\basic-hypergeometric-functions-paclet\\\\basic-\
+hypergeometric-functions\\\\\"\>", 
+   ",", "\<\"C:\\\\Users\\\\Peter\\\\OneDrive - Marshall \
+University\\\\basic-hypergeometric-functions-paclet\\\\basic-hypergeometric-\
+functions\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.89636870906607*^9},
+ CellLabel->
+  "Out[560]=",ExpressionUUID->"333672c6-fa5e-44e8-839a-0d75cebc9aaf"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"PacletDataRebuild", "[", "]"}]], "Input",
+ CellLabel->
+  "In[561]:=",ExpressionUUID->"ca725915-8c15-4255-9204-5a7dc10f4899"]
 },
 WindowSize->{576, 585.6},
-WindowMargins->{{-5.3999999999999995`, Automatic}, {-5.399999999999977, 
-   Automatic}},
+WindowMargins->{{-5.3999999999999995`, Automatic}, {Automatic, 0}},
 FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (May 18, 2023)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"7fe4d443-9f13-4ccb-8e7f-41d9ef483fd7"
@@ -14575,33 +15303,33 @@ Cell[CellGroupData[{
 Cell[312139, 7717, 229, 4, 28, "Input",ExpressionUUID->"661d7ad3-66ce-40ca-92f9-9998f47e369f"],
 Cell[312371, 7723, 303, 8, 48, "Output",ExpressionUUID->"da0627d1-ee60-4154-abc2-4d90e5806c2f"]
 }, Open  ]],
-Cell[312689, 7734, 2027, 51, 143, "Input",ExpressionUUID->"1b26f2f6-475f-43e4-a148-09cbe4368895"],
+Cell[312689, 7734, 2027, 51, 276, "Input",ExpressionUUID->"1b26f2f6-475f-43e4-a148-09cbe4368895"],
 Cell[CellGroupData[{
-Cell[314741, 7789, 18988, 446, 234, "Input",ExpressionUUID->"2063c56e-397d-4637-b65d-ce53d8350b22"],
-Cell[333732, 8237, 7380, 212, 159, "Output",ExpressionUUID->"95cf3b59-ed2f-44a8-bf3b-2df2c1bf09c8"]
+Cell[314741, 7789, 18988, 446, 434, "Input",ExpressionUUID->"2063c56e-397d-4637-b65d-ce53d8350b22"],
+Cell[333732, 8237, 7380, 212, 387, "Output",ExpressionUUID->"95cf3b59-ed2f-44a8-bf3b-2df2c1bf09c8"]
 }, Open  ]],
-Cell[341127, 8452, 1889, 48, 192, "Input",ExpressionUUID->"9a3a6316-b3c4-46af-9739-fe75ae8c2534"],
+Cell[341127, 8452, 1889, 48, 295, "Input",ExpressionUUID->"9a3a6316-b3c4-46af-9739-fe75ae8c2534"],
 Cell[CellGroupData[{
-Cell[343041, 8504, 19342, 449, 242, "Input",ExpressionUUID->"a9a5a28a-fd16-4ad6-a9b2-b81c647e9ce2"],
-Cell[362386, 8955, 7425, 210, 116, "Output",ExpressionUUID->"3a255d7e-0ba4-4bb4-bdbb-7727841d85f4"]
+Cell[343041, 8504, 19342, 449, 461, "Input",ExpressionUUID->"a9a5a28a-fd16-4ad6-a9b2-b81c647e9ce2"],
+Cell[362386, 8955, 7425, 210, 416, "Output",ExpressionUUID->"3a255d7e-0ba4-4bb4-bdbb-7727841d85f4"]
 }, Open  ]],
-Cell[369826, 9168, 10378, 206, 56, "Input",ExpressionUUID->"155c9b3b-153d-4519-9722-5a90a6e62b0d"],
+Cell[369826, 9168, 10378, 206, 94, "Input",ExpressionUUID->"155c9b3b-153d-4519-9722-5a90a6e62b0d"],
 Cell[CellGroupData[{
-Cell[380229, 9378, 19340, 449, 234, "Input",ExpressionUUID->"58742482-ca57-48ce-8ab2-7524796d7f6d"],
-Cell[399572, 9829, 7479, 211, 116, "Output",ExpressionUUID->"011ae057-ae22-4d1e-8450-0a0195270dc7"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[407088, 10045, 20133, 462, 290, "Input",ExpressionUUID->"402a5685-06bc-4a3c-b286-8dbd989961ee"],
-Cell[427224, 10509, 9165, 236, 115, "Output",ExpressionUUID->"46f216cc-2fc8-4033-93b6-cea98b057910"]
+Cell[380229, 9378, 19340, 449, 452, "Input",ExpressionUUID->"58742482-ca57-48ce-8ab2-7524796d7f6d"],
+Cell[399572, 9829, 7479, 211, 416, "Output",ExpressionUUID->"011ae057-ae22-4d1e-8450-0a0195270dc7"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[436426, 10750, 20580, 464, 309, "Input",ExpressionUUID->"86976575-c956-49ad-81f3-8d62f1c892e1"],
-Cell[457009, 11216, 8540, 223, 111, "Output",ExpressionUUID->"b35da88a-9b41-4cef-94d7-c564c5c88bb9"]
+Cell[407088, 10045, 20133, 462, 499, "Input",ExpressionUUID->"402a5685-06bc-4a3c-b286-8dbd989961ee"],
+Cell[427224, 10509, 9165, 236, 440, "Output",ExpressionUUID->"46f216cc-2fc8-4033-93b6-cea98b057910"]
 }, Open  ]],
-Cell[465564, 11442, 21880, 431, 255, "Input",ExpressionUUID->"0b43dfb0-6367-48f3-a45f-52fef8516095"],
 Cell[CellGroupData[{
-Cell[487469, 11877, 20578, 464, 281, "Input",ExpressionUUID->"83477624-ca0e-4836-a15c-dce96f3181c9"],
-Cell[508050, 12343, 8572, 224, 111, "Output",ExpressionUUID->"8f6e9c98-62ff-4d62-b2f8-7c9e96a80abb"]
+Cell[436426, 10750, 20580, 464, 527, "Input",ExpressionUUID->"86976575-c956-49ad-81f3-8d62f1c892e1"],
+Cell[457009, 11216, 8540, 223, 431, "Output",ExpressionUUID->"b35da88a-9b41-4cef-94d7-c564c5c88bb9"]
+}, Open  ]],
+Cell[465564, 11442, 21880, 431, 430, "Input",ExpressionUUID->"0b43dfb0-6367-48f3-a45f-52fef8516095"],
+Cell[CellGroupData[{
+Cell[487469, 11877, 20578, 464, 491, "Input",ExpressionUUID->"83477624-ca0e-4836-a15c-dce96f3181c9"],
+Cell[508050, 12343, 8572, 224, 431, "Output",ExpressionUUID->"8f6e9c98-62ff-4d62-b2f8-7c9e96a80abb"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[516659, 12572, 9386, 258, 406, "Input",ExpressionUUID->"8f6f7e55-78d1-4b2c-8aa2-512ea7ee39cc"],
@@ -14622,7 +15350,22 @@ Cell[550598, 13462, 13265, 327, 169, "Output",ExpressionUUID->"2da8dc2c-8141-44e
 Cell[CellGroupData[{
 Cell[563900, 13794, 275, 5, 28, "Input",ExpressionUUID->"dadba224-2e9d-44f5-a892-92a8b0b8c088"],
 Cell[564178, 13801, 31506, 638, 193, "Output",ExpressionUUID->"b1f9040e-3e17-4517-a261-40a2aa1861aa"]
-}, Open  ]]
+}, Open  ]],
+Cell[595699, 14442, 632, 16, 143, "Input",ExpressionUUID->"269bf142-5aee-4b7e-9667-653735f65a03"],
+Cell[596334, 14460, 228, 4, 28, "Input",ExpressionUUID->"b2475e5a-f0e2-4cba-a733-1369cb716652"],
+Cell[596565, 14466, 224, 4, 28, "Input",ExpressionUUID->"92518287-7231-4ecc-a5bd-7cf9a7e069fa"],
+Cell[596792, 14472, 236, 4, 28, "Input",ExpressionUUID->"f0e777f7-f4b5-49a8-8a44-fda0108258f2"],
+Cell[597031, 14478, 240, 4, 28, "Input",ExpressionUUID->"d3b600a3-a912-4109-bde0-d999f88fbd7c"],
+Cell[CellGroupData[{
+Cell[597296, 14486, 220, 4, 28, "Input",ExpressionUUID->"6fe9c0e8-4069-4d2d-aa9e-88fa005b5c77"],
+Cell[597519, 14492, 31636, 641, 193, "Output",ExpressionUUID->"b488ee0f-05e4-4ed4-bddb-2da9aab69f7e"]
+}, Open  ]],
+Cell[629170, 15136, 218, 4, 28, "Input",ExpressionUUID->"669699a9-fbbb-4055-b94b-b39379932b1e"],
+Cell[CellGroupData[{
+Cell[629413, 15144, 366, 7, 86, "Input",ExpressionUUID->"153ec4a9-cc37-4f76-aaf1-1af5fe47e23a"],
+Cell[629782, 15153, 495, 10, 128, "Output",ExpressionUUID->"333672c6-fa5e-44e8-839a-0d75cebc9aaf"]
+}, Open  ]],
+Cell[630292, 15166, 148, 3, 58, "Input",ExpressionUUID->"ca725915-8c15-4255-9204-5a7dc10f4899"]
 }
 ]
 *)

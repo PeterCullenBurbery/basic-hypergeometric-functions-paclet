@@ -170,3 +170,13 @@
 <<PeterBurbery`BasicHypergeometricFunctions`MakeFunctionsExact`;
 
 <<PeterBurbery`BasicHypergeometricFunctions`RemoveNumericalFunctionsOptions`;
+
+<<PeterBurbery`BasicHypergeometricFunctions`EnsureHeld`;
+
+<<PeterBurbery`BasicHypergeometricFunctions`IsHeld`;
+
+<<PeterBurbery`BasicHypergeometricFunctions`InactivateIntegralProductSum`;
+
+
+
+
