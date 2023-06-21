@@ -164,3 +164,7 @@
 <<PeterBurbery`BasicHypergeometricFunctions`PutNumbersInFrontOfList`;
 
 <<PeterBurbery`BasicHypergeometricFunctions`TransformListToTimes`;
+
+<<PeterBurbery`BasicHypergeometricFunctions`RemoveWorkingPrecision`;
+
+<<PeterBurbery`BasicHypergeometricFunctions`MakeFunctionsExact`;
