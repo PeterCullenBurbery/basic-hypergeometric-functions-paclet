@@ -168,3 +168,5 @@
 <<PeterBurbery`BasicHypergeometricFunctions`RemoveWorkingPrecision`;
 
 <<PeterBurbery`BasicHypergeometricFunctions`MakeFunctionsExact`;
+
+<<PeterBurbery`BasicHypergeometricFunctions`RemoveNumericalFunctionsOptions`;
