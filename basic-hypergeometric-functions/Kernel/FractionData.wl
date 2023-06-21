@@ -30,28 +30,27 @@ FractionData[x_] :=
       denominatorData = <|"value" -> denominator|>;
       interestingNumeratorDataAssociation = <|"q-powers" -> Cases[numerator,
           (_ ? (Function[{symbol}, Quiet[StringMatchQ[Quiet[FullSymbolName[symbol
-         ], General::strse], "*`q"], StringMatchQ::strse], {}])) ^ _, All], "very-well-poised-basic-hypergeometric-cases"
-          -> Cases[numerator, _?VeryWellPoisedBasicHypergeometricFunctionQ, All
-         ], "fraction-power-cases" -> Cases[numerator, (_?FractionQ) ^ power_,
-          All], "sums" -> Cases[numerator, (Sum | Inactive[Sum])[summand:___, 
-         {variableOfSummation_, lowerBound_, upperBound_}], All], "integrals" 
+         ], General::strse], "*`q"], StringMatchQ::strse], {}])) ^ _], "very-well-poised-basic-hypergeometric-cases"
+          -> Cases[numerator, _?VeryWellPoisedBasicHypergeometricFunctionQ
+         ], "fraction-power-cases" -> Cases[numerator, (_?FractionQ) ^ power_
+          ], "sums" -> Cases[numerator, (Sum | Inactive[Sum])[summand:___, 
+         {variableOfSummation_, lowerBound_, upperBound_}]], "integrals" 
          -> Join[Cases[numerator, (Inactive[Integrate] | Integrate)[integrand_,
-          {variableOfIntegration_, lowerBound_, upperBound_}], All], Cases[numerator,
-          (Integrate | Inactive[Integrate])[integrand_, variable_], All]], "products"
+          {variableOfIntegration_, lowerBound_, upperBound_}]], Cases[numerator,
+          (Integrate | Inactive[Integrate])[integrand_, variable_]]], "products"
           -> Cases[numerator, (Inactive[Product] | Product)[factor_, {variable_,
-          lowerBound_, upperBound_}], All]|>;
+          lowerBound_, upperBound_}]]|>;
       interestingNumeratorDataList = Catenate[Values[interestingNumeratorDataAssociation
          ]];
       interestingDenominatorDataAssociation = <|"q-powers" -> Cases[denominator,
           (_ ? (Function[{symbol}, Quiet[StringMatchQ[Quiet[FullSymbolName[symbol
-         ], General::strse], "*`q"], StringMatchQ::strse], {}])) ^ _, All], "very-well-poised-basic-hypergeometric-cases"
+         ], General::strse], "*`q"], StringMatchQ::strse], {}])) ^ _], "very-well-poised-basic-hypergeometric-cases"
           -> Cases[denominator, _?VeryWellPoisedBasicHypergeometricFunctionQ],
-          "fraction-power-cases" -> Cases[denominator, (_?FractionQ) ^ power_,
-          All], "integrals" -> Join[Cases[denominator, (Inactive[Integrate] | 
+          "fraction-power-cases" -> Cases[denominator, (_?FractionQ) ^ power_, "integrals" -> Join[Cases[denominator, (Inactive[Integrate] | 
          Integrate)[integrand_, {variableOfIntegration_, lowerBound_, upperBound_
-         }], All], Cases[denominator, (Integrate | Inactive[Integrate])[integrand_,
-          variable_], All]], "products" -> Cases[denominator, (Inactive[Product
-         ] | Product)[factor_, {variable_, lowerBound_, upperBound_}], All]|>;
+         }]], Cases[denominator, (Integrate | Inactive[Integrate])[integrand_,
+          variable_]]], "products" -> Cases[denominator, (Inactive[Product
+         ] | Product)[factor_, {variable_, lowerBound_, upperBound_}]]|>;
          
       interestingDenominatorDataList = Catenate[Values[interestingDenominatorDataAssociation
          ]];
@@ -60,7 +59,7 @@ FractionData[x_] :=
       denominatorData = Join[denominatorData, interestingDenominatorDataAssociation,
           <|"interesting-data" -> interestingDenominatorDataList|>];
       numeratorWithThingsToKeep = DeleteCases[numerator, Alternatives
-          @@ interestingNumeratorDataList, All];
+          @@ interestingNumeratorDataList];
       leftTypesList = Catenate[Lookup[interestingNumeratorDataAssociation,
           leftTypes]];
       leftProduct = TransformList[leftTypesList];
