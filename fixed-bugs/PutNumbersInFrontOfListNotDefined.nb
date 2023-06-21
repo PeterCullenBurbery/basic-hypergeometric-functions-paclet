@@ -1,0 +1,824 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     33356,        814]
+NotebookOptionsPosition[     31346,        771]
+NotebookOutlinePosition[     31745,        787]
+CellTagsIndexPosition[     31702,        784]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Figuring out the bug", "Section",
+ CellChangeTimes->{{3.896341025722328*^9, 
+  3.8963410284031105`*^9}},ExpressionUUID->"96e42f40-1a1d-40e9-9028-\
+1668bdd4dce4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FractionData", "[", 
+  FractionBox[
+   RowBox[{"p", " ", 
+    SuperscriptBox["q", 
+     RowBox[{
+      FractionBox["1", "4"], 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "3"}], "+", 
+        RowBox[{"2", "j"}], "+", 
+        RowBox[{"2", "m"}], "+", 
+        RowBox[{"2", "n"}]}], ")"}]}]]}], 
+   RowBox[{"2", "k", " ", "\[Pi]", " ", "r"}]], "]"}]], "Input",
+ CellChangeTimes->{{3.896340312758334*^9, 3.896340316861006*^9}, {
+  3.8963405362383633`*^9, 3.8963405464403353`*^9}},
+ CellLabel->"In[53]:=",ExpressionUUID->"1cf60118-42ad-41c8-9dba-a303ffdbaea3"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"numerator\"\>", "\[Rule]", 
+    RowBox[{"\[LeftAssociation]", 
+     RowBox[{
+      RowBox[{"\<\"value\"\>", "\[Rule]", 
+       RowBox[{"p", " ", 
+        SuperscriptBox["q", 
+         RowBox[{
+          FractionBox["j", "2"], "+", 
+          FractionBox["m", "2"], "+", 
+          FractionBox["n", "2"]}]]}]}], ",", 
+      RowBox[{"\<\"q-powers\"\>", "\[Rule]", 
+       RowBox[{"{", 
+        SuperscriptBox["q", 
+         RowBox[{
+          FractionBox["j", "2"], "+", 
+          FractionBox["m", "2"], "+", 
+          FractionBox["n", "2"]}]], "}"}]}], ",", 
+      RowBox[{"\<\"very-well-poised-basic-hypergeometric-cases\"\>", 
+       "\[Rule]", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"\<\"fraction-power-cases\"\>", "\[Rule]", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"\<\"sums\"\>", "\[Rule]", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"\<\"integrals\"\>", "\[Rule]", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"\<\"products\"\>", "\[Rule]", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"\<\"interesting-data\"\>", "\[Rule]", 
+       RowBox[{"{", 
+        SuperscriptBox["q", 
+         RowBox[{
+          FractionBox["j", "2"], "+", 
+          FractionBox["m", "2"], "+", 
+          FractionBox["n", "2"]}]], "}"}]}], ",", 
+      RowBox[{"\<\"numerator-with-things-to-keep\"\>", "\[Rule]", "p"}]}], 
+     "\[RightAssociation]"}]}], ",", 
+   RowBox[{"\<\"denominator\"\>", "\[Rule]", 
+    RowBox[{"\[LeftAssociation]", 
+     RowBox[{
+      RowBox[{"\<\"value\"\>", "\[Rule]", 
+       RowBox[{"2", " ", "k", " ", "\[Pi]", " ", 
+        SuperscriptBox["q", 
+         RowBox[{"3", "/", "4"}]], " ", "r"}]}], ",", 
+      RowBox[{"\<\"q-powers\"\>", "\[Rule]", 
+       RowBox[{"{", 
+        SuperscriptBox["q", 
+         RowBox[{"3", "/", "4"}]], "}"}]}], ",", 
+      RowBox[{"\<\"very-well-poised-basic-hypergeometric-cases\"\>", 
+       "\[Rule]", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"\<\"fraction-power-cases\"\>", "\[Rule]", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"\<\"integrals\"\>", "\[Rule]", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"\<\"products\"\>", "\[Rule]", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"\<\"interesting-data\"\>", "\[Rule]", 
+       RowBox[{"{", 
+        SuperscriptBox["q", 
+         RowBox[{"3", "/", "4"}]], "}"}]}]}], "\[RightAssociation]"}]}], ",", 
+   RowBox[{"\<\"left-product\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "Null"}], "}"}]}], ",", 
+   RowBox[{"\<\"right-product\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"numerator-with-things-to-keep\"\>", "\[Rule]", "p"}], ",", 
+   RowBox[{"\<\"denominator-product\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "Null"}], "}"}]}], ",", 
+   RowBox[{"\<\"final-product\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "Null"}], "}"}]}]}], "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{{3.896340539198656*^9, 3.8963405467754*^9}},
+ CellLabel->"Out[53]=",ExpressionUUID->"52eb026b-ccae-4295-8bd5-bb81136ec505"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"With", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"x", "=", 
+     FractionBox[
+      RowBox[{"p", " ", 
+       SuperscriptBox["q", 
+        RowBox[{
+         FractionBox["1", "4"], 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "3"}], "+", 
+           RowBox[{"2", "j"}], "+", 
+           RowBox[{"2", "m"}], "+", 
+           RowBox[{"2", "n"}]}], ")"}]}]]}], 
+      RowBox[{"2", "k", " ", "\[Pi]", " ", "r"}]]}], "}"}], ",", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "leftTypes", ",", "rightTypes", ",", "interestingDataTypes", ",", 
+       "numeratorData", ",", "denominatorData", ",", "numerator", ",", 
+       "denominator", ",", "basicData", ",", "listData", ",", 
+       "interestingData", ",", "organizedData", ",", "moreData", ",", 
+       "postData", ",", "postDataProduct", ",", "preData", ",", 
+       "preDataProduct", ",", "combinedData", ",", "smallerFractionData", ",",
+        "allData", ",", "totalProductList", ",", "totalProductProduct", ",", 
+       "deletedCasesData", ",", "outputData", ",", 
+       "interestingNumeratorDataAssociation", ",", 
+       "interestingDenominatorDataAssociation", ",", 
+       "interestingNumeratorDataList", ",", "interestingDenominatorDataList", 
+       ",", "numeratorWithThingsToKeep", ",", "leftTypesList", ",", 
+       "rightTypesList", ",", "leftProduct", ",", "rightProduct", ",", 
+       "finalProduct", ",", "denominatorProduct"}], "}"}], ",", 
+     RowBox[{
+      RowBox[{"leftTypes", "=", 
+       RowBox[{"{", 
+        RowBox[{"\"\<q-powers\>\"", ",", "\"\<fraction-power-cases\>\""}], 
+        "}"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"rightTypes", "=", 
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<very-well-poised-basic-hypergeometric-cases\>\"", ",", 
+         "\"\<sums\>\"", ",", "\"\<integrals\>\"", ",", "\"\<products\>\""}], 
+        "}"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"interestingDataTypes", "=", 
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<very-well-poised-basic-hypergeometric-cases\>\"", ",", 
+         "\"\<fraction-power-cases\>\"", ",", "\"\<sums\>\"", ",", 
+         "\"\<q-powers\>\"", ",", "\"\<integrals\>\"", ",", 
+         "\"\<products\>\""}], "}"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"numerator", ",", "denominator"}], "}"}], "=", 
+       RowBox[{"NumeratorDenominator", "[", "x", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"numeratorData", "=", 
+       RowBox[{"<|", 
+        RowBox[{"\"\<value\>\"", "->", "numerator"}], "|>"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"denominatorData", "=", 
+       RowBox[{"<|", 
+        RowBox[{"\"\<value\>\"", "->", "denominator"}], "|>"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"interestingNumeratorDataAssociation", "=", 
+       RowBox[{"<|", 
+        RowBox[{
+         RowBox[{"\"\<q-powers\>\"", "->", 
+          RowBox[{"Cases", "[", 
+           RowBox[{"numerator", ",", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"_", "?", 
+               RowBox[{"(", 
+                RowBox[{"Function", "[", 
+                 RowBox[{
+                  RowBox[{"{", "symbol", "}"}], ",", 
+                  RowBox[{"Quiet", "[", 
+                   RowBox[{
+                    RowBox[{"StringMatchQ", "[", 
+                    RowBox[{
+                    RowBox[{"Quiet", "[", 
+                    RowBox[{
+                    RowBox[{"FullSymbolName", "[", "symbol", "]"}], ",", 
+                    RowBox[{"General", "::", "strse"}]}], "]"}], ",", 
+                    "\"\<*`q\>\""}], "]"}], ",", 
+                    RowBox[{"StringMatchQ", "::", "strse"}]}], "]"}], ",", 
+                  RowBox[{"{", "}"}]}], "]"}], ")"}]}], ")"}], "^", "_"}], 
+            ",", "All"}], "]"}]}], ",", 
+         RowBox[{"\"\<very-well-poised-basic-hypergeometric-cases\>\"", "->", 
+          RowBox[{"Cases", "[", 
+           RowBox[{"numerator", ",", 
+            RowBox[{
+            "_", "?", "VeryWellPoisedBasicHypergeometricFunctionQ"}]}], 
+           "]"}]}], ",", 
+         RowBox[{"\"\<fraction-power-cases\>\"", "->", 
+          RowBox[{"Cases", "[", 
+           RowBox[{"numerator", ",", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"_", "?", "FractionQ"}], ")"}], "^", "power_"}], ",", 
+            "All"}], "]"}]}], ",", 
+         RowBox[{"\"\<sums\>\"", "->", 
+          RowBox[{"Cases", "[", 
+           RowBox[{"numerator", ",", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"Sum", "|", 
+               RowBox[{"Inactive", "[", "Sum", "]"}]}], ")"}], "[", 
+             RowBox[{
+              RowBox[{"summand", ":", "___"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+               "variableOfSummation_", ",", "lowerBound_", ",", 
+                "upperBound_"}], "}"}]}], "]"}], ",", "All"}], "]"}]}], ",", 
+         RowBox[{"\"\<integrals\>\"", "->", 
+          RowBox[{"Join", "[", 
+           RowBox[{
+            RowBox[{"Cases", "[", 
+             RowBox[{"numerator", ",", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"Inactive", "[", "Integrate", "]"}], "|", 
+                 "Integrate"}], ")"}], "[", 
+               RowBox[{"integrand_", ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "variableOfIntegration_", ",", "lowerBound_", ",", 
+                  "upperBound_"}], "}"}]}], "]"}], ",", "All"}], "]"}], ",", 
+            RowBox[{"Cases", "[", 
+             RowBox[{"numerator", ",", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"Integrate", "|", 
+                 RowBox[{"Inactive", "[", "Integrate", "]"}]}], ")"}], "[", 
+               RowBox[{"integrand_", ",", "variable_"}], "]"}], ",", "All"}], 
+             "]"}]}], "]"}]}], ",", 
+         RowBox[{"\"\<products\>\"", "->", 
+          RowBox[{"Cases", "[", 
+           RowBox[{"numerator", ",", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"Inactive", "[", "Product", "]"}], "|", "Product"}], 
+              ")"}], "[", 
+             RowBox[{"factor_", ",", 
+              RowBox[{"{", 
+               RowBox[{"variable_", ",", "lowerBound_", ",", "upperBound_"}], 
+               "}"}]}], "]"}], ",", "All"}], "]"}]}]}], "|>"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"interestingNumeratorDataList", "=", 
+       RowBox[{"Catenate", "[", 
+        RowBox[{"Values", "[", "interestingNumeratorDataAssociation", "]"}], 
+        "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"interestingDenominatorDataAssociation", "=", 
+       RowBox[{"<|", 
+        RowBox[{
+         RowBox[{"\"\<q-powers\>\"", "->", 
+          RowBox[{"Cases", "[", 
+           RowBox[{"denominator", ",", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"_", "?", 
+               RowBox[{"(", 
+                RowBox[{"Function", "[", 
+                 RowBox[{
+                  RowBox[{"{", "symbol", "}"}], ",", 
+                  RowBox[{"Quiet", "[", 
+                   RowBox[{
+                    RowBox[{"StringMatchQ", "[", 
+                    RowBox[{
+                    RowBox[{"Quiet", "[", 
+                    RowBox[{
+                    RowBox[{"FullSymbolName", "[", "symbol", "]"}], ",", 
+                    RowBox[{"General", "::", "strse"}]}], "]"}], ",", 
+                    "\"\<*`q\>\""}], "]"}], ",", 
+                    RowBox[{"StringMatchQ", "::", "strse"}]}], "]"}], ",", 
+                  RowBox[{"{", "}"}]}], "]"}], ")"}]}], ")"}], "^", "_"}], 
+            ",", "All"}], "]"}]}], ",", 
+         RowBox[{"\"\<very-well-poised-basic-hypergeometric-cases\>\"", "->", 
+          RowBox[{"Cases", "[", 
+           RowBox[{"denominator", ",", 
+            RowBox[{
+            "_", "?", "VeryWellPoisedBasicHypergeometricFunctionQ"}]}], 
+           "]"}]}], ",", 
+         RowBox[{"\"\<fraction-power-cases\>\"", "->", 
+          RowBox[{"Cases", "[", 
+           RowBox[{"denominator", ",", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"_", "?", "FractionQ"}], ")"}], "^", "power_"}], ",", 
+            "All"}], "]"}]}], ",", 
+         RowBox[{"\"\<integrals\>\"", "->", 
+          RowBox[{"Join", "[", 
+           RowBox[{
+            RowBox[{"Cases", "[", 
+             RowBox[{"denominator", ",", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"Inactive", "[", "Integrate", "]"}], "|", 
+                 "Integrate"}], ")"}], "[", 
+               RowBox[{"integrand_", ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "variableOfIntegration_", ",", "lowerBound_", ",", 
+                  "upperBound_"}], "}"}]}], "]"}], ",", "All"}], "]"}], ",", 
+            RowBox[{"Cases", "[", 
+             RowBox[{"denominator", ",", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"Integrate", "|", 
+                 RowBox[{"Inactive", "[", "Integrate", "]"}]}], ")"}], "[", 
+               RowBox[{"integrand_", ",", "variable_"}], "]"}], ",", "All"}], 
+             "]"}]}], "]"}]}], ",", 
+         RowBox[{"\"\<products\>\"", "->", 
+          RowBox[{"Cases", "[", 
+           RowBox[{"denominator", ",", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"Inactive", "[", "Product", "]"}], "|", "Product"}], 
+              ")"}], "[", 
+             RowBox[{"factor_", ",", 
+              RowBox[{"{", 
+               RowBox[{"variable_", ",", "lowerBound_", ",", "upperBound_"}], 
+               "}"}]}], "]"}], ",", "All"}], "]"}]}]}], "|>"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"interestingDenominatorDataList", "=", 
+       RowBox[{"Catenate", "[", 
+        RowBox[{"Values", "[", "interestingDenominatorDataAssociation", "]"}],
+         "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"numeratorData", "=", 
+       RowBox[{"Join", "[", 
+        RowBox[{
+        "numeratorData", ",", "interestingNumeratorDataAssociation", ",", 
+         RowBox[{"<|", 
+          RowBox[{
+          "\"\<interesting-data\>\"", "->", "interestingNumeratorDataList"}], 
+          "|>"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"denominatorData", "=", 
+       RowBox[{"Join", "[", 
+        RowBox[{
+        "denominatorData", ",", "interestingDenominatorDataAssociation", ",", 
+         RowBox[{"<|", 
+          RowBox[{
+          "\"\<interesting-data\>\"", "->", 
+           "interestingDenominatorDataList"}], "|>"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"numeratorWithThingsToKeep", "=", 
+       RowBox[{"DeleteCases", "[", 
+        RowBox[{"numerator", ",", 
+         RowBox[{"Alternatives", "@@", "interestingNumeratorDataList"}], ",", 
+         "All"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"leftTypesList", "=", 
+       RowBox[{"Echo", "@", 
+        RowBox[{"Catenate", "[", 
+         RowBox[{"Lookup", "[", 
+          RowBox[{"interestingNumeratorDataAssociation", ",", "leftTypes"}], 
+          "]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"leftProduct", "=", 
+       RowBox[{"TransformList", "[", "leftTypesList", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"rightTypesList", "=", 
+       RowBox[{"Catenate", "[", 
+        RowBox[{"Lookup", "[", 
+         RowBox[{"interestingNumeratorDataAssociation", ",", "rightTypes"}], 
+         "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"rightProduct", "=", 
+       RowBox[{"TransformList", "[", "rightTypesList", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"numeratorData", "=", 
+       RowBox[{"Join", "[", 
+        RowBox[{"numeratorData", ",", 
+         RowBox[{"<|", 
+          RowBox[{
+          "\"\<numerator-with-things-to-keep\>\"", "->", 
+           "numeratorWithThingsToKeep"}], "|>"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"denominatorProduct", "=", 
+       RowBox[{"TransformList", "[", 
+        RowBox[{"List", "@@", 
+         RowBox[{"(", "denominator", ")"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"finalProduct", "=", 
+       RowBox[{"TransformList", "[", 
+        RowBox[{"{", 
+         RowBox[{"leftProduct", ",", 
+          RowBox[{"numeratorWithThingsToKeep", "/", "denominatorProduct"}], 
+          ",", "rightProduct"}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"outputData", "=", 
+       RowBox[{"<|", 
+        RowBox[{
+         RowBox[{"\"\<numerator\>\"", "->", "numeratorData"}], ",", 
+         RowBox[{"\"\<denominator\>\"", "->", "denominatorData"}], ",", 
+         RowBox[{"\"\<left-product\>\"", "->", "leftProduct"}], ",", 
+         RowBox[{"\"\<right-product\>\"", "->", "rightProduct"}], ",", 
+         RowBox[{
+         "\"\<numerator-with-things-to-keep\>\"", "->", 
+          "numeratorWithThingsToKeep"}], ",", 
+         RowBox[{"\"\<denominator-product\>\"", "->", "denominatorProduct"}], 
+         ",", 
+         RowBox[{"\"\<final-product\>\"", "->", "finalProduct"}]}], 
+        "|>"}]}]}]}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8963405870998793`*^9, 3.896340663816925*^9}},
+ CellLabel->"In[58]:=",ExpressionUUID->"5a86bdc1-1276-4f0f-92e8-0cb9d36e872b"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  SuperscriptBox["q", 
+   RowBox[{
+    FractionBox["j", "2"], "+", 
+    FractionBox["m", "2"], "+", 
+    FractionBox["n", "2"]}]], "}"}]], "Echo",
+ CellChangeTimes->{
+  3.8963406640491824`*^9},ExpressionUUID->"13a23739-7cfd-4cc1-a833-\
+312bd0ff0b88"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"numerator\"\>", "\[Rule]", 
+    RowBox[{"\[LeftAssociation]", 
+     RowBox[{
+      RowBox[{"\<\"value\"\>", "\[Rule]", 
+       RowBox[{"p", " ", 
+        SuperscriptBox["q", 
+         RowBox[{
+          FractionBox["j", "2"], "+", 
+          FractionBox["m", "2"], "+", 
+          FractionBox["n", "2"]}]]}]}], ",", 
+      RowBox[{"\<\"q-powers\"\>", "\[Rule]", 
+       RowBox[{"{", 
+        SuperscriptBox["q", 
+         RowBox[{
+          FractionBox["j", "2"], "+", 
+          FractionBox["m", "2"], "+", 
+          FractionBox["n", "2"]}]], "}"}]}], ",", 
+      RowBox[{"\<\"very-well-poised-basic-hypergeometric-cases\"\>", 
+       "\[Rule]", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"\<\"fraction-power-cases\"\>", "\[Rule]", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"\<\"sums\"\>", "\[Rule]", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"\<\"integrals\"\>", "\[Rule]", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"\<\"products\"\>", "\[Rule]", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"\<\"interesting-data\"\>", "\[Rule]", 
+       RowBox[{"{", 
+        SuperscriptBox["q", 
+         RowBox[{
+          FractionBox["j", "2"], "+", 
+          FractionBox["m", "2"], "+", 
+          FractionBox["n", "2"]}]], "}"}]}], ",", 
+      RowBox[{"\<\"numerator-with-things-to-keep\"\>", "\[Rule]", "p"}]}], 
+     "\[RightAssociation]"}]}], ",", 
+   RowBox[{"\<\"denominator\"\>", "\[Rule]", 
+    RowBox[{"\[LeftAssociation]", 
+     RowBox[{
+      RowBox[{"\<\"value\"\>", "\[Rule]", 
+       RowBox[{"2", " ", "k", " ", "\[Pi]", " ", 
+        SuperscriptBox["q", 
+         RowBox[{"3", "/", "4"}]], " ", "r"}]}], ",", 
+      RowBox[{"\<\"q-powers\"\>", "\[Rule]", 
+       RowBox[{"{", 
+        SuperscriptBox["q", 
+         RowBox[{"3", "/", "4"}]], "}"}]}], ",", 
+      RowBox[{"\<\"very-well-poised-basic-hypergeometric-cases\"\>", 
+       "\[Rule]", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"\<\"fraction-power-cases\"\>", "\[Rule]", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"\<\"integrals\"\>", "\[Rule]", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"\<\"products\"\>", "\[Rule]", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"\<\"interesting-data\"\>", "\[Rule]", 
+       RowBox[{"{", 
+        SuperscriptBox["q", 
+         RowBox[{"3", "/", "4"}]], "}"}]}]}], "\[RightAssociation]"}]}], ",", 
+   RowBox[{"\<\"left-product\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "Null"}], "}"}]}], ",", 
+   RowBox[{"\<\"right-product\"\>", "\[Rule]", "1"}], ",", 
+   RowBox[{"\<\"numerator-with-things-to-keep\"\>", "\[Rule]", "p"}], ",", 
+   RowBox[{"\<\"denominator-product\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "Null"}], "}"}]}], ",", 
+   RowBox[{"\<\"final-product\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "Null"}], "}"}]}]}], "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{{3.8963406065378947`*^9, 3.896340664142619*^9}},
+ CellLabel->"Out[58]=",ExpressionUUID->"462ce1a1-e442-4834-8f87-b192e63ddcda"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TransformList", "[", 
+  RowBox[{"{", 
+   SuperscriptBox["q", 
+    RowBox[{
+     FractionBox["j", "2"], "+", 
+     FractionBox["m", "2"], "+", 
+     FractionBox["n", "2"]}]], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.896340668241987*^9, 3.8963406769830184`*^9}},
+ CellLabel->"In[59]:=",ExpressionUUID->"83a943c3-bc92-40e8-8b11-405dc08cde4e"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "Null"}], "}"}]], "Output",
+ CellChangeTimes->{3.896340677735786*^9},
+ CellLabel->"Out[59]=",ExpressionUUID->"d4cd38a3-5fd8-47e1-949b-5ea16c01647f"]
+}, Open  ]],
+
+Cell["\<\
+PutNumbersInFrontOfList is not defined. We need to find the definition.\
+\>", "Text",
+ CellChangeTimes->{{3.8963407834799194`*^9, 
+  3.896340791966276*^9}},ExpressionUUID->"fd911855-c376-4670-9b29-\
+48955da28903"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"With", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"n", "=", 
+     RowBox[{"{", 
+      SuperscriptBox["q", 
+       RowBox[{
+        FractionBox["j", "2"], "+", 
+        FractionBox["m", "2"], "+", 
+        FractionBox["n", "2"]}]], "}"}]}], "}"}], ",", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "putnumbersinfront", ",", "numericGather", ",", "gatherSimilarSymbols", 
+       ",", "multiplySimilarSymbols", ",", "multiplyNumbers", ",", 
+       "listWithQInFront"}], "}"}], ",", 
+     RowBox[{
+      RowBox[{"putnumbersinfront", "=", 
+       RowBox[{"PutNumbersInFrontOfList", "[", "n", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"numericGather", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Extract", "[", 
+          RowBox[{"putnumbersinfront", ",", "#"}], "]"}], "&"}], "/@", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"DeleteElements", "[", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"putnumbersinfront", ",", 
+              RowBox[{"_", "?", "NumericQ"}], ",", 
+              RowBox[{"{", "1", "}"}], ",", 
+              RowBox[{"Heads", "->", "False"}]}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", "0", "}"}], ",", 
+              RowBox[{"{", "}"}]}], "}"}]}], "]"}], ",", 
+          RowBox[{"DeleteElements", "[", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"putnumbersinfront", ",", 
+              RowBox[{"_", "?", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"!", 
+                  RowBox[{"NumericQ", "[", "#", "]"}]}], "&"}], ")"}]}], ",", 
+              RowBox[{"{", "1", "}"}], ",", 
+              RowBox[{"Heads", "->", "False"}]}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", "0", "}"}], ",", 
+              RowBox[{"{", "}"}]}], "}"}]}], "]"}]}], "}"}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"gatherSimilarSymbols", "=", 
+       RowBox[{
+        RowBox[{"MapAt", "[", 
+         RowBox[{"Gather", ",", 
+          RowBox[{"{", 
+           RowBox[{"{", 
+            RowBox[{"-", "1"}], "}"}], "}"}]}], "]"}], "@", 
+        "numericGather"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"multiplySimilarSymbols", "=", 
+       RowBox[{
+        RowBox[{"MapAt", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Times", "@@@", "#"}], "&"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"{", 
+            RowBox[{"-", "1"}], "}"}], "}"}]}], "]"}], "[", 
+        "gatherSimilarSymbols", "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"listWithQInFront", "=", 
+       RowBox[{
+        RowBox[{"MapAt", "[", 
+         RowBox[{"PositionQInFrontOfList", ",", 
+          RowBox[{"{", 
+           RowBox[{"{", 
+            RowBox[{"-", "1"}], "}"}], "}"}]}], "]"}], "[", 
+        "multiplySimilarSymbols", "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"multiplyNumbers", "=", 
+       RowBox[{
+        RowBox[{"MapAt", "[", 
+         RowBox[{
+          RowBox[{"Apply", "[", "Times", "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"{", "1", "}"}], "}"}]}], "]"}], "[", "listWithQInFront", 
+        "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"ReplaceAll", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"number", ":", 
+              RowBox[{"_", "?", "NumericQ"}]}], ",", 
+             RowBox[{"{", "symbol_", "}"}]}], "}"}], ":>", 
+           RowBox[{"number", "*", "symbol"}]}], ",", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"number", ":", 
+              RowBox[{"_", "?", "NumericQ"}]}], ",", 
+             RowBox[{"symbols", ":", 
+              RowBox[{"{", 
+               RowBox[{"firstSymbol_", ",", 
+                RowBox[{"othersymbols", ":", 
+                 RowBox[{"Repeated", "[", "_", "]"}]}]}], "}"}]}]}], "}"}], ":>", 
+           RowBox[{"NonCommutativeMultiply", "@@", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"number", "*", "firstSymbol"}], ",", "othersymbols"}], 
+             "}"}]}]}]}], "}"}], "]"}], "[", "multiplyNumbers", "]"}]}]}], 
+    "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8963406936167583`*^9, 3.896340724453472*^9}},
+ CellLabel->"In[73]:=",ExpressionUUID->"6f64bacd-8632-4650-a3e1-3e7c58f7b73b"],
+
+Cell[BoxData[
+ SuperscriptBox["q", 
+  RowBox[{
+   FractionBox["j", "2"], "+", 
+   FractionBox["m", "2"], "+", 
+   FractionBox["n", "2"]}]]], "Output",
+ CellChangeTimes->{3.896340724899197*^9, 3.896340985242399*^9},
+ CellLabel->"Out[73]=",ExpressionUUID->"82032016-c0c0-4761-b6b4-bf7c57f523b9"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Remove", "[", "Global`PutNumbersInFrontOfList", "]"}]], "Input",
+ CellChangeTimes->{{3.896340978073867*^9, 3.896340981844606*^9}},
+ CellLabel->"In[72]:=",ExpressionUUID->"a26c099d-2d09-422d-8b6d-1fb26063ba05"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"NotebookDirectory", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.896340735787915*^9, 3.896340738732704*^9}},
+ CellLabel->"In[61]:=",ExpressionUUID->"c116ad5d-c73c-4a7f-a9ba-ab03367ccc81"],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\Peter\\\\OneDrive - Marshall \
+University\\\\GitHub\\\\basic-hypergeometric-functions-paclet\\\\denominator-\
+bug\\\\\"\>"], "Output",
+ CellChangeTimes->{3.896340739081452*^9},
+ CellLabel->"Out[61]=",ExpressionUUID->"e1ecab21-cdc8-47a1-98be-7919f59a6128"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FileNames", "[", 
+  RowBox[{
+  "\"\<*\>\"", ",", 
+   "\"\<C:\\\\Users\\\\Peter\\\\OneDrive - Marshall \
+University\\\\GitHub\\\\basic-hypergeometric-functions-paclet\\\\\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{3.8963407488576393`*^9},
+ NumberMarks->False,
+ CellLabel->"In[63]:=",ExpressionUUID->"c8ebfd0d-1ff0-4f88-b329-935229aa6569"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"C:\\\\Users\\\\Peter\\\\OneDrive - Marshall \
+University\\\\GitHub\\\\basic-hypergeometric-functions-paclet\\\\basic-\
+hypergeometric-functions\"\>", 
+   ",", "\<\"C:\\\\Users\\\\Peter\\\\OneDrive - Marshall University\\\\GitHub\
+\\\\basic-hypergeometric-functions-paclet\\\\CODE_OF_CONDUCT.md\"\>", 
+   ",", "\<\"C:\\\\Users\\\\Peter\\\\OneDrive - Marshall University\\\\GitHub\
+\\\\basic-hypergeometric-functions-paclet\\\\CONTRIBUTING.md\"\>", 
+   ",", "\<\"C:\\\\Users\\\\Peter\\\\OneDrive - Marshall University\\\\GitHub\
+\\\\basic-hypergeometric-functions-paclet\\\\denominator-bug\"\>", 
+   ",", "\<\"C:\\\\Users\\\\Peter\\\\OneDrive - Marshall University\\\\GitHub\
+\\\\basic-hypergeometric-functions-paclet\\\\.git\"\>", 
+   ",", "\<\"C:\\\\Users\\\\Peter\\\\OneDrive - Marshall University\\\\GitHub\
+\\\\basic-hypergeometric-functions-paclet\\\\.gitattributes\"\>", 
+   ",", "\<\"C:\\\\Users\\\\Peter\\\\OneDrive - Marshall University\\\\GitHub\
+\\\\basic-hypergeometric-functions-paclet\\\\.github\"\>", 
+   ",", "\<\"C:\\\\Users\\\\Peter\\\\OneDrive - Marshall University\\\\GitHub\
+\\\\basic-hypergeometric-functions-paclet\\\\learning-how-to-use-inactivate\"\
+\>", ",", "\<\"C:\\\\Users\\\\Peter\\\\OneDrive - Marshall \
+University\\\\GitHub\\\\basic-hypergeometric-functions-paclet\\\\LICENSE\"\>",
+    ",", "\<\"C:\\\\Users\\\\Peter\\\\OneDrive - Marshall \
+University\\\\GitHub\\\\basic-hypergeometric-functions-paclet\\\\manually-\
+doing-the-work\"\>", 
+   ",", "\<\"C:\\\\Users\\\\Peter\\\\OneDrive - Marshall University\\\\GitHub\
+\\\\basic-hypergeometric-functions-paclet\\\\PeterBurbery__\
+BasicHypergeometricFunctions-1.0.0.paclet\"\>", 
+   ",", "\<\"C:\\\\Users\\\\Peter\\\\OneDrive - Marshall University\\\\GitHub\
+\\\\basic-hypergeometric-functions-paclet\\\\README.md\"\>", 
+   ",", "\<\"C:\\\\Users\\\\Peter\\\\OneDrive - Marshall University\\\\GitHub\
+\\\\basic-hypergeometric-functions-paclet\\\\SECURITY.md\"\>", 
+   ",", "\<\"C:\\\\Users\\\\Peter\\\\OneDrive - Marshall University\\\\GitHub\
+\\\\basic-hypergeometric-functions-paclet\\\\smaller-examples\"\>", 
+   ",", "\<\"C:\\\\Users\\\\Peter\\\\OneDrive - Marshall University\\\\GitHub\
+\\\\basic-hypergeometric-functions-paclet\\\\sum-data\"\>", 
+   ",", "\<\"C:\\\\Users\\\\Peter\\\\OneDrive - Marshall University\\\\GitHub\
+\\\\basic-hypergeometric-functions-paclet\\\\testing-held-expression-function\
+\"\>", ",", "\<\"C:\\\\Users\\\\Peter\\\\OneDrive - Marshall \
+University\\\\GitHub\\\\basic-hypergeometric-functions-paclet\\\\testing-\
+RearrangeMultiplicativeSubexpressions\"\>", 
+   ",", "\<\"C:\\\\Users\\\\Peter\\\\OneDrive - Marshall University\\\\GitHub\
+\\\\basic-hypergeometric-functions-paclet\\\\trying-to-rebuild-the-program\"\>\
+", ",", "\<\"C:\\\\Users\\\\Peter\\\\OneDrive - Marshall University\\\\GitHub\
+\\\\basic-hypergeometric-functions-paclet\\\\.vs\"\>", 
+   ",", "\<\"C:\\\\Users\\\\Peter\\\\OneDrive - Marshall University\\\\GitHub\
+\\\\basic-hypergeometric-functions-paclet\\\\working-on-the-second-example\"\>\
+"}], "}"}]], "Output",
+ CellChangeTimes->{{3.8963407435226607`*^9, 3.896340749262192*^9}},
+ CellLabel->"Out[63]=",ExpressionUUID->"af3071e4-2e98-4f21-b35b-516fec3b9433"]
+}, Open  ]]
+}, Closed]]
+},
+WindowSize->{574.8, 579.6},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (May 18, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"033a9d4b-cca9-4ea0-b912-2ab0ccbf1f29"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 167, 3, 67, "Section",ExpressionUUID->"96e42f40-1a1d-40e9-9028-1668bdd4dce4"],
+Cell[CellGroupData[{
+Cell[772, 29, 594, 16, 55, "Input",ExpressionUUID->"1cf60118-42ad-41c8-9dba-a303ffdbaea3"],
+Cell[1369, 47, 3093, 76, 319, "Output",ExpressionUUID->"52eb026b-ccae-4295-8bd5-bb81136ec505"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4499, 128, 13370, 308, 2012, "Input",ExpressionUUID->"5a86bdc1-1276-4f0f-92e8-0cb9d36e872b"],
+Cell[17872, 438, 279, 9, 36, "Echo",ExpressionUUID->"13a23739-7cfd-4cc1-a833-312bd0ff0b88"],
+Cell[18154, 449, 3097, 76, 319, "Output",ExpressionUUID->"462ce1a1-e442-4834-8f87-b192e63ddcda"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21288, 530, 368, 9, 42, "Input",ExpressionUUID->"83a943c3-bc92-40e8-8b11-405dc08cde4e"],
+Cell[21659, 541, 197, 4, 32, "Output",ExpressionUUID->"d4cd38a3-5fd8-47e1-949b-5ea16c01647f"]
+}, Open  ]],
+Cell[21871, 548, 223, 5, 35, "Text",ExpressionUUID->"fd911855-c376-4670-9b29-48955da28903"],
+Cell[CellGroupData[{
+Cell[22119, 557, 4484, 118, 431, "Input",ExpressionUUID->"6f64bacd-8632-4650-a3e1-3e7c58f7b73b"],
+Cell[26606, 677, 293, 7, 63, "Output",ExpressionUUID->"82032016-c0c0-4761-b6b4-bf7c57f523b9"]
+}, Open  ]],
+Cell[26914, 687, 233, 3, 28, "Input",ExpressionUUID->"a26c099d-2d09-422d-8b6d-1fb26063ba05"],
+Cell[CellGroupData[{
+Cell[27172, 694, 210, 3, 28, "Input",ExpressionUUID->"c116ad5d-c73c-4a7f-a9ba-ab03367ccc81"],
+Cell[27385, 699, 288, 4, 71, "Output",ExpressionUUID->"e1ecab21-cdc8-47a1-98be-7919f59a6128"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27710, 708, 365, 9, 86, "Input",ExpressionUUID->"c8ebfd0d-1ff0-4f88-b329-935229aa6569"],
+Cell[28078, 719, 3240, 48, 927, "Output",ExpressionUUID->"af3071e4-2e98-4f21-b35b-516fec3b9433"]
+}, Open  ]]
+}, Closed]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

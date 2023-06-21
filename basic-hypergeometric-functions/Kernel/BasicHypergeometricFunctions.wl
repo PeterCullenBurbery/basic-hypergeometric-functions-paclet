@@ -160,3 +160,7 @@
 <<PeterBurbery`BasicHypergeometricFunctions`PolynomializeFractionPower`;
 
 <<PeterBurbery`BasicHypergeometricFunctions`NonCommutativeMultiplyToTimes`;
+
+<<PeterBurbery`BasicHypergeometricFunctions`PutNumbersInFrontOfList`;
+
+<<PeterBurbery`BasicHypergeometricFunctions`TransformListToTimes`;

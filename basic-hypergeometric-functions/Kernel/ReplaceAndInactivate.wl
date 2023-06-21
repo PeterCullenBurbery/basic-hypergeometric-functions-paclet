@@ -14,13 +14,13 @@ Begin["`Private`"];
 
 ReplaceAndInactivate // ClearAll
 
-Attributes[ReplaceAndInactivate] = {HoldFirst};
+Attributes[ReplaceAndInactivate] = {HoldAll};
 
 ReplaceAndInactivate[input_ ? (!EquationQ[#]&)] :=
   RearrangeMultiplicativeSubexpressions //@
-    FullSimplify[                                               PowerExpand 
+    FullSimplify[                                           (*    PowerExpand 
       
-@ Inactivate[input, Sum | NIntegrate] /. {Inactive[NIntegrate][f_, 
+@*)(*I am not using PowerExpand because it converts something like ((b c d z)/(a q))^m to b^m**c^m**d^m**z^m/q^m**a^m, which is not what I want.*) Inactivate[input, Sum | NIntegrate] /. {Inactive[NIntegrate][f_, 
   {x_, xmin_, xmax_}, ___] :> Inactive[Integrate][f, {x, xmin, xmax}]}
     ]
 
@@ -30,7 +30,7 @@ ReplaceAndInactivate[input_ ? (EquationQ[#]&)] :=
   ApplySides[
     Function[{side},
       RearrangeMultiplicativeSubexpressions //@
-        FullSimplify[PowerExpand@
+        FullSimplify[(*PowerExpand@*)(*I am not using PowerExpand because it converts something like ((b c d z)/(a q))^m to b^m**c^m**d^m**z^m/q^m**a^m, which is not what I want.*)
         ReplaceAll[{Inactive[NIntegrate][f_, {x_, xmin_, xmax_}, ___
   ] :> Inactive[Integrate][f, {x, xmin, xmax}]}][side]
         ]
