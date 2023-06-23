@@ -37,7 +37,7 @@ FractionData[x_] :=
           upperBound_}],All], "integrals" -> Join[Cases[numerator, (Inactive[Integrate
          ] | Integrate)[integrand_, {variableOfIntegration_, lowerBound_, upperBound_
          }],All], Cases[numerator, (Integrate | Inactive[Integrate])[integrand_, variable_
-         ]],All], "products" -> Cases[numerator, (Inactive[Product] | Product)[factor_,
+         ]]], "products" -> Cases[numerator, (Inactive[Product] | Product)[factor_,
           {variable_, lowerBound_, upperBound_}]]|>;
       interestingNumeratorDataList = Catenate[Values[interestingNumeratorDataAssociation
          ]];
