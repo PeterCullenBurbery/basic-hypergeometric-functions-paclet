@@ -19,11 +19,11 @@ SetAttributes[EquationQ, {HoldAll}]
 EquationQ[b_] :=
 (* Which[
     HeldExpressionQ[b],
-        UnevaluatedHead @@ b === Equal
+        PeterBurbery`BasicHypergeometricFunctions`UnevaluatedHead @@ b === Equal
     ,
     !HeldExpressionQ[b],
-        UnevaluatedHead[b] === Equal
-] *)UnevaluatedHead[b] === Equal
+        PeterBurbery`BasicHypergeometricFunctions`UnevaluatedHead[b] === Equal
+] *)PeterBurbery`BasicHypergeometricFunctions`UnevaluatedHead[b] === Equal
 
 EquationQ[args___] :=
     Null /; CheckArguments[EquationQ[args], 1]

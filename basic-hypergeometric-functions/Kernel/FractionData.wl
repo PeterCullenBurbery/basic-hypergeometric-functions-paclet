@@ -45,8 +45,8 @@ FractionData[x_] :=
           (_ ? (Function[{symbol}, Quiet[StringMatchQ[Quiet[FullSymbolName[symbol
          ], General::strse], "*`q"], StringMatchQ::strse], {}])) ^ _], "very-well-poised-basic-hypergeometric-cases"
           -> Cases[denominator, _?VeryWellPoisedBasicHypergeometricFunctionQ],
-          "fraction-power-cases" -> Cases[denominator, (_?FractionQ) ^ power_,
-          "integrals"] -> Join[Cases[denominator, (Inactive[Integrate] | Integrate
+          "fraction-power-cases" -> Cases[denominator, (_?FractionQ) ^ power_],
+          "integrals" -> Join[Cases[denominator, (Inactive[Integrate] | Integrate
          )[integrand_, {variableOfIntegration_, lowerBound_, upperBound_}]], Cases[
          denominator, (Integrate | Inactive[Integrate])[integrand_, variable_]
          ]], "products" -> Cases[denominator, (Inactive[Product] | Product)[factor_,
@@ -61,14 +61,14 @@ FractionData[x_] :=
           @@ interestingNumeratorDataList];
       leftTypesList = Catenate[Lookup[interestingNumeratorDataAssociation,
           leftTypes]];
-      leftProduct = TransformList[leftTypesList];
+      leftProduct = PeterBurbery`BasicHypergeometricFunctions`TransformList[leftTypesList];
       rightTypesList = Catenate[Lookup[interestingNumeratorDataAssociation,
           rightTypes]];
-      rightProduct = TransformList[rightTypesList];
+      rightProduct = PeterBurbery`BasicHypergeometricFunctions`TransformList[rightTypesList];
       numeratorData = Join[numeratorData, <|"numerator-with-things-to-keep"
           -> numeratorWithThingsToKeep|>];
-      denominatorProduct = TransformList[List @@ (denominator)];
-      finalProduct = TransformList[{leftProduct, numeratorWithThingsToKeep
+      denominatorProduct = PeterBurbery`BasicHypergeometricFunctions`TransformList[List @@ (denominator)];
+      finalProduct = PeterBurbery`BasicHypergeometricFunctions`TransformList[{leftProduct, numeratorWithThingsToKeep
           / denominatorProduct, rightProduct}];
       outputData = <|"numerator" -> numeratorData, "denominator" -> denominatorData,
           "left-product" -> leftProduct, "right-product" -> rightProduct, "numerator-with-things-to-keep"

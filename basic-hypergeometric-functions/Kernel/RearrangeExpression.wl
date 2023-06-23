@@ -15,10 +15,10 @@ RearrangeExpression//ClearAll
 
 
 RearrangeExpression[input : _?(# === Hold &)[__] ] := 
-ReplaceAndInactivate@@input
+PeterBurbery`BasicHypergeometricFunctions`ReplaceAndInactivate@@input
 RearrangeExpression[input : _?(# === HoldForm &)[__] ] := 
-ReplaceAndInactivate@@input
-RearrangeExpression[input : _?(# =!= Hold &&#=!=HoldForm)[__] | _] :=ReplaceAndInactivate[input]
+PeterBurbery`BasicHypergeometricFunctions`ReplaceAndInactivate@@input
+RearrangeExpression[input : _?(# =!= Hold &&#=!=HoldForm)[__] | _] :=PeterBurbery`BasicHypergeometricFunctions`ReplaceAndInactivate[input]
 
 End[]; (* End `Private` *)
 

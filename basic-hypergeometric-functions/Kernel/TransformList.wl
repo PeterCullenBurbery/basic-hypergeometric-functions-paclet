@@ -12,8 +12,9 @@ Begin["`Private`"];
 
 ClearAll[TransformList]
 
-TransformList[1] = 1;
-
+TransformList[n_?NumericQ] :=
+    n;
+TransformList[s_Symbol]:=s
 TransformList[n : {_?NumericQ...}] :=
     Times @@ n
 

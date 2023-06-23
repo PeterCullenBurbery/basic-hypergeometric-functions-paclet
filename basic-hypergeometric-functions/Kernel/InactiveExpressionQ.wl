@@ -21,7 +21,8 @@ SetAttributes[InactiveExpressionQ, HoldAll]
 InactiveExpressionQ::usage = "InactiveExpressionQ[expr] returns True if expr is an inactive expression, and False otherwise.";
 
 InactiveExpressionQ[expr_] :=
-    MatchQ[UnevaluatedHead[expr], Inactive[_]]
+    MatchQ[PeterBurbery`BasicHypergeometricFunctions`UnevaluatedHead[
+        expr], Inactive[_]]
 
 End[]; (* End `Private` *)
 

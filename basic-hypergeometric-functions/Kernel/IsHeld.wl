@@ -10,14 +10,15 @@ Begin["`Private`"];
 
 (* Define your public and private symbols here. *)
 
-
 ClearAll[IsHeld]
+
 SetAttributes[IsHeld, HoldAll]
-IsHeld[input_] := MatchQ[UnevaluatedHead[input], HoldForm | Hold]
-IsHeld::usage = 
-  "IsHeld[input] returns True if the input is a held expression, and \
-False otherwise. A held expression is an expression that is held by \
-Hold or HoldForm.";
+
+IsHeld[input_] :=
+  MatchQ[PeterBurbery`BasicHypergeometricFunctions`UnevaluatedHead[input
+    ], HoldForm | Hold]
+
+IsHeld::usage = "IsHeld[input] returns True if the input is a held expression, and False otherwise. A held expression is an expression that is held by Hold or HoldForm.";
 
 End[]; (* End `Private` *)
 

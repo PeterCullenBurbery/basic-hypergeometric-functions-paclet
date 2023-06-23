@@ -19,10 +19,11 @@ SetAttributes[QHypergeometricPFQExpressionQ, {HoldAll}]
 QHypergeometricPFQExpressionQ::usage = "QHypergeometricPFQExpressionQ[input] returns True if input is a valid QHypergeometricPFQ expression and False otherwise."
 
 QHypergeometricPFQExpressionQ[input_] :=
-    And @@ {UnevaluatedHead[input] === QHypergeometricPFQ, MatchQ[Unevaluated[
-        input], QHypergeometricPFQ[_ ? (VectorQ[#, IndeterminateOrNumericQ]&),
-         _ ? (VectorQ[#, IndeterminateOrNumericQ]&), _ ? (IndeterminateOrNumericQ[
-        #]&), _ ? (IndeterminateOrNumericQ[#]&)]]}
+    And @@ {PeterBurbery`BasicHypergeometricFunctions`UnevaluatedHead[
+        input] === QHypergeometricPFQ, MatchQ[Unevaluated[input], QHypergeometricPFQ[
+        _ ? (VectorQ[#, IndeterminateOrNumericQ]&), _ ? (VectorQ[#, IndeterminateOrNumericQ
+        ]&), _ ? (IndeterminateOrNumericQ[#]&), _ ? (IndeterminateOrNumericQ[
+        #]&)]]}
 
 End[]; (* End `Private` *)
 

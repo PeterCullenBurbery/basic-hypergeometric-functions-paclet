@@ -4,7 +4,7 @@ BeginPackage["PeterBurbery`BasicHypergeometricFunctions`"];
 
 (* Declare your packages public symbols here. *)
 
-PositionQInFrontOfList;
+PeterBurbery`BasicHypergeometricFunctions`PositionQInFrontOfList;
 
 Begin["`Private`"];
 

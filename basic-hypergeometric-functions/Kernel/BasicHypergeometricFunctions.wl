@@ -77,7 +77,7 @@
 
 <<PeterBurbery`BasicHypergeometricFunctions`RemoveMathMode`;
 
-<<PeterBurbery`BasicHypergeometricFunctions`TransformSum`;
+<<PeterBurbery`BasicHypergeometricFunctions`PeterBurbery`BasicHypergeometricFunctions`TransformSumLaTeX`;
 
 <<PeterBurbery`BasicHypergeometricFunctions`RearrangedExpressionLaTeX`;
 
@@ -176,7 +176,3 @@
 <<PeterBurbery`BasicHypergeometricFunctions`IsHeld`;
 
 <<PeterBurbery`BasicHypergeometricFunctions`InactivateIntegralProductSum`;
-
-
-
-
