@@ -34,7 +34,7 @@ FractionData[x_] :=
           -> Cases[numerator, _?VeryWellPoisedBasicHypergeometricFunctionQ], "fraction-power-cases"
           -> Cases[numerator, (_?FractionQ) ^ power_], "sums" -> Cases[numerator,
           (Sum | Inactive[Sum])[summand:___, {variableOfSummation_, lowerBound_,
-          upperBound_}]], "integrals" -> Join[Cases[numerator, (Inactive[Integrate
+          upperBound_}],All], "integrals" -> Join[Cases[numerator, (Inactive[Integrate
          ] | Integrate)[integrand_, {variableOfIntegration_, lowerBound_, upperBound_
          }]], Cases[numerator, (Integrate | Inactive[Integrate])[integrand_, variable_
          ]]], "products" -> Cases[numerator, (Inactive[Product] | Product)[factor_,
